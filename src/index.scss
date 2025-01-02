@@ -1,6 +1,42 @@
-@use "normalize.css";
+@use "./styles/normalize";
+@use "./styles/variables";
+
+html {
+	box-sizing: border-box;
+	/* Учитывать границы и паддинги в общей ширине элемента */
+	font-size: 16px;
+	/* Базовый размер шрифта для удобства использования rem */
+	scroll-behavior: smooth;
+	/* Плавная прокрутка */
+	height: 100%;
+	/* Полноэкранное покрытие */
+}
 
 body {
-	color: white;
-	background-color: #112349;
+	margin: 0;
+	/* Убираем отступы по умолчанию */
+	padding: 0;
+	/* Убираем внутренние отступы */
+	font-family: Arial, sans-serif;
+	/* Задаем шрифт по умолчанию */
+	font-size: 1rem;
+	/* Размер шрифта по умолчанию */
+	line-height: 1.5;
+	/* Интерлиньяж для читаемости */
+	color: var(--white);
+	/* Цвет текста */
+	background-color: #fff;
+	/* Цвет фона */
+	min-height: 100%;
+	/* Гарантируем минимальную высоту */
+	overflow-x: hidden;
+	/* Убираем горизонтальную прокрутку */
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
