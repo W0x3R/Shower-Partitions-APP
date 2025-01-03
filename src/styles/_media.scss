@@ -1,3 +1,18 @@
+$tablet: 1024px;
+$big-mobile: 768px;
+
+@mixin tablet {
+	@media only screen and (max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin bigMobile {
+	@media only screen and (max-width: $big-mobile) {
+		@content;
+	}
+}
+
 @mixin hoverAndActive {
 	@media (hover: hover) {
 		&:hover {
