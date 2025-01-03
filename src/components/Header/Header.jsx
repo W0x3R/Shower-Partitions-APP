@@ -6,8 +6,14 @@ import Telegram from "../../assets/header/telegram.svg?react"
 import Instagram from "../../assets/header/instagram.svg?react"
 import styles from "./Header.module.scss"
 import { Link, NavLink } from "react-router-dom"
+import { useState } from "react"
 
 const Header = () => {
+	const [isBurgerActive, setIsBurgerActive] = useState(false)
+
+	const handleBurgerClick = () => {
+		setIsBurgerActive((prev) => !prev)
+	}
 	return (
 		<header className={styles.header}>
 			<div className="container">
@@ -83,10 +89,16 @@ const Header = () => {
 							Заказать звонок
 						</button>
 					</div>
-					<div className={styles.header__burger}>
-						<span className={styles["header__burger-line"]}></span>
-						<span className={styles["header__burger-line"]}></span>
-						<span className={styles["header__burger-line"]}></span>
+					<div className={styles.header__burger} onClick={handleBurgerClick}>
+						<span
+							className={`${styles["header__burger-line"]} ${isBurgerActive ? styles["header__burger-line_active"] : ""}`}
+						></span>
+						<span
+							className={`${styles["header__burger-line"]} ${isBurgerActive ? styles["header__burger-line_active"] : ""}`}
+						></span>
+						<span
+							className={`${styles["header__burger-line"]} ${isBurgerActive ? styles["header__burger-line_active"] : ""}`}
+						></span>
 					</div>
 				</div>
 				<nav className={styles.header__nav}>
