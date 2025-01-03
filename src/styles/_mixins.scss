@@ -1,21 +1,11 @@
 @use 'sass:math';
+@use './_media';
 
-// @mixin fluid-text($max: 48, $min: 16) {
-// 	$maxViewportWidth: 1440;
-// 	$minViewportWidth: 320;
-
-// 	$maxSize: math.div($max, 16);
-// 	$minSize: math.div($min, 16);
-// 	$maxWidth: math.div($maxViewportWidth, 16);
-// 	$minWidth: math.div($minViewportWidth, 16);
-
-// 	$slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
-// 	$yAxisIntersection: -$minWidth * $slope + $minSize;
-
-// 	font-size: clamp(#{$minSize * 1rem},
-// 		#{$yAxisIntersection * 1rem} + #{$slope * 100vw},
-// 		#{$maxSize * 1rem});
-// }
+@mixin fluid-text($min: 13, $content-width: 1440, $max: 46) {
+	$min-rem: math.div($min, 16); // 
+	$max-rem: math.div($max, 16); // 
+	font-size: clamp(#{$min-rem}rem, math.div($max, $content-width) * 100vw, #{$max-rem}rem);
+}
 
 @mixin flexCenter {
 	display: flex;
@@ -44,7 +34,11 @@
 }
 
 %texts-fonts {
-	font-size: 0.8rem;
+	font-size: 1.0625rem;
 	letter-spacing: var(--basic-letter-spacing);
 	text-align: center;
+
+	@include media.bigMobile {
+		font-size: 1.65rem;
+	}
 }
