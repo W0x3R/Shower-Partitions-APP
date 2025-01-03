@@ -1,15 +1,20 @@
 @use "./styles/normalize";
 @use "./styles/variables";
+@use "./styles/media";
 
 html {
 	box-sizing: border-box;
 	/* Учитывать границы и паддинги в общей ширине элемента */
-	font-size: 16px;
+	font-size: clamp(10px, 1.3vw, 16px);
 	/* Базовый размер шрифта для удобства использования rem */
 	scroll-behavior: smooth;
 	/* Плавная прокрутка */
 	height: 100%;
 	/* Полноэкранное покрытие */
+
+	// @include mixins.tablet {
+
+	// }
 }
 
 body {
@@ -25,7 +30,7 @@ body {
 	/* Интерлиньяж для читаемости */
 	color: var(--white);
 	/* Цвет текста */
-	background-color: #fff;
+	background-color: black;
 	/* Цвет фона */
 	min-height: 100%;
 	/* Гарантируем минимальную высоту */
