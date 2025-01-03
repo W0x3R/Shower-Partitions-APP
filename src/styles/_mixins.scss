@@ -41,4 +41,8 @@
 	@include media.bigMobile {
 		font-size: 1.65rem;
 	}
+
+	@include media.mediumMobile {
+		font-size: 1.95rem;
+	}
 }

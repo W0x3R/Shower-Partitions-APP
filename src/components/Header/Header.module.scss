@@ -24,6 +24,10 @@
 		@include media.bigMobile {
 			width: 16%;
 		}
+
+		@include media.mediumMobile {
+			width: 22%;
+		}
 	}
 
 	&__logo-img {
@@ -40,7 +44,11 @@
 		max-width: min-content;
 
 		@include media.bigMobile {
-			max-width: 180px;
+			max-width: 140px;
+		}
+
+		@include media.mediumMobile {
+			display: none;
 		}
 	}
 
@@ -116,6 +124,10 @@
 		@include mixins.flexCenter;
 		flex-direction: column;
 		row-gap: 0.31rem;
+
+		@include media.mediumMobile {
+			row-gap: 0.71rem;
+		}
 	}
 
 	&__callUs-text {
@@ -134,18 +146,25 @@
 	}
 
 	&__callUs-link {
-		// @include mixins.fluid-text(16, 1440, 21)
 		font-size: 1.112rem;
+		transition: var(--basic-transition);
+
+		@include media.hoverAndActive {
+			color: red;
+		}
 
 		@include media.bigMobile {
 			font-size: 1.612rem;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.912rem;
 		}
 
 	}
 
 	&__callUs-btn {
 		padding: 0.7rem;
-		// @include mixins.fluid-text(16, 1440, 21);
 		font-size: 1.112rem;
 		border: none;
 		border-radius: 0.62rem;
@@ -153,14 +172,20 @@
 		transition: var(--basic-transition);
 
 		@include media.hoverAndActive {
-			transform: scale(1.1);
-			background-color: rgb(204, 200, 200);
+			transform: scale(1.03);
+			color: red;
 		}
 
 		@include media.bigMobile {
 			padding: 1rem;
-			font-size: 1.412rem;
+			font-size: 1.312rem;
 		}
+
+		@include media.mediumMobile {
+			padding: 1.3rem;
+			font-size: 1.512rem;
+		}
+
 	}
 
 	&__nav {}
@@ -203,14 +228,13 @@
 
 	&__burger {
 		display: none;
-
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
 		row-gap: 10px;
 		position: relative;
-		width: 50px;
-		height: 50px;
+		width: 45px;
+		height: 45px;
 		background-color: white;
 		border-radius: 50%;
 		cursor: pointer;
