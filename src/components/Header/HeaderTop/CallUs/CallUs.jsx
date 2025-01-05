@@ -3,7 +3,7 @@ import styles from "./CallUs.module.scss"
 export const CallUs = () => {
 	return (
 		<div className={styles.callUs}>
-			<p className={`"header__texts" header__animation`}>
+			<p className={`header__texts header__animation`}>
 				Звоните Пн-Пт <b>9 - 18</b>
 			</p>
 			<a className={styles.callUs__link} href="tel:+375447625856">
