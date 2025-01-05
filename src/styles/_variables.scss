@@ -1,7 +1,11 @@
 :root {
 	--white: rgb(255, 255, 255);
 	--black: rgb(0, 0, 0);
+	--red: rgb(255, 0, 0);
+	--main-green: rgb(33, 178, 36);
+
 	--basic-transition: all .3s ease;
 	--basic-letter-spacing: 0.025rem;
-	--basic-line-height: 0.9rem
+	--basic-line-height: 0.9rem;
+	--scale: scale(1.03)
 }

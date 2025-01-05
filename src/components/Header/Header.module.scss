@@ -4,14 +4,14 @@
 
 .header {
 	padding-top: .625rem;
-	background: black;
+	background: var(--black);
 
 	&__top {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding-bottom: .625rem;
-		border-bottom: 2px solid #ff0000;
+		border-bottom: 2px solid var(--white);
 	}
 
 	&__texts {
@@ -31,8 +31,7 @@
 	}
 
 	&__logo-img {
-		width: 100%;
-		height: auto;
+		@include mixins.sizes(100%, auto);
 		border-radius: 10%;
 	}
 
@@ -66,8 +65,7 @@
 	}
 
 	&__adress-img {
-		width: 1.62rem;
-		height: auto;
+		@include mixins.sizes(1.62rem, auto);
 		cursor: default
 	}
 
@@ -90,28 +88,17 @@
 		position: relative;
 
 		&::before {
-			content: '';
-			position: absolute;
-			left: -20px;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 8px;
-			height: 8px;
-			background-color: rgb(0, 255, 94);
-			border-radius: 50%;
-			animation: blink 2.2s infinite;
+			@extend %header-blink-animation
 		}
 	}
 
 	&__social-link {
 		display: inline-block;
-		width: 2.9rem;
-		height: auto;
+		@include mixins.sizes(2.9rem, auto);
 		text-decoration: none;
 
 		& svg {
-			width: 100%;
-			height: 100%;
+			@include mixins.sizes(100%, 100%);
 			transition: var(--basic-transition);
 
 			@include media.hoverAndActive {
@@ -132,16 +119,7 @@
 
 	&__callUs-text {
 		&::before {
-			content: '';
-			position: absolute;
-			left: -20px;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 8px;
-			height: 8px;
-			background-color: rgb(0, 255, 94);
-			border-radius: 50%;
-			animation: blink 2.2s infinite;
+			@extend %header-blink-animation;
 		}
 	}
 
@@ -150,7 +128,7 @@
 		transition: var(--basic-transition);
 
 		@include media.hoverAndActive {
-			color: red;
+			color: var(--main-green);
 		}
 
 		@include media.bigMobile {
@@ -160,7 +138,6 @@
 		@include media.mediumMobile {
 			font-size: 1.912rem;
 		}
-
 	}
 
 	&__callUs-btn {
@@ -172,8 +149,7 @@
 		transition: var(--basic-transition);
 
 		@include media.hoverAndActive {
-			transform: scale(1.03);
-			color: red;
+			transform: var(--scale);
 		}
 
 		@include media.bigMobile {
@@ -185,39 +161,31 @@
 			padding: 1.3rem;
 			font-size: 1.512rem;
 		}
-
 	}
 
 	&__burger {
 		display: none;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		row-gap: 10px;
 		position: relative;
-		width: 45px;
-		height: 45px;
-		background-color: white;
+		@include mixins.sizes(45px, 45px);
+		background-color: var(--white);
 		border-radius: 50%;
 		cursor: pointer;
 
 		@include media.bigMobile {
-			display: flex;
+			@include mixins.flexCenter;
+			flex-direction: column;
+			row-gap: 6px;
 		}
 
 		&::before {
-			content: "";
-			position: absolute;
-			display: block;
-			inset: -5px
+			@include mixins.increaseClickableArea;
 		}
 	}
 
 	&__burger-line {
-		width: 26px;
-		height: 2px;
-		background-color: rgb(255, 0, 0);
-		transition: 0.2s;
+		@include mixins.sizes(23px, 2px);
+		background-color: var(--main-green);
+		transition: transform .3s ease-in-out;
 
 		&_active {
 			position: absolute;
@@ -242,16 +210,13 @@
 }
 
 .nav {
-	border-bottom: 2px solid #ff0000;
+	border-bottom: 2px solid var(--white);
 
 	@include media.bigMobile {
 		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		inset: 0;
-		width: 100vw;
-		height: 100vh;
+		@include mixins.flexCenter;
+		@include mixins.sizes(100vw, 100vh);
 		background-color: #839e9e;
 	}
 
@@ -264,7 +229,6 @@
 			flex-direction: column;
 			flex-basis: 50%;
 		}
-
 	}
 
 	&__item {
@@ -289,8 +253,8 @@
 			}
 		}
 
-		&:hover {
-			color: red;
+		@include media.hoverAndActive {
+			color: var(--main-green);
 		}
 	}
 
@@ -310,10 +274,10 @@
 		min-width: 100%;
 		padding: 1.02rem;
 		background-color: #F5F8F9;
-		color: black;
+		color: var(--black);
 		opacity: 0;
 		pointer-events: none;
-		transition: (var(--basic-transition));
+		transition: var(--basic-transition);
 
 		@include media.bigMobile {
 			position: static;
@@ -339,7 +303,7 @@
 
 		&:hover {
 			text-decoration: underline;
-			text-decoration-skip: none;
+			text-decoration-skip-ink: none;
 			text-decoration-color: var(--black);
 		}
 	}
@@ -351,7 +315,7 @@
 
 		@include media.bigMobile {
 			font-size: 2.5rem;
-			color: white;
+			color: var(--white);
 		}
 	}
 
@@ -360,11 +324,10 @@
 
 		&:after {
 			content: '';
-			width: 8px;
-			height: 8px;
+			@include mixins.sizes(8px, 8px);
 			display: inline-block;
-			border-left: 2px solid white;
-			border-bottom: 2px solid white;
+			border-left: 2px solid var(--white);
+			border-bottom: 2px solid var(--white);
 			transform: translateY(-50%) rotate(-45deg);
 			margin-inline: 5px;
 
@@ -376,19 +339,15 @@
 		}
 
 		@media only screen and (min-width: 769px) {
-			&:hover {
-				background-color: white;
-				color: red;
+			@include media.hoverAndActive {
+				background-color: var(--white);
+				color: var(--main-green);
 			}
 		}
 
 		&:hover::after {
-			border-color: red;
+			border-color: var(--main-green);
 		}
 
 	}
-}
-
-.active {
-	background: red;
 }
