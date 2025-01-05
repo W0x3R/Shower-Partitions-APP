@@ -32,7 +32,7 @@ const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 				>
 					<b>Задайте вопрос, мы онлайн:</b>
 				</p>
-				<SocialLinks />
+				<SocialLinks gap="socials-header" sizes="socials__link-sizes" />
 			</div>
 			<div className={styles.header__callUs}>
 				<p
