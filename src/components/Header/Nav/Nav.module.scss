@@ -1,11 +1,5 @@
-@use '../../styles/mixins';
-@use '../../styles/media';
-@use '../../styles/animations';
-
-.header {
-	padding-top: .625rem;
-	background: var(--black);
-}
+@use '../../../styles/mixins';
+@use '../../../styles/media';
 
 .nav {
 	border-bottom: 2px solid var(--white);

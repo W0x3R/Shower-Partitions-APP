@@ -7,14 +7,19 @@
 	padding: 0 15px;
 }
 
-.header__texts {
-	@extend %texts-fonts;
-}
+.header {
+	padding-top: .625rem;
+	background: var(--black);
 
-.header__animation {
-	position: relative;
+	&__texts {
+		@extend %texts-fonts;
+	}
 
-	&::before {
-		@extend %header-blink-animation
+	&__animation {
+		position: relative;
+
+		&::before {
+			@extend %header-blink-animation
+		}
 	}
 }
