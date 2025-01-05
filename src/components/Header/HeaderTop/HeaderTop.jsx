@@ -2,14 +2,13 @@ import styles from "./HeaderTop.module.scss"
 import SocialLinks from "../../SocialsLinks/SocialLinks"
 import Logo from "./Logo/Logo"
 import { Adress } from "./Adress/Adress"
+import { Description } from "./Description/Description"
 
 const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 	return (
 		<div className={styles.header__top}>
 			<Logo />
-			<div className={`${styles.header__text} ${styles.header__texts}`}>
-				<strong>Производство перегородок в Гомеле</strong>
-			</div>
+			<Description />
 			<Adress />
 
 			<div className={styles.header__socials}>

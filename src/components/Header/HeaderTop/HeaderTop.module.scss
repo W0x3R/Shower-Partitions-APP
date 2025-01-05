@@ -16,17 +16,6 @@
 		@extend %texts-fonts;
 	}
 
-	&__text {
-		max-width: min-content;
-
-		@include media.bigMobile {
-			max-width: 140px;
-		}
-
-		@include media.mediumMobile {
-			display: none;
-		}
-	}
 
 	&__socials {
 		@include mixins.flexCenter;

@@ -1,6 +1,7 @@
 @use "./styles/normalize";
 @use "./styles/variables";
 @use "./styles/media";
+@use './styles/global.scss';
 
 html {
 	box-sizing: border-box;
