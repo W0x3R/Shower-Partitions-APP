@@ -119,9 +119,13 @@ const Header = () => {
 							className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]}`}
 							onClick={() => handleMenuToggle(0)}
 						>
-							<NavLink className={styles["nav__item-link"]}>
-								Покупателям
-							</NavLink>
+							<div className={styles["nav__link-wrapper"]}>
+								<NavLink className={styles["nav__item-link"]}>
+									Покупателям
+								</NavLink>
+								<span className={styles["nav__item-arrow"]}>▼</span>
+							</div>
+
 							<ul
 								className={`${styles.nav__menu} ${openMenu === 0 ? styles["nav__menu_open"] : ""}`}
 							>
@@ -146,7 +150,13 @@ const Header = () => {
 							className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]}`}
 							onClick={() => handleMenuToggle(1)}
 						>
-							<NavLink className={styles["nav__item-link"]}>О компании</NavLink>
+							<div className={styles["nav__link-wrapper"]}>
+								<NavLink className={styles["nav__item-link"]}>
+									О компании
+								</NavLink>
+								<span className={styles["nav__item-arrow"]}>▼</span>
+							</div>
+
 							<ul
 								className={`${styles.nav__menu} ${openMenu === 1 ? styles["nav__menu_open"] : ""}`}
 							>
