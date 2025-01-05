@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom"
 import Location from "../../../assets/header/location.svg?react"
-import Whatsapp from "../../../assets/header/whatsapp.svg?react"
-import Viber from "../../../assets/header/viber.svg?react"
-import Telegram from "../../../assets/header/telegram.svg?react"
-import Instagram from "../../../assets/header/instagram.svg?react"
 import logo from "../../../assets/header/logo.jpg"
 import styles from "./HeaderTop.module.scss"
+import SocialLinks from "../../SocialsLinks/SocialLinks"
 
 const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 	return (
@@ -28,26 +25,14 @@ const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 					</b>
 				</p>
 			</div>
+
 			<div className={styles.header__socials}>
 				<p
 					className={`${styles["header__texts"]} ${styles["header__socials-text"]}`}
 				>
 					<b>Задайте вопрос, мы онлайн:</b>
 				</p>
-				<article className={styles["header__socials-links"]}>
-					<a className={styles["header__social-link"]} href="#" target="_blank">
-						<Whatsapp />
-					</a>
-					<a className={styles["header__social-link"]} href="#" target="_blank">
-						<Viber />
-					</a>
-					<a className={styles["header__social-link"]} href="#" target="_blank">
-						<Telegram />
-					</a>
-					<a className={styles["header__social-link"]} href="#" target="_blank">
-						<Instagram />
-					</a>
-				</article>
+				<SocialLinks />
 			</div>
 			<div className={styles.header__callUs}>
 				<p
