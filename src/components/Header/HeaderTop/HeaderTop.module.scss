@@ -3,53 +3,11 @@
 @use '../../../styles/animations';
 
 .header {
-
 	&__top {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding-bottom: .625rem;
 		border-bottom: 2px solid var(--white);
-	}
-
-	&__burger {
-		display: none;
-		position: relative;
-		@include mixins.sizes(45px, 45px);
-		background-color: var(--white);
-		border-radius: 50%;
-		cursor: pointer;
-
-		@include media.bigMobile {
-			@include mixins.flexCenter;
-			flex-direction: column;
-			row-gap: 6px;
-		}
-
-		&::before {
-			@include mixins.increaseClickableArea;
-		}
-	}
-
-	&__burger-line {
-		@include mixins.sizes(23px, 2px);
-		background-color: var(--main-green);
-		transition: transform .3s ease-in-out;
-
-		&_active {
-			position: absolute;
-
-			&:first-child {
-				@include mixins.positioningBurgerLines(-45)
-			}
-
-			&:nth-child(2) {
-				opacity: 0;
-			}
-
-			&:nth-child(3) {
-				@include mixins.positioningBurgerLines(45)
-			}
-		}
 	}
 }

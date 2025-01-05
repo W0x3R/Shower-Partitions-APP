@@ -4,6 +4,7 @@ import { Adress } from "./Adress/Adress"
 import { Description } from "./Description/Description"
 import { Socials } from "./Socials/Socials"
 import { CallUs } from "./CallUs/CallUs"
+import { Burger } from "./Burger/Burger"
 
 const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 	return (
@@ -13,17 +14,7 @@ const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 			<Adress />
 			<Socials />
 			<CallUs />
-			<div className={styles.header__burger} onClick={onBurgerClick}>
-				<span
-					className={`${styles["header__burger-line"]} ${isBurgerActive ? styles["header__burger-line_active"] : ""}`}
-				></span>
-				<span
-					className={`${styles["header__burger-line"]} ${isBurgerActive ? styles["header__burger-line_active"] : ""}`}
-				></span>
-				<span
-					className={`${styles["header__burger-line"]} ${isBurgerActive ? styles["header__burger-line_active"] : ""}`}
-				></span>
-			</div>
+			<Burger isBurgerActive={isBurgerActive} onBurgerClick={onBurgerClick} />
 		</div>
 	)
 }
