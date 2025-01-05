@@ -252,7 +252,7 @@
 		inset: 0;
 		width: 100vw;
 		height: 100vh;
-		background-color: #272828;
+		background-color: #839e9e;
 	}
 
 	&__list {
@@ -262,7 +262,7 @@
 
 		@include media.bigMobile {
 			flex-direction: column;
-			flex-basis: 100%;
+			flex-basis: 50%;
 		}
 
 	}
@@ -274,13 +274,20 @@
 		cursor: pointer;
 		min-width: max-content;
 
+		@include media.bigMobile {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			width: 100%;
+		}
+
 		@media only screen and (min-width: 769px) {
 			&:hover .nav__menu {
 				opacity: 1;
 				pointer-events: all;
 			}
 		}
-
 
 		&:hover {
 			color: red;
@@ -341,6 +348,11 @@
 		font-size: 1rem;
 		letter-spacing: var(--basic-letter-spacing);
 		white-space: nowrap;
+
+		@include media.bigMobile {
+			font-size: 2.5rem;
+			color: white;
+		}
 	}
 
 	&__dropdown-item {
@@ -355,16 +367,25 @@
 			border-bottom: 2px solid white;
 			transform: translateY(-50%) rotate(-45deg);
 			margin-inline: 5px;
+
+			@include media.bigMobile {
+				position: absolute;
+				top: 28px;
+				right: 0
+			}
 		}
 
-		&:hover {
-			background-color: white;
-			color: red;
+		@media only screen and (min-width: 769px) {
+			&:hover {
+				background-color: white;
+				color: red;
+			}
 		}
 
 		&:hover::after {
 			border-color: red;
 		}
+
 	}
 }
 
