@@ -1,7 +1,7 @@
-import Location from "../../../assets/header/location.svg?react"
 import styles from "./HeaderTop.module.scss"
 import SocialLinks from "../../SocialsLinks/SocialLinks"
 import Logo from "./Logo/Logo"
+import { Adress } from "./Adress/Adress"
 
 const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 	return (
@@ -10,16 +10,7 @@ const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 			<div className={`${styles.header__text} ${styles.header__texts}`}>
 				<strong>Производство перегородок в Гомеле</strong>
 			</div>
-			<div className={styles.header__adress}>
-				<Location className={styles["header__adress-img"]} />
-				<p
-					className={`${styles["header__adress-text"]} ${styles.header__texts}`}
-				>
-					<b>
-						Наш адрес: <br></br> Беларусь,г.Гомель, ул. Гомельская 25
-					</b>
-				</p>
-			</div>
+			<Adress />
 
 			<div className={styles.header__socials}>
 				<p

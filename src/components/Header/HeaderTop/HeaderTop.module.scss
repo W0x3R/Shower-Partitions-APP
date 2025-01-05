@@ -28,24 +28,6 @@
 		}
 	}
 
-	&__adress {
-		@include mixins.flexCenter;
-		column-gap: .31rem;
-
-		@include media.bigMobile {
-			display: none;
-		}
-	}
-
-	&__adress-text {
-		max-width: min-content;
-	}
-
-	&__adress-img {
-		@include mixins.sizes(1.62rem, auto);
-		cursor: default;
-	}
-
 	&__socials {
 		@include mixins.flexCenter;
 		flex-direction: column;
