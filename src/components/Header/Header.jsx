@@ -10,10 +10,16 @@ import { useState } from "react"
 
 const Header = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false)
+	const [openMenu, setOpenMenu] = useState(null)
 
 	const handleBurgerClick = () => {
 		setIsBurgerActive((prev) => !prev)
 	}
+
+	const handleMenuToggle = (index) => {
+		setOpenMenu((prev) => (prev === index ? null : index))
+	}
+
 	return (
 		<header className={styles.header}>
 			<div className="container">
@@ -101,49 +107,51 @@ const Header = () => {
 						></span>
 					</div>
 				</div>
-				<nav className={styles.header__nav}>
-					<ul className={styles["header__nav-list"]}>
-						<li className={styles["header__nav-item"]}>
-							<NavLink className={styles["header__nav-link"]}>Главная</NavLink>
+				<nav className={styles.nav}>
+					<ul className={styles.nav__list}>
+						<li className={styles.nav__item}>
+							<NavLink className={styles["nav__item-link"]}>Товары</NavLink>
 						</li>
-						<li className={styles["header__nav-item"]}>
-							<NavLink className={styles["header__nav-link"]}>
-								Портфолио
-							</NavLink>
+						<li className={styles.nav__item}>
+							<NavLink className={styles["nav__item-link"]}>Портфолио</NavLink>
 						</li>
 						<li
-							className={`${styles["header__nav-item"]} ${styles["header__dropdown-item"]}`}
+							className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]}`}
+							onClick={() => handleMenuToggle(0)}
 						>
-							<NavLink className={styles["header__nav-link"]}>
+							<NavLink className={styles["nav__item-link"]}>
 								Покупателям
 							</NavLink>
-							<ul className={styles["header__nav-menu"]}>
-								<li className={styles["header__nav-item"]}>
-									<NavLink className={styles["header__nav-link"]}>
+							<ul
+								className={`${styles.nav__menu} ${openMenu === 0 ? styles["nav__menu_open"] : ""}`}
+							>
+								<li className={styles["nav__menu-item"]}>
+									<NavLink className={styles["nav__menu-link"]}>
 										Доставка и оплата
 									</NavLink>
 								</li>
-								<li className={styles["header__nav-item"]}>
-									<NavLink className={styles["header__nav-link"]}>
+								<li className={styles["nav__menu-item"]}>
+									<NavLink className={styles["nav__menu-link"]}>
 										Стоимость
 									</NavLink>
 								</li>
-								<li className={styles["header__nav-item"]}>
-									<NavLink className={styles["header__nav-link"]}>
+								<li className={styles["nav__menu-item"]}>
+									<NavLink className={styles["nav__menu-link"]}>
 										Полезные статьи и новости
 									</NavLink>
 								</li>
 							</ul>
 						</li>
 						<li
-							className={`${styles["header__nav-item"]} ${styles["header__dropdown-item"]}`}
+							className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]}`}
+							onClick={() => handleMenuToggle(1)}
 						>
-							<NavLink className={styles["header__nav-link"]}>
-								О компании
-							</NavLink>
-							<ul className={styles["header__nav-menu"]}>
-								<li className={styles["header__nav-item"]}>
-									<NavLink className={styles["header__nav-link"]}>
+							<NavLink className={styles["nav__item-link"]}>О компании</NavLink>
+							<ul
+								className={`${styles.nav__menu} ${openMenu === 1 ? styles["nav__menu_open"] : ""}`}
+							>
+								<li className={styles["nav__menu-item"]}>
+									<NavLink className={styles["nav__menu-link"]}>
 										Наши контакты
 									</NavLink>
 								</li>
