@@ -1,0 +1,204 @@
+@use '../../../styles/mixins';
+@use '../../../styles/media';
+
+.header {
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: .625rem;
+		border-bottom: 2px solid var(--white);
+	}
+
+	&__texts {
+		@extend %texts-fonts;
+	}
+
+	&__logo {
+		width: 10%;
+
+		@include media.bigMobile {
+			width: 16%;
+		}
+
+		@include media.mediumMobile {
+			width: 22%;
+		}
+	}
+
+	&__logo-img {
+		@include mixins.sizes(100%, auto);
+		border-radius: 10%;
+	}
+
+	&__logo-link {
+		display: inline-block;
+	}
+
+	&__text {
+		max-width: min-content;
+
+		@include media.bigMobile {
+			max-width: 140px;
+		}
+
+		@include media.mediumMobile {
+			display: none;
+		}
+	}
+
+	&__adress {
+		@include mixins.flexCenter;
+		column-gap: .31rem;
+
+		@include media.bigMobile {
+			display: none;
+		}
+	}
+
+	&__adress-text {
+		max-width: min-content;
+	}
+
+	&__adress-img {
+		@include mixins.sizes(1.62rem, auto);
+		cursor: default;
+	}
+
+	&__socials {
+		@include mixins.flexCenter;
+		flex-direction: column;
+		row-gap: .31rem;
+
+		@include media.bigMobile {
+			display: none;
+		}
+	}
+
+	&__socials-links {
+		display: flex;
+		column-gap: 1rem;
+	}
+
+	&__socials-text {
+		position: relative;
+
+		&::before {
+			@extend %header-blink-animation
+		}
+	}
+
+	&__social-link {
+		display: inline-block;
+		@include mixins.sizes(2.9rem, auto);
+		text-decoration: none;
+
+		& svg {
+			@include mixins.sizes(100%, 100%);
+			transition: var(--basic-transition);
+
+			@include media.hoverAndActive {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__callUs {
+		@include mixins.flexCenter;
+		flex-direction: column;
+		row-gap: .31rem;
+		font-weight: 600;
+
+		@include media.mediumMobile {
+			row-gap: .71rem;
+		}
+	}
+
+	&__callUs-text {
+		&::before {
+			@extend %header-blink-animation;
+		}
+	}
+
+	&__callUs-link {
+		font-size: 1.112rem;
+		transition: var(--basic-transition);
+
+		@include media.hoverAndActive {
+			color: var(--main-green);
+		}
+
+		@include media.bigMobile {
+			font-size: 1.612rem;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.912rem;
+		}
+	}
+
+	&__callUs-btn {
+		padding: .7rem;
+		font-size: 1.112rem;
+		border: none;
+		border-radius: .62rem;
+		cursor: pointer;
+		transition: var(--basic-transition);
+
+		@include media.hoverAndActive {
+			transform: var(--scale);
+		}
+
+		@include media.bigMobile {
+			padding: 1rem;
+			font-size: 1.312rem;
+		}
+
+		@include media.mediumMobile {
+			padding: 1.3rem;
+			font-size: 1.512rem;
+		}
+	}
+
+	&__burger {
+		display: none;
+		position: relative;
+		@include mixins.sizes(45px, 45px);
+		background-color: var(--white);
+		border-radius: 50%;
+		cursor: pointer;
+
+		@include media.bigMobile {
+			@include mixins.flexCenter;
+			flex-direction: column;
+			row-gap: 6px;
+		}
+
+		&::before {
+			@include mixins.increaseClickableArea;
+		}
+	}
+
+	&__burger-line {
+		@include mixins.sizes(23px, 2px);
+		background-color: var(--main-green);
+		transition: transform .3s ease-in-out;
+
+		&_active {
+			position: absolute;
+
+			&:first-child {
+				@include mixins.positioningBurgerLines(-45)
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:nth-child(3) {
+				@include mixins.positioningBurgerLines(45)
+			}
+		}
+	}
+}
