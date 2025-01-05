@@ -71,3 +71,10 @@
 	width: $width;
 	height: $height;
 }
+
+@mixin positioningBurgerLines($rotateVal) {
+	top: 50%;
+
+	transform: translateY(-50%) rotate(#{$rotateVal}deg);
+	transform-origin: center center;
+}
