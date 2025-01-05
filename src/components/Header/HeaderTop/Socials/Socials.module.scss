@@ -10,12 +10,4 @@
 	@include media.bigMobile {
 		display: none;
 	}
-
-	&__text {
-		position: relative;
-
-		&::before {
-			@extend %header-blink-animation
-		}
-	}
 }

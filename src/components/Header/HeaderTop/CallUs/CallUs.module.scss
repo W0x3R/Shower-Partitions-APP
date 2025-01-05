@@ -1,0 +1,54 @@
+@use '../../../../styles/mixins';
+@use '../../../../styles/media';
+@use '../../../../styles/animations';
+
+.callUs {
+	@include mixins.flexCenter;
+	flex-direction: column;
+	row-gap: .31rem;
+	font-weight: 600;
+
+	@include media.mediumMobile {
+		row-gap: .71rem;
+	}
+
+	&__link {
+		font-size: 1.112rem;
+		transition: var(--basic-transition);
+
+		@include media.hoverAndActive {
+			color: var(--main-green);
+		}
+
+		@include media.bigMobile {
+			font-size: 1.612rem;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.912rem;
+		}
+	}
+
+	&__btn {
+		padding: .7rem;
+		font-size: 1.112rem;
+		border: none;
+		border-radius: .62rem;
+		cursor: pointer;
+		transition: var(--basic-transition);
+
+		@include media.hoverAndActive {
+			transform: var(--scale);
+		}
+
+		@include media.bigMobile {
+			padding: 1rem;
+			font-size: 1.312rem;
+		}
+
+		@include media.mediumMobile {
+			padding: 1.3rem;
+			font-size: 1.512rem;
+		}
+	}
+}
