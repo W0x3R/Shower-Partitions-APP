@@ -12,29 +12,6 @@
 		border-bottom: 2px solid var(--white);
 	}
 
-	&__texts {
-		@extend %texts-fonts;
-	}
-
-
-	&__socials {
-		@include mixins.flexCenter;
-		flex-direction: column;
-		row-gap: .31rem;
-
-		@include media.bigMobile {
-			display: none;
-		}
-	}
-
-	&__socials-text {
-		position: relative;
-
-		&::before {
-			@extend %header-blink-animation
-		}
-	}
-
 	&__callUs {
 		@include mixins.flexCenter;
 		flex-direction: column;

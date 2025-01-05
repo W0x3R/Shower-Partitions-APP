@@ -1,0 +1,21 @@
+@use '../../../../styles/mixins';
+@use '../../../../styles/media';
+@use '../../../../styles/animations';
+
+.socials {
+	@include mixins.flexCenter;
+	flex-direction: column;
+	row-gap: .31rem;
+
+	@include media.bigMobile {
+		display: none;
+	}
+
+	&__text {
+		position: relative;
+
+		&::before {
+			@extend %header-blink-animation
+		}
+	}
+}

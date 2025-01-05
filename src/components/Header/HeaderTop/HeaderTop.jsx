@@ -1,8 +1,8 @@
 import styles from "./HeaderTop.module.scss"
-import SocialLinks from "../../SocialsLinks/SocialLinks"
 import Logo from "./Logo/Logo"
 import { Adress } from "./Adress/Adress"
 import { Description } from "./Description/Description"
+import { Socials } from "./Socials/Socials"
 
 const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 	return (
@@ -10,15 +10,7 @@ const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 			<Logo />
 			<Description />
 			<Adress />
-
-			<div className={styles.header__socials}>
-				<p
-					className={`${styles["header__texts"]} ${styles["header__socials-text"]}`}
-				>
-					<b>Задайте вопрос, мы онлайн:</b>
-				</p>
-				<SocialLinks gap="socials-header" sizes="socials__link-sizes" />
-			</div>
+			<Socials />
 			<div className={styles.header__callUs}>
 				<p
 					className={`${styles["header__texts"]} ${styles["header__socials-text"]}`}

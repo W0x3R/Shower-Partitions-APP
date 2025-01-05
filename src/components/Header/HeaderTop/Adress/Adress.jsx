@@ -5,7 +5,7 @@ export const Adress = () => {
 	return (
 		<div className={styles.adress}>
 			<Location className={styles.adress__img} />
-			<p className={`${styles.adress__text} ${styles.header__texts}`}>
+			<p className={`${styles.adress__text} header__texts`}>
 				<b>
 					Наш адрес: <br></br> Беларусь,г.Гомель, ул. Гомельская 25
 				</b>
