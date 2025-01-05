@@ -1,0 +1,23 @@
+@use '../../../../styles/mixins';
+@use '../../../../styles/media';
+
+.logo {
+	width: 10%;
+
+	@include media.bigMobile {
+		width: 16%;
+	}
+
+	@include media.mediumMobile {
+		width: 22%;
+	}
+
+	&__img {
+		@include mixins.sizes(100%, auto);
+		border-radius: 10%;
+	}
+
+	&__link {
+		display: inline-block;
+	}
+}

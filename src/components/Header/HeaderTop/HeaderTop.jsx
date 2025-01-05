@@ -1,17 +1,12 @@
-import { Link } from "react-router-dom"
 import Location from "../../../assets/header/location.svg?react"
-import logo from "../../../assets/header/logo.jpg"
 import styles from "./HeaderTop.module.scss"
 import SocialLinks from "../../SocialsLinks/SocialLinks"
+import Logo from "./Logo/Logo"
 
 const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 	return (
 		<div className={styles.header__top}>
-			<div className={styles.header__logo}>
-				<Link className={styles["header__logo-link"]} to=".">
-					<img src={logo} className={styles["header__logo-img"]} />
-				</Link>
-			</div>
+			<Logo />
 			<div className={`${styles.header__text} ${styles.header__texts}`}>
 				<strong>Производство перегородок в Гомеле</strong>
 			</div>

@@ -16,27 +16,6 @@
 		@extend %texts-fonts;
 	}
 
-	&__logo {
-		width: 10%;
-
-		@include media.bigMobile {
-			width: 16%;
-		}
-
-		@include media.mediumMobile {
-			width: 22%;
-		}
-	}
-
-	&__logo-img {
-		@include mixins.sizes(100%, auto);
-		border-radius: 10%;
-	}
-
-	&__logo-link {
-		display: inline-block;
-	}
-
 	&__text {
 		max-width: min-content;
 
