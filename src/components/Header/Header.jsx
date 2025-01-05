@@ -131,7 +131,7 @@ const Header = () => {
 							</div>
 
 							<ul
-								className={`${styles.nav__menu} ${openMenu === 0 ? styles["nav__menu_open"] : ""}`}
+								className={`${styles.nav__menu} ${openMenu === 0 ? styles["open"] : ""}`}
 							>
 								<li className={styles["nav__menu-item"]}>
 									<NavLink className={styles["nav__menu-link"]}>
@@ -166,7 +166,7 @@ const Header = () => {
 							</div>
 
 							<ul
-								className={`${styles.nav__menu} ${openMenu === 1 ? styles["nav__menu_open"] : ""}`}
+								className={`${styles.nav__menu} ${openMenu === 1 ? styles["open"] : ""}`}
 							>
 								<li className={styles["nav__menu-item"]}>
 									<NavLink className={styles["nav__menu-link"]}>

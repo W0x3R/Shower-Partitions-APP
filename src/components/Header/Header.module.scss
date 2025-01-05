@@ -66,7 +66,7 @@
 
 	&__adress-img {
 		@include mixins.sizes(1.62rem, auto);
-		cursor: default
+		cursor: default;
 	}
 
 	&__socials {
@@ -112,7 +112,6 @@
 		flex-direction: column;
 		row-gap: .31rem;
 		font-weight: 600;
-
 
 		@include media.mediumMobile {
 			row-gap: .71rem;
@@ -193,9 +192,7 @@
 			position: absolute;
 
 			&:first-child {
-				top: 50%;
-				transform: translateY(-50%) rotate(-45deg);
-				transform-origin: center center;
+				@include mixins.positioningBurgerLines(-45)
 			}
 
 			&:nth-child(2) {
@@ -203,9 +200,7 @@
 			}
 
 			&:nth-child(3) {
-				top: 50%;
-				transform: translateY(-50%) rotate(45deg);
-				transform-origin: center center;
+				@include mixins.positioningBurgerLines(45)
 			}
 		}
 	}
@@ -219,7 +214,7 @@
 		inset: 0;
 		@include mixins.flexCenter;
 		@include mixins.sizes(100vw, 100vh);
-		background-color: #ffffff;
+		background-color: var(--white);
 	}
 
 	&__list {
@@ -255,8 +250,6 @@
 				color: var(--main-green)
 			}
 		}
-
-
 
 		@media only screen and (min-width: 769px) {
 
@@ -295,7 +288,8 @@
 		left: 0;
 		min-width: 100%;
 		padding: 1.02rem;
-		background-color: #F5F8F9;
+		background-color: var(--white);
+		border-top: 1px solid rgb(28 28 28 / 17%);
 		color: var(--black);
 		opacity: 0;
 		pointer-events: none;
@@ -303,21 +297,19 @@
 
 		@include media.bigMobile {
 			position: static;
+			display: none;
 			padding: 0;
+			padding-top: 1.5rem;
 			opacity: 1;
 			pointer-events: all;
 			border-top: none;
-			background-color: transparent;
-			padding-top: 3.125vw;
-			display: none;
 		}
 
-		&_open {
+		&.open {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 		}
-
 	}
 
 	&__menu-item {
@@ -325,7 +317,7 @@
 			padding-bottom: 3.6px;
 		}
 
-		&:hover {
+		@include media.hoverAndActive {
 			text-decoration: underline;
 			text-decoration-skip-ink: none;
 			text-decoration-color: var(--black);
@@ -356,10 +348,6 @@
 					color: var(--main-green);
 				}
 			}
-		}
-
-		&:hover::after {
-			border-color: var(--main-green);
 		}
 
 		& .nav__item-link {
