@@ -123,7 +123,11 @@ const Header = () => {
 								<NavLink className={styles["nav__item-link"]}>
 									Покупателям
 								</NavLink>
-								<span className={styles["nav__item-arrow"]}>▼</span>
+								<span
+									className={`${styles["nav__item-arrow"]} ${openMenu === 0 ? styles["open"] : ""}`}
+								>
+									▼
+								</span>
 							</div>
 
 							<ul
@@ -154,7 +158,11 @@ const Header = () => {
 								<NavLink className={styles["nav__item-link"]}>
 									О компании
 								</NavLink>
-								<span className={styles["nav__item-arrow"]}>▼</span>
+								<span
+									className={`${styles["nav__item-arrow"]} ${openMenu === 1 ? styles["open"] : ""}`}
+								>
+									▼
+								</span>
 							</div>
 
 							<ul
