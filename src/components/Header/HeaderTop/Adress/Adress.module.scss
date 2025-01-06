@@ -3,7 +3,7 @@
 
 .adress {
 	@include mixins.flexCenter;
-	column-gap: .31rem;
+	column-gap: .31em;
 
 	@include media.bigMobile {
 		display: none;
@@ -14,7 +14,7 @@
 	}
 
 	&__img {
-		@include mixins.sizes(1.62rem, auto);
+		@include mixins.sizes(1.62em, auto);
 		cursor: default;
 	}
 }

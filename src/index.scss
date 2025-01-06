@@ -6,7 +6,7 @@
 html {
 	box-sizing: border-box;
 	/* Учитывать границы и паддинги в общей ширине элемента */
-	font-size: clamp(8px, 1.3vw, 16px);
+	// font-size: clamp(8px, 1.3vw, 16px);
 	/* Базовый размер шрифта для удобства использования rem */
 	scroll-behavior: smooth;
 	/* Плавная прокрутка */

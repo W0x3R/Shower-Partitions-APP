@@ -5,15 +5,15 @@
 .callUs {
 	@include mixins.flexCenter;
 	flex-direction: column;
-	row-gap: .31rem;
+	row-gap: .31em;
 	font-weight: 600;
 
 	@include media.mediumMobile {
-		row-gap: .71rem;
+		row-gap: .71em;
 	}
 
 	&__link {
-		font-size: 1.112rem;
+		font-size: 1.112em;
 		transition: var(--basic-transition);
 
 		@include media.hoverAndActive {
@@ -21,19 +21,19 @@
 		}
 
 		@include media.bigMobile {
-			font-size: 1.612rem;
+			font-size: 1.612em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.912rem;
+			font-size: 1.912em;
 		}
 	}
 
 	&__btn {
-		padding: .7rem;
-		font-size: 1.112rem;
+		padding: .7em;
+		font-size: 1.112em;
 		border: none;
-		border-radius: .62rem;
+		border-radius: .62em;
 		cursor: pointer;
 		transition: var(--basic-transition);
 
@@ -42,13 +42,13 @@
 		}
 
 		@include media.bigMobile {
-			padding: 1rem;
-			font-size: 1.312rem;
+			padding: 0.9em;
+			font-size: 1.212em;
 		}
 
 		@include media.mediumMobile {
-			padding: 1.3rem;
-			font-size: 1.512rem;
+			padding: 1.1em;
+			font-size: 1.412em;
 		}
 	}
 }

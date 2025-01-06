@@ -5,7 +5,7 @@
 	display: flex;
 
 	&-header {
-		column-gap: 1rem;
+		column-gap: 1em;
 	}
 
 
@@ -15,7 +15,7 @@
 		text-decoration: none;
 
 		&-sizes {
-			@include mixins.sizes(2.9rem, auto);
+			@include mixins.sizes(2.9em, auto);
 		}
 
 		& svg {

@@ -4,10 +4,11 @@
 
 .header {
 	&__top {
+		font-size: clamp(8px, 1.4vw, 16px);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-bottom: .625rem;
+		padding-bottom: .625em;
 		border-bottom: 2px solid var(--white);
 		position: relative;
 		z-index: 100;
