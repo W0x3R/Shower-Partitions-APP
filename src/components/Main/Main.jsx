@@ -5,7 +5,7 @@ import { About } from "./About/About"
 
 export const Main = () => {
 	return (
-		<main>
+		<main className={styles.main}>
 			<div className={styles.main__background}>
 				<img
 					className={styles["main__background-desktop"]}
