@@ -14,10 +14,12 @@ const Header = () => {
 	}
 
 	const handleMenuToggle = (key) => {
-		setIsMenuOpen((prev) => ({
-			...prev,
-			[key]: !prev[key],
-		}))
+		if (window.innerWidth <= 768) {
+			setIsMenuOpen((prev) => ({
+				...prev,
+				[key]: !prev[key],
+			}))
+		}
 	}
 
 	return (
