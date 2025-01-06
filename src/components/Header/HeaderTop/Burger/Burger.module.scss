@@ -22,7 +22,7 @@
 	&__line {
 		@include mixins.sizes(23px, 2px);
 		background-color: var(--main-green);
-		transition: transform .3s ease-in-out;
+		transition: transform 0.2s;
 
 		&.active {
 			position: absolute;
