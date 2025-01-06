@@ -9,5 +9,20 @@
 		align-items: center;
 		padding-bottom: .625rem;
 		border-bottom: 2px solid var(--white);
+		position: relative;
+		z-index: 100;
+		color: var(--white);
+
+		@include media.bigMobile {
+			border-bottom: none;
+		}
+
+		&.open {
+			color: var(--black);
+
+			@media only screen and (min-width: 769px) {
+				color: var(--white);
+			}
+		}
 	}
 }
