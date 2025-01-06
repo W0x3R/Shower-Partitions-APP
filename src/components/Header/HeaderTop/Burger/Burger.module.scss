@@ -23,21 +23,21 @@
 		@include mixins.sizes(23px, 2px);
 		background-color: var(--main-green);
 		transition: transform 0.2s;
+	}
 
-		&.active {
-			position: absolute;
+	&__line.active {
+		position: absolute;
 
-			&:first-child {
-				@include mixins.positioningBurgerLines(-45)
-			}
+		&:first-child {
+			@include mixins.positioningBurgerLines(-45)
+		}
 
-			&:nth-child(2) {
-				opacity: 0;
-			}
+		&:nth-child(2) {
+			opacity: 0;
+		}
 
-			&:nth-child(3) {
-				@include mixins.positioningBurgerLines(45)
-			}
+		&:nth-child(3) {
+			@include mixins.positioningBurgerLines(45)
 		}
 	}
 }
