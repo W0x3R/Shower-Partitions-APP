@@ -17,13 +17,13 @@
 		@include media.bigMobile {
 			border-bottom: none;
 		}
+	}
 
-		&.open {
-			color: var(--black);
+	&__top.open {
+		color: var(--black);
 
-			@media only screen and (min-width: 769px) {
-				color: var(--white);
-			}
+		@media only screen and (min-width: 769px) {
+			color: var(--white);
 		}
 	}
 }
