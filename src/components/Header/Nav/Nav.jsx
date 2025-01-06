@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom"
 import styles from "./Nav.module.scss"
 
-export const Nav = ({ handleMenuToggle, isMenuOpen }) => {
+export const Nav = ({ onMenuClick, isMenuOpen, isBurgerActive }) => {
 	return (
-		<nav className={styles.nav}>
+		<nav className={`${styles.nav} ${isBurgerActive ? styles.open : ""}`}>
 			<ul className={styles.nav__list}>
 				<li className={styles.nav__item}>
 					<NavLink className={styles["nav__item-link"]}>Товары</NavLink>
@@ -13,19 +13,19 @@ export const Nav = ({ handleMenuToggle, isMenuOpen }) => {
 				</li>
 				<li
 					className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]}`}
-					onClick={() => handleMenuToggle(0)}
+					onClick={() => onMenuClick("customer")}
 				>
 					<div className={styles["nav__link-wrapper"]}>
 						<NavLink className={styles["nav__item-link"]}>Покупателям</NavLink>
 						<span
-							className={`${styles["nav__item-arrow"]} ${isMenuOpen === 0 ? styles["open"] : ""}`}
+							className={`${styles["nav__item-arrow"]} ${isMenuOpen.customer ? styles["open"] : ""}`}
 						>
 							▼
 						</span>
 					</div>
 
 					<ul
-						className={`${styles.nav__menu} ${isMenuOpen === 0 ? styles["open"] : ""}`}
+						className={`${styles.nav__menu} ${isMenuOpen.customer ? styles["open"] : ""}`}
 					>
 						<li className={styles["nav__menu-item"]}>
 							<NavLink className={styles["nav__menu-link"]}>
@@ -44,19 +44,19 @@ export const Nav = ({ handleMenuToggle, isMenuOpen }) => {
 				</li>
 				<li
 					className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]}`}
-					onClick={() => handleMenuToggle(1)}
+					onClick={() => onMenuClick("company")}
 				>
 					<div className={styles["nav__link-wrapper"]}>
 						<NavLink className={styles["nav__item-link"]}>О компании</NavLink>
 						<span
-							className={`${styles["nav__item-arrow"]} ${isMenuOpen === 1 ? styles["open"] : ""}`}
+							className={`${styles["nav__item-arrow"]} ${isMenuOpen.company ? styles["open"] : ""}`}
 						>
 							▼
 						</span>
 					</div>
 
 					<ul
-						className={`${styles.nav__menu} ${isMenuOpen === 1 ? styles["open"] : ""}`}
+						className={`${styles.nav__menu} ${isMenuOpen.company ? styles["open"] : ""}`}
 					>
 						<li className={styles["nav__menu-item"]}>
 							<NavLink className={styles["nav__menu-link"]}>
