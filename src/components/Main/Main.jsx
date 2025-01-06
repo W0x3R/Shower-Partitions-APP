@@ -16,9 +16,7 @@ export const Main = () => {
 					src={mainBackgroundMobile}
 				></img>
 			</div>
-			<div className="container">
-				<About />
-			</div>
+			<About />
 		</main>
 	)
 }

@@ -24,17 +24,15 @@ const Header = () => {
 
 	return (
 		<header className="header">
-			<div className="container">
-				<HeaderTop
-					onBurgerClick={handleBurgerClick}
-					isBurgerActive={isBurgerActive}
-				/>
-				<Nav
-					onMenuClick={handleMenuToggle}
-					isMenuOpen={isMenuOpen}
-					isBurgerActive={isBurgerActive}
-				/>
-			</div>
+			<HeaderTop
+				onBurgerClick={handleBurgerClick}
+				isBurgerActive={isBurgerActive}
+			/>
+			<Nav
+				onMenuClick={handleMenuToggle}
+				isMenuOpen={isMenuOpen}
+				isBurgerActive={isBurgerActive}
+			/>
 		</header>
 	)
 }
