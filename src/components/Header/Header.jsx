@@ -4,14 +4,20 @@ import { Nav } from "./Nav/Nav"
 
 const Header = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false)
-	const [isMenuOpen, setIsMenuOpen] = useState(null)
+	const [isMenuOpen, setIsMenuOpen] = useState({
+		customer: false,
+		company: false,
+	})
 
 	const handleBurgerClick = () => {
 		setIsBurgerActive((prev) => !prev)
 	}
 
-	const handleMenuToggle = (index) => {
-		setIsMenuOpen((prev) => (prev === index ? null : index))
+	const handleMenuToggle = (key) => {
+		setIsMenuOpen((prev) => ({
+			...prev,
+			[key]: !prev[key],
+		}))
 	}
 
 	return (
@@ -21,7 +27,11 @@ const Header = () => {
 					onBurgerClick={handleBurgerClick}
 					isBurgerActive={isBurgerActive}
 				/>
-				<Nav onMenuClick={handleMenuToggle} isMenuOpen={isMenuOpen} />
+				<Nav
+					onMenuClick={handleMenuToggle}
+					isMenuOpen={isMenuOpen}
+					isBurgerActive={isBurgerActive}
+				/>
 			</div>
 		</header>
 	)
