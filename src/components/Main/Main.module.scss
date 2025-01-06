@@ -1,0 +1,39 @@
+@use '../../styles/media';
+
+.main {
+
+	&__background {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&__background-desktop {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 1;
+
+		@include media.mediumMobile {
+			opacity: 0;
+		}
+	}
+
+	&__background-mobile {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0;
+
+		@include media.mediumMobile {
+			opacity: 1;
+		}
+	}
+
+}
