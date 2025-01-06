@@ -5,11 +5,23 @@
 	border-bottom: 2px solid var(--white);
 
 	@include media.bigMobile {
-		position: absolute;
+		position: fixed;
 		inset: 0;
-		@include mixins.flexCenter;
+		padding-top: 19rem;
+		padding-bottom: 4rem;
+		opacity: 0;
+		pointer-events: none;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
 		@include mixins.sizes(100vw, 100vh);
-		background-color: var(--white);
+		transition: var(--basic-transition);
+		background-color: #F5F8F9;
+	}
+
+	&.open {
+		opacity: 1;
+		pointer-events: all;
 	}
 
 	&__list {
@@ -18,8 +30,13 @@
 		align-items: center;
 
 		@include media.bigMobile {
+			max-height: 100%;
+			overflow-y: auto;
 			flex-direction: column;
-			flex-basis: 50%;
+			flex-basis: 70%;
+			padding: 1rem;
+			background: #ffffffd6;
+			border-radius: 25px;
 		}
 	}
 
@@ -72,7 +89,7 @@
 		font-weight: 600;
 
 		@include media.bigMobile {
-			font-size: 2.6rem;
+			font-size: 2.4rem;
 			color: var(--black);
 		}
 	}
@@ -98,6 +115,7 @@
 			opacity: 1;
 			pointer-events: all;
 			border-top: none;
+			background-color: transparent;
 		}
 
 		&.open {
