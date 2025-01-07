@@ -13,8 +13,12 @@
 	}
 
 	&__img {
-		@include mixins.sizes(100%, auto);
+		@include mixins.sizes(90%, auto);
 		border-radius: 10%;
+
+		@include media.mediumMobile {
+			width: 100%;
+		}
 	}
 
 	&__link {

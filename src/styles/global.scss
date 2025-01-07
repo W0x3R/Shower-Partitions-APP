@@ -1,10 +1,15 @@
 @use './mixins';
+@use './media';
 @use './animations';
 
 .container {
 	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 20px;
+
+	@include media.bigMobile {
+		padding-inline: 10px;
+	}
 }
 
 .header {

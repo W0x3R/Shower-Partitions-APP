@@ -2,7 +2,7 @@
 @use '../../../styles/media';
 
 .nav {
-	font-size: clamp(10px, 1.5vw, 16px);
+	font-size: clamp(9px, 1.5vw, 16px);
 	border-bottom: 2px solid var(--white);
 
 	@include media.bigMobile {
@@ -94,6 +94,10 @@
 			font-size: 2.3em;
 			color: var(--black);
 		}
+
+		@include media.smallMobile {
+			font-size: 2.1em;
+		}
 	}
 
 	&__menu {
@@ -113,7 +117,7 @@
 			position: static;
 			display: none;
 			padding: 0;
-			padding-top: 1.5em;
+			padding: 1em 0 0 1em;
 			opacity: 1;
 			pointer-events: all;
 			border-top: none;
@@ -148,6 +152,11 @@
 		@include media.bigMobile {
 			font-size: 2em;
 		}
+
+		@include media.smallMobile {
+			font-size: 1.8em;
+		}
+
 	}
 
 	&__dropdown-item {

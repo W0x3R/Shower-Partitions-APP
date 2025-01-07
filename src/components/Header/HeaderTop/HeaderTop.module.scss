@@ -4,7 +4,7 @@
 
 .header {
 	&__top {
-		font-size: clamp(8px, 1.4vw, 16px);
+		font-size: clamp(10px, 1.6vw, 16px);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -16,6 +16,10 @@
 
 		@include media.bigMobile {
 			border-bottom: none;
+		}
+
+		@include media.mediumMobile {
+			font-size: clamp(7.3px, 2vw, 10px);
 		}
 	}
 

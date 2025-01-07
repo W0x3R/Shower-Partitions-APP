@@ -9,7 +9,7 @@
 	font-weight: 600;
 
 	@include media.mediumMobile {
-		row-gap: .71em;
+		row-gap: 0.61em;
 	}
 
 	&__link {
@@ -25,7 +25,8 @@
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.912em;
+			font-size: 1.812em;
+			letter-spacing: .0313em;
 		}
 	}
 
@@ -47,8 +48,8 @@
 		}
 
 		@include media.mediumMobile {
-			padding: 1.1em;
-			font-size: 1.412em;
+			padding: 1em;
+			font-size: 1.312em;
 		}
 	}
 }
