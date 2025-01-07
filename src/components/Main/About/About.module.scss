@@ -1,18 +1,98 @@
-.about {
+@use '../../../styles/media';
+@use '../../../styles/animations';
 
-	&__title {}
+.about {
+	margin-top: 3.5em;
+	font-size: clamp(10px, 1.5vw, 16px);
+
+	&__title {
+		font-size: 3.25em;
+		font-weight: 300;
+		margin-bottom: 0.5375em;
+
+		& b {
+			font-weight: 700;
+		}
+	}
 
 	&__description {}
 
-	&__description-dots {}
+	&__description-text {
+		margin-bottom: 1.5em;
+		font-size: 1.5em;
+		max-width: 42%;
+	}
 
-	&__description-text {}
+	&__features {
+		display: flex;
+		column-gap: 1.125em;
+		max-width: 50%;
+		margin-bottom: 2.2em;
+	}
 
-	&__features {}
+	&__features-item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 0 0 25%;
+		row-gap: .5em;
+		cursor: pointer;
 
-	&__order {}
+		@include media.hoverAndActive {
+			& img {
+				transform: scale(1.1);
 
-	&__order-btn {}
+			}
+		}
 
-	&__order-text {}
+		& img {
+			transition: var(--basic-transition);
+			width: 40px;
+		}
+
+	}
+
+	&__features-text {
+		font-size: .81em;
+		letter-spacing: .04em;
+	}
+
+	&__order {
+		display: flex;
+		align-items: center;
+		column-gap: .9375em;
+	}
+
+	&__order-btn {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-inline: 1.875em;
+		background-color: var(--main-green);
+		opacity: 0.9;
+		width: 400px;
+		height: 75px;
+		border-radius: 15px;
+		border: none;
+		cursor: pointer;
+		transition: var(--basic-transition);
+		font-size: 1em;
+		font-weight: 600;
+		color: var(--white);
+
+		@include media.hoverAndActive {
+			opacity: 1;
+		}
+
+		& img {
+			width: 26px;
+			animation: scaleAndRotate 2.2s linear infinite;
+		}
+	}
+
+	&__order-text {
+		font-size: .81em;
+		letter-spacing: .04em;
+		max-width: min-content;
+	}
 }
