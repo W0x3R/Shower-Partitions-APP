@@ -9,6 +9,12 @@ export const About = () => {
 				<b>Душевые перегородки</b> на заказ
 			</h1>
 			<div className={styles.about__description}>
+				<div className={styles["about__description-dots"]}>
+					<span className={styles["about__description-dot"]}></span>
+					<span className={styles["about__description-dot"]}></span>
+					<span className={styles["about__description-dot"]}></span>
+					<span className={styles["about__description-dot"]}></span>
+				</div>
 				<p className={styles["about__description-text"]}>
 					Стильные ограждения для душевой премиум качества
 				</p>
@@ -24,7 +30,7 @@ export const About = () => {
 				<div className={styles["about__features-item"]}>
 					<img src={featureCircle} />
 					<p className={styles["about__features-text"]}>
-						<b>Дизайнерские решения.</b>
+						<b>Дизайнерские решения</b>
 					</p>
 				</div>
 				<div className={styles["about__features-item"]}>
