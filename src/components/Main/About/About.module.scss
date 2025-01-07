@@ -2,8 +2,15 @@
 @use '../../../styles/animations';
 
 .about {
-	margin-top: 3.5em;
-	font-size: clamp(10px, 1.5vw, 16px);
+	margin-top: 4em;
+	font-size: clamp(12px, 1.8vw, 16px);
+
+	@include media.bigMobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 2em;
+	}
 
 	&__title {
 		font-size: 3.25em;
@@ -13,41 +20,107 @@
 		& b {
 			font-weight: 700;
 		}
+
+		@include media.bigMobile {
+			max-width: 80%;
+			text-align: center;
+			line-height: 1.1em;
+			margin-bottom: 0.4375em;
+		}
 	}
 
-	&__description {}
+	&__description {
+		display: flex;
+		column-gap: 10px;
+
+		@include media.bigMobile {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 1.15em;
+		}
+	}
+
+	&__description-dots {
+		margin-top: .3125em;
+
+		@include media.bigMobile {
+			margin-top: 0;
+		}
+	}
+
+	&__description-dot {
+		display: inline-block;
+		width: 9px;
+		height: 9px;
+		border: 2px solid var(--main-green);
+		border-radius: 50%;
+		animation: wave 2s linear infinite;
+
+		@include media.bigMobile {
+			width: 14px;
+			height: 14px;
+		}
+
+		@for $i from 1 through 4 {
+			&:nth-child(#{$i}) {
+				animation-delay: #{($i - 1) * 0.5}s;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: .3125em;
+
+			@include media.bigMobile {
+				margin-right: 1.4125em;
+			}
+		}
+	}
 
 	&__description-text {
 		margin-bottom: 1.5em;
 		font-size: 1.5em;
 		max-width: 42%;
+
+		@include media.bigMobile {
+			margin-bottom: 1.3em;
+			max-width: 80%;
+			text-align: center;
+			font-size: 1.8em;
+		}
 	}
 
 	&__features {
 		display: flex;
 		column-gap: 1.125em;
 		max-width: 50%;
-		margin-bottom: 2.2em;
+		margin-bottom: 2.6em;
+
+		@include media.bigMobile {
+
+			max-width: 100%;
+			column-gap: 0.925em;
+		}
 	}
 
 	&__features-item {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
+		text-align: center;
 		flex: 0 0 25%;
 		row-gap: .5em;
 		cursor: pointer;
 
-		@include media.hoverAndActive {
-			& img {
-				transform: scale(1.1);
-
-			}
-		}
-
 		& img {
 			transition: var(--basic-transition);
 			width: 40px;
+			animation: scale 3s linear infinite;
+		}
+
+		@include media.bigMobile {
+			align-items: center;
+			text-align: center;
+			flex-basis: calc(25% - 0.925em);
 		}
 
 	}
@@ -55,38 +128,80 @@
 	&__features-text {
 		font-size: .81em;
 		letter-spacing: .04em;
+
+		@include media.bigMobile {
+			font-size: 1.01em;
+		}
 	}
 
 	&__order {
 		display: flex;
 		align-items: center;
 		column-gap: .9375em;
+
+		@include media.bigMobile {
+			flex-direction: column;
+			row-gap: 25px;
+		}
 	}
 
 	&__order-btn {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-inline: 1.875em;
-		background-color: var(--main-green);
+		column-gap: .625em;
+		padding: 1.575em 1.875em;
+		overflow: hidden;
 		opacity: 0.9;
-		width: 400px;
-		height: 75px;
+		background-color: var(--main-green);
 		border-radius: 15px;
 		border: none;
 		cursor: pointer;
 		transition: var(--basic-transition);
-		font-size: 1em;
 		font-weight: 600;
 		color: var(--white);
+
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: var(--white);
+			width: 10%;
+			height: 300%;
+			transform: rotate(45deg) translateY(-50%);
+			animation: glare 3s linear infinite;
+			opacity: 0.8;
+		}
+
+
+		@include media.bigMobile {
+			padding: 1.775em 1.475em;
+		}
 
 		@include media.hoverAndActive {
 			opacity: 1;
 		}
 
+		& span {
+			font-size: 1em;
+			white-space: nowrap;
+
+			@include media.bigMobile {
+				font-size: 1.3em;
+			}
+
+		}
+
 		& img {
 			width: 26px;
 			animation: scaleAndRotate 2.2s linear infinite;
+
+			@include media.bigMobile {
+				width: 23px;
+			}
 		}
 	}
 
@@ -94,5 +209,10 @@
 		font-size: .81em;
 		letter-spacing: .04em;
 		max-width: min-content;
+
+		@include media.bigMobile {
+			max-width: 100%;
+			font-size: 1.41em;
+		}
 	}
 }
