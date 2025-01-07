@@ -127,6 +127,7 @@
 	&__features-text {
 		font-size: .81em;
 		letter-spacing: .04em;
+		text-align: center;
 
 		@include media.bigMobile {
 			font-size: 1.01em;
