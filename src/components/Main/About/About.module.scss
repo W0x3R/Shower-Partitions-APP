@@ -1,4 +1,5 @@
 @use '../../../styles/media';
+@use '../../../styles/mixins';
 @use '../../../styles/animations';
 
 .about {
@@ -17,19 +18,19 @@
 	}
 
 	&__title {
+		margin-bottom: 0.5375em;
 		font-size: 3.25em;
 		font-weight: 300;
-		margin-bottom: 0.5375em;
 
 		& b {
 			font-weight: 700;
 		}
 
 		@include media.bigMobile {
+			margin-bottom: 0.4375em;
 			max-width: 80%;
 			text-align: center;
 			line-height: 1.1em;
-			margin-bottom: 0.4375em;
 		}
 	}
 
@@ -40,7 +41,7 @@
 		@include media.bigMobile {
 			flex-direction: column;
 			align-items: center;
-			row-gap: 1.15em;
+			gap: 1.15em 0;
 		}
 	}
 
@@ -54,15 +55,13 @@
 
 	&__description-dot {
 		display: inline-block;
-		width: 9px;
-		height: 9px;
+		@include mixins.sizes(9px, 9px);
 		border: 2px solid var(--main-green);
-		border-radius: 50%;
+		border-radius: var(--border-r-circle);
 		animation: wave 2s linear infinite;
 
 		@include media.bigMobile {
-			width: 14px;
-			height: 14px;
+			@include mixins.sizes(14px, 14px);
 		}
 
 		@for $i from 1 through 4 {
@@ -82,8 +81,8 @@
 
 	&__description-text {
 		margin-bottom: 1.5em;
-		font-size: 1.5em;
 		max-width: 42%;
+		font-size: 1.5em;
 
 		@include media.bigMobile {
 			margin-bottom: 1.3em;
@@ -96,29 +95,26 @@
 	&__features {
 		display: flex;
 		column-gap: 1.125em;
-		max-width: 50%;
 		margin-bottom: 2.6em;
+		max-width: 50%;
 
 		@include media.bigMobile {
-
-			max-width: 100%;
 			column-gap: 0.925em;
+			max-width: 100%;
 		}
 	}
 
 	&__features-item {
-		display: flex;
+		@include mixins.flexCenter;
 		flex-direction: column;
-		align-items: center;
-		text-align: center;
 		flex: 0 0 25%;
 		row-gap: .5em;
 		cursor: pointer;
 
 		& img {
-			transition: var(--basic-transition);
 			width: 40px;
 			animation: scale 3s linear infinite;
+			transition: var(--basic-transition);
 		}
 
 		@include media.bigMobile {
@@ -126,7 +122,6 @@
 			text-align: center;
 			flex-basis: calc(25% - 0.925em);
 		}
-
 	}
 
 	&__features-text {
@@ -145,7 +140,7 @@
 
 		@include media.bigMobile {
 			flex-direction: column;
-			row-gap: 25px;
+			gap: 1.5625em 0;
 		}
 	}
 
@@ -166,20 +161,17 @@
 		font-weight: 600;
 		color: var(--white);
 
-
 		&:after {
 			content: '';
 			position: absolute;
 			left: 0;
 			top: 0;
 			background: var(--white);
-			width: 10%;
-			height: 300%;
+			@include mixins.sizes(10%, 300%);
 			transform: rotate(45deg) translateY(-50%);
 			animation: glare 3s linear infinite;
 			opacity: 0.8;
 		}
-
 
 		@include media.bigMobile {
 			padding: 1.775em 1.475em;
@@ -196,7 +188,6 @@
 			@include media.bigMobile {
 				font-size: 1.3em;
 			}
-
 		}
 
 		& img {
@@ -210,9 +201,9 @@
 	}
 
 	&__order-text {
+		max-width: min-content;
 		font-size: .81em;
 		letter-spacing: .04em;
-		max-width: min-content;
 
 		@include media.bigMobile {
 			max-width: 100%;
