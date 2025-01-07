@@ -9,7 +9,6 @@
 
 @mixin flexCenter {
 	display: flex;
-	text-align: center;
 	justify-content: center;
 	align-items: center;
 }
@@ -55,8 +54,8 @@
 	transform: translateY(-50%);
 	width: 8px;
 	height: 8px;
-	background-color: rgb(0, 255, 94);
-	border-radius: 50%;
+	background-color: var(--main-green);
+	border-radius: var(--border-r-circle);
 	animation: blink 2.2s infinite;
 
 	@include media.bigMobile {
@@ -78,7 +77,6 @@
 
 @mixin positioningBurgerLines($rotateVal) {
 	top: 50%;
-
 	transform: translateY(-50%) rotate(#{$rotateVal}deg);
 	transform-origin: center center;
 }
