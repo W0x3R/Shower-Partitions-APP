@@ -1,6 +1,7 @@
 $tablet: 1024px;
 $big-mobile: 768px;
 $medium-mobile: 500px;
+$small-mobile: 380px;
 
 @mixin tablet {
 	@media only screen and (max-width: $tablet) {
@@ -16,6 +17,12 @@ $medium-mobile: 500px;
 
 @mixin mediumMobile {
 	@media only screen and (max-width: $medium-mobile) {
+		@content;
+	}
+}
+
+@mixin smallMobile {
+	@media only screen and (max-width: $small-mobile) {
 		@content;
 	}
 }
