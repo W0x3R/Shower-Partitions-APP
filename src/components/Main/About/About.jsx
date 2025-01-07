@@ -23,7 +23,8 @@ export const About = () => {
 				<div className={styles["about__features-item"]}>
 					<img src={featureCircle} />
 					<p className={styles["about__features-text"]}>
-						<b>Закаленное стекло</b> <br />
+						<b>Закаленное стекло</b>
+						<br />
 						8-10 мм
 					</p>
 				</div>
@@ -36,19 +37,13 @@ export const About = () => {
 				<div className={styles["about__features-item"]}>
 					<img src={featureCircle} />
 					<p className={styles["about__features-text"]}>
-						<b>
-							Тонкая <br />
-							рамка
-						</b>
+						<b>Тонкая рамка</b>
 					</p>
 				</div>
 				<div className={styles["about__features-item"]}>
 					<img src={featureCircle} />
 					<p className={styles["about__features-text"]}>
-						<b>
-							Надежная <br />
-							фурнитура
-						</b>
+						<b>Надежная фурнитура</b>
 					</p>
 				</div>
 			</div>
