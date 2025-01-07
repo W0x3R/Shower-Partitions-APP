@@ -8,10 +8,11 @@
 	@include media.bigMobile {
 		position: fixed;
 		inset: 0;
+		z-index: 10;
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
-		padding-top: 19em;
+		padding-top: 22em;
 		padding-bottom: 4em;
 		@include mixins.sizes(100vw, 100vh);
 		opacity: 0;
