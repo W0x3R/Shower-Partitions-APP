@@ -14,7 +14,7 @@
 	}
 
 	&__img {
-		@include mixins.sizes(1.62em, auto);
+		@include mixins.sizes(1.32em, auto);
 		cursor: default;
 	}
 }

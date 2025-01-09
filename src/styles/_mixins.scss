@@ -33,16 +33,16 @@
 }
 
 %texts-fonts {
-	font-size: 0.9625em;
+	font-size: 0.8em;
 	letter-spacing: var(--basic-letter-spacing);
 	text-align: center;
 
 	@include media.bigMobile {
-		font-size: 1.55em;
+		font-size: 1.25em;
 	}
 
 	@include media.mediumMobile {
-		font-size: 1.7em;
+		font-size: 1.6em;
 	}
 }
 

@@ -13,7 +13,7 @@
 	}
 
 	&__link {
-		font-size: 1.112em;
+		font-size: 0.9em;
 		transition: var(--basic-transition);
 
 		@include media.hoverAndActive {
@@ -21,18 +21,18 @@
 		}
 
 		@include media.bigMobile {
-			font-size: 1.612em;
+			font-size: 1.3em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.812em;
+			font-size: 1.712em;
 			letter-spacing: .0313em;
 		}
 	}
 
 	&__btn {
-		padding: .7em;
-		font-size: 1.112em;
+		padding: .6em;
+		font-size: 0.9em;
 		border: none;
 		border-radius: .62em;
 		cursor: pointer;
@@ -43,12 +43,12 @@
 		}
 
 		@include media.bigMobile {
-			padding: 0.9em;
-			font-size: 1.212em;
+			padding: 0.8em;
+			font-size: 1.1em;
 		}
 
 		@include media.mediumMobile {
-			padding: 1em;
+			padding: 0.9em;
 			font-size: 1.312em;
 		}
 	}

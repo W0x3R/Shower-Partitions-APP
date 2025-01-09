@@ -2,10 +2,10 @@
 @use '../../../../styles/media';
 
 .logo {
-	width: 10%;
+	width: 7%;
 
 	@include media.bigMobile {
-		width: 16%;
+		width: 14%;
 	}
 
 	@include media.mediumMobile {
@@ -13,7 +13,7 @@
 	}
 
 	&__img {
-		@include mixins.sizes(90%, auto);
+		@include mixins.sizes(100%, auto);
 		border-radius: 10%;
 
 		@include media.mediumMobile {

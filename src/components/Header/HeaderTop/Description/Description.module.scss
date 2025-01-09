@@ -3,10 +3,6 @@
 .description {
 	max-width: min-content;
 
-	@include media.bigMobile {
-		max-width: 140px;
-	}
-
 	@include media.mediumMobile {
 		display: none;
 	}

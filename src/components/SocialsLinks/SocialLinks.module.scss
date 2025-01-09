@@ -8,14 +8,13 @@
 		column-gap: 1em;
 	}
 
-
 	&__link {
 		display: inline-block;
 
 		text-decoration: none;
 
 		&-sizes {
-			@include mixins.sizes(2.9em, auto);
+			@include mixins.sizes(2.4em, auto);
 		}
 
 		& svg {

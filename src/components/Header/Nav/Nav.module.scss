@@ -2,7 +2,7 @@
 @use '../../../styles/media';
 
 .nav {
-	font-size: clamp(9px, 1.5vw, 16px);
+	font-size: clamp(9px, 1.6vw, 16px);
 	border-bottom: 2px solid var(--white);
 
 	@include media.bigMobile {
@@ -45,7 +45,7 @@
 
 	&__item {
 		transition: var(--basic-transition);
-		padding: 1.02em;
+		padding: 0.82em;
 		letter-spacing: var(--basic-letter-spacing);
 		cursor: pointer;
 		min-width: max-content;
@@ -85,7 +85,7 @@
 	}
 
 	&__item-link {
-		font-size: 1.05em;
+		font-size: 0.9em;
 		letter-spacing: var(--basic-letter-spacing);
 		text-transform: uppercase;
 		color: var(--white);
@@ -106,7 +106,7 @@
 		top: 100%;
 		left: 0;
 		min-width: 100%;
-		padding: 1.02em;
+		padding: 0.9em;
 		background-color: var(--white);
 		border-top: 1px solid rgb(28 28 28 / 17%);
 		color: var(--black);
@@ -145,7 +145,7 @@
 	}
 
 	&__menu-link {
-		font-size: 1em;
+		font-size: 0.85em;
 		letter-spacing: var(--basic-letter-spacing);
 		white-space: nowrap;
 		color: var(--black);

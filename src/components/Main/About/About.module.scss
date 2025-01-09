@@ -3,23 +3,73 @@
 @use '../../../styles/animations';
 
 .about {
-	margin-top: 4em;
-	font-size: clamp(12px, 1.8vw, 16px);
+	position: relative;
+	z-index: -1;
+	padding-top: 10.5rem;
+	margin-top: -10.5rem;
+	min-height: 100%;
+	font-size: clamp(12px, 1.6vw, 16px);
 
-	@include media.smallMobile {
-		font-size: clamp(10px, 3.3vw, 12px);
+	@include media.mediumMobile {
+		min-height: 100dvh;
+		font-size: clamp(10.5px, 2.82vw, 11.5px);
 	}
 
 	@include media.bigMobile {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-top: 2em;
+		padding-top: 8rem;
+		margin-top: -8rem;
+	}
+
+	&__background {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&__background-desktop {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 1;
+
+		@include media.mediumMobile {
+			opacity: 0;
+		}
+	}
+
+	&__background-mobile {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0;
+
+		@include media.mediumMobile {
+			opacity: 1;
+		}
+	}
+
+	&__content {
+		padding-top: 4.5em;
+		padding-bottom: 2.5em;
+
+		@include media.mediumMobile {
+			padding-top: 5.83em;
+		}
 	}
 
 	&__title {
-		margin-bottom: 0.5375em;
-		font-size: 3.25em;
+		margin-bottom: 0.6375em;
+		font-size: 3.1em;
+		letter-spacing: .05em;
 		font-weight: 300;
 
 		& b {
@@ -27,10 +77,13 @@
 		}
 
 		@include media.bigMobile {
-			margin-bottom: 0.4375em;
-			max-width: 80%;
+			margin-bottom: 0.7375em;
 			text-align: center;
 			line-height: 1.1em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.77em;
 		}
 	}
 
@@ -41,7 +94,7 @@
 		@include media.bigMobile {
 			flex-direction: column;
 			align-items: center;
-			gap: 1.15em 0;
+			gap: 2.05em 0;
 		}
 	}
 
@@ -80,15 +133,14 @@
 	}
 
 	&__description-text {
-		margin-bottom: 1.5em;
-		max-width: 42%;
+		margin-bottom: 1.3em;
+		max-width: 40%;
 		font-size: 1.5em;
 
 		@include media.bigMobile {
-			margin-bottom: 1.3em;
-			max-width: 80%;
+			max-width: 90%;
 			text-align: center;
-			font-size: 1.8em;
+			font-size: 1.85em;
 		}
 	}
 
@@ -96,10 +148,14 @@
 		display: flex;
 		align-items: flex-start;
 		column-gap: 1.125em;
-		margin-bottom: 2.6em;
+		margin-bottom: 3em;
 
 		@include media.bigMobile {
 			column-gap: 0.925em;
+		}
+
+		@include media.mediumMobile {
+			margin-bottom: 3.7em;
 		}
 	}
 
@@ -110,7 +166,7 @@
 		cursor: pointer;
 
 		& img {
-			width: 40px;
+			width: 38px;
 			animation: scale 3s linear infinite;
 			transition: var(--basic-transition);
 		}
@@ -123,12 +179,16 @@
 	}
 
 	&__features-text {
-		font-size: .81em;
+		font-size: .87em;
 		letter-spacing: .04em;
 		text-align: center;
 
 		@include media.bigMobile {
-			font-size: 1.01em;
+			font-size: 1.05em;
+		}
+
+		@include media.smallMobile {
+			font-size: 1em;
 		}
 	}
 
@@ -173,7 +233,7 @@
 		}
 
 		@include media.bigMobile {
-			padding: 1.775em 1.475em;
+			padding: 1.9em 1.6em;
 		}
 
 		@include media.hoverAndActive {
@@ -185,7 +245,11 @@
 			white-space: nowrap;
 
 			@include media.bigMobile {
-				font-size: 1.3em;
+				font-size: 1.4em;
+			}
+
+			@include media.smallMobile {
+				font-size: 1.2em;
 			}
 		}
 
@@ -201,12 +265,12 @@
 
 	&__order-text {
 		max-width: min-content;
-		font-size: .81em;
+		font-size: .89em;
 		letter-spacing: .04em;
 
 		@include media.bigMobile {
 			max-width: 100%;
-			font-size: 1.41em;
+			font-size: 1.31em;
 		}
 	}
 }

@@ -3,17 +3,27 @@
 @use './animations';
 
 .container {
+	width: 90%;
 	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 20px;
 
 	@include media.bigMobile {
-		padding-inline: 10px;
+		padding-inline: 8px;
+	}
+
+	@include media.mediumMobile {
+		padding-inline: 5px;
 	}
 }
 
 .header {
-	padding-top: .625rem;
+	padding-top: .625em;
+	height: 10.5rem;
+
+	@include media.bigMobile {
+		height: 8rem;
+	}
 
 	&__texts {
 		@extend %texts-fonts;
