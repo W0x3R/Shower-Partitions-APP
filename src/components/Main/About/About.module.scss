@@ -25,40 +25,19 @@
 	&__background {
 		position: absolute;
 		inset: 0;
-		width: 100%;
-		height: 100%;
 		z-index: -1;
 	}
 
 	&__background-desktop {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		opacity: 1;
-
-		@include media.mediumMobile {
-			opacity: 0;
-		}
+		@include mixins.fullscreen-bg(1, 0);
 	}
 
 	&__background-mobile {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		opacity: 0;
-
-		@include media.mediumMobile {
-			opacity: 1;
-		}
+		@include mixins.fullscreen-bg(0, 1);
 	}
 
 	&__content {
-		padding-top: 4.5em;
-		padding-bottom: 2.5em;
+		padding-block: 4.5em 2.5em;
 
 		@include media.mediumMobile {
 			padding-top: 5.83em;
@@ -66,7 +45,7 @@
 	}
 
 	&__title {
-		margin-bottom: 0.6375em;
+		margin-bottom: .6375em;
 		font-size: 3.1em;
 		letter-spacing: .05em;
 		font-weight: 300;
@@ -135,6 +114,7 @@
 		margin-bottom: 1.3em;
 		max-width: 40%;
 		font-size: 1.5em;
+		letter-spacing: 0.025em;
 
 		@include media.bigMobile {
 			max-width: 90%;
