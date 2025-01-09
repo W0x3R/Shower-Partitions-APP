@@ -84,3 +84,15 @@
 	transform: translateY(-50%) rotate(#{$rotateVal}deg);
 	transform-origin: center center;
 }
+
+@mixin fullscreen-bg($opacity, $mediumMobileOpacity) {
+	position: absolute;
+	inset: 0;
+	@include sizes(100%, 100%);
+	object-fit: cover;
+	opacity: $opacity;
+
+	@include media.mediumMobile {
+		opacity: $mediumMobileOpacity;
+	}
+}
