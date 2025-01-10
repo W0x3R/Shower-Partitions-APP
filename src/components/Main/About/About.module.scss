@@ -6,8 +6,8 @@
 	position: relative;
 	padding-top: 10.5rem;
 	margin-top: -10.5rem;
-	min-height: 100%;
-	font-size: clamp(12px, 1.6vw, 16px);
+	min-height: 100vh;
+	font-size: clamp(12px, 1.6vw, 17px);
 
 	@include media.mediumMobile {
 		min-height: 100dvh;
