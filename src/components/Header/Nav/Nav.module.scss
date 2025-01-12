@@ -4,6 +4,7 @@
 .nav {
 	font-size: clamp(9px, 1.6vw, 16px);
 	border-bottom: 2px solid var(--white);
+	transform: var(--basic-transition);
 
 	&.fixed {
 		position: fixed;
