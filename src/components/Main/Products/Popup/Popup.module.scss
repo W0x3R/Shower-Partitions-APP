@@ -1,62 +1,50 @@
+@use '../../../../styles/media';
+@use '../../../../styles/mixins';
+
 .products__popup {
-	position: fixed;
-	inset: 0;
-	left: 50%;
-	top: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	opacity: 0;
-	pointer-events: none;
-	width: 100%;
-	height: 100%;
-	transform: translate(-50%, -50%);
-	background-color: rgba(0, 0, 0, 0.8);
-	z-index: 100000000;
+	@include mixins.fixed-center-fullscreen;
+	@include mixins.flexCenter;
+	@include mixins.hide;
+	background-color: var(--black-alpha);
+	z-index: 100;
 	cursor: pointer;
 	transition: opacity .2s ease;
 }
 
 .products__popup.visible {
-	opacity: 1;
-	pointer-events: all;
+	@include mixins.show;
 }
 
 .products__popup-content {
 	position: relative;
 	cursor: default;
+}
 
-	& img {
-		width: 50em;
-		height: 30.9em;
-	}
+.popup__img {
+	@include mixins.sizes(50em, 30.9em);
+}
 
-	& p {
-		min-height: 40px;
-		font-size: 20px;
-		position: absolute;
-		bottom: 6px;
-		background: rgba(0, 0, 0, 0.7490196078);
-		width: 100%;
-		color: white;
-		text-align: center;
-		align-content: center;
-	}
+.popup__text {
+	position: absolute;
+	align-content: center;
+	width: 100%;
+	min-height: 40px;
+	font-size: 20px;
+	bottom: 6px;
+	background-color: var(--black-alpha);
+	color: var(--white);
+	text-align: center;
 }
 
 .products__popup-btn {
-	width: 38px;
-	height: 38px;
+	@include mixins.sizes(38px, 38px);
 	border-radius: 8px;
-	border: none;
-	outline: none;
 	position: absolute;
 	bottom: 101%;
 	left: 101%;
-	cursor: pointer;
-	background: #00000066;
+	background: var(--black);
 
-	&:hover {
+	@include media.hoverAndActive {
 		span {
 			color: var(--main-green);
 		}
@@ -64,7 +52,7 @@
 
 	& span {
 		transition: var(--basic-transition);
-		color: white;
+		color: var(--white);
 		font-size: 18px;
 	}
 }
