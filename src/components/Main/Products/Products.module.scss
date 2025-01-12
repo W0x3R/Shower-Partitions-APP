@@ -1,3 +1,6 @@
+@use '../../../styles/mixins';
+@use '../../../styles/media';
+
 .products {
 	padding-block: 4em;
 	background-color: var(--white);
@@ -53,56 +56,46 @@
 	}
 
 	&__item {
-		display: flex;
+		@include mixins.flexCenter;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		row-gap: .375em;
 		flex: 0 0 calc(33.3% - 1.5625em);
 		cursor: pointer;
 
-		&:hover img {
-			filter: brightness(0.4);
-		}
-
-		&:hover svg {
-			opacity: 1;
-		}
-
-		&:hover .products__item-text {
-			text-decoration: underline;
-			text-decoration-skip-ink: none;
-			text-decoration-color: var(--black);
-		}
-
-		button {
-			position: relative;
-			border: none;
-			outline: none;
-			background: none;
-			cursor: pointer;
+		@include media.hoverAndActive {
+			.products__item-img {
+				filter: brightness(0.4);
+			}
 
 			svg {
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				width: 30px;
-				height: 30px;
-				transform: translate(-50%, -50%);
-				opacity: 0;
-				transition: var(--basic-transition);
+				opacity: 1;
+			}
 
-				&:hover {
-					width: 32px;
-					height: 32px;
-				}
+			.products__item-text {
+				text-decoration: underline;
+				text-decoration-skip-ink: none;
+				text-decoration-color: var(--black);
+			}
+		}
+	}
+
+	&__item-btn {
+		position: relative;
+
+		svg {
+			@include mixins.abs-center;
+			@include mixins.sizes(30px, 30px);
+			opacity: 0;
+			transition: var(--basic-transition);
+
+			@include media.hoverAndActive {
+				@include mixins.sizes(32px, 32px);
 			}
 		}
 	}
 
 	&__item-img {
-		width: 20em;
-		height: 14em;
+		@include mixins.sizes(20em, 14em);
 		border-radius: 10px;
 		transition: var(--basic-transition);
 	}
