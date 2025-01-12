@@ -5,8 +5,8 @@ import { productsData } from "../../data/productsData"
 
 import { Popup } from "./Popup/Popup"
 import {
-	disableBodyScroll,
-	enableBodyScroll,
+	disableBodyScrollIncludeScrollbar,
+	enableBodyScrollIncludeScrollbar,
 } from "../../../utils/setBodyScroll"
 
 export const Products = () => {
@@ -20,12 +20,12 @@ export const Products = () => {
 	}
 
 	const handlePopupOpen = () => {
-		disableBodyScroll()
+		disableBodyScrollIncludeScrollbar()
 		setIsPopupOpen(true)
 	}
 
 	const handlePopupClose = () => {
-		enableBodyScroll()
+		enableBodyScrollIncludeScrollbar()
 		setIsPopupOpen(false)
 	}
 
