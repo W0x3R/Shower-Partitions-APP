@@ -1,0 +1,66 @@
+.products__popup {
+	position: fixed;
+	inset: 0;
+	left: 50%;
+	top: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 100000000;
+	cursor: pointer;
+	transition: opacity .2s ease;
+}
+
+.products__popup.visible {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.products__popup-content {
+	position: relative;
+	cursor: default;
+
+	& img {
+		width: 50em;
+		height: 30.9em;
+	}
+
+	& p {
+		font-size: 25px;
+		position: absolute;
+		left: 50%;
+		bottom: 2%;
+		transform: translateX(-50%);
+	}
+}
+
+.products__popup-btn {
+	width: 38px;
+	height: 38px;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	position: absolute;
+	bottom: 101%;
+	left: 101%;
+	cursor: pointer;
+	background: #00000066;
+
+	&:hover {
+		span {
+			color: var(--main-green);
+		}
+	}
+
+	& span {
+		transition: var(--basic-transition);
+		color: white;
+		font-size: 18px;
+	}
+}
