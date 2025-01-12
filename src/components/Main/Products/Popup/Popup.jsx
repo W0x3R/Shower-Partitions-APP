@@ -15,8 +15,12 @@ export const Popup = ({
 				className={styles["products__popup-content"]}
 				onClick={(e) => e.stopPropagation()}
 			>
-				<p>{activePopupText}</p>
-				<img src={activePopupImage} onClick={(e) => e.currentTarget} />
+				<p className={styles.popup__text}>{activePopupText}</p>
+				<img
+					className={styles.popup__img}
+					src={activePopupImage}
+					onClick={(e) => e.currentTarget}
+				/>
 				<button
 					className={styles["products__popup-btn"]}
 					onClick={handlePopupClose}
