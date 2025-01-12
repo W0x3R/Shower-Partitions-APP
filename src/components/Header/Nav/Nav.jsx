@@ -1,18 +1,27 @@
 import { NavLink } from "react-router-dom"
 import styles from "./Nav.module.scss"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export const Nav = ({ onMenuClick, isMenuOpen, isBurgerActive }) => {
 	const [isFixed, setIsFixed] = useState(false)
+	let animationFrameId = useRef(null)
 
 	const handleScroll = () => {
-		window.scrollY > 120 ? setIsFixed(true) : setIsFixed(false)
+		if (animationFrameId) {
+			cancelAnimationFrame(animationFrameId)
+		}
+		animationFrameId = requestAnimationFrame(() => {
+			setIsFixed(window.scrollY > 120)
+		})
 	}
 
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll)
 		return () => {
 			window.removeEventListener("scroll", handleScroll)
+			if (animationFrameId) {
+				cancelAnimationFrame(animationFrameId)
+			}
 		}
 	}, [])
 
