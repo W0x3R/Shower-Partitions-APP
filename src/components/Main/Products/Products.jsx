@@ -65,7 +65,9 @@ export const Products = () => {
 					</button>
 				</div>
 
-				<div className={styles.products__items}>
+				<div
+					className={`${styles.products__items} ${activeBtn === "typeOpening" ? styles.oneRow : ""}`}
+				>
 					{productsData[activeBtn].map(({ id, title, src, popupSrc }) => {
 						return (
 							<div className={styles.products__item} key={id}>
