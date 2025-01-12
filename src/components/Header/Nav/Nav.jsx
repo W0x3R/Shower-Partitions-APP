@@ -1,9 +1,25 @@
 import { NavLink } from "react-router-dom"
 import styles from "./Nav.module.scss"
+import { useEffect, useState } from "react"
 
 export const Nav = ({ onMenuClick, isMenuOpen, isBurgerActive }) => {
+	const [isFixed, setIsFixed] = useState(false)
+
+	const handleScroll = () => {
+		window.scrollY > 120 ? setIsFixed(true) : setIsFixed(false)
+	}
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll)
+		return () => {
+			window.removeEventListener("scroll", handleScroll)
+		}
+	}, [])
+
 	return (
-		<nav className={`${styles.nav} ${isBurgerActive ? styles.open : ""}`}>
+		<nav
+			className={`${styles.nav} ${isBurgerActive ? styles.open : ""} ${isFixed ? styles.fixed : ""}`}
+		>
 			<ul className={styles.nav__list}>
 				<li className={styles.nav__item}>
 					<NavLink className={styles["nav__item-link"]}>Товары</NavLink>
