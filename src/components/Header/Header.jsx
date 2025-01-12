@@ -1,6 +1,7 @@
 import { useState } from "react"
 import HeaderTop from "./HeaderTop/HeaderTop"
 import { Nav } from "./Nav/Nav"
+import { disableBodyScroll, enableBodyScroll } from "../../utils/setBodyScroll"
 
 const Header = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false)
@@ -11,6 +12,7 @@ const Header = () => {
 
 	const handleBurgerClick = () => {
 		setIsBurgerActive((prev) => !prev)
+		isBurgerActive ? enableBodyScroll() : disableBodyScroll()
 	}
 
 	const handleMenuToggle = (key) => {
