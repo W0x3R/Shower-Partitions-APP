@@ -70,22 +70,23 @@ export const Products = () => {
 				>
 					{productsData[activeBtn].map(({ id, title, src, popupSrc }) => {
 						return (
-							<div className={styles.products__item} key={id}>
-								<a
-									href="#"
-									onClick={(e) => {
-										e.preventDefault()
-										handlePopupOpen()
-										setActivePopupImage(popupSrc)
-										setActivePopupText(title)
-									}}
-								>
+							<figure
+								className={styles.products__item}
+								key={id}
+								onClick={() => {
+									handlePopupOpen()
+									setActivePopupImage(popupSrc)
+									setActivePopupText(title)
+								}}
+							>
+								<button>
 									<img className={styles["products__item-img"]} src={src}></img>
 									<FullScreenIcon />
-								</a>
-
-								<p className={styles["products__item-text"]}>{title}</p>
-							</div>
+								</button>
+								<figcaption>
+									<p className={styles["products__item-text"]}>{title}</p>
+								</figcaption>
+							</figure>
 						)
 					})}
 					<Popup
