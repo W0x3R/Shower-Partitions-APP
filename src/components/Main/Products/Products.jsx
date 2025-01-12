@@ -79,7 +79,7 @@ export const Products = () => {
 									setActivePopupText(title)
 								}}
 							>
-								<button>
+								<button className={styles["products__item-btn"]}>
 									<img className={styles["products__item-img"]} src={src}></img>
 									<FullScreenIcon />
 								</button>
