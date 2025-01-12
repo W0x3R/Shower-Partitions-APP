@@ -1,20 +1,32 @@
 import { useState } from "react"
 import styles from "./Products.module.scss"
-import { combinedData } from "../../data/productsData"
-import curtain from "../../../assets/main/Шторка в ванную.webp"
-import curtain11 from "../../../assets/main/Шторка в ванную.jpg?"
-import curtain1 from "../../../assets/main/Душевая перегородка.webp"
-import curtain2 from "../../../assets/main/Дверь в нишу.webp"
-import curtain3 from "../../../assets/main/Душевая в нишу.webp"
-import curtain4 from "../../../assets/main/Угловая душевая small.webp"
-import curtain5 from "../../../assets/main/Трапециевидная душевая.webp"
-import curtain6 from "../../../assets/main/Душевая кабина.webp"
+import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
+import { productsData } from "../../data/productsData"
+
+import { Popup } from "./Popup/Popup"
+import {
+	disableBodyScroll,
+	enableBodyScroll,
+} from "../../../utils/setBodyScroll"
 
 export const Products = () => {
 	const [activeBtn, setActiveBtn] = useState("showers")
+	const [isPopupOpen, setIsPopupOpen] = useState(false)
+	const [activePopupImage, setActivePopupImage] = useState(null)
+	const [activePopupText, setActivePopupText] = useState(null)
 
 	const handleButtonActive = (value) => {
 		setActiveBtn(value)
+	}
+
+	const handlePopupOpen = () => {
+		disableBodyScroll()
+		setIsPopupOpen(true)
+	}
+
+	const handlePopupClose = () => {
+		enableBodyScroll()
+		setIsPopupOpen(false)
 	}
 
 	return (
@@ -52,38 +64,34 @@ export const Products = () => {
 						Типы открывания дверей
 					</button>
 				</div>
-				<div className={styles.products__items}>
-					<div className={styles.products__item}>
-						<a href={curtain11} target="_blink">
-							<img className={styles["products__item-img"]} src={curtain}></img>
-						</a>
 
-						<p className={styles["products__item-text"]}>Шторка в ванную</p>
-					</div>
-					<div className={styles.products__item}>
-						<img className={styles["products__item-img"]} src={curtain1}></img>
-						<p className={styles["products__item-text"]}>Душевая перегородка</p>
-					</div>
-					<div className={styles.products__item}>
-						<img className={styles["products__item-img"]} src={curtain2}></img>
-						<p className={styles["products__item-text"]}>Дверь в нишу</p>
-					</div>
-					<div className={styles.products__item}>
-						<img className={styles["products__item-img"]} src={curtain3}></img>
-						<p className={styles["products__item-text"]}>Дверь в нишу</p>
-					</div>
-					<div className={styles.products__item}>
-						<img className={styles["products__item-img"]} src={curtain4}></img>
-						<p className={styles["products__item-text"]}>Дверь в нишу</p>
-					</div>
-					<div className={styles.products__item}>
-						<img className={styles["products__item-img"]} src={curtain5}></img>
-						<p className={styles["products__item-text"]}>Дверь в нишу</p>
-					</div>
-					<div className={styles.products__item}>
-						<img className={styles["products__item-img"]} src={curtain6}></img>
-						<p className={styles["products__item-text"]}>Дверь в нишу</p>
-					</div>
+				<div className={styles.products__items}>
+					{productsData[activeBtn].map(({ id, title, src, popupSrc }) => {
+						return (
+							<div className={styles.products__item} key={id}>
+								<a
+									href="#"
+									onClick={(e) => {
+										e.preventDefault()
+										handlePopupOpen()
+										setActivePopupImage(popupSrc)
+										setActivePopupText(title)
+									}}
+								>
+									<img className={styles["products__item-img"]} src={src}></img>
+									<FullScreenIcon />
+								</a>
+
+								<p className={styles["products__item-text"]}>{title}</p>
+							</div>
+						)
+					})}
+					<Popup
+						handlePopupClose={handlePopupClose}
+						activePopupImage={activePopupImage}
+						activePopupText={activePopupText}
+						isPopupOpen={isPopupOpen}
+					/>
 				</div>
 			</div>
 		</section>
