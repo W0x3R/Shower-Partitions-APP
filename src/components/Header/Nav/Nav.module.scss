@@ -5,6 +5,29 @@
 	font-size: clamp(9px, 1.6vw, 16px);
 	border-bottom: 2px solid var(--white);
 
+	&.fixed {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		background: var(--black);
+		border-bottom: none;
+	}
+
+	&.fixed {
+		.nav__item {
+			padding: 1.02em;
+		}
+
+		.nav__item-link {
+			font-size: 1em;
+		}
+
+		.nav__menu-link {
+			font-size: .95em
+		}
+	}
+
 	@include media.bigMobile {
 		position: fixed;
 		inset: 0;
