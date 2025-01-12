@@ -8,10 +8,8 @@ export const disableBodyScrollIncludeScrollbar = () => {
 }
 
 export const enableBodyScrollIncludeScrollbar = () => {
-	setTimeout(() => {
-		body.style.overflow = ""
-		body.style.paddingRight = ""
-	}, 300)
+	body.style.overflow = ""
+	body.style.paddingRight = ""
 }
 
 export const disableBodyScroll = () => {
