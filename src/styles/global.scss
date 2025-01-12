@@ -18,6 +18,8 @@
 }
 
 .header {
+	position: relative;
+	z-index: 10;
 	padding-top: .625em;
 	height: 10.5rem;
 
