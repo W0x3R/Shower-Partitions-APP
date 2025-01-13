@@ -11,8 +11,11 @@ const Header = () => {
 	})
 
 	const handleBurgerClick = () => {
-		setIsBurgerActive((prev) => !prev)
-		isBurgerActive ? enableBodyScroll() : disableBodyScroll()
+		setIsBurgerActive((prev) => {
+			const newState = !prev
+			newState ? disableBodyScroll() : enableBodyScroll()
+			return newState
+		})
 	}
 
 	const handleMenuToggle = (key) => {
