@@ -24,9 +24,7 @@ export const Popup = ({
 				<button
 					className={styles["products__popup-btn"]}
 					onClick={handlePopupClose}
-				>
-					<span>X</span>
-				</button>
+				></button>
 			</div>
 		</div>
 	)
