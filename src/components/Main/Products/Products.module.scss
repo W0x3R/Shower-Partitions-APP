@@ -4,11 +4,11 @@
 .products {
 	padding-block: 4em;
 	background-color: var(--white);
-	font-size: clamp(8.9px, 1.35vw, 15.8px);
+	font-size: clamp(11px, 1.4vw, 16px);
 	color: var(--text-main-color);
 
 	@include media.bigMobile {
-		font-size: clamp(7.4px, 1.63vw, 9.6px);
+		font-size: clamp(7.4px, 1.9vw, 11px);
 	}
 
 	&__title {
@@ -22,6 +22,10 @@
 			line-height: 1.1em;
 			margin-bottom: 0.6em;
 		}
+
+		@include media.mediumMobile {
+			font-size: 3.25em;
+		}
 	}
 
 	&__text {
@@ -32,6 +36,10 @@
 		@include media.bigMobile {
 			margin-bottom: 1.2em;
 			font-size: 1.9em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.25em;
 		}
 	}
 
