@@ -5,6 +5,7 @@
 	@include mixins.fixed-center-fullscreen;
 	@include mixins.flexCenter;
 	@include mixins.hide;
+	font-size: clamp(5.5px, 1.62vw, 16.3px);
 	background-color: var(--black-alpha);
 	z-index: 100;
 	cursor: pointer;
@@ -22,18 +23,26 @@
 
 .popup__img {
 	@include mixins.sizes(50em, 30.9em);
+
+	@include media.mediumMobile {
+		@include mixins.sizes(46em, 26.9em);
+	}
 }
 
 .popup__text {
 	position: absolute;
 	align-content: center;
 	width: 100%;
-	min-height: 40px;
-	font-size: 20px;
-	bottom: 6px;
+	min-height: 2.5em;
+	font-size: 1.25em;
+	bottom: 1%;
 	background-color: var(--black-alpha);
 	color: var(--white);
 	text-align: center;
+
+	@include media.bigMobile {
+		font-size: 1.65em;
+	}
 }
 
 .products__popup-btn {
@@ -42,17 +51,37 @@
 	position: absolute;
 	bottom: 101%;
 	left: 101%;
-	background: var(--black);
+	background: var(--white);
+	transition: var(--basic-transition);
 
-	@include media.hoverAndActive {
-		span {
-			color: var(--main-green);
+	@include media.mediumMobile {
+		@include mixins.sizes(32px, 32px);
+	}
+
+	@include media.smallMobile {
+		@include mixins.sizes(28px, 28px);
+	}
+
+	&:after {
+		content: '✖';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		color: var(--black);
+		font-size: 18px;
+		transition: var(--basic-transition);
+
+		@include media.mediumMobile {
+			font-size: 14px;
+		}
+
+		@include media.smallMobile {
+			font-size: 12px;
 		}
 	}
 
-	& span {
-		transition: var(--basic-transition);
-		color: var(--white);
-		font-size: 18px;
+	&:hover::after {
+		color: var(--red);
 	}
 }

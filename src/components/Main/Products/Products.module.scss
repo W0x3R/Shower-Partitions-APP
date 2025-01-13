@@ -4,37 +4,78 @@
 .products {
 	padding-block: 4em;
 	background-color: var(--white);
-	font-size: clamp(12px, 3.5vw, 16px);
+	font-size: clamp(8.9px, 1.35vw, 15.8px);
 	color: var(--text-main-color);
 
+	@include media.bigMobile {
+		font-size: clamp(7.4px, 1.63vw, 9.6px);
+	}
+
 	&__title {
-		margin-bottom: 0.5em;
-		font-size: 2.5em;
+		margin-bottom: 0.4em;
+		font-size: 2.65em;
+		letter-spacing: 0.05em;
 		text-align: center;
+
+		@include media.bigMobile {
+			font-size: 2.9em;
+			line-height: 1.1em;
+			margin-bottom: 0.6em;
+		}
 	}
 
 	&__text {
 		margin-bottom: 1em;
 		font-size: 1.6em;
 		text-align: center;
+
+		@include media.bigMobile {
+			margin-bottom: 1.2em;
+			font-size: 1.9em;
+		}
 	}
 
 	&__types {
 		display: flex;
 		justify-content: center;
 		column-gap: 1.25em;
-		margin-bottom: 1.875em;
+		margin-bottom: 3.275em;
+		font-size: clamp(10.8px, 1.4vw, 16.5px);
+
+		@include media.bigMobile {
+			flex-wrap: wrap;
+			row-gap: 1.25em;
+			font-size: clamp(11.6px, 2.25vw, 14.6px);
+		}
+
+		@include media.mediumMobile {
+			flex-wrap: wrap;
+			row-gap: 1.25em;
+			font-size: 13.3px;
+		}
 	}
 
 	&__types-btn {
-		padding: 1.075em 1.475em;
+		flex: 0 0 calc((100% - (3 * 1.25em)) / 4);
+		max-width: 250px;
+		padding: 1.25em 0.5em;
 		background-color: var(--black);
 		border-radius: 15px;
 		border: none;
-		transition: var(--basic-transition);
+		transition: background .3s ease;
 		font-weight: 600;
 		color: var(--white);
 		cursor: pointer;
+
+		@include media.bigMobile {
+			flex-basis: calc((80% - 1.25em) / 2);
+		}
+
+		@include media.mediumMobile {
+			flex-basis: 100%;
+			max-width: 210px;
+			padding: 1.1em 0.5em;
+		}
 	}
 
 	&__types-btn.active {
@@ -48,7 +89,15 @@
 		align-items: flex-start;
 		flex-wrap: wrap;
 		gap: 1.5625em;
-		padding: 1.25em;
+		font-size: clamp(10px, 1.35vw, 18px);
+
+		@include media.bigMobile {
+			font-size: clamp(10px, 2vw, 15px);
+		}
+
+		@include media.mediumMobile {
+			font-size: clamp(12px, 3.6vw, 18px);
+		}
 	}
 
 	&__items.oneRow {
@@ -59,8 +108,18 @@
 		@include mixins.flexCenter;
 		flex-direction: column;
 		row-gap: .375em;
-		flex: 0 0 calc(33.3% - 1.5625em);
+		flex: 0 0 calc((100% - 2 * 1.5625em) / 3);
 		cursor: pointer;
+		text-align: center;
+		font-weight: 600;
+
+		@include media.bigMobile {
+			flex-basis: calc((100% - 1 * 1.5625em) / 2);
+		}
+
+		@include media.mediumMobile {
+			flex-basis: 100%;
+		}
 
 		@include media.hoverAndActive {
 			.products__item-img {
@@ -95,9 +154,9 @@
 	}
 
 	&__item-img {
-		@include mixins.sizes(20em, 14em);
+		@include mixins.sizes(19.5em, 13.5em);
 		border-radius: 10px;
-		transition: var(--basic-transition);
+		transition: filter .3s ease;
 	}
 
 	&__item-text {
