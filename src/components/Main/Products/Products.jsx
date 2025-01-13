@@ -89,13 +89,13 @@ export const Products = () => {
 							</figure>
 						)
 					})}
-					<Popup
-						handlePopupClose={handlePopupClose}
-						activePopupImage={activePopupImage}
-						activePopupText={activePopupText}
-						isPopupOpen={isPopupOpen}
-					/>
 				</div>
+				<Popup
+					handlePopupClose={handlePopupClose}
+					activePopupImage={activePopupImage}
+					activePopupText={activePopupText}
+					isPopupOpen={isPopupOpen}
+				/>
 			</div>
 		</section>
 	)
