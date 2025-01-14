@@ -4,12 +4,10 @@ import Location from "../../../../assets/header/location.svg?react"
 export const Adress = () => {
 	return (
 		<div className={styles.adress}>
-			<Location className={styles.adress__img} />
-			<p className={`${styles.adress__text} header__texts`}>
-				<b>
-					Наш адрес: <br></br> Беларусь,г.Гомель, ул. Гомельская 25
-				</b>
-			</p>
+			<Location className={styles.adress__img} aria-hidden="true" />
+			<address className={`${styles.adress__text} header__texts`}>
+				<strong>Наш адрес: Беларусь,г.Гомель, ул. Гомельская 25</strong>
+			</address>
 		</div>
 	)
 }
