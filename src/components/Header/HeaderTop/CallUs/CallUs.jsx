@@ -4,12 +4,24 @@ export const CallUs = () => {
 	return (
 		<div className={styles.callUs}>
 			<p className={`header__texts header__animation`}>
-				Звоните Пн-Пт <b>9 - 18</b>
+				<strong>
+					<span>Звоните Пн-Пт</span> 9 - 18
+				</strong>
 			</p>
-			<a className={styles.callUs__link} href="tel:+375447625856">
-				<b>+375 (44) 762-58-56</b>
+			<a
+				className={styles.callUs__link}
+				href="tel:+375447625856"
+				aria-label="Связаться с нами по номеру телефона"
+				title="Позвонить по номеру +375 (44) 762-58-56"
+			>
+				<strong>+375 (44) 762-58-56</strong>
 			</a>
-			<button className={styles.callUs__btn}>Заказать звонок</button>
+			<button
+				className={styles.callUs__btn}
+				aria-label="Нажмите, чтобы заказать звонок"
+			>
+				Заказать звонок
+			</button>
 		</div>
 	)
 }
