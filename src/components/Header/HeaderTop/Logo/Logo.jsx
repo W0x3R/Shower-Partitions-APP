@@ -4,11 +4,13 @@ import styles from "./Logo.module.scss"
 
 export const Logo = () => {
 	return (
-		<div className={styles.logo}>
-			<Link className={styles.logo__link} to=".">
-				<img src={logo} className={styles.logo__img} />
-			</Link>
-		</div>
+		<Link className={styles.logo} to="/" title="Перейти на главную страницу">
+			<img
+				src={logo}
+				className={styles.logo__img}
+				alt="Логотип DZ System - Душевые перегордки на заказ в Гомеле"
+			/>
+		</Link>
 	)
 }
 
