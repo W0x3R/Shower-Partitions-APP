@@ -6,7 +6,7 @@
 	position: relative;
 	@include mixins.sizes(45px, 45px);
 	background-color: var(--white);
-	border-radius: 50%;
+	border-radius: var(--border-r-circle);
 	cursor: pointer;
 
 	@include media.bigMobile {
