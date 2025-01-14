@@ -11,8 +11,6 @@
 	&__link {
 		display: inline-block;
 
-		text-decoration: none;
-
 		&-sizes {
 			@include mixins.sizes(2.4em, auto);
 		}
