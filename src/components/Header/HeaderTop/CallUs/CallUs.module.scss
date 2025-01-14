@@ -12,8 +12,8 @@
 		row-gap: 0.41em;
 	}
 
-	@include media.mediumMobile {
-		// row-gap: 0.51em;
+	&>p span {
+		font-weight: 400;
 	}
 
 	&__link {
