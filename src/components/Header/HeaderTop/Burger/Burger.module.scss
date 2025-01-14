@@ -15,8 +15,12 @@
 		row-gap: 6px;
 	}
 
+	@include media.mediumMobile {
+		@include mixins.sizes(42px, 42px);
+	}
+
 	@include media.smallMobile {
-		@include mixins.sizes(40px, 40px);
+		@include mixins.sizes(38px, 38px);
 	}
 
 	&::before {
@@ -27,6 +31,10 @@
 		@include mixins.sizes(23px, 2px);
 		background-color: var(--main-green);
 		transition: transform 0.2s;
+
+		@include media.smallMobile {
+			width: 21px;
+		}
 	}
 
 	&__line.active {

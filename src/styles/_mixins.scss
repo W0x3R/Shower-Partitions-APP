@@ -42,7 +42,7 @@
 }
 
 %texts-fonts {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	letter-spacing: var(--basic-letter-spacing);
 	text-align: center;
 
@@ -51,14 +51,14 @@
 	}
 
 	@include media.mediumMobile {
-		font-size: 1.6em;
+		font-size: 1.5em;
 	}
 }
 
 %header-blink-animation {
 	content: '';
 	position: absolute;
-	left: -20px;
+	left: -17px;
 	top: 50%;
 	transform: translateY(-50%);
 	width: 8px;

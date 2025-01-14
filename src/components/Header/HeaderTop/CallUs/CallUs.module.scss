@@ -8,12 +8,16 @@
 	row-gap: .31em;
 	font-weight: 600;
 
+	@include media.bigMobile {
+		row-gap: 0.41em;
+	}
+
 	@include media.mediumMobile {
-		row-gap: 0.61em;
+		// row-gap: 0.51em;
 	}
 
 	&__link {
-		font-size: 0.9em;
+		font-size: 1em;
 		transition: var(--basic-transition);
 
 		@include media.hoverAndActive {
@@ -21,34 +25,44 @@
 		}
 
 		@include media.bigMobile {
-			font-size: 1.3em;
+			font-size: 1.4em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.712em;
+			font-size: 1.7em;
 			letter-spacing: .0313em;
 		}
 	}
 
 	&__btn {
-		padding: .6em;
-		font-size: 0.9em;
-		border-radius: .62em;
-		transition: var(--basic-transition);
-		background-color: var(--white);
+		position: relative;
+		font-size: 1.1em;
+		color: var(--main-green);
+		padding-bottom: 2px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			border-bottom: 1px dotted var(--main-green);
+			transition: var(--basic-transition);
+		}
 
 		@include media.hoverAndActive {
-			transform: var(--scale);
+			&::after {
+				width: 0%;
+			}
 		}
 
 		@include media.bigMobile {
-			padding: 0.8em;
-			font-size: 1.1em;
+			font-size: 1.5em;
 		}
 
 		@include media.mediumMobile {
-			padding: 0.9em;
-			font-size: 1.312em;
+			font-size: 1.7em;
 		}
 	}
 }
