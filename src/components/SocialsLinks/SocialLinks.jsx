@@ -9,7 +9,11 @@ const SocialLinks = ({ gap, sizes }) => {
 		{ element: Whatsapp, href: "#", ariaLabel: "Связаться с нами в Whatsapp" },
 		{ element: Viber, href: "#", ariaLabel: "Связаться с нами в Viber" },
 		{ element: Telegram, href: "#", ariaLabel: "Связаться с нами в Telegram" },
-		{ element: Instagram, href: "#", ariaLabel: "Связаться с нами в Telegram" },
+		{
+			element: Instagram,
+			href: "#",
+			ariaLabel: "Связаться с нами в Instagram",
+		},
 	]
 	return (
 		<section className={`${styles.socials} ${styles[gap]}`}>
