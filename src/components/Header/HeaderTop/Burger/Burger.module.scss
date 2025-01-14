@@ -23,6 +23,10 @@
 		@include mixins.sizes(38px, 38px);
 	}
 
+	@include media.focusVisible {
+		border: 2px solid var(--red);
+	}
+
 	&::before {
 		@include mixins.increaseClickableArea;
 	}
