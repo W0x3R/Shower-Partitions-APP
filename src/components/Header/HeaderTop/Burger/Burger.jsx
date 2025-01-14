@@ -1,11 +1,14 @@
 import styles from "./Burger.module.scss"
 
 export const Burger = ({ isBurgerActive, onBurgerClick }) => {
-	const lines = Array(3).fill(null)
-
 	return (
-		<div className={styles.burger} onClick={onBurgerClick}>
-			{lines.map((_, i) => {
+		<button
+			className={styles.burger}
+			onClick={onBurgerClick}
+			aria-label="Открыть меню сайта"
+			aria-expanded={isBurgerActive}
+		>
+			{[...Array(3)].map((_, i) => {
 				return (
 					<span
 						key={i}
@@ -13,6 +16,6 @@ export const Burger = ({ isBurgerActive, onBurgerClick }) => {
 					></span>
 				)
 			})}
-		</div>
+		</button>
 	)
 }
