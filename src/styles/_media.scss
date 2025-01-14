@@ -40,3 +40,9 @@ $small-mobile: 380px;
 		}
 	}
 }
+
+@mixin focusVisible {
+	&:focus-visible {
+		@content;
+	}
+}
