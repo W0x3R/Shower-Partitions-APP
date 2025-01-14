@@ -5,38 +5,29 @@ import Instagram from "../../assets/header/instagram.svg?react"
 import styles from "./SocialLinks.module.scss"
 
 const SocialLinks = ({ gap, sizes }) => {
-	console.log(sizes)
+	const socialLinksData = [
+		{ element: Whatsapp, href: "#", ariaLabel: "Связаться с нами в Whatsapp" },
+		{ element: Viber, href: "#", ariaLabel: "Связаться с нами в Viber" },
+		{ element: Telegram, href: "#", ariaLabel: "Связаться с нами в Telegram" },
+		{ element: Instagram, href: "#", ariaLabel: "Связаться с нами в Telegram" },
+	]
 	return (
-		<article className={`${styles.socials} ${styles[gap]}`}>
-			<a
-				className={`${styles.socials__link} ${styles[sizes]}`}
-				href="#"
-				target="_blank"
-			>
-				<Whatsapp />
-			</a>
-			<a
-				className={`${styles.socials__link} ${styles[sizes]}`}
-				href="#"
-				target="_blank"
-			>
-				<Viber />
-			</a>
-			<a
-				className={`${styles.socials__link} ${styles[sizes]}`}
-				href="#"
-				target="_blank"
-			>
-				<Telegram />
-			</a>
-			<a
-				className={`${styles.socials__link} ${styles[sizes]}`}
-				href="#"
-				target="_blank"
-			>
-				<Instagram />
-			</a>
-		</article>
+		<section className={`${styles.socials} ${styles[gap]}`}>
+			{socialLinksData.map((link) => {
+				return (
+					<a
+						key={link.ariaLabel}
+						className={`${styles.socials__link} ${styles[sizes]}`}
+						href={link.href}
+						target="_blank"
+						aria-label={link.ariaLabel}
+						rel="noopener noreferrer"
+					>
+						<link.element />
+					</a>
+				)
+			})}
+		</section>
 	)
 }
 
