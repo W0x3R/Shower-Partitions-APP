@@ -124,6 +124,11 @@
 		@include media.smallMobile {
 			font-size: 2.1em;
 		}
+
+		@include media.focusVisible {
+			outline: none;
+			box-shadow: var(--focus-shadow);
+		}
 	}
 
 	&__menu {
@@ -140,11 +145,9 @@
 		transition: var(--basic-transition);
 
 		@include media.bigMobile {
-			position: static;
-			display: none;
+			position: fixed;
 			padding: 0;
-			padding: 1em 0 0 1em;
-			opacity: 1;
+			opacity: 0;
 			pointer-events: all;
 			border-top: none;
 			background-color: transparent;
@@ -155,6 +158,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		opacity: 1;
+
+		@include media.bigMobile {
+			position: static;
+			padding: 1em 0 0 1em;
+		}
 	}
 
 	&__menu-item {
@@ -181,6 +190,11 @@
 
 		@include media.smallMobile {
 			font-size: 1.8em;
+		}
+
+		@include media.focusVisible {
+			outline: none;
+			box-shadow: var(--focus-shadow);
 		}
 
 	}
