@@ -6,7 +6,11 @@ export const Adress = () => {
 		<div className={styles.adress}>
 			<Location className={styles.adress__img} aria-hidden="true" />
 			<address className={`${styles.adress__text} header__texts`}>
-				<strong>Наш адрес: Беларусь,г.Гомель, ул. Гомельская 25</strong>
+				<strong>
+					Наш адрес:
+					<br aria-hidden="true" /> Беларусь, г.Гомель,
+					<br aria-hidden="true" /> ул. Гомельская 25
+				</strong>
 			</address>
 		</div>
 	)
