@@ -32,6 +32,11 @@
 			font-size: 1.7em;
 			letter-spacing: .0313em;
 		}
+
+		@include media.focusVisible {
+			outline: none;
+			box-shadow: 0 2px 0 0 var(--red);
+		}
 	}
 
 	&__btn {
@@ -51,11 +56,21 @@
 			transition: var(--basic-transition);
 		}
 
+
+		@include media.focusVisible {
+			&::after {
+				border-bottom: none;
+				box-shadow: 0 1px 0 1px var(--red);
+			}
+		}
+
 		@include media.hoverAndActive {
 			&::after {
 				width: 0%;
 			}
 		}
+
+
 
 		@include media.bigMobile {
 			font-size: 1.5em;

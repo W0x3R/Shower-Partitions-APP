@@ -12,6 +12,14 @@
 		width: 21%;
 	}
 
+	@include media.focusVisible {
+		outline: none;
+
+		.logo__img {
+			outline: 2px solid var(--red);
+		}
+	}
+
 	&__img {
 		@include mixins.sizes(100%, auto);
 		border-radius: 10%;
