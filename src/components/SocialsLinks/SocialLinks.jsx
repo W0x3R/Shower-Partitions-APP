@@ -16,7 +16,10 @@ const SocialLinks = ({ gap, sizes }) => {
 		},
 	]
 	return (
-		<section className={`${styles.socials} ${styles[gap]}`}>
+		<section
+			className={`${styles.socials} ${styles[gap]}`}
+			aria-label="Наши социальные сети"
+		>
 			{socialLinksData.map((link) => {
 				return (
 					<a
@@ -27,7 +30,7 @@ const SocialLinks = ({ gap, sizes }) => {
 						aria-label={link.ariaLabel}
 						rel="noopener noreferrer"
 					>
-						<link.element />
+						<link.element aria-hidden="true" />
 					</a>
 				)
 			})}
