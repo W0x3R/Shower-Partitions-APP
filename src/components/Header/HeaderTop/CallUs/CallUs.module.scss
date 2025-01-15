@@ -35,7 +35,7 @@
 
 		@include media.focusVisible {
 			outline: none;
-			box-shadow: 0 2px 0 0 var(--red);
+			box-shadow: var(--focus-shadow);
 		}
 	}
 
@@ -56,7 +56,6 @@
 			transition: var(--basic-transition);
 		}
 
-
 		@include media.focusVisible {
 			&::after {
 				border-bottom: none;
@@ -69,8 +68,6 @@
 				width: 0%;
 			}
 		}
-
-
 
 		@include media.bigMobile {
 			font-size: 1.5em;
