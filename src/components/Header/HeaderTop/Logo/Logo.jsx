@@ -4,7 +4,11 @@ import styles from "./Logo.module.scss"
 
 export const Logo = () => {
 	return (
-		<Link className={styles.logo} to="/" title="Перейти на главную страницу">
+		<Link
+			className={styles.logo}
+			to="/"
+			aria-label="Перейти на главную страницу"
+		>
 			<img
 				src={logo}
 				className={styles.logo__img}
