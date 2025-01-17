@@ -158,12 +158,6 @@
 		&:not(:last-child) {
 			padding-bottom: 3.6px;
 		}
-
-		@include media.hoverAndActive {
-			text-decoration: underline;
-			text-decoration-skip-ink: none;
-			text-decoration-color: var(--black);
-		}
 	}
 
 	&__menu-link {
@@ -178,6 +172,11 @@
 
 		@include media.smallMobile {
 			font-size: 1.8em;
+		}
+
+		@include media.hoverAndActive {
+			outline: none;
+			box-shadow: var(--focus-shadow);
 		}
 
 		@include media.focusVisible {
