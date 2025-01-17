@@ -74,6 +74,7 @@
 		letter-spacing: var(--basic-letter-spacing);
 		cursor: pointer;
 		min-width: max-content;
+		color: var(--white);
 
 		@include media.bigMobile {
 			display: flex;
@@ -81,6 +82,7 @@
 			justify-content: center;
 			align-items: flex-start;
 			width: 100%;
+			color: var(--black);
 		}
 
 		@include media.hoverAndActive {
@@ -88,14 +90,6 @@
 			.nav__item-link,
 			.nav__item-arrow {
 				color: var(--main-green)
-			}
-		}
-
-		@media only screen and (min-width: 769px) {
-
-			&:hover .nav__menu {
-				opacity: 1;
-				pointer-events: all;
 			}
 		}
 	}
@@ -113,12 +107,10 @@
 		font-size: 0.9em;
 		letter-spacing: var(--basic-letter-spacing);
 		text-transform: uppercase;
-		color: var(--white);
 		font-weight: 600;
 
 		@include media.bigMobile {
 			font-size: 2.3em;
-			color: var(--black);
 		}
 
 		@include media.smallMobile {
@@ -148,7 +140,7 @@
 			position: fixed;
 			padding: 0;
 			opacity: 0;
-			pointer-events: all;
+			pointer-events: none;
 			border-top: none;
 			background-color: transparent;
 		}
@@ -159,6 +151,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		opacity: 1;
+		pointer-events: all;
 
 		@include media.bigMobile {
 			position: static;
@@ -196,20 +189,19 @@
 			outline: none;
 			box-shadow: var(--focus-shadow);
 		}
-
 	}
 
 	&__dropdown-item {
 		position: relative;
 
 		@media only screen and (min-width: 769px) {
-			@include media.hoverAndActive {
-				background-color: var(--white);
-				color: var(--main-green);
+			@media (hover: hover) {
+				@include media.hoverAndActive {
+					background-color: var(--white);
 
-				.nav__item-arrow {
-					transform: rotate(180deg);
-					color: var(--main-green);
+					.nav__item-arrow {
+						transform: rotate(180deg);
+					}
 				}
 			}
 		}
@@ -221,6 +213,11 @@
 				margin-right: 8px;
 			}
 		}
+	}
+
+	&__dropdown-item.open {
+		color: var(--main-green);
+		background-color: var(--white);
 	}
 
 	&__item-arrow {
@@ -237,6 +234,7 @@
 	}
 
 	&__item-arrow.open {
-		transform: rotate(180deg)
+		transform: rotate(180deg);
+		color: var(--main-green);
 	}
 }

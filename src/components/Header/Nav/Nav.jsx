@@ -2,11 +2,48 @@ import { NavLink } from "react-router-dom"
 import styles from "./Nav.module.scss"
 import { useEffect, useRef, useState } from "react"
 
-export const Nav = ({ onMenuClick, isMenuOpen, isBurgerActive }) => {
+export const Nav = ({ isBurgerActive }) => {
 	const [isFixed, setIsFixed] = useState(false)
-	const [focusedItem, setFocusedItem] = useState(null)
-	const [lastFocusedItem, setLastFocusedItem] = useState(null)
-	const navLinkRefs = useRef({})
+	const navMenus = useRef({})
+	const navDropdownMenusRef = useRef({})
+	const navDropdownMenusArrows = useRef({})
+	const [isMenuOpen, setIsMenuOpen] = useState({
+		customer: false,
+		company: false,
+	})
+
+	const handleOpenMenuMouseEnter = (menuName) => {
+		const mediaQuery = window.matchMedia("(hover: hover)")
+		if (window.innerWidth > 768 && mediaQuery.matches) {
+			navMenus.current[menuName].classList.add(styles.open)
+		}
+	}
+
+	const handleCloseMenuMouseLeave = (menuName) => {
+		const mediaQuery = window.matchMedia("(hover: hover)")
+		if (window.innerWidth > 768 && mediaQuery.matches) {
+			navMenus.current[menuName].classList.remove(styles.open)
+		}
+	}
+
+	const handleToggleMenuMouseClick = (menuName) => {
+		const mediaQuery = window.matchMedia("(hover: none)")
+		if (
+			window.innerWidth <= 768 ||
+			(window.innerWidth > 768) & mediaQuery.matches
+		) {
+			navDropdownMenusRef.current[menuName].classList.toggle(styles.open)
+			navMenus.current[menuName].classList.toggle(styles.open)
+			navDropdownMenusArrows.current[menuName].classList.toggle(styles.open)
+		}
+	}
+
+	const handleCloseMenuMouseClick = (menuName) => {
+		navMenus.current[menuName].classList.remove(styles.open)
+		navDropdownMenusRef.current[menuName].classList.remove(styles.open)
+		navDropdownMenusArrows.current[menuName].classList.remove(styles.open)
+	}
+
 	let animationFrameId = useRef(null)
 
 	const handleScroll = () => {
@@ -16,12 +53,6 @@ export const Nav = ({ onMenuClick, isMenuOpen, isBurgerActive }) => {
 		animationFrameId = requestAnimationFrame(() => {
 			setIsFixed(window.scrollY > 120)
 		})
-	}
-
-	const handleKeyDown = (e) => {
-		if (e.code === "Escape") {
-			navLinkRefs.current[lastFocusedItem].focus()
-		}
 	}
 
 	useEffect(() => {
@@ -37,71 +68,55 @@ export const Nav = ({ onMenuClick, isMenuOpen, isBurgerActive }) => {
 	return (
 		<nav
 			className={`${styles.nav} ${isBurgerActive ? styles.open : ""} ${isFixed ? styles.fixed : ""}`}
-			onKeyDown={handleKeyDown}
 		>
 			<ul className={styles.nav__list}>
 				<li className={styles.nav__item}>
-					<NavLink
-						className={styles["nav__item-link"]}
-						onFocus={() => setFocusedItem("products")}
-					>
-						Товары
-					</NavLink>
+					<NavLink className={styles["nav__item-link"]}>Товары</NavLink>
 				</li>
 				<li className={styles.nav__item}>
-					<NavLink
-						className={styles["nav__item-link"]}
-						onFocus={() => setFocusedItem("portfolio")}
-					>
-						Портфолио
-					</NavLink>
+					<NavLink className={styles["nav__item-link"]}>Портфолио</NavLink>
 				</li>
 				<li
 					className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]}`}
-					onClick={() => onMenuClick("customer")}
+					ref={(el) => (navDropdownMenusRef.current["customer"] = el)}
+					onMouseEnter={() => handleOpenMenuMouseEnter("customer")}
+					onMouseLeave={() => handleCloseMenuMouseLeave("customer")}
 				>
-					<div className={styles["nav__link-wrapper"]}>
-						<NavLink
-							ref={(el) => (navLinkRefs.current["customer"] = el)}
-							className={styles["nav__item-link"]}
-							onFocus={() => {
-								setFocusedItem("customer")
-								setLastFocusedItem("customer")
-							}}
-						>
-							Покупателям
-						</NavLink>
+					<div
+						className={styles["nav__link-wrapper"]}
+						onClick={() => handleToggleMenuMouseClick("customer")}
+					>
+						<NavLink className={styles["nav__item-link"]}>Покупателям</NavLink>
 						<span
-							className={`${styles["nav__item-arrow"]} ${isMenuOpen.customer || focusedItem === "delivery" || focusedItem === "cost" || focusedItem === "articles" ? styles["open"] : ""}`}
+							className={styles["nav__item-arrow"]}
+							ref={(el) => (navDropdownMenusArrows.current["customer"] = el)}
 						>
 							▼
 						</span>
 					</div>
-
 					<ul
-						className={`${styles.nav__menu} ${isMenuOpen.customer ? styles["open"] : ""} ${focusedItem === "delivery" || focusedItem === "cost" || focusedItem === "articles" ? styles.open : ""}`}
+						className={styles.nav__menu}
+						ref={(el) => (navMenus.current["customer"] = el)}
 					>
-						<li className={styles["nav__menu-item"]}>
-							<NavLink
-								className={styles["nav__menu-link"]}
-								onFocus={() => setFocusedItem("delivery")}
-							>
+						<li
+							className={styles["nav__menu-item"]}
+							onClick={() => handleCloseMenuMouseClick("customer")}
+						>
+							<NavLink className={styles["nav__menu-link"]}>
 								Доставка и оплата
 							</NavLink>
 						</li>
-						<li className={styles["nav__menu-item"]}>
-							<NavLink
-								className={styles["nav__menu-link"]}
-								onFocus={() => setFocusedItem("cost")}
-							>
-								Стоимость
-							</NavLink>
+						<li
+							className={styles["nav__menu-item"]}
+							onClick={() => handleCloseMenuMouseClick("customer")}
+						>
+							<NavLink className={styles["nav__menu-link"]}>Стоимость</NavLink>
 						</li>
-						<li className={styles["nav__menu-item"]}>
-							<NavLink
-								className={styles["nav__menu-link"]}
-								onFocus={() => setFocusedItem("articles")}
-							>
+						<li
+							className={styles["nav__menu-item"]}
+							onClick={() => handleCloseMenuMouseClick("customer")}
+						>
+							<NavLink className={styles["nav__menu-link"]}>
 								Полезные статьи и новости
 							</NavLink>
 						</li>
@@ -109,35 +124,32 @@ export const Nav = ({ onMenuClick, isMenuOpen, isBurgerActive }) => {
 				</li>
 				<li
 					className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]}`}
-					onClick={() => onMenuClick("company")}
+					ref={(el) => (navDropdownMenusRef.current["company"] = el)}
+					onMouseEnter={() => handleOpenMenuMouseEnter("company")}
+					onMouseLeave={() => handleCloseMenuMouseLeave("company")}
 				>
-					<div className={styles["nav__link-wrapper"]}>
-						<NavLink
-							className={styles["nav__item-link"]}
-							ref={(el) => (navLinkRefs.current["company"] = el)}
-							onFocus={() => {
-								setFocusedItem("company")
-								setLastFocusedItem("company")
-							}}
-						>
-							О компании
-						</NavLink>
+					<div
+						className={styles["nav__link-wrapper"]}
+						onClick={() => handleToggleMenuMouseClick("company")}
+					>
+						<NavLink className={styles["nav__item-link"]}>О компании</NavLink>
 						<span
-							className={`${styles["nav__item-arrow"]} ${isMenuOpen.company || focusedItem === "contacts" ? styles["open"] : ""}`}
+							className={styles["nav__item-arrow"]}
+							ref={(el) => (navDropdownMenusArrows.current["company"] = el)}
 						>
 							▼
 						</span>
 					</div>
 
 					<ul
-						className={`${styles.nav__menu} ${isMenuOpen.company ? styles["open"] : ""} ${focusedItem === "contacts" ? styles.open : ""}`}
-						onBlur={() => setFocusedItem(null)}
+						className={styles.nav__menu}
+						ref={(el) => (navMenus.current["company"] = el)}
 					>
-						<li className={styles["nav__menu-item"]}>
-							<NavLink
-								className={`${styles["nav__menu-link"]} ${focusedItem === "contacts" ? styles.focused : ""}`}
-								onFocus={() => setFocusedItem("contacts")}
-							>
+						<li
+							className={styles["nav__menu-item"]}
+							onClick={() => handleCloseMenuMouseClick("company")}
+						>
+							<NavLink className={styles["nav__menu-link"]}>
 								Наши контакты
 							</NavLink>
 						</li>
