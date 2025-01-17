@@ -6,38 +6,43 @@ export const DropdownMenu = ({
 	isMenuOpen,
 	onClose,
 	menuValue,
-	handleFocused,
+	setIsFocused,
 	isFocused,
 	onBurgerClick,
-}) => (
-	<ul
-		className={`${styles.nav__menu} ${isMenuOpen || isFocused[[menuValue]] ? styles["nav__menu_open"] : ""}`}
-	>
-		{menuItems.map((item, i) => {
-			return (
-				<li
-					key={item}
-					className={styles["nav__menu-item"]}
-					onClick={() => {
-						onClose(menuValue)
-						handleFocused(false)
-						onBurgerClick()
-					}}
-				>
-					<NavLink
-						className={styles["nav__menu-link"]}
-						onFocus={() => handleFocused(true)}
-						onBlur={(e) => {
-							if (i === menuItems.length - 1) {
-								e.target.blur()
-								handleFocused(false)
-							}
+}) => {
+	const handleFocused = (value) => {
+		setIsFocused((prev) => ({ ...prev, [menuValue]: value }))
+	}
+
+	return (
+		<ul
+			className={`${styles.nav__menu} ${isMenuOpen || isFocused[menuValue] ? styles["nav__menu_open"] : ""}`}
+		>
+			{menuItems.map((item, i) => {
+				return (
+					<li
+						key={item}
+						className={styles["nav__menu-item"]}
+						onClick={() => {
+							onClose(menuValue)
+							handleFocused(false)
+							onBurgerClick()
 						}}
 					>
-						{item}
-					</NavLink>
-				</li>
-			)
-		})}
-	</ul>
-)
+						<NavLink
+							className={styles["nav__menu-link"]}
+							onFocus={() => handleFocused(true)}
+							onBlur={() => {
+								if (i === menuItems.length - 1) {
+									handleFocused(false)
+								}
+							}}
+						>
+							{item}
+						</NavLink>
+					</li>
+				)
+			})}
+		</ul>
+	)
+}

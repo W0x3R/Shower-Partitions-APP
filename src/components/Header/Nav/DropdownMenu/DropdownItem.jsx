@@ -15,10 +15,6 @@ export const DropdownItem = ({
 		company: false,
 	})
 
-	const handleFocused = (value) => {
-		setIsFocused((prev) => ({ ...prev, [menuValue]: value }))
-	}
-
 	return (
 		<li
 			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen || isFocused[menuValue] ? styles["nav__dropdown-item_open"] : ""}`}
@@ -43,7 +39,7 @@ export const DropdownItem = ({
 				onClose={onClose}
 				onBurgerClick={onBurgerClick}
 				menuValue={menuValue}
-				handleFocused={handleFocused}
+				setIsFocused={setIsFocused}
 				isFocused={isFocused}
 			/>
 		</li>
