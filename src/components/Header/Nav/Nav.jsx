@@ -3,7 +3,7 @@ import styles from "./Nav.module.scss"
 import { useEffect, useRef, useState } from "react"
 import { DropdownItem } from "./DropdownMenu/DropdownItem"
 
-export const Nav = ({ isBurgerActive }) => {
+export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	const [isFixed, setIsFixed] = useState(false)
 	const [isMenuOpen, setIsMenuOpen] = useState({
 		customer: false,
@@ -80,6 +80,7 @@ export const Nav = ({ isBurgerActive }) => {
 						onMouseLeave: handleCloseMenuMouseLeave,
 						onToggle: handleToggleMenuClick,
 						onClose: handleCloseMenuClick,
+						onBurgerClick: onBurgerClick,
 					}}
 					menuValue={"customer"}
 					title="Покупателям"
@@ -97,6 +98,7 @@ export const Nav = ({ isBurgerActive }) => {
 						onMouseLeave: handleCloseMenuMouseLeave,
 						onToggle: handleToggleMenuClick,
 						onClose: handleCloseMenuClick,
+						onBurgerClick: onBurgerClick,
 					}}
 					menuValue={"company"}
 					title="О компании"

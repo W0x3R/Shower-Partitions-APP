@@ -5,7 +5,7 @@ import { useState } from "react"
 export const DropdownItem = ({
 	styles,
 	isMenuOpen,
-	actions: { onMouseEnter, onMouseLeave, onToggle, onClose },
+	actions: { onMouseEnter, onMouseLeave, onToggle, onClose, onBurgerClick },
 	menuValue,
 	title,
 	menuItems,
@@ -41,6 +41,7 @@ export const DropdownItem = ({
 				menuItems={menuItems}
 				isMenuOpen={isMenuOpen}
 				onClose={onClose}
+				onBurgerClick={onBurgerClick}
 				menuValue={menuValue}
 				handleFocused={handleFocused}
 				isFocused={isFocused}

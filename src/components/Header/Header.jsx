@@ -7,11 +7,13 @@ const Header = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false)
 
 	const handleBurgerClick = () => {
-		setIsBurgerActive((prev) => {
-			const newState = !prev
-			newState ? disableBodyScroll() : enableBodyScroll()
-			return newState
-		})
+		if (window.innerWidth <= 768) {
+			setIsBurgerActive((prev) => {
+				const newState = !prev
+				newState ? disableBodyScroll() : enableBodyScroll()
+				return newState
+			})
+		}
 	}
 
 	return (
@@ -21,7 +23,10 @@ const Header = () => {
 					onBurgerClick={handleBurgerClick}
 					isBurgerActive={isBurgerActive}
 				/>
-				<Nav isBurgerActive={isBurgerActive} />
+				<Nav
+					isBurgerActive={isBurgerActive}
+					onBurgerClick={handleBurgerClick}
+				/>
 			</div>
 		</header>
 	)

@@ -8,6 +8,7 @@ export const DropdownMenu = ({
 	menuValue,
 	handleFocused,
 	isFocused,
+	onBurgerClick,
 }) => (
 	<ul
 		className={`${styles.nav__menu} ${isMenuOpen || isFocused[[menuValue]] ? styles["nav__menu_open"] : ""}`}
@@ -20,6 +21,7 @@ export const DropdownMenu = ({
 					onClick={() => {
 						onClose(menuValue)
 						handleFocused(false)
+						onBurgerClick()
 					}}
 				>
 					<NavLink
