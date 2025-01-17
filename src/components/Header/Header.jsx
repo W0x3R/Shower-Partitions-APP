@@ -5,10 +5,6 @@ import { disableBodyScroll, enableBodyScroll } from "../../utils/setBodyScroll"
 
 const Header = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false)
-	const [isMenuOpen, setIsMenuOpen] = useState({
-		customer: false,
-		company: false,
-	})
 
 	const handleBurgerClick = () => {
 		setIsBurgerActive((prev) => {
@@ -18,15 +14,6 @@ const Header = () => {
 		})
 	}
 
-	const handleMenuToggle = (key) => {
-		if (window.innerWidth <= 768) {
-			setIsMenuOpen((prev) => ({
-				...prev,
-				[key]: !prev[key],
-			}))
-		}
-	}
-
 	return (
 		<header className="header">
 			<div className="container">
@@ -34,11 +21,7 @@ const Header = () => {
 					onBurgerClick={handleBurgerClick}
 					isBurgerActive={isBurgerActive}
 				/>
-				<Nav
-					onMenuClick={handleMenuToggle}
-					isMenuOpen={isMenuOpen}
-					isBurgerActive={isBurgerActive}
-				/>
+				<Nav isBurgerActive={isBurgerActive} />
 			</div>
 		</header>
 	)
