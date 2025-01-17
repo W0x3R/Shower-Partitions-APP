@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import styles from "./Nav.module.scss"
 import { useEffect, useRef, useState } from "react"
-import { DropdownMenu } from "./DropdownMenu/DropdownMenu"
+import { DropdownItem } from "./DropdownMenu/DropdownItem"
 
 export const Nav = ({ isBurgerActive }) => {
 	const [isFixed, setIsFixed] = useState(false)
@@ -63,7 +63,7 @@ export const Nav = ({ isBurgerActive }) => {
 
 	return (
 		<nav
-			className={`${styles.nav} ${isBurgerActive ? styles.open : ""} ${isFixed ? styles.fixed : ""}`}
+			className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : ""} ${isFixed ? styles["nav_fixed"] : ""}`}
 		>
 			<ul className={styles.nav__list}>
 				<li className={styles.nav__item}>
@@ -72,7 +72,7 @@ export const Nav = ({ isBurgerActive }) => {
 				<li className={styles.nav__item}>
 					<NavLink className={styles["nav__item-link"]}>Портфолио</NavLink>
 				</li>
-				<DropdownMenu
+				<DropdownItem
 					styles={styles}
 					isMenuOpen={isMenuOpen.customer}
 					actions={{
@@ -81,7 +81,7 @@ export const Nav = ({ isBurgerActive }) => {
 						onToggle: handleToggleMenuClick,
 						onClose: handleCloseMenuClick,
 					}}
-					valueOfCloseMenu={"customer"}
+					menuValue={"customer"}
 					title="Покупателям"
 					menuItems={[
 						"Доставка и оплата",
@@ -89,7 +89,7 @@ export const Nav = ({ isBurgerActive }) => {
 						"Полезные статьи и новости",
 					]}
 				/>
-				<DropdownMenu
+				<DropdownItem
 					styles={styles}
 					isMenuOpen={isMenuOpen.company}
 					actions={{
@@ -98,7 +98,7 @@ export const Nav = ({ isBurgerActive }) => {
 						onToggle: handleToggleMenuClick,
 						onClose: handleCloseMenuClick,
 					}}
-					valueOfCloseMenu={"company"}
+					menuValue={"company"}
 					title="О компании"
 					menuItems={["Наши контакты"]}
 				/>
