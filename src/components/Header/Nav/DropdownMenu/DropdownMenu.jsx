@@ -6,18 +6,34 @@ export const DropdownMenu = ({
 	isMenuOpen,
 	onClose,
 	menuValue,
+	handleFocused,
+	isFocused,
 }) => (
 	<ul
-		className={`${styles.nav__menu} ${isMenuOpen ? styles["nav__menu_open"] : ""}`}
+		className={`${styles.nav__menu} ${isMenuOpen || isFocused[[menuValue]] ? styles["nav__menu_open"] : ""}`}
 	>
-		{menuItems.map((item) => {
+		{menuItems.map((item, i) => {
 			return (
 				<li
 					key={item}
 					className={styles["nav__menu-item"]}
-					onClick={() => onClose(menuValue)}
+					onClick={() => {
+						onClose(menuValue)
+						handleFocused(false)
+					}}
 				>
-					<NavLink className={styles["nav__menu-link"]}>{item}</NavLink>
+					<NavLink
+						className={styles["nav__menu-link"]}
+						onFocus={() => handleFocused(true)}
+						onBlur={(e) => {
+							if (i === menuItems.length - 1) {
+								e.target.blur()
+								handleFocused(false)
+							}
+						}}
+					>
+						{item}
+					</NavLink>
 				</li>
 			)
 		})}

@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { DropdownMenu } from "./DropdownMenu"
+import { useState } from "react"
 
 export const DropdownItem = ({
 	styles,
@@ -9,9 +10,18 @@ export const DropdownItem = ({
 	title,
 	menuItems,
 }) => {
+	const [isFocused, setIsFocused] = useState({
+		customer: false,
+		company: false,
+	})
+
+	const handleFocused = (value) => {
+		setIsFocused((prev) => ({ ...prev, [menuValue]: value }))
+	}
+
 	return (
 		<li
-			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen ? styles["nav__dropdown-item_open"] : ""}`}
+			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen || isFocused[menuValue] ? styles["nav__dropdown-item_open"] : ""}`}
 			onMouseEnter={() => onMouseEnter(menuValue)}
 			onMouseLeave={() => onMouseLeave(menuValue)}
 		>
@@ -21,7 +31,7 @@ export const DropdownItem = ({
 			>
 				<NavLink className={styles["nav__item-link"]}>{title}</NavLink>
 				<span
-					className={`${styles["nav__item-arrow"]} ${isMenuOpen ? styles["nav__item-arrow_open"] : ""}`}
+					className={`${styles["nav__item-arrow"]} ${isMenuOpen || isFocused[menuValue] ? styles["nav__item-arrow_open"] : ""}`}
 				>
 					▼
 				</span>
@@ -32,6 +42,8 @@ export const DropdownItem = ({
 				isMenuOpen={isMenuOpen}
 				onClose={onClose}
 				menuValue={menuValue}
+				handleFocused={handleFocused}
+				isFocused={isFocused}
 			/>
 		</li>
 	)
