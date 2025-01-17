@@ -1,44 +1,21 @@
-import { NavLink } from "react-router-dom"
 import styles from "./Nav.module.scss"
 import { useEffect, useRef, useState } from "react"
 import { DropdownItem } from "./DropdownMenu/DropdownItem"
+import { NavItems } from "./NavItems"
+import { useMenuActions } from "./UseMenuActions"
 
 export const Nav = ({ isBurgerActive, onBurgerClick }) => {
+	const {
+		isMenuOpen,
+		handleOpenMenuMouseEnter,
+		handleCloseMenuMouseLeave,
+		handleToggleMenuClick,
+		handleCloseMenuClick,
+	} = useMenuActions()
+
 	const [isFixed, setIsFixed] = useState(false)
-	const [isMenuOpen, setIsMenuOpen] = useState({
-		customer: false,
-		company: false,
-	})
+
 	const animationFrameId = useRef(null)
-
-	const actionsOnMenuInteractions = (menuName, setIsMenuOpenValue) => {
-		setIsMenuOpen((prev) => ({ ...prev, [menuName]: setIsMenuOpenValue }))
-	}
-
-	const isDesktop = () => window.innerWidth > 768
-	const isHoverSupported = () => window.matchMedia("(hover: hover)").matches
-
-	const handleOpenMenuMouseEnter = (menuName) => {
-		if (isDesktop() && isHoverSupported()) {
-			actionsOnMenuInteractions(menuName, true)
-		}
-	}
-
-	const handleCloseMenuMouseLeave = (menuName) => {
-		if (isDesktop() && isHoverSupported()) {
-			actionsOnMenuInteractions(menuName, false)
-		}
-	}
-
-	const handleToggleMenuClick = (menuName, isMenuOpen) => {
-		if (!isDesktop() || (isDesktop() && !isHoverSupported())) {
-			actionsOnMenuInteractions(menuName, !isMenuOpen)
-		}
-	}
-
-	const handleCloseMenuClick = (menuName) => {
-		actionsOnMenuInteractions(menuName, false)
-	}
 
 	const handleScroll = () => {
 		if (animationFrameId.current) {
@@ -66,12 +43,7 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 			className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : ""} ${isFixed ? styles["nav_fixed"] : ""}`}
 		>
 			<ul className={styles.nav__list}>
-				<li className={styles.nav__item}>
-					<NavLink className={styles["nav__item-link"]}>Товары</NavLink>
-				</li>
-				<li className={styles.nav__item}>
-					<NavLink className={styles["nav__item-link"]}>Портфолио</NavLink>
-				</li>
+				<NavItems styles={styles} titleItems={["Товары", "Портфолио"]} />
 				<DropdownItem
 					styles={styles}
 					isMenuOpen={isMenuOpen.customer}
