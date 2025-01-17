@@ -1,15 +1,23 @@
 import { NavLink } from "react-router-dom"
 import { DropdownMenu } from "./DropdownMenu"
 import { useState } from "react"
+import { useMenuActions } from "./UseMenuActions"
 
 export const DropdownItem = ({
 	styles,
-	isMenuOpen,
-	actions: { onMouseEnter, onMouseLeave, onToggle, onClose, onBurgerClick },
+	onBurgerClick,
 	menuValue,
 	title,
 	menuItems,
 }) => {
+	const {
+		isMenuOpen,
+		handleOpenMenuMouseEnter,
+		handleCloseMenuMouseLeave,
+		handleToggleMenuClick,
+		handleCloseMenuClick,
+	} = useMenuActions()
+
 	const [isFocused, setIsFocused] = useState({
 		customer: false,
 		company: false,
@@ -17,17 +25,17 @@ export const DropdownItem = ({
 
 	return (
 		<li
-			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen || isFocused[menuValue] ? styles["nav__dropdown-item_open"] : ""}`}
-			onMouseEnter={() => onMouseEnter(menuValue)}
-			onMouseLeave={() => onMouseLeave(menuValue)}
+			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen[menuValue] || isFocused[menuValue] ? styles["nav__dropdown-item_open"] : ""}`}
+			onMouseEnter={() => handleOpenMenuMouseEnter(menuValue)}
+			onMouseLeave={() => handleCloseMenuMouseLeave(menuValue)}
 		>
 			<div
 				className={styles["nav__link-wrapper"]}
-				onClick={() => onToggle(menuValue, isMenuOpen)}
+				onClick={() => handleToggleMenuClick(menuValue, isMenuOpen[menuValue])}
 			>
 				<NavLink className={styles["nav__item-link"]}>{title}</NavLink>
 				<span
-					className={`${styles["nav__item-arrow"]} ${isMenuOpen || isFocused[menuValue] ? styles["nav__item-arrow_open"] : ""}`}
+					className={`${styles["nav__item-arrow"]} ${isMenuOpen[menuValue] || isFocused[menuValue] ? styles["nav__item-arrow_open"] : ""}`}
 				>
 					▼
 				</span>
@@ -36,7 +44,7 @@ export const DropdownItem = ({
 				styles={styles}
 				menuItems={menuItems}
 				isMenuOpen={isMenuOpen}
-				onClose={onClose}
+				onClose={handleCloseMenuClick}
 				onBurgerClick={onBurgerClick}
 				menuValue={menuValue}
 				setIsFocused={setIsFocused}
