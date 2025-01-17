@@ -11,7 +11,7 @@
 		left: 0;
 		top: 0;
 		right: 0;
-		width: calc(100vw);
+		width: 100vw;
 		background: var(--black);
 		border-bottom: none;
 
@@ -54,23 +54,21 @@
 		align-items: center;
 
 		@include media.bigMobile {
-			max-height: 100%;
-			overflow-y: auto;
-			overflow-x: hidden;
 			flex-direction: column;
-			flex-basis: 80%;
 			padding: 1em;
+			max-height: 100%;
+			overflow: hidden auto;
+			flex-basis: 80%;
 			background: #ffffffd6;
 			border-radius: 25px;
 		}
 	}
 
 	&__item {
-		transition: var(--basic-transition);
 		padding: 0.82em;
+		transition: var(--basic-transition);
 		letter-spacing: var(--basic-letter-spacing);
 		cursor: pointer;
-		min-width: max-content;
 		color: var(--white);
 
 		@include media.bigMobile {
