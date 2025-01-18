@@ -5,11 +5,9 @@
 .header {
 	&__top {
 		font-size: clamp(10px, 1.6vw, 16px);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include mixins.flexSpaceBetweenCenter;
 		padding-bottom: .525em;
-		border-bottom: 2px solid var(--white);
+		border-bottom: var(--border-b-white-2);
 		position: relative;
 		z-index: 100;
 		color: var(--white);
