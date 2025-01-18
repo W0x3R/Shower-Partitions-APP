@@ -14,7 +14,10 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 		}
 
 		animationFrameId.current = requestAnimationFrame(() => {
-			setIsFixed(window.scrollY > 120)
+			setIsFixed((prev) => {
+				const shouldFix = window.scrollY > 120
+				return prev !== shouldFix ? shouldFix : prev
+			})
 		})
 	}
 
