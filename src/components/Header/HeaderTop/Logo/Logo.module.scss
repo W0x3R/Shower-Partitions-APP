@@ -22,7 +22,7 @@
 
 	&__img {
 		@include mixins.sizes(100%, auto);
-		border-radius: 10%;
+		border-radius: 10px;
 	}
 
 	&__link {
