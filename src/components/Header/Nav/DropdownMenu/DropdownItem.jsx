@@ -1,54 +1,84 @@
 import { NavLink } from "react-router-dom"
 import { DropdownMenu } from "./DropdownMenu"
-import { useState } from "react"
-import { useMenuActions } from "./UseMenuActions"
+import isDesktop from "../../../../utils/isDesktop"
+import isHoverSupported from "../../../../utils/isHoverSupported"
+import { useRef } from "react"
 
 export const DropdownItem = ({
 	styles,
-	onBurgerClick,
-	menuValue,
+	actions: {
+		onBurgerClick,
+		isFocused,
+		setIsFocused,
+		isMenuOpen,
+		setIsMenuOpen,
+	},
+	menuName,
 	title,
 	menuItems,
 }) => {
-	const {
-		isMenuOpen,
-		handleOpenMenuMouseEnter,
-		handleCloseMenuMouseLeave,
-		handleToggleMenuClick,
-		handleCloseMenuClick,
-	} = useMenuActions()
+	const handleFocus = (menuName, value) => {
+		setIsFocused((prev) => ({ ...prev, [menuName]: value }))
+	}
 
-	const [isFocused, setIsFocused] = useState({
-		customer: false,
-		company: false,
-	})
+	const handleMenuActions = (menuName, value) => {
+		setIsMenuOpen((prev) => ({ ...prev, [menuName]: value }))
+	}
+
+	const handleOpenMenuMouseEnter = (menuName) => {
+		if (isDesktop() && isHoverSupported()) {
+			handleMenuActions(menuName, true)
+		}
+	}
+
+	const handleCloseMenuMouseLeave = (menuName) => {
+		if (isDesktop() && isHoverSupported()) {
+			handleMenuActions(menuName, false)
+		}
+	}
+
+	const handleToggleMenuClick = (menuName, isMenuOpen) => {
+		if (!isDesktop() || (isDesktop() && !isHoverSupported())) {
+			handleMenuActions(menuName, !isMenuOpen)
+		}
+	}
+
+	const handleCloseMenuClick = (menuName) => {
+		handleMenuActions(menuName, false)
+	}
 
 	return (
 		<li
-			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen[menuValue] || isFocused[menuValue] ? styles["nav__dropdown-item_open"] : ""}`}
-			onMouseEnter={() => handleOpenMenuMouseEnter(menuValue)}
-			onMouseLeave={() => handleCloseMenuMouseLeave(menuValue)}
+			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen[menuName] || isFocused[menuName] ? styles["nav__dropdown-item_open"] : ""}`}
+			onMouseEnter={() => handleOpenMenuMouseEnter(menuName)}
+			onMouseLeave={() => handleCloseMenuMouseLeave(menuName)}
 		>
 			<div
 				className={styles["nav__link-wrapper"]}
-				onClick={() => handleToggleMenuClick(menuValue, isMenuOpen[menuValue])}
+				onClick={() => {
+					handleFocus(menuName, false)
+					handleToggleMenuClick(menuName, isMenuOpen[menuName])
+				}}
 			>
 				<NavLink className={styles["nav__item-link"]}>{title}</NavLink>
 				<span
-					className={`${styles["nav__item-arrow"]} ${isMenuOpen[menuValue] || isFocused[menuValue] ? styles["nav__item-arrow_open"] : ""}`}
+					className={`${styles["nav__item-arrow"]} ${isMenuOpen[menuName] || isFocused[menuName] ? styles["nav__item-arrow_open"] : ""}`}
 				>
 					▼
 				</span>
 			</div>
 			<DropdownMenu
 				styles={styles}
+				actions={{
+					onBurgerClick,
+					isFocused,
+					handleFocus,
+					isMenuOpen,
+					handleMenuActions,
+					handleCloseMenuClick,
+				}}
+				menuName={menuName}
 				menuItems={menuItems}
-				isMenuOpen={isMenuOpen}
-				onClose={handleCloseMenuClick}
-				onBurgerClick={onBurgerClick}
-				menuValue={menuValue}
-				setIsFocused={setIsFocused}
-				isFocused={isFocused}
 			/>
 		</li>
 	)

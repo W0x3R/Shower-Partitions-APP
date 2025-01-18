@@ -1,22 +1,22 @@
+import { useRef } from "react"
 import { NavLink } from "react-router-dom"
 
 export const DropdownMenu = ({
 	styles,
+	actions: {
+		onBurgerClick,
+		isFocused,
+		handleFocus,
+		isMenuOpen,
+		handleMenuActions,
+		handleCloseMenuClick,
+	},
 	menuItems,
-	isMenuOpen,
-	onClose,
-	menuValue,
-	setIsFocused,
-	isFocused,
-	onBurgerClick,
+	menuName,
 }) => {
-	const handleFocused = (value) => {
-		setIsFocused((prev) => ({ ...prev, [menuValue]: value }))
-	}
-
 	return (
 		<ul
-			className={`${styles.nav__menu} ${isMenuOpen[menuValue] || isFocused[menuValue] ? styles["nav__menu_open"] : ""}`}
+			className={`${styles.nav__menu} ${isMenuOpen[menuName] || isFocused[menuName] ? styles["nav__menu_open"] : ""}`}
 		>
 			{menuItems.map((item, i) => {
 				return (
@@ -24,17 +24,19 @@ export const DropdownMenu = ({
 						key={item}
 						className={styles["nav__menu-item"]}
 						onClick={() => {
-							onClose(menuValue)
-							handleFocused(false)
+							handleCloseMenuClick(menuName)
+							handleFocus(menuName, false)
 							onBurgerClick()
+							handleMenuActions(menuName, false)
 						}}
 					>
 						<NavLink
 							className={styles["nav__menu-link"]}
-							onFocus={() => handleFocused(true)}
+							onFocus={() => handleMenuActions(menuName, true)}
 							onBlur={() => {
 								if (i === menuItems.length - 1) {
-									handleFocused(false)
+									handleFocus(menuName, false)
+									handleMenuActions(menuName, false)
 								}
 							}}
 						>
