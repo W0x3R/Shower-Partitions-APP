@@ -13,7 +13,17 @@
 	align-items: center;
 }
 
-@mixin pxToRem($px) {}
+@mixin flexSpaceBetweenCenter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin flexCenterStart {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
 
 @mixin abs-center {
 	position: absolute;
@@ -33,12 +43,12 @@
 
 @mixin hide {
 	opacity: 0;
-	visibility: hidden;
+	pointer-events: none;
 }
 
 @mixin show {
 	opacity: 1;
-	visibility: visible;
+	pointer-events: all;
 }
 
 %texts-fonts {
