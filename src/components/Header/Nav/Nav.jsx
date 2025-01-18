@@ -33,6 +33,12 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 		})
 	}
 
+	const handleCloseNavOnEsc = (e) => {
+		if (isMobile() && e.code === "Escape") {
+			onBurgerClick()
+		}
+	}
+
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll)
 
@@ -47,6 +53,7 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	const NavContent = (
 		<nav
 			className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : ""} ${isFixed ? styles["nav_fixed"] : ""}`}
+			onKeyDown={(e) => handleCloseNavOnEsc(e)}
 		>
 			<ul className={styles.nav__list}>
 				<NavItems
