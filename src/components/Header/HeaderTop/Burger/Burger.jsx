@@ -5,14 +5,16 @@ export const Burger = ({ isBurgerActive, onBurgerClick }) => {
 		<button
 			className={styles.burger}
 			onClick={onBurgerClick}
-			aria-label="Открыть меню сайта"
+			aria-label={isBurgerActive ? "Закрыть меню сайта" : "Открыть меню сайта"}
 			aria-expanded={isBurgerActive}
+			aria-controls="burger-open-nav"
 		>
 			{[...Array(3)].map((_, i) => {
 				return (
 					<span
 						key={i}
 						className={`${styles.burger__line} ${isBurgerActive ? styles.active : ""}`}
+						aria-hidden="true"
 					></span>
 				)
 			})}
