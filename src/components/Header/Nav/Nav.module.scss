@@ -210,6 +210,10 @@
 			color: var(--main-green);
 			background-color: var(--white);
 			margin-bottom: 0;
+
+			.nav__item-arrow {
+				color: var(--main-green);
+			}
 		}
 	}
 
