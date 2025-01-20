@@ -36,15 +36,23 @@ export const DropdownItem = ({
 		handleMenuActions(menuName, false)
 	}
 
+	const handleMenuToggleOnEnter = (e) => {
+		if (e.key === "Enter") {
+			handleToggleMenuClick(e, menuName, isMenuOpen[menuName])
+		}
+	}
+
 	return (
 		<li
 			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen[menuName] ? styles["nav__dropdown-item_open"] : ""}`}
 			onMouseEnter={() => handleOpenMenuMouseEnter(menuName)}
 			onMouseLeave={() => handleCloseMenuMouseLeave(menuName)}
-			onClick={() => {
-				handleFocus(menuName, false)
-				handleToggleMenuClick(menuName, isMenuOpen[menuName])
+			onKeyDown={(e) => {
+				handleMenuToggleOnEnter(e)
 			}}
+			onMouseDown={(e) =>
+				handleToggleMenuClick(e, menuName, isMenuOpen[menuName])
+			}
 			aria-expanded={isMenuOpen[menuName]}
 			aria-haspopup="true"
 			aria-controls={`menu-${menuName}`}
@@ -55,16 +63,12 @@ export const DropdownItem = ({
 				</span>
 				<NavLink
 					className={styles["nav__item-link"]}
-					onFocus={() => {
-						handleMenuActions(menuName, false)
-						handleFocus(menuName, false)
-					}}
 					aria-describedby={`menu-desc-${menuName}`}
 				>
 					{title}
 				</NavLink>
 				<span
-					className={`${styles["nav__item-arrow"]} ${isMenuOpen[menuName] || isFocused[menuName] ? styles["nav__item-arrow_open"] : ""}`}
+					className={`${styles["nav__item-arrow"]} ${isMenuOpen[menuName] ? styles["nav__item-arrow_open"] : ""}`}
 					aria-hidden="true"
 				>
 					▼
