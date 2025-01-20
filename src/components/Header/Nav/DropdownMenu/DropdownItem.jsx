@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom"
 import { DropdownMenu } from "./DropdownMenu"
 import isDesktop from "../../../../utils/isDesktop"
 import isHoverSupported from "../../../../utils/isHoverSupported"
-import { useRef } from "react"
 
 export const DropdownItem = ({
 	styles,
