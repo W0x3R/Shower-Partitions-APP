@@ -64,6 +64,7 @@ export const DropdownItem = ({
 				<NavLink
 					className={styles["nav__item-link"]}
 					aria-describedby={`menu-desc-${menuName}`}
+					onFocus={() => handleCloseMenuClick(menuName)}
 				>
 					{title}
 				</NavLink>
