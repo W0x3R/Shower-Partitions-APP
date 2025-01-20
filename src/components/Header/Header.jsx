@@ -9,7 +9,7 @@ const Header = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false)
 
 	const handleBurgerClick = () => {
-		if (window.innerWidth <= 768) {
+		if (isMobile()) {
 			setIsBurgerActive((prev) => !prev)
 		}
 	}
@@ -22,6 +22,24 @@ const Header = () => {
 		}
 
 		return () => enableBodyScroll()
+	}, [isBurgerActive])
+
+	useEffect(() => {
+		let prevWidth = window.innerWidth
+		const handleResize = () => {
+			const currentWidth = window.innerWidth
+			if (isBurgerActive && prevWidth <= 768 && currentWidth > 768) {
+				enableBodyScroll()
+			} else if (isBurgerActive && prevWidth > 768 && currentWidth <= 768) {
+				disableBodyScroll()
+			}
+			prevWidth = currentWidth
+		}
+		window.addEventListener("resize", handleResize)
+
+		return () => {
+			window.removeEventListener("resize", handleResize)
+		}
 	}, [isBurgerActive])
 
 	const HeaderContent = (
