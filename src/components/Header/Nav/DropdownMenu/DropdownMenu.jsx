@@ -16,6 +16,7 @@ export const DropdownMenu = ({
 	return (
 		<ul
 			className={`${styles.nav__menu} ${isMenuOpen[menuName] || isFocused[menuName] ? styles["nav__menu_open"] : ""}`}
+			id={`menu-${menuName}`}
 		>
 			{menuItems.map((item, i) => {
 				return (
