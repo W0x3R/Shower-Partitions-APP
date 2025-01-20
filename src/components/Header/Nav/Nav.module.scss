@@ -39,10 +39,12 @@
 		@include mixins.hide;
 		transition: opacity .3s ease;
 		background-color: #F5F8F9;
+		visibility: hidden
 	}
 
 	&_open {
 		@include mixins.show;
+		visibility: visible;
 	}
 
 	&__list {
