@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react"
 import { DropdownItem } from "./DropdownMenu/DropdownItem"
 import { NavItems } from "./NavItems"
 import isMobile from "../../../utils/isMobile"
-import ReactFocusLock from "react-focus-lock"
 
 export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	const [isFixed, setIsFixed] = useState(false)
@@ -50,7 +49,7 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 		}
 	}, [])
 
-	const NavContent = (
+	return (
 		<nav
 			className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : ""} ${isFixed ? styles["nav_fixed"] : ""}`}
 			onKeyDown={(e) => handleCloseNavOnEsc(e)}
@@ -97,8 +96,4 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 			</ul>
 		</nav>
 	)
-
-	return isMobile() && isBurgerActive ?
-			<ReactFocusLock>{NavContent}</ReactFocusLock>
-		:	NavContent
 }

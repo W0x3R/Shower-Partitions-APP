@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import HeaderTop from "./HeaderTop/HeaderTop"
 import { Nav } from "./Nav/Nav"
 import { disableBodyScroll, enableBodyScroll } from "../../utils/setBodyScroll"
+import ReactFocusLock from "react-focus-lock"
+import isMobile from "../../utils/isMobile"
 
 const Header = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false)
@@ -22,7 +24,7 @@ const Header = () => {
 		return () => enableBodyScroll()
 	}, [isBurgerActive])
 
-	return (
+	const HeaderContent = (
 		<header className="header">
 			<div className="container">
 				<HeaderTop
@@ -36,6 +38,10 @@ const Header = () => {
 			</div>
 		</header>
 	)
+
+	return isMobile() && isBurgerActive ?
+			<ReactFocusLock>{HeaderContent}</ReactFocusLock>
+		:	HeaderContent
 }
 
 export default Header
