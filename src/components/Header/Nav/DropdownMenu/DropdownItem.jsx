@@ -5,21 +5,11 @@ import isHoverSupported from "../../../../utils/isHoverSupported"
 
 export const DropdownItem = ({
 	styles,
-	actions: {
-		onBurgerClick,
-		isFocused,
-		setIsFocused,
-		isMenuOpen,
-		setIsMenuOpen,
-	},
+	actions: { onBurgerClick, isMenuOpen, setIsMenuOpen },
 	menuName,
 	title,
 	menuItems,
 }) => {
-	const handleFocus = (menuName, value) => {
-		setIsFocused((prev) => ({ ...prev, [menuName]: value }))
-	}
-
 	const handleMenuActions = (menuName, value) => {
 		setIsMenuOpen((prev) => ({ ...prev, [menuName]: value }))
 	}
@@ -48,7 +38,7 @@ export const DropdownItem = ({
 
 	return (
 		<li
-			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen[menuName] || isFocused[menuName] ? styles["nav__dropdown-item_open"] : ""}`}
+			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen[menuName] ? styles["nav__dropdown-item_open"] : ""}`}
 			onMouseEnter={() => handleOpenMenuMouseEnter(menuName)}
 			onMouseLeave={() => handleCloseMenuMouseLeave(menuName)}
 			onClick={() => {
@@ -84,8 +74,6 @@ export const DropdownItem = ({
 				styles={styles}
 				actions={{
 					onBurgerClick,
-					isFocused,
-					handleFocus,
 					isMenuOpen,
 					handleMenuActions,
 					handleCloseMenuClick,

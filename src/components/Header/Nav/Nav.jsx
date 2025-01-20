@@ -7,11 +7,6 @@ import isMobile from "../../../utils/isMobile"
 export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	const [isFixed, setIsFixed] = useState(false)
 
-	const [isFocused, setIsFocused] = useState({
-		customer: false,
-		company: false,
-	})
-
 	const [isMenuOpen, setIsMenuOpen] = useState({
 		customer: false,
 		company: false,
@@ -67,8 +62,6 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 					styles={styles}
 					actions={{
 						onBurgerClick,
-						isFocused,
-						setIsFocused,
 						isMenuOpen,
 						setIsMenuOpen,
 					}}
@@ -85,8 +78,6 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 					styles={styles}
 					actions={{
 						onBurgerClick,
-						isFocused,
-						setIsFocused,
 						isMenuOpen,
 						setIsMenuOpen,
 					}}
