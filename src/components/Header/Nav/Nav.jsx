@@ -54,6 +54,7 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 		<nav
 			className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : ""} ${isFixed ? styles["nav_fixed"] : ""}`}
 			onKeyDown={(e) => handleCloseNavOnEsc(e)}
+			aria-label="Основная навигация"
 		>
 			<ul className={styles.nav__list}>
 				<NavItems
