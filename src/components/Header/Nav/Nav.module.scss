@@ -93,6 +93,17 @@
 			@include mixins.flexSpaceBetweenCenter;
 			width: 100%;
 		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			inset: -0px;
+
+			@include media.bigMobile {
+				content: unset;
+			}
+		}
 	}
 
 	&__item-link {
