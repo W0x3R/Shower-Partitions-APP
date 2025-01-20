@@ -86,14 +86,6 @@
 				margin-bottom: 0;
 			}
 		}
-
-		@include media.hoverAndActive {
-
-			.nav__item-link,
-			.nav__item-arrow {
-				color: var(--main-green)
-			}
-		}
 	}
 
 	&__link-wrapper {
@@ -119,6 +111,14 @@
 
 		@include media.smallMobile {
 			font-size: 2.1em;
+		}
+
+		@include media.hoverAndActive {
+			color: var(--main-green);
+
+			&+.nav__item-arrow {
+				color: var(--main-green)
+			}
 		}
 
 		@include media.focusVisible {
