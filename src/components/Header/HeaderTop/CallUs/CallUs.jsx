@@ -5,7 +5,6 @@ export const CallUs = () => {
 		<div className={styles.callUs} aria-labelledby="working-time">
 			<p
 				className="header__texts header__animation"
-				tabIndex={0}
 				aria-labelledby="working-time-description"
 			>
 				<strong aria-hidden>
@@ -26,7 +25,7 @@ export const CallUs = () => {
 			<button
 				type="button"
 				className={styles.callUs__btn}
-				aria-label="Нажмите, чтобы заказать звонок"
+				aria-label="Нажмите, чтобы заказать обратный звонок"
 			>
 				Заказать звонок
 			</button>
