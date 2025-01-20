@@ -26,8 +26,8 @@ export const DropdownItem = ({
 		}
 	}
 
-	const handleToggleMenuClick = (menuName, isMenuOpen) => {
-		if (!isDesktop() || (isDesktop() && !isHoverSupported())) {
+	const handleToggleMenuClick = (e, menuName, isMenuOpen) => {
+		if (e.target.closest(`.${styles["nav__link-wrapper"]}`)) {
 			handleMenuActions(menuName, !isMenuOpen)
 		}
 	}
