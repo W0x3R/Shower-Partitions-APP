@@ -11,10 +11,12 @@ export const DropdownMenu = ({
 	menuItems,
 	menuName,
 }) => {
+	const navMenuRef = useRef()
 	return (
 		<ul
 			className={`${styles.nav__menu} ${isMenuOpen[menuName] ? styles["nav__menu_open"] : ""}`}
 			id={`menu-${menuName}`}
+			ref={navMenuRef}
 		>
 			{menuItems.map((item, i) => {
 				return (
