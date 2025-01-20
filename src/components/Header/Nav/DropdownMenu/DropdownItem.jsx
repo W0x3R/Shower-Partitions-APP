@@ -62,6 +62,7 @@ export const DropdownItem = ({
 				<NavLink className={styles["nav__item-link"]}>{title}</NavLink>
 				<span
 					className={`${styles["nav__item-arrow"]} ${isMenuOpen[menuName] || isFocused[menuName] ? styles["nav__item-arrow_open"] : ""}`}
+					aria-hidden="true"
 				>
 					▼
 				</span>
