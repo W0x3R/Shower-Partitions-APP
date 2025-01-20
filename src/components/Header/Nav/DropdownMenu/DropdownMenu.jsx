@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import { NavLink } from "react-router-dom"
 
 export const DropdownMenu = ({
@@ -20,23 +21,18 @@ export const DropdownMenu = ({
 		>
 			{menuItems.map((item, i) => {
 				return (
-					<li
-						key={item}
-						className={styles["nav__menu-item"]}
-						onClick={() => {
-							handleCloseMenuClick(menuName)
-							handleFocus(menuName, false)
-							onBurgerClick()
-							handleMenuActions(menuName, false)
-						}}
-					>
+					<li key={item} className={styles["nav__menu-item"]}>
 						<NavLink
 							className={styles["nav__menu-link"]}
 							onFocus={() => handleMenuActions(menuName, true)}
+							onClick={() => {
+								handleCloseMenuClick(menuName)
+								onBurgerClick()
+							}}
 							onBlur={() => {
 								if (i === menuItems.length - 1) {
-									handleFocus(menuName, false)
-									handleMenuActions(menuName, false)
+									navMenuRef.current.classList.remove(styles["nav__menu_open"])
+									handleCloseMenuClick(menuName)
 								}
 							}}
 						>
