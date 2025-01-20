@@ -54,12 +54,16 @@
 
 		@include media.bigMobile {
 			flex-direction: column;
-			padding: 1em;
+			padding: 1.4em 1.8em;
 			max-height: 100%;
 			overflow: hidden auto;
-			flex-basis: 80%;
+			flex-basis: 70%;
 			background: #ffffffd6;
 			border-radius: 25px;
+		}
+
+		@include media.mediumMobile {
+			flex-basis: 82%;
 		}
 	}
 
@@ -73,8 +77,14 @@
 		@include media.bigMobile {
 			@include mixins.flexCenterStart;
 			flex-direction: column;
+			padding: 0;
+			margin-bottom: 1.8em;
 			width: 100%;
 			color: var(--black);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 
 		@include media.hoverAndActive {
@@ -94,13 +104,17 @@
 	}
 
 	&__item-link {
-		font-size: 0.9em;
+		font-size: 0.98em;
 		letter-spacing: var(--basic-letter-spacing);
 		text-transform: uppercase;
 		font-weight: 600;
 
 		@include media.bigMobile {
-			font-size: 2.3em;
+			font-size: 2em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.4em;
 		}
 
 		@include media.smallMobile {
@@ -140,7 +154,8 @@
 
 			@include media.bigMobile {
 				position: static;
-				padding: 1em 0;
+				padding: 1.2em 0;
+				margin-left: 0.8em;
 			}
 		}
 	}
@@ -152,17 +167,21 @@
 	}
 
 	&__menu-link {
-		font-size: 0.85em;
+		font-size: 0.9em;
 		letter-spacing: var(--basic-letter-spacing);
 		white-space: nowrap;
 		color: var(--black);
 
 		@include media.bigMobile {
+			font-size: 1.8em;
+		}
+
+		@include media.mediumMobile {
 			font-size: 2em;
 		}
 
 		@include media.smallMobile {
-			font-size: 1.8em;
+			font-size: 1.9em;
 		}
 
 		@include media.hoverAndActive {
@@ -190,6 +209,7 @@
 		&_open {
 			color: var(--main-green);
 			background-color: var(--white);
+			margin-bottom: 0;
 		}
 	}
 
@@ -199,7 +219,7 @@
 		display: inline-block;
 
 		@include media.bigMobile {
-			font-size: 2.2em;
+			font-size: 2em;
 			transition-property: all;
 			color: var(--black)
 		}
