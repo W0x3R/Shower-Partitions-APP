@@ -40,12 +40,14 @@
 		background-color: #F5F8F9;
 	}
 
-	&_open {
-		animation: navShow 0.4s forwards;
-	}
+	@include media.bigMobile {
+		&_open {
+			animation: navShow 0.4s forwards;
+		}
 
-	&_hide {
-		animation: navHide 0.4s forwards;
+		&_hide {
+			animation: navHide 0.4s forwards;
+		}
 	}
 
 	&__list {
