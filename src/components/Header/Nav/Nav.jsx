@@ -2,7 +2,6 @@ import styles from "./Nav.module.scss"
 import { useEffect, useRef, useState } from "react"
 import { DropdownItem } from "./DropdownMenu/DropdownItem"
 import { NavItems } from "./NavItems"
-import isMobile from "../../../utils/isMobile"
 
 export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	const [isFixed, setIsFixed] = useState(false)
@@ -27,12 +26,6 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 		})
 	}
 
-	const handleCloseNavOnEsc = (e) => {
-		if (isMobile() && e.code === "Escape") {
-			onBurgerClick()
-		}
-	}
-
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll)
 
@@ -47,7 +40,6 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	return (
 		<nav
 			className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : styles["nav_hide"]} ${isFixed ? styles["nav_fixed"] : ""}`}
-			onKeyDown={(e) => handleCloseNavOnEsc(e)}
 			aria-label="Основная навигация"
 			id="burger-open-nav"
 		>

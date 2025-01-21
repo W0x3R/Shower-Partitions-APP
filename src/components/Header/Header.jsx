@@ -14,6 +14,12 @@ const Header = () => {
 		}
 	}
 
+	const handleCloseBurgerOnEsc = (e) => {
+		if (isMobile() && isBurgerActive && e.code === "Escape") {
+			setIsBurgerActive(false)
+		}
+	}
+
 	useEffect(() => {
 		if (isBurgerActive) {
 			disableBodyScroll()
@@ -43,7 +49,7 @@ const Header = () => {
 	}, [isBurgerActive])
 
 	const HeaderContent = (
-		<header className="header">
+		<header className="header" onKeyDown={handleCloseBurgerOnEsc}>
 			<div className="container">
 				<HeaderTop
 					onBurgerClick={handleBurgerClick}
