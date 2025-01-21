@@ -24,15 +24,15 @@ export const DropdownMenu = ({
 					<li key={item} className={styles["nav__menu-item"]}>
 						<NavLink
 							className={styles["nav__menu-link"]}
-							onFocus={() => handleMenuActions(menuName, true)}
+							onFocus={() => handleMenuActions(true)}
 							onClick={() => {
-								handleCloseMenuClick(menuName)
+								handleCloseMenuClick()
 								onBurgerClick()
 							}}
 							onBlur={() => {
 								if (i === menuItems.length - 1) {
 									navMenuRef.current.classList.remove(styles["nav__menu_open"])
-									handleCloseMenuClick(menuName)
+									handleCloseMenuClick()
 								}
 							}}
 						>

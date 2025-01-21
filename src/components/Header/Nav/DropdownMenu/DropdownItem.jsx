@@ -10,49 +10,31 @@ export const DropdownItem = ({
 	title,
 	menuItems,
 }) => {
-	const handleMenuActions = (menuName, value) => {
+	const handleMenuActions = (value) =>
 		setIsMenuOpen((prev) => ({ ...prev, [menuName]: value }))
-	}
 
-	const handleOpenMenuMouseEnter = (menuName) => {
+	const handleActionsMenuMouseMove = (value) => {
 		if (isDesktop() && isHoverSupported()) {
-			handleMenuActions(menuName, true)
+			handleMenuActions(value)
 		}
 	}
 
-	const handleCloseMenuMouseLeave = (menuName) => {
-		if (isDesktop() && isHoverSupported()) {
-			handleMenuActions(menuName, false)
-		}
-	}
-
-	const handleToggleMenuClick = (e, menuName, isMenuOpen) => {
+	const handleToggleMenuClick = (e) => {
 		if (e.target.closest(`.${styles["nav__link-wrapper"]}`)) {
-			handleMenuActions(menuName, !isMenuOpen)
+			setTimeout(() => {
+				handleMenuActions(!isMenuOpen[menuName])
+			}, 0)
 		}
 	}
 
-	const handleCloseMenuClick = (menuName) => {
-		handleMenuActions(menuName, false)
-	}
-
-	const handleMenuToggleOnEnter = (e) => {
-		if (e.key === "Enter") {
-			handleToggleMenuClick(e, menuName, isMenuOpen[menuName])
-		}
-	}
+	const handleCloseMenuClick = () => handleMenuActions(false)
 
 	return (
 		<li
 			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen[menuName] ? styles["nav__dropdown-item_open"] : ""}`}
-			onMouseEnter={() => handleOpenMenuMouseEnter(menuName)}
-			onMouseLeave={() => handleCloseMenuMouseLeave(menuName)}
-			onKeyDown={(e) => {
-				handleMenuToggleOnEnter(e)
-			}}
-			onMouseDown={(e) =>
-				handleToggleMenuClick(e, menuName, isMenuOpen[menuName])
-			}
+			onMouseEnter={() => handleActionsMenuMouseMove(true)}
+			onMouseLeave={() => handleActionsMenuMouseMove(false)}
+			onMouseDown={(e) => handleToggleMenuClick(e)}
 			aria-expanded={isMenuOpen[menuName]}
 			aria-haspopup="true"
 			aria-controls={`menu-${menuName}`}
@@ -64,7 +46,7 @@ export const DropdownItem = ({
 				<NavLink
 					className={styles["nav__item-link"]}
 					aria-describedby={`menu-desc-${menuName}`}
-					onFocus={() => handleCloseMenuClick(menuName)}
+					onFocus={() => handleCloseMenuClick()}
 				>
 					{title}
 				</NavLink>
