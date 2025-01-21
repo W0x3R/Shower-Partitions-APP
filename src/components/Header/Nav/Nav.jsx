@@ -46,7 +46,7 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 
 	return (
 		<nav
-			className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : ""} ${isFixed ? styles["nav_fixed"] : ""}`}
+			className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : styles["nav_hide"]} ${isFixed ? styles["nav_fixed"] : ""}`}
 			onKeyDown={(e) => handleCloseNavOnEsc(e)}
 			aria-label="Основная навигация"
 			id="burger-open-nav"

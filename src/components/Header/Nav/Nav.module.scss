@@ -1,5 +1,6 @@
 @use '../../../styles/mixins';
 @use '../../../styles/media';
+@use '../../../styles/animations';
 
 .nav {
 	font-size: clamp(9px, 1.6vw, 16px);
@@ -36,15 +37,15 @@
 		@include mixins.flexCenterStart;
 		padding-block: 17em 4em;
 		@include mixins.sizes(100vw, 100vh);
-		@include mixins.hide;
-		transition: opacity .3s ease;
 		background-color: #F5F8F9;
-		visibility: hidden
 	}
 
 	&_open {
-		@include mixins.show;
-		visibility: visible;
+		animation: navShow 0.4s forwards;
+	}
+
+	&_hide {
+		animation: navHide 0.4s forwards;
 	}
 
 	&__list {
