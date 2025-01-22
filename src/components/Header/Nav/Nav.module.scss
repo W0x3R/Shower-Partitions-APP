@@ -149,7 +149,7 @@
 		border-top: 1px solid rgb(28 28 28 / 17%);
 		color: var(--black);
 		@include mixins.hide;
-		transition: all 0.4s ease-in-out;
+		transition: all 0.3s ease-in-out;
 
 		@include media.bigMobile {
 			position: static;
