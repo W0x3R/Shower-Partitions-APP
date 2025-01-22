@@ -71,8 +71,8 @@
 		padding: 1em;
 		transition: var(--basic-transition);
 		letter-spacing: var(--basic-letter-spacing);
-		cursor: pointer;
 		color: var(--white);
+		cursor: pointer;
 
 		@include media.hoverAndActive {
 
