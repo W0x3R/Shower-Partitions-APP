@@ -186,10 +186,10 @@
 		letter-spacing: var(--basic-letter-spacing);
 		white-space: nowrap;
 		color: var(--black);
+		transition: all 0.2s ease-in-out;
 
 		@include media.bigMobile {
 			font-size: 1.75em;
-
 		}
 
 		@include media.mediumMobile {
