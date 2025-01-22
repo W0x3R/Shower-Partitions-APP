@@ -19,6 +19,12 @@
 	align-items: center;
 }
 
+@mixin flexSpaceAroundCenter {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
 @mixin flexCenterStart {
 	display: flex;
 	justify-content: center;
