@@ -116,6 +116,7 @@
 		font-weight: 600;
 
 		@include media.bigMobile {
+			transition: color 0.3s ease;
 			font-size: 2em;
 		}
 
@@ -151,14 +152,16 @@
 		border-top: 1px solid rgb(28 28 28 / 17%);
 		color: var(--black);
 		@include mixins.hide;
-		transition: var(--basic-transition);
+		transition: all 0.4s ease-in-out;
 
 		@include media.bigMobile {
-			position: fixed;
+			position: static;
 			padding: 0;
 			@include mixins.hide;
 			border-top: none;
 			background-color: transparent;
+			max-height: 0;
+			overflow: hidden;
 		}
 
 		&_open {
@@ -167,9 +170,10 @@
 			@include mixins.show;
 
 			@include media.bigMobile {
-				position: static;
 				padding: 1.2em 0;
 				margin-left: 0.8em;
+				max-height: 550px;
+				overflow: visible;
 			}
 		}
 	}
@@ -188,6 +192,7 @@
 
 		@include media.bigMobile {
 			font-size: 1.8em;
+
 		}
 
 		@include media.mediumMobile {
