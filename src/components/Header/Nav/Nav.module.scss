@@ -78,6 +78,14 @@
 		cursor: pointer;
 		color: var(--white);
 
+		@include media.hoverAndActive {
+
+			.nav__item-link,
+			.nav__item-arrow {
+				color: var(--main-green)
+			}
+		}
+
 		@include media.bigMobile {
 			@include mixins.flexCenterStart;
 			flex-direction: column;
@@ -127,14 +135,6 @@
 
 		@include media.smallMobile {
 			font-size: 2.1em;
-		}
-
-		@include media.hoverAndActive {
-			color: var(--main-green);
-
-			&+.nav__item-arrow {
-				color: var(--main-green)
-			}
 		}
 
 		@include media.focusVisible {
