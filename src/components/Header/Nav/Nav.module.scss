@@ -3,7 +3,7 @@
 @use '../../../styles/animations';
 
 .nav {
-	font-size: clamp(9px, 1.6vw, 16px);
+	font-size: clamp(12px, 1.6vw, 16px);
 	border-bottom: var(--border-b-white-2);
 	transform: var(--basic-transition);
 	outline: none;
@@ -37,6 +37,7 @@
 		@include mixins.flexCenterStart;
 		padding-block: 17em 4em;
 		@include mixins.sizes(100vw, 100vh);
+		font-size: clamp(9px, 2vw, 12px);
 		background-color: #F5F8F9;
 	}
 
@@ -71,7 +72,7 @@
 	}
 
 	&__item {
-		padding: 0.82em;
+		padding: 1em;
 		transition: var(--basic-transition);
 		letter-spacing: var(--basic-letter-spacing);
 		cursor: pointer;
@@ -81,7 +82,7 @@
 			@include mixins.flexCenterStart;
 			flex-direction: column;
 			padding: 0;
-			margin-bottom: 1.8em;
+			margin-bottom: 1.3em;
 			width: 100%;
 			color: var(--black);
 
@@ -110,7 +111,7 @@
 	}
 
 	&__item-link {
-		font-size: 0.98em;
+		font-size: 1em;
 		letter-spacing: var(--basic-letter-spacing);
 		text-transform: uppercase;
 		font-weight: 600;
@@ -170,7 +171,7 @@
 			@include mixins.show;
 
 			@include media.bigMobile {
-				padding: 1.2em 0;
+				padding: 1em 0;
 				margin-left: 0.8em;
 				max-height: 550px;
 				overflow: visible;
@@ -191,7 +192,7 @@
 		color: var(--black);
 
 		@include media.bigMobile {
-			font-size: 1.8em;
+			font-size: 1.75em;
 
 		}
 

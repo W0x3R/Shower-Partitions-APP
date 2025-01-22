@@ -4,7 +4,7 @@
 
 .header {
 	&__top {
-		font-size: clamp(10px, 1.48vw, 16px);
+		font-size: clamp(12px, 1.44vw, 16px);
 		@include mixins.flexSpaceBetweenCenter;
 		padding-bottom: .525em;
 		border-bottom: var(--border-b-white-2);
@@ -13,11 +13,12 @@
 		color: var(--white);
 
 		@include media.bigMobile {
+			font-size: clamp(9.6px, 1.7vw, 12px);
 			border-bottom: none;
 		}
 
 		@include media.mediumMobile {
-			font-size: clamp(8.2px, 2.4vw, 10.5px);
+			font-size: clamp(8.2px, 2.1vw, 9.6px);
 		}
 	}
 

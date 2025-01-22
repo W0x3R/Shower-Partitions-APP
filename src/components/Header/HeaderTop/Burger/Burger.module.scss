@@ -13,15 +13,12 @@
 	@include media.bigMobile {
 		@include mixins.flexCenter;
 		flex-direction: column;
-		row-gap: 8px;
-	}
-
-	@include media.mediumMobile {
-		@include mixins.sizes(42px, 42px);
+		row-gap: 9px;
 	}
 
 	@include media.smallMobile {
-		@include mixins.sizes(38px, 38px);
+		@include mixins.sizes(26px, 26px);
+		row-gap: 7px;
 	}
 
 	@include media.focusVisible {
@@ -33,12 +30,12 @@
 	}
 
 	&__line {
-		@include mixins.sizes(28px, 2.5px);
+		@include mixins.sizes(30px, 2.5px);
 		background-color: var(--white);
 
 
 		@include media.smallMobile {
-			width: 21px;
+			width: 26px;
 		}
 
 		&.first-line,

@@ -25,11 +25,11 @@
 		}
 
 		@include media.bigMobile {
-			font-size: 1.4em;
+			font-size: 1.45em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.7em;
+			font-size: 1.75em;
 			letter-spacing: .0313em;
 		}
 
@@ -70,11 +70,11 @@
 		}
 
 		@include media.bigMobile {
-			font-size: 1.5em;
+			font-size: 1.55em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.7em;
+			font-size: 1.75em;
 			padding-bottom: 1px;
 		}
 	}
