@@ -21,6 +21,12 @@
 		row-gap: 7px;
 	}
 
+	@include media.hoverAndActive {
+		.burger__line {
+			background-color: var(--main-green);
+		}
+	}
+
 	@include media.focusVisible {
 		border: 2px solid var(--red);
 	}
@@ -32,7 +38,7 @@
 	&__line {
 		@include mixins.sizes(30px, 2.5px);
 		background-color: var(--white);
-
+		transition: var(--basic-transition);
 
 		@include media.smallMobile {
 			width: 26px;
@@ -46,6 +52,12 @@
 	}
 
 	&.open {
+		@include media.hoverAndActive {
+			.burger__line {
+				background-color: var(--main-green);
+			}
+		}
+
 		.burger__line {
 			position: absolute;
 			background-color: var(--black);
