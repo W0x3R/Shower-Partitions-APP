@@ -1,10 +1,11 @@
 import styles from "./Burger.module.scss"
 
-export const Burger = ({ isBurgerActive, onBurgerClick }) => {
+export const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 	return (
 		<button
 			className={`${styles.burger} ${isBurgerActive ? styles.open : styles.close}`}
 			onClick={onBurgerClick}
+			ref={burgerRef}
 			aria-label={isBurgerActive ? "Закрыть меню сайта" : "Открыть меню сайта"}
 			aria-expanded={isBurgerActive}
 			aria-controls="burger-open-nav"

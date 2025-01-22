@@ -6,7 +6,7 @@ import { Socials } from "./Socials/Socials"
 import { CallUs } from "./CallUs/CallUs"
 import { Burger } from "./Burger/Burger"
 
-const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
+const HeaderTop = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 	return (
 		<div
 			className={`${styles.header__top} ${isBurgerActive ? styles.open : ""}`}
@@ -16,7 +16,11 @@ const HeaderTop = ({ isBurgerActive, onBurgerClick }) => {
 			<Adress />
 			<Socials />
 			<CallUs />
-			<Burger isBurgerActive={isBurgerActive} onBurgerClick={onBurgerClick} />
+			<Burger
+				isBurgerActive={isBurgerActive}
+				onBurgerClick={onBurgerClick}
+				burgerRef={burgerRef}
+			/>
 		</div>
 	)
 }

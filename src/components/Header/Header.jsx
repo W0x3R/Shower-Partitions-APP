@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import HeaderTop from "./HeaderTop/HeaderTop"
 import { Nav } from "./Nav/Nav"
 import { disableBodyScroll, enableBodyScroll } from "../../utils/setBodyScroll"
@@ -7,10 +7,16 @@ import isMobile from "../../utils/isMobile"
 
 const Header = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false)
+	const [hasBurgerOpen, setHasBurgerOpen] = useState(false)
+
+	const burgerRef = useRef(null)
 
 	const handleBurgerClick = () => {
 		if (isMobile()) {
 			setIsBurgerActive((prev) => !prev)
+			if (!hasBurgerOpen) {
+				setHasBurgerOpen(true)
+			}
 		}
 	}
 
@@ -19,6 +25,12 @@ const Header = () => {
 			setIsBurgerActive(false)
 		}
 	}
+
+	useEffect(() => {
+		if (!isBurgerActive && hasBurgerOpen) {
+			burgerRef?.current?.focus()
+		}
+	}, [isBurgerActive, hasBurgerOpen])
 
 	useEffect(() => {
 		if (isBurgerActive) {
@@ -54,6 +66,7 @@ const Header = () => {
 				<HeaderTop
 					onBurgerClick={handleBurgerClick}
 					isBurgerActive={isBurgerActive}
+					burgerRef={burgerRef}
 				/>
 				<Nav
 					isBurgerActive={isBurgerActive}
