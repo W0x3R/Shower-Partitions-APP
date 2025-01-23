@@ -2,14 +2,10 @@
 @use '../../../../styles/media';
 
 .logo {
-	width: 6.7%;
+	width: 5em;
 
 	@include media.bigMobile {
-		width: 13%;
-	}
-
-	@include media.mediumMobile {
-		width: 18%;
+		width: 7em;
 	}
 
 	@include media.focusVisible {
