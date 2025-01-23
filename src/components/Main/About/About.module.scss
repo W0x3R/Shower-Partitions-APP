@@ -221,6 +221,10 @@
 			opacity: 1;
 		}
 
+		@include media.focusVisible {
+			outline: var(--focus-outline);
+		}
+
 		& span {
 			font-size: 1em;
 			white-space: nowrap;
