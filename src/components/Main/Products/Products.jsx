@@ -44,13 +44,22 @@ export const Products = () => {
 				<p className={styles.products__text}>
 					Виды душевых перегородок и комплектующих
 				</p>
-				<div className={styles.products__types}>
+				<div aria-live="polite" className="sr-only">
+					{isPopupOpen ?
+						`Открыто окно с иозбражением: ${activePopupText} `
+					:	`Закрыто окно с иозбражением: ${activePopupText}`}
+				</div>
+				<div className={styles.products__types} role="tablist">
 					{buttonsData.map((data, i) => {
 						return (
 							<button
 								key={i}
 								onClick={() => handleButtonActive(data.activeBtnValue)}
 								className={`${styles["products__types-btn"]} ${activeBtn === data.activeBtnValue ? styles.active : ""}`}
+								role="tab"
+								aria-selected={activeBtn === data.activeBtnValue}
+								id={`tab-${data.activeBtnValue}`}
+								aria-controls={`panel-${data.activeBtnValue}`}
 							>
 								{data.text}
 							</button>
@@ -59,6 +68,8 @@ export const Products = () => {
 				</div>
 				<div
 					className={`${styles.products__items} ${activeBtn === "typeOpening" ? styles.oneRow : ""}`}
+					id={`panel-${activeBtn}`}
+					aria-labelledby={`tab-${activeBtn}`}
 				>
 					{productsData[activeBtn].map(({ id, title, src, popupSrc, alt }) => {
 						return (
