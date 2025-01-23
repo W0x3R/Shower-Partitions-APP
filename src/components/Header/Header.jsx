@@ -27,7 +27,7 @@ const Header = () => {
 	}
 
 	useEffect(() => {
-		if (!isBurgerActive && hasBurgerOpen) {
+		if (hasBurgerOpen) {
 			burgerRef?.current?.focus()
 		}
 	}, [isBurgerActive, hasBurgerOpen])
