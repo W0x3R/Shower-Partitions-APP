@@ -7,7 +7,7 @@
 	padding-top: 10.5rem;
 	margin-top: -10.5rem;
 	min-height: 100vh;
-	font-size: clamp(11px, 1.625vw, 16px);
+	font-size: clamp(11px, 1.659vw, 16px);
 
 	@include media.mediumMobile {
 		min-height: 100svh;
@@ -179,10 +179,6 @@
 		@include media.mediumMobile {
 			font-size: 0.95em;
 		}
-
-		// @include media.smallMobile {
-		// 	font-size: 1em;
-		// }
 	}
 
 	&__order {
@@ -198,17 +194,13 @@
 
 	&__order-btn {
 		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		@include mixins.flexSpaceAroundCenter;
 		column-gap: .625em;
 		padding: 1.6em 2.4em;
 		overflow: hidden;
 		opacity: 0.9;
 		background-color: var(--main-green);
 		border-radius: 15px;
-		border: none;
-		cursor: pointer;
 		transition: var(--basic-transition);
 		font-weight: 600;
 		color: var(--white);
