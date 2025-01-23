@@ -14,6 +14,22 @@ export const Products = () => {
 	const [activePopupImage, setActivePopupImage] = useState(null)
 	const [activePopupImageAlt, setActivePopupImageAlt] = useState(null)
 	const [activePopupText, setActivePopupText] = useState(null)
+	const [indexOfLastActiveImg, setIndexOfLastActiveImg] = useState(null)
+	const closePopupBtnRef = useRef(null)
+
+	useEffect(() => {
+		if (!isPopupOpen && indexOfLastActiveImg !== null) {
+			const imagesBtns = document.querySelectorAll(
+				`.${styles["products__item-btn"]}`
+			)
+			const lastActiveImageBtn = imagesBtns[indexOfLastActiveImg]
+
+			if (lastActiveImageBtn) {
+				lastActiveImageBtn.focus()
+			}
+		}
+	}),
+		[isPopupOpen, indexOfLastActiveImg]
 
 	const buttonsData = [
 		{ text: "Формы душевых", activeBtnValue: "showers" },
