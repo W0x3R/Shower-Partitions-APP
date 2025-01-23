@@ -37,14 +37,10 @@
 	}
 
 	&__content {
-		padding-block: 5.4em 3em;
+		padding-block: 5.4em 5em;
 
 		@include media.bigMobile {
 			padding-top: 6em;
-		}
-
-		@include media.mediumMobile {
-			padding-top: 5.83em;
 		}
 	}
 
