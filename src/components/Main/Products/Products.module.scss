@@ -53,13 +53,11 @@
 		@include media.bigMobile {
 			flex-wrap: wrap;
 			row-gap: 1.25em;
-			font-size: clamp(11.6px, 2.25vw, 14.6px);
+			font-size: clamp(12px, 2.25vw, 14px);
 		}
 
 		@include media.mediumMobile {
-			flex-wrap: wrap;
-			row-gap: 1.25em;
-			font-size: 13.3px;
+			font-size: 13px;
 		}
 	}
 
