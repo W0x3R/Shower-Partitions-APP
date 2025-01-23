@@ -60,7 +60,7 @@ export const Products = () => {
 				<div
 					className={`${styles.products__items} ${activeBtn === "typeOpening" ? styles.oneRow : ""}`}
 				>
-					{productsData[activeBtn].map(({ id, title, src, popupSrc }) => {
+					{productsData[activeBtn].map(({ id, title, src, popupSrc, alt }) => {
 						return (
 							<figure
 								className={styles.products__item}
@@ -72,7 +72,11 @@ export const Products = () => {
 								}}
 							>
 								<button className={styles["products__item-btn"]}>
-									<img className={styles["products__item-img"]} src={src} />
+									<img
+										className={styles["products__item-img"]}
+										src={src}
+										alt={alt}
+									/>
 									<FullScreenIcon />
 								</button>
 								<figcaption>
