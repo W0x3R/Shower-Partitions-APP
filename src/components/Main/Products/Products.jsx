@@ -42,7 +42,7 @@ export const Products = () => {
 		setActiveBtn(value)
 	}
 
-	const handlePopupOpen = (i) => {
+	const handlePopupOpen = (popupImageSrc, popupText, e, i) => {
 		disableBodyScrollIncludeScrollbar()
 		setIsPopupOpen(true)
 		setActivePopupImage(popupImageSrc)
