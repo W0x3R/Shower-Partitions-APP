@@ -5,6 +5,12 @@ import mainBackgroundDesktop from "../../../assets/main/main-bg-big.webp"
 import mainBackgroundMobile from "../../../assets/main/main-bg-small.webp"
 
 export const About = () => {
+	const featuresItemsText = [
+		"Дизайнерские решения",
+		"Тонкая рамка",
+		"Надежная фурнитура",
+	]
+
 	return (
 		<section className={styles.about}>
 			<div className={styles.about__background}>
@@ -24,10 +30,14 @@ export const About = () => {
 					</h1>
 					<div className={styles.about__description}>
 						<div className={styles["about__description-dots"]}>
-							<span className={styles["about__description-dot"]}></span>
-							<span className={styles["about__description-dot"]}></span>
-							<span className={styles["about__description-dot"]}></span>
-							<span className={styles["about__description-dot"]}></span>
+							{new Array(4).fill(null).map((_, i) => {
+								return (
+									<span
+										key={i}
+										className={styles["about__description-dot"]}
+									></span>
+								)
+							})}
 						</div>
 						<p className={styles["about__description-text"]}>
 							Стильные ограждения для душевой премиум качества
@@ -42,24 +52,16 @@ export const About = () => {
 								8-10 мм
 							</p>
 						</div>
-						<div className={styles["about__features-item"]}>
-							<img src={featureCircle} />
-							<p className={styles["about__features-text"]}>
-								<b>Дизайнерские решения</b>
-							</p>
-						</div>
-						<div className={styles["about__features-item"]}>
-							<img src={featureCircle} />
-							<p className={styles["about__features-text"]}>
-								<b>Тонкая рамка</b>
-							</p>
-						</div>
-						<div className={styles["about__features-item"]}>
-							<img src={featureCircle} />
-							<p className={styles["about__features-text"]}>
-								<b>Надежная фурнитура</b>
-							</p>
-						</div>
+						{featuresItemsText.map((itemText) => {
+							return (
+								<div className={styles["about__features-item"]} key={itemText}>
+									<img src={featureCircle} />
+									<p className={styles["about__features-text"]}>
+										<b>{itemText}</b>
+									</p>
+								</div>
+							)
+						})}
 					</div>
 					<div className={styles.about__order}>
 						<button className={styles["about__order-btn"]}>
