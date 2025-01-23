@@ -52,6 +52,18 @@ export const Products = () => {
 	const handlePopupClose = () => {
 		enableBodyScrollIncludeScrollbar()
 		setIsPopupOpen(false)
+		setActivePopupImage(null)
+		setActivePopupText(null)
+		setActivePopupImageAlt(" ")
+	}
+
+	const handleKeyDown = (e) => {
+		if (e.key === "Tab") {
+			e.preventDefault()
+		}
+		if (e.key === "Escape") {
+			handlePopupClose()
+		}
 	}
 
 	return (
