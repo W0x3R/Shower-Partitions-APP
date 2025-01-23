@@ -3,7 +3,7 @@
 
 .products__popup {
 	@include mixins.fixed-center-fullscreen;
-	@include mixins.flexCenter;
+	z-index: 100;
 	@include mixins.hide;
 	font-size: clamp(5.5px, 1.73vw, 16px);
 	background-color: var(--black-alpha);
@@ -14,6 +14,7 @@
 
 .products__popup.visible {
 	@include mixins.show;
+	@include mixins.flexCenter;
 }
 
 .products__popup-content {
