@@ -70,10 +70,18 @@
 		background-color: var(--black);
 		border-radius: 15px;
 		border: none;
-		transition: background .3s ease;
+		transition: all .3s ease;
 		font-weight: 600;
 		color: var(--white);
 		cursor: pointer;
+
+		@include media.hoverAndActive {
+			border-radius: 25px;
+		}
+
+		@include media.focusVisible {
+			outline: var(--focus-outline);
+		}
 
 		@include media.bigMobile {
 			flex-basis: calc((80% - 1.25em) / 2);
@@ -148,6 +156,12 @@
 
 	&__item-btn {
 		position: relative;
+
+		@include media.focusVisible {
+			.products__item-img {
+				outline: var(--focus-outline);
+			}
+		}
 
 		svg {
 			@include mixins.abs-center;
