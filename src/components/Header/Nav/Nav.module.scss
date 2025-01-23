@@ -54,8 +54,8 @@
 
 		@include media.bigMobile {
 			flex-direction: column;
-			padding: 1.4em 1.8em;
-			max-height: 100%;
+			padding: 1.6em 1.8em;
+			max-height: 60svh;
 			overflow: hidden auto;
 			flex-basis: 70%;
 			background: #ffffffd6;
