@@ -68,13 +68,13 @@
 		background-color: var(--black);
 		border-radius: 15px;
 		border: none;
-		transition: all .3s ease;
+		transition: background-color .3s ease, border-radius .5s ease;
 		font-weight: 600;
 		color: var(--white);
 		cursor: pointer;
 
 		@include media.hoverAndActive {
-			border-radius: 25px;
+			border-radius: 20px;
 		}
 
 		@include media.focusVisible {
