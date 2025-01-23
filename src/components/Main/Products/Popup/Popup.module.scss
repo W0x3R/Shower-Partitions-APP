@@ -8,7 +8,7 @@
 	font-size: clamp(5.5px, 1.73vw, 16px);
 	background-color: var(--black-alpha);
 	cursor: pointer;
-	transition: all .3s linear;
+	transition: opacity .3s linear;
 }
 
 .products__popup.visible {
@@ -29,7 +29,7 @@
 	position: absolute;
 	align-content: center;
 	width: 100%;
-	min-height: 2.1em;
+	min-height: 1.6em;
 	font-size: 1.45em;
 	bottom: 1%;
 	background-color: var(--black-alpha);
