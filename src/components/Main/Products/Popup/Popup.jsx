@@ -13,12 +13,17 @@ export const Popup = ({
 		<div
 			className={`${styles.products__popup} ${isPopupOpen ? styles.visible : ""}`}
 			onClick={handlePopupClose}
+			role="dialog"
+			aria-labelledby="popup-title"
+			onKeyDown={handleKeyDown}
 		>
 			<div
 				className={styles["products__popup-content"]}
 				onClick={(e) => e.stopPropagation()}
 			>
-				<p className={styles.popup__text}>{activePopupText}</p>
+				<p className={styles.popup__text} id="popup-title">
+					{activePopupText}
+				</p>
 				<img
 					className={styles.popup__img}
 					src={activePopupImage}
