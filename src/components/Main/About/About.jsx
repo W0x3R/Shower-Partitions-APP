@@ -55,7 +55,7 @@ export const About = () => {
 						{featuresItemsText.map((itemText) => {
 							return (
 								<div className={styles["about__features-item"]} key={itemText}>
-									<img src={featureCircle} />
+									<img src={featureCircle} alt="" />
 									<p className={styles["about__features-text"]}>
 										<b>{itemText}</b>
 									</p>
@@ -66,7 +66,7 @@ export const About = () => {
 					<div className={styles.about__order}>
 						<button className={styles["about__order-btn"]}>
 							<span> Рассчитать цену по моим размерам</span>
-							<img src={clickHand} />
+							<img src={clickHand} alt="" />
 						</button>
 						<p className={styles["about__order-text"]}>
 							<b>Перезвоним и проконсультируем </b>
