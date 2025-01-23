@@ -41,11 +41,11 @@
 
 	@include media.bigMobile {
 		&_open {
-			animation: navShow 0.4s forwards;
+			animation: navShow 0.3s forwards;
 		}
 
 		&_hide {
-			animation: navHide 0.4s forwards;
+			animation: navHide 0.3s forwards;
 		}
 	}
 
@@ -119,9 +119,9 @@
 		letter-spacing: var(--basic-letter-spacing);
 		text-transform: uppercase;
 		font-weight: 600;
+		transition: all 0.2s ease-out;
 
 		@include media.bigMobile {
-			transition: color 0.3s ease;
 			font-size: 2em;
 		}
 
@@ -149,7 +149,7 @@
 		border-top: 1px solid rgb(28 28 28 / 17%);
 		color: var(--black);
 		@include mixins.hide;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.2s ease-in-out;
 
 		@include media.bigMobile {
 			position: static;
@@ -186,7 +186,7 @@
 		letter-spacing: var(--basic-letter-spacing);
 		white-space: nowrap;
 		color: var(--black);
-		transition: all 0.2s ease-in-out;
+		transition: all 0.1s ease-in-out;
 
 		@include media.bigMobile {
 			font-size: 1.75em;
@@ -235,7 +235,7 @@
 
 	&__item-arrow {
 		font-size: 1rem;
-		transition: transform .3s ease;
+		transition: all 0.2s ease-out;
 		display: inline-block;
 
 		@include media.bigMobile {
