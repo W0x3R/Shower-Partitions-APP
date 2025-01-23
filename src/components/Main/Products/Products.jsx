@@ -12,6 +12,7 @@ export const Products = () => {
 	const [activeBtn, setActiveBtn] = useState("showers")
 	const [isPopupOpen, setIsPopupOpen] = useState(false)
 	const [activePopupImage, setActivePopupImage] = useState(null)
+	const [activePopupImageAlt, setActivePopupImageAlt] = useState(null)
 	const [activePopupText, setActivePopupText] = useState(null)
 
 	const buttonsData = [
