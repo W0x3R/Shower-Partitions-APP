@@ -7,7 +7,6 @@
 	@include mixins.hide;
 	font-size: clamp(5.5px, 1.73vw, 16px);
 	background-color: var(--black-alpha);
-	z-index: 100;
 	cursor: pointer;
 	transition: all .3s linear;
 }
@@ -47,24 +46,19 @@
 }
 
 .products__popup-btn {
-	width: 38px;
-	height: 38px;
 	position: fixed;
 	top: 1%;
 	right: 1%;
+	@include mixins.sizes(45px, 45px);
+	font-size: 26px;
+	color: var(--white);
+	transition: all .2s ease-in-out;
 
-	&:after {
-		content: '✖';
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		color: var(--white);
-		font-size: 26px;
-		transition: color .3s ease;
+	@include media.hoverAndActive {
+		color: var(--red);
 	}
 
-	&:hover::after {
+	@include media.focusVisible {
 		color: var(--red);
 	}
 }
