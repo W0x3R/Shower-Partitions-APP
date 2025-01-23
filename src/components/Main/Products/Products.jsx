@@ -42,9 +42,11 @@ export const Products = () => {
 		setActiveBtn(value)
 	}
 
-	const handlePopupOpen = () => {
+	const handlePopupOpen = (i) => {
 		disableBodyScrollIncludeScrollbar()
 		setIsPopupOpen(true)
+		setIndexOfLastActiveImg(i)
+		closePopupBtnRef.current.focus()
 	}
 
 	const handlePopupClose = () => {
