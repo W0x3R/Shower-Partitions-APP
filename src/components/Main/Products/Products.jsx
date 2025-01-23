@@ -2,7 +2,6 @@ import { useState } from "react"
 import styles from "./Products.module.scss"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import { productsData } from "../../data/productsData"
-
 import { Popup } from "./Popup/Popup"
 import {
 	disableBodyScrollIncludeScrollbar,
@@ -14,6 +13,13 @@ export const Products = () => {
 	const [isPopupOpen, setIsPopupOpen] = useState(false)
 	const [activePopupImage, setActivePopupImage] = useState(null)
 	const [activePopupText, setActivePopupText] = useState(null)
+
+	const buttonsData = [
+		{ text: "Формы душевых", activeBtnValue: "showers" },
+		{ text: "Виды стекла", activeBtnValue: "glasses" },
+		{ text: "Цвета фурнитуры", activeBtnValue: "furniture" },
+		{ text: "Типы открывания дверей", activeBtnValue: "typeOpening" },
+	]
 
 	const handleButtonActive = (value) => {
 		setActiveBtn(value)
@@ -39,32 +45,18 @@ export const Products = () => {
 					Виды душевых перегородок и комплектующих
 				</p>
 				<div className={styles.products__types}>
-					<button
-						onClick={() => handleButtonActive("showers")}
-						className={`${styles["products__types-btn"]} ${activeBtn === "showers" ? styles.active : ""}`}
-					>
-						Формы душевых
-					</button>
-					<button
-						onClick={() => handleButtonActive("glasses")}
-						className={`${styles["products__types-btn"]} ${activeBtn === "glasses" ? styles.active : ""}`}
-					>
-						Виды стекла
-					</button>
-					<button
-						onClick={() => handleButtonActive("furniture")}
-						className={`${styles["products__types-btn"]} ${activeBtn === "furniture" ? styles.active : ""}`}
-					>
-						Цвета фурнитуры
-					</button>
-					<button
-						onClick={() => handleButtonActive("typeOpening")}
-						className={`${styles["products__types-btn"]} ${activeBtn === "typeOpening" ? styles.active : ""}`}
-					>
-						Типы открывания дверей
-					</button>
+					{buttonsData.map((data, i) => {
+						return (
+							<button
+								key={i}
+								onClick={() => handleButtonActive(data.activeBtnValue)}
+								className={`${styles["products__types-btn"]} ${activeBtn === data.activeBtnValue ? styles.active : ""}`}
+							>
+								{data.text}
+							</button>
+						)
+					})}
 				</div>
-
 				<div
 					className={`${styles.products__items} ${activeBtn === "typeOpening" ? styles.oneRow : ""}`}
 				>
@@ -80,7 +72,7 @@ export const Products = () => {
 								}}
 							>
 								<button className={styles["products__item-btn"]}>
-									<img className={styles["products__item-img"]} src={src}></img>
+									<img className={styles["products__item-img"]} src={src} />
 									<FullScreenIcon />
 								</button>
 								<figcaption>
