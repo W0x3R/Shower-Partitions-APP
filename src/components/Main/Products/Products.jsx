@@ -45,6 +45,9 @@ export const Products = () => {
 	const handlePopupOpen = (i) => {
 		disableBodyScrollIncludeScrollbar()
 		setIsPopupOpen(true)
+		setActivePopupImage(popupImageSrc)
+		setActivePopupText(popupText)
+		setActivePopupImageAlt(e.target.alt)
 		setIndexOfLastActiveImg(i)
 		closePopupBtnRef.current.focus()
 	}
@@ -102,31 +105,29 @@ export const Products = () => {
 					id={`panel-${activeBtn}`}
 					aria-labelledby={`tab-${activeBtn}`}
 				>
-					{productsData[activeBtn].map(({ id, title, src, popupSrc, alt }) => {
-						return (
-							<figure
-								className={styles.products__item}
-								key={id}
-								onClick={() => {
-									handlePopupOpen()
-									setActivePopupImage(popupSrc)
-									setActivePopupText(title)
-								}}
-							>
-								<button className={styles["products__item-btn"]}>
-									<img
-										className={styles["products__item-img"]}
-										src={src}
-										alt={alt}
-									/>
-									<FullScreenIcon />
-								</button>
-								<figcaption>
-									<p className={styles["products__item-text"]}>{title}</p>
-								</figcaption>
-							</figure>
-						)
-					})}
+					{productsData[activeBtn].map(
+						({ id, title, imgSrc, popupImgSrc, alt }, i) => {
+							return (
+								<figure
+									className={styles.products__item}
+									key={id}
+									onClick={(e) => handlePopupOpen(popupImgSrc, title, e, i)}
+								>
+									<button className={styles["products__item-btn"]}>
+										<img
+											className={styles["products__item-img"]}
+											src={imgSrc}
+											alt={alt}
+										/>
+										<FullScreenIcon />
+									</button>
+									<figcaption>
+										<p className={styles["products__item-text"]}>{title}</p>
+									</figcaption>
+								</figure>
+							)
+						}
+					)}
 				</div>
 				<Popup
 					handlePopupClose={handlePopupClose}
