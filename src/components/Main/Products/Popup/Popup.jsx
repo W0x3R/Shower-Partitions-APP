@@ -5,6 +5,9 @@ export const Popup = ({
 	activePopupText,
 	handlePopupClose,
 	isPopupOpen,
+	activePopupImageAlt,
+	closePopupBtnRef,
+	handleKeyDown,
 }) => {
 	return (
 		<div

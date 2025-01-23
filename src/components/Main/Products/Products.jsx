@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from "./Products.module.scss"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import { productsData } from "../../data/productsData"
@@ -134,6 +134,9 @@ export const Products = () => {
 					activePopupImage={activePopupImage}
 					activePopupText={activePopupText}
 					isPopupOpen={isPopupOpen}
+					activePopupImageAlt={activePopupImageAlt}
+					closePopupBtnRef={closePopupBtnRef}
+					handleKeyDown={handleKeyDown}
 				/>
 			</div>
 		</section>
