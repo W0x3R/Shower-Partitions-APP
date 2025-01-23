@@ -9,7 +9,7 @@
 	background-color: var(--black-alpha);
 	z-index: 100;
 	cursor: pointer;
-	transition: opacity .2s ease;
+	transition: all .3s linear;
 }
 
 .products__popup.visible {
