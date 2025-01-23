@@ -28,6 +28,7 @@ export const Popup = ({
 					className={styles.popup__img}
 					src={activePopupImage}
 					onClick={(e) => e.currentTarget}
+					alt={activePopupImageAlt}
 				/>
 				<button
 					className={styles["products__popup-btn"]}
