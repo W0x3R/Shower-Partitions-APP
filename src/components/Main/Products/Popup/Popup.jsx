@@ -33,7 +33,11 @@ export const Popup = ({
 				<button
 					className={styles["products__popup-btn"]}
 					onClick={handlePopupClose}
-				></button>
+					aria-label="Закрыть окно с изображением"
+					ref={closePopupBtnRef}
+				>
+					✖
+				</button>
 			</div>
 		</div>
 	)
