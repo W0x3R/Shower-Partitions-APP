@@ -89,6 +89,7 @@
 
 	&__item {
 		@extend %image-card;
+		row-gap: 0.175em;
 
 		& svg {
 			@extend %image-card-svg;
