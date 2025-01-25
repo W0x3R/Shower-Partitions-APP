@@ -173,7 +173,6 @@
 %image-card {
 	@include flexCenter;
 	flex-direction: column;
-	row-gap: .375em;
 	flex: 0 0 calc((100% - 2 * 1.5625em) / 3);
 	cursor: pointer;
 	text-align: center;
