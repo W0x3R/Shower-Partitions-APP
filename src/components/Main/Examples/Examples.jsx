@@ -1,5 +1,6 @@
 import Fancybox from "../../FancyApp/FancyBox"
 import ExamplesShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
+import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import styles from "./Examples.module.scss"
 import examplesData from "../../data/examplesData"
 import { useEffect, useMemo, useState } from "react"
@@ -56,6 +57,7 @@ export const Examples = () => {
 						width="351"
 						height="243"
 					/>
+					<FullScreenIcon />
 				</a>
 			</div>
 		))
