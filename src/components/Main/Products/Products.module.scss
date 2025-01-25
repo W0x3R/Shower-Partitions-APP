@@ -110,8 +110,9 @@
 		}
 	}
 
-	&__item-btn {
+	&__item-link {
 		position: relative;
+		outline: none;
 
 		@include media.focusVisible {
 			.products__item-img {
