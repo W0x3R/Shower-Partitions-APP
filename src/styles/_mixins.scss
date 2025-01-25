@@ -202,4 +202,8 @@
 	@include sizes(19.5em, 13.5em);
 	border-radius: 10px;
 	transition: filter .3s ease;
+
+	@include media.mediumMobile {
+		@include sizes(22.5em, 15.5em);
+	}
 }
