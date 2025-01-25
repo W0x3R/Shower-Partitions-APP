@@ -29,23 +29,23 @@
 		justify-content: center;
 		column-gap: 1.25em;
 		margin-bottom: 3.275em;
-		font-size: clamp(10.8px, 1.4vw, 16.5px);
+		font-size: clamp(10.8px, 1.4vw, 17px);
 
 		@include media.bigMobile {
 			flex-wrap: wrap;
 			row-gap: 1.25em;
-			font-size: clamp(12px, 2.25vw, 14px);
+			font-size: clamp(12px, 2.35vw, 14.5px);
 		}
 
 		@include media.mediumMobile {
-			font-size: 13px;
+			font-size: 14.2px;
 		}
 	}
 
 	&__types-btn {
 		flex: 0 0 calc((100% - (3 * 1.25em)) / 4);
 		max-width: 250px;
-		height: 4em;
+		height: 3.5em;
 		background-color: var(--black);
 		border-radius: 15px;
 		border: none;
@@ -64,11 +64,12 @@
 
 		@include media.bigMobile {
 			flex-basis: calc((80% - 1.25em) / 2);
+			max-width: 220px;
 		}
 
 		@include media.mediumMobile {
 			flex-basis: 100%;
-			max-width: 210px;
+			max-width: 204px;
 			padding: 1.1em 0.5em;
 		}
 	}
