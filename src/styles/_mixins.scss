@@ -7,6 +7,12 @@
 	font-size: clamp(#{$min-rem}rem, math.div($max, $content-width) * 100vw, #{$max-rem}rem);
 }
 
+@mixin flexStartStart {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
 @mixin flexCenter {
 	display: flex;
 	justify-content: center;
@@ -57,6 +63,36 @@
 	pointer-events: all;
 }
 
+@mixin increaseClickableArea {
+	content: "";
+	position: absolute;
+	display: block;
+	inset: -5px
+}
+
+@mixin sizes($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin positioningBurgerLines($rotateVal) {
+	top: 50%;
+	transform: translateY(-50%) rotate(#{$rotateVal}deg);
+	transform-origin: center center;
+}
+
+@mixin fullscreen-bg($opacity, $mediumMobileOpacity) {
+	position: absolute;
+	inset: 0;
+	@include sizes(100%, 100%);
+	object-fit: cover;
+	opacity: $opacity;
+
+	@include media.mediumMobile {
+		opacity: $mediumMobileOpacity;
+	}
+}
+
 %header-texts-fonts {
 	font-size: 0.94em;
 	letter-spacing: var(--basic-letter-spacing);
@@ -92,32 +128,79 @@
 	}
 }
 
-@mixin increaseClickableArea {
-	content: "";
-	position: absolute;
-	display: block;
-	inset: -5px
+%photos-section {
+	padding-block: 4em;
+	font-size: clamp(11px, 1.4vw, 16px);
+	color: var(--text-main-color);
+
+	@include media.bigMobile {
+		font-size: clamp(7.4px, 1.9vw, 11px);
+	}
 }
 
-@mixin sizes($width, $height) {
-	width: $width;
-	height: $height;
-}
+%title-level-two {
+	margin-bottom: 0.4em;
+	font-size: 2.65em;
+	letter-spacing: 0.05em;
+	text-align: center;
 
-@mixin positioningBurgerLines($rotateVal) {
-	top: 50%;
-	transform: translateY(-50%) rotate(#{$rotateVal}deg);
-	transform-origin: center center;
-}
-
-@mixin fullscreen-bg($opacity, $mediumMobileOpacity) {
-	position: absolute;
-	inset: 0;
-	@include sizes(100%, 100%);
-	object-fit: cover;
-	opacity: $opacity;
+	@include media.bigMobile {
+		font-size: 2.9em;
+		line-height: 1.1em;
+		margin-bottom: 0.6em;
+	}
 
 	@include media.mediumMobile {
-		opacity: $mediumMobileOpacity;
+		font-size: 3.25em;
 	}
+}
+
+%images-cards {
+	position: relative;
+	flex-wrap: wrap;
+	gap: 1.5625em;
+	font-size: clamp(10px, 1.35vw, 18px);
+
+	@include media.bigMobile {
+		font-size: clamp(10px, 2vw, 15px);
+	}
+
+	@include media.mediumMobile {
+		font-size: clamp(12px, 3.6vw, 18px);
+	}
+}
+
+%image-card {
+	@include flexCenter;
+	flex-direction: column;
+	row-gap: .375em;
+	flex: 0 0 calc((100% - 2 * 1.5625em) / 3);
+	cursor: pointer;
+	text-align: center;
+	font-weight: 600;
+
+	@include media.bigMobile {
+		flex-basis: calc((100% - 1 * 1.5625em) / 2);
+	}
+
+	@include media.mediumMobile {
+		flex-basis: 100%;
+	}
+}
+
+%image-card-svg {
+	@include abs-center;
+	@include sizes(30px, 30px);
+	opacity: 0;
+	transition: var(--basic-transition);
+
+	@include media.hoverAndActive {
+		@include sizes(32px, 32px);
+	}
+}
+
+%image-card-img {
+	@include sizes(19.5em, 13.5em);
+	border-radius: 10px;
+	transition: filter .3s ease;
 }

@@ -2,30 +2,11 @@
 @use '../../../styles/media';
 
 .products {
-	padding-block: 4em;
+	@extend %photos-section;
 	background-color: var(--white);
-	font-size: clamp(11px, 1.4vw, 16px);
-	color: var(--text-main-color);
-
-	@include media.bigMobile {
-		font-size: clamp(7.4px, 1.9vw, 11px);
-	}
 
 	&__title {
-		margin-bottom: 0.4em;
-		font-size: 2.65em;
-		letter-spacing: 0.05em;
-		text-align: center;
-
-		@include media.bigMobile {
-			font-size: 2.9em;
-			line-height: 1.1em;
-			margin-bottom: 0.6em;
-		}
-
-		@include media.mediumMobile {
-			font-size: 3.25em;
-		}
+		@extend %title-level-two
 	}
 
 	&__text {
@@ -97,21 +78,8 @@
 	}
 
 	&__items {
-		position: relative;
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-		flex-wrap: wrap;
-		gap: 1.5625em;
-		font-size: clamp(10px, 1.35vw, 18px);
-
-		@include media.bigMobile {
-			font-size: clamp(10px, 2vw, 15px);
-		}
-
-		@include media.mediumMobile {
-			font-size: clamp(12px, 3.6vw, 18px);
-		}
+		@include mixins.flexStartStart;
+		@extend %images-cards;
 	}
 
 	&__items.oneRow {
@@ -119,20 +87,10 @@
 	}
 
 	&__item {
-		@include mixins.flexCenter;
-		flex-direction: column;
-		row-gap: .375em;
-		flex: 0 0 calc((100% - 2 * 1.5625em) / 3);
-		cursor: pointer;
-		text-align: center;
-		font-weight: 600;
+		@extend %image-card;
 
-		@include media.bigMobile {
-			flex-basis: calc((100% - 1 * 1.5625em) / 2);
-		}
-
-		@include media.mediumMobile {
-			flex-basis: 100%;
+		& svg {
+			@extend %image-card-svg;
 		}
 
 		@include media.hoverAndActive {
@@ -160,23 +118,10 @@
 				outline: var(--focus-outline);
 			}
 		}
-
-		svg {
-			@include mixins.abs-center;
-			@include mixins.sizes(30px, 30px);
-			opacity: 0;
-			transition: var(--basic-transition);
-
-			@include media.hoverAndActive {
-				@include mixins.sizes(32px, 32px);
-			}
-		}
 	}
 
 	&__item-img {
-		@include mixins.sizes(19.5em, 13.5em);
-		border-radius: 10px;
-		transition: filter .3s ease;
+		@extend %image-card-img;
 	}
 
 	&__item-text {
