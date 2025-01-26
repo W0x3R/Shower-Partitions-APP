@@ -49,7 +49,11 @@ export const Examples = () => {
 	const renderedSlides = useMemo(() => {
 		return examplesData.slice(0, visibleCount).map((example) => (
 			<div className={`${styles.examples__item}`} key={example.id}>
-				<a data-fancybox="gallery" href={example.sliderImg}>
+				<a
+					className={styles["examples__item-link"]}
+					data-fancybox="gallery"
+					href={example.sliderImg}
+				>
 					<img
 						className={styles["examples__item-img"]}
 						alt={example.alt}
