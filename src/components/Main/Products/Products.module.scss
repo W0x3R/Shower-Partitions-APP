@@ -29,23 +29,28 @@
 		justify-content: center;
 		column-gap: 1.25em;
 		margin-bottom: 3.275em;
-		font-size: clamp(10.8px, 1.4vw, 17px);
+		font-size: clamp(11px, 1.5vw, 16px);
 
 		@include media.bigMobile {
 			flex-wrap: wrap;
 			row-gap: 1.25em;
-			font-size: clamp(12px, 2.35vw, 14.5px);
+			font-size: clamp(12px, 2.3vw, 14.5px);
 		}
 
 		@include media.mediumMobile {
-			font-size: 14.2px;
+			font-size: 14px;
+		}
+
+		@include media.smallMobile {
+			font-size: 13px;
 		}
 	}
 
 	&__types-btn {
 		flex: 0 0 calc((100% - (3 * 1.25em)) / 4);
-		max-width: 250px;
-		height: 3.5em;
+		padding-inline: 10px;
+		max-width: 260px;
+		height: 3.8em;
 		background-color: var(--black);
 		border-radius: 15px;
 		border: none;
@@ -129,5 +134,9 @@
 
 	&__item-text {
 		font-size: 1em;
+
+		@include media.tablet {
+			font-size: 1.1em;
+		}
 	}
 }
