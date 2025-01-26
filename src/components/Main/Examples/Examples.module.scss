@@ -41,7 +41,6 @@
 	&__items {
 		@include mixins.flexCenter;
 		@extend %images-cards;
-		margin-bottom: 20px;
 	}
 
 	&__item {
