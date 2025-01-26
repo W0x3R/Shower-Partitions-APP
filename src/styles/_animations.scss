@@ -222,3 +222,20 @@
 		visibility: hidden;
 	}
 }
+
+@keyframes scaleAndFilterPriceImage {
+	0% {
+		transform: scale(1);
+		filter: none;
+	}
+
+	50% {
+		transform: scale(1.01);
+		filter: drop-shadow(2px 4px 6px black);
+	}
+
+	100% {
+		transform: scale(1);
+		filter: none;
+	}
+}
