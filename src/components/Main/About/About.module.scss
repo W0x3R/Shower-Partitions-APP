@@ -23,17 +23,7 @@
 	}
 
 	&__background {
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-	}
-
-	&__background-desktop {
-		@include mixins.fullscreen-bg(1, 0);
-	}
-
-	&__background-mobile {
-		@include mixins.fullscreen-bg(0, 1);
+		@include mixins.fullscreen-bg;
 	}
 
 	&__content {

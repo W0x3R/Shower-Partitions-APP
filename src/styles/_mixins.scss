@@ -81,15 +81,16 @@
 	transform-origin: center center;
 }
 
-@mixin fullscreen-bg($opacity, $mediumMobileOpacity) {
+@mixin fullscreen-bg {
 	position: absolute;
 	inset: 0;
-	@include sizes(100%, 100%);
-	object-fit: cover;
-	opacity: $opacity;
+	z-index: -1;
+	background-image: url('../../../assets/main/main-bg-big.webp');
+	background-position: center;
+	background-size: cover;
 
 	@include media.mediumMobile {
-		opacity: $mediumMobileOpacity;
+		background-image: url('../../../assets/main/main-bg-small.webp');
 	}
 }
 

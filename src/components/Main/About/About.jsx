@@ -1,8 +1,6 @@
 import styles from "./About.module.scss"
 import featureCircle from "../../../assets/main/feature-circle.svg?url"
 import clickHand from "../../../assets/main/click-hand.svg?url"
-import mainBackgroundDesktop from "../../../assets/main/main-bg-big.webp"
-import mainBackgroundMobile from "../../../assets/main/main-bg-small.webp"
 
 export const About = () => {
 	const featuresItemsText = [
@@ -13,16 +11,7 @@ export const About = () => {
 
 	return (
 		<section className={styles.about}>
-			<div className={styles.about__background}>
-				<img
-					className={styles["about__background-desktop"]}
-					src={mainBackgroundDesktop}
-				></img>
-				<img
-					className={styles["about__background-mobile"]}
-					src={mainBackgroundMobile}
-				></img>
-			</div>
+			<div className={styles.about__background} aria-hidden="true" />
 			<div className="container">
 				<div className={styles.about__content}>
 					<h1 className={styles.about__title}>
