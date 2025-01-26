@@ -128,5 +128,12 @@
 				width: 50%;
 			}
 		}
+
+		@include media.focusVisible {
+			&::after {
+				border-bottom: none;
+				box-shadow: 0 1px 0 1px var(--red);
+			}
+		}
 	}
 }
