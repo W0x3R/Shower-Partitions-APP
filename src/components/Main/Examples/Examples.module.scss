@@ -12,7 +12,8 @@
 	}
 
 	&__title {
-		@extend %title-level-two
+		@extend %title-level-two;
+		margin-bottom: 1em;
 	}
 
 	&__info {
