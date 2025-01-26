@@ -1,5 +1,5 @@
 import Fancybox from "../../FancyApp/FancyBox"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "./Products.module.scss"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import { productsData } from "../../data/productsData"
@@ -17,6 +17,15 @@ export const Products = () => {
 	const handleButtonActive = (value) => {
 		setActiveBtn(value)
 	}
+
+	useEffect(() => {
+		const items = document.querySelectorAll(`.${styles.products__item}`)
+		items.forEach((item, i) => {
+			setTimeout(() => {
+				item.classList.add(styles.visible)
+			}, i * 40)
+		})
+	})
 
 	return (
 		<section className={styles.products}>

@@ -95,6 +95,12 @@
 	&__item {
 		@extend %image-card;
 		row-gap: 0.175em;
+		transition: opacity 0.3s ease;
+		opacity: 0;
+
+		&.visible {
+			opacity: 1;
+		}
 
 		& svg {
 			@extend %image-card-svg;
