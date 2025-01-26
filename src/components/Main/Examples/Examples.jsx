@@ -98,7 +98,7 @@ export const Examples = () => {
 							onClick={handleShowMorePictures}
 						>
 							Загрузить еще фото
-							<ExamplesShowMoreImgBtn />
+							<ExamplesShowMoreImgBtn aria-hidden="true" />
 						</button>
 					)}
 				</Fancybox>
