@@ -68,6 +68,17 @@
 		}
 	}
 
+	&__item-link {
+		position: relative;
+		outline: none;
+
+		@include media.focusVisible {
+			.examples__item-img {
+				outline: var(--focus-outline);
+			}
+		}
+	}
+
 	&__item-img {
 		@extend %image-card-img;
 	}
