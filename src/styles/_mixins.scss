@@ -95,16 +95,16 @@
 }
 
 %header-texts-fonts {
-	font-size: 0.94em;
+	font-size: 0.98em;
 	letter-spacing: var(--basic-letter-spacing);
 	text-align: center;
 
 	@include media.bigMobile {
-		font-size: 1.35em;
+		font-size: 1.5em;
 	}
 
 	@include media.mediumMobile {
-		font-size: 1.65em;
+		font-size: 1.7em;
 	}
 }
 
@@ -119,6 +119,10 @@
 	background-color: var(--main-green);
 	border-radius: var(--border-r-circle);
 	animation: blink 2.2s infinite;
+
+	@include media.tablet {
+		left: -14px;
+	}
 
 	@include media.bigMobile {
 		left: -15px;
