@@ -3,10 +3,18 @@
 @use './animations';
 
 .container {
-	width: 90%;
-	max-width: 1440px;
+	width: 92%;
 	margin: 0 auto;
-	padding: 0 1.25rem;
+	padding: 0 1rem;
+	max-width: 1440px;
+
+	@media (min-width: 1440px) {
+		max-width: 1560px;
+	}
+
+	@include media.desktop-large {
+		max-width: 1440px;
+	}
 
 	@include media.bigMobile {
 		padding-inline: 8px;
