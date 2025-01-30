@@ -5,6 +5,31 @@
 	@extend %photos-section;
 	background-color: var(--white);
 
+	@include media.smallMobile {
+		font-size: clamp(6px, 1.9vw, 7.4px);
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	& img {
+		width: 26em;
+		background: transparent;
+		margin-bottom: 20px;
+
+		@include media.bigMobile {
+			width: 33em;
+		}
+
+		@include media.mediumMobile {
+			width: 34em;
+		}
+	}
+
 	&__title {
 		@extend %title-level-two
 	}
@@ -15,18 +40,37 @@
 	}
 
 	&__accordion {
-		width: 70%;
+		width: 80%;
 		display: flex;
 		flex-direction: column;
 		row-gap: 20px;
+
+		@include media.bigMobile {
+			width: 100%;
+		}
 	}
 
 	&__accordion-section {
 		position: relative;
-		padding: 1.2em;
+		padding: 1.4em 1.2em;
 		overflow: hidden;
 		background: #F8FAFB;
 		border-radius: 15px;
+		opacity: 0;
+		transition: opacity .3s ease-in-out;
+
+		@include media.bigMobile {
+			padding: 1.8em 1.6em;
+		}
+
+		@include media.mediumMobile {
+			padding: 2em 1.8em;
+		}
+
+
+		&.visible {
+			opacity: 1;
+		}
 	}
 
 	&__accordion-btn {
@@ -41,20 +85,33 @@
 			@include mixins.sizes(32px, 32px);
 			transition: transform 0.4s ease-in-out;
 
+			@include media.mediumMobile {
+				width: 28px;
+				height: 28px;
+			}
+
 			&.open {
 				transform: rotate(135deg);
 			}
 		}
 
 		& span {
-			padding-right: 25px;
-			font-size: 1.2em;
+			padding-right: 30px;
+			font-size: 1.3em;
 			color: #000;
 			font-weight: 700;
 			letter-spacing: .03em;
-			line-height: 25px;
+			line-height: 1.5625em;
 			text-transform: uppercase;
 			text-align: left;
+
+			@include media.bigMobile {
+				font-size: 1.65em;
+			}
+
+			@include media.mediumMobile {
+				font-size: 1.95em;
+			}
 		}
 	}
 
@@ -66,11 +123,19 @@
 		transition: all .3s ease-in-out;
 
 		& p {
-			font-size: 1em;
+			font-size: 1.1em;
 			font-weight: 500;
-			line-height: 21px;
+			line-height: 1.3125em;
 			letter-spacing: .03em;
 			color: #939393;
+
+			@include media.bigMobile {
+				font-size: 1.45em;
+			}
+
+			@include media.mediumMobile {
+				font-size: 1.75em;
+			}
 		}
 
 		&.open {
@@ -86,7 +151,7 @@
 		@include mixins.flexCenter;
 		column-gap: 7px;
 		padding-bottom: 4px;
-		font-size: 20px;
+		font-size: 19px;
 		transition: all 0.45s ease-in-out;
 		color: var(--main-green);
 		max-width: max-content;
@@ -97,7 +162,7 @@
 		}
 
 		@include media.mediumMobile {
-			font-size: 17px;
+			font-size: 16px;
 		}
 
 		&::after {

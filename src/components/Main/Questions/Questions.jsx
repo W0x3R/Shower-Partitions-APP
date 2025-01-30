@@ -1,5 +1,6 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Cross from "../../../assets/main/cross.svg?react"
+import questionImg from "../../../assets/main/questions-img.png"
 import styles from "./Questions.module.scss"
 import { accordionData } from "../../data/accordionData"
 
@@ -40,22 +41,36 @@ export const Questions = () => {
 		)
 	}
 
+	useEffect(() => {
+		const accordionSections = document.querySelectorAll(
+			`.${styles["questions__accordion-section"]}`
+		)
+		accordionSections.forEach((section, i) => {
+			setTimeout(() => {
+				section.classList.add(styles.visible)
+			}, i * 40)
+		})
+	})
+
 	return (
 		<section className={styles.questions}>
 			<div className="container">
-				<h3 className={styles.questions__title}>Часто задаваемые вопросы</h3>
-				<div className={styles["questions__accordion-wrapper"]}>
-					<div className={styles["questions__accordion"]}>
-						{renderQuestions()}
-						{visibleCount < accordionData.length && (
-							<button
-								className={styles["questions__items-btn"]}
-								onClick={handleShowMoreQuestions}
-							>
-								Показать еще вопросы
-								<span>&#10549;</span>
-							</button>
-						)}
+				<div className={styles.questions__inner}>
+					<h3 className={styles.questions__title}>Часто задаваемые вопросы</h3>
+					<img src={questionImg} />
+					<div className={styles["questions__accordion-wrapper"]}>
+						<div className={styles["questions__accordion"]}>
+							{renderQuestions()}
+							{visibleCount < accordionData.length && (
+								<button
+									className={styles["questions__items-btn"]}
+									onClick={handleShowMoreQuestions}
+								>
+									Показать еще вопросы
+									<span>&#10549;</span>
+								</button>
+							)}
+						</div>
 					</div>
 				</div>
 			</div>
