@@ -48,7 +48,7 @@ export const Products = () => {
 								id={`tab-${data.activeBtnValue}`}
 								aria-controls={`panel-${data.activeBtnValue}`}
 							>
-								{data.text}
+								<span>{data.text}</span>
 							</button>
 						)
 					})}
