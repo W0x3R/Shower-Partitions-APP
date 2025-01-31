@@ -12,13 +12,13 @@
 		align-items: center;
 	}
 
-	& img {
-		width: 24em;
+	&__img {
+		width: 22em;
 		background: transparent;
 		margin-bottom: 1em;
 
 		@include media.bigMobile {
-			width: 30em;
+			width: 28em;
 		}
 	}
 
