@@ -96,12 +96,13 @@
 	}
 
 	&__description-text {
-		margin-bottom: 1.4em;
+		margin-bottom: 1.7em;
 		max-width: 40%;
 		font-size: 1.5em;
 		letter-spacing: 0.025em;
 
 		@include media.bigMobile {
+			margin-bottom: 1.8em;
 			max-width: 90%;
 			text-align: center;
 			font-size: 1.85em;
