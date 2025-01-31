@@ -46,7 +46,7 @@ export const Examples = () => {
 	useEffect(() => {
 		const items = document.querySelectorAll(`.${styles.examples__item}`)
 		items.forEach((item, i) => {
-			setTimeout(() => {
+			const timer = setTimeout(() => {
 				item.classList.add(styles.visible)
 			}, i * 40)
 		})
