@@ -135,11 +135,15 @@
 
 %photos-section {
 	padding-block: 4em;
-	font-size: clamp(11px, 1.55vw, 16px);
+	font-size: clamp(11px, 1.6vw, 16px);
 	color: var(--text-main-color);
 
 	@include media.bigMobile {
-		font-size: clamp(7.2px, 1.9vw, 11px);
+		font-size: clamp(9.5px, 1.5vw, 11px);
+	}
+
+	@include media.mediumMobile {
+		font-size: clamp(7.5px, 1.85vw, 9.5px);
 	}
 }
 
