@@ -252,6 +252,10 @@
 		font-size: 17px;
 	}
 
+	@include media.smallMobile {
+		font-size: 16px;
+	}
+
 	@include media.hoverAndActive {
 		color: var(--main-green);
 
