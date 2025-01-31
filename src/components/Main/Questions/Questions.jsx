@@ -18,20 +18,31 @@ export const Questions = () => {
 			return (
 				<div key={id} className={styles["questions__accordion-section"]}>
 					<button
+						id={`accordion-btn-${id}`}
 						className={styles["questions__accordion-btn"]}
 						onClick={() => handleToggleAccordion(id)}
+						aria-expanded={expandedIndex.includes(id)}
+						aria-controls={`subtitle-${id}`}
 					>
-						<span>{title}</span>
+						<span className={styles["questions__accordion-text"]}>{title}</span>
 						<Cross
 							className={`${styles["questions__accordion-icon"]} ${expandedIndex.includes(id) ? styles.open : ""}`}
-							aria-hidden="hidden"
+							aria-hidden="true"
 						/>
 					</button>
 					<div
+						id={`subtitle-${id}`}
 						className={`${styles["questions__accordion-content"]} ${expandedIndex.includes(id) ? styles.open : ""}`}
+						role="region"
+						aria-labelledby={`accordion-btn-${id}`}
 					>
-						<p>{answer}</p>
+						<p className={styles["questions__accordion-subtext"]}>{answer}</p>
 					</div>
+					<div
+						id="aria-accordion-live-status"
+						aria-live="polite"
+						className="sr-only"
+					></div>
 				</div>
 			)
 		})
@@ -66,6 +77,7 @@ export const Questions = () => {
 								<button
 									className={styles["questions__more-btn"]}
 									onClick={handleShowMoreQuestions}
+									aria-label="Показать еще 2 вопроса"
 								>
 									Показать еще вопросы
 									<QuestionsShowMoreImgBtn aria-hidden="true" />
