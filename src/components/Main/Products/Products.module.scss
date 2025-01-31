@@ -10,17 +10,9 @@
 	}
 
 	&__text {
+		@extend %main-texts-fonts;
 		margin-bottom: 1.4em;
-		font-size: 1.3em;
 		text-align: center;
-
-		@include media.bigMobile {
-			font-size: 1.8em;
-		}
-
-		@include media.mediumMobile {
-			font-size: 1.95em;
-		}
 	}
 
 	&__types {

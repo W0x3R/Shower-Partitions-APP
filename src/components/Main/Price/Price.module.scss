@@ -64,30 +64,13 @@
 	}
 
 	&__info-text {
-		font-size: 1.3em;
-		letter-spacing: .04em;
+		@extend %main-texts-fonts;
 		text-align: center;
-
-		@include media.bigMobile {
-			font-size: 1.8em;
-		}
-
-		@include media.mediumMobile {
-			font-size: 1.95em;
-		}
 	}
 
 	&__info-subtext {
-		font-size: 1.15em;
+		@extend %main-subtexts-fonts;
 		text-align: center;
-
-		@include media.bigMobile {
-			font-size: 1.65em;
-		}
-
-		@include media.mediumMobile {
-			font-size: 1.8em;
-		}
 	}
 
 	&__info-link {
