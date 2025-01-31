@@ -131,7 +131,7 @@
 		pointer-events: none;
 
 		& img {
-			width: 38px;
+			width: 42px;
 			animation: scale 3s linear infinite;
 			transition: var(--basic-transition);
 		}
@@ -144,7 +144,7 @@
 
 		@include media.mediumMobile {
 			& img {
-				width: 34px;
+				width: 36px;
 			}
 		}
 	}
