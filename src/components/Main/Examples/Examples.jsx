@@ -49,8 +49,9 @@ export const Examples = () => {
 			const timer = setTimeout(() => {
 				item.classList.add(styles.visible)
 			}, i * 40)
+			return () => clearTimeout(timer)
 		})
-	})
+	}, [visibleCount])
 
 	const renderedSlides = useMemo(() => {
 		return examplesData.slice(0, visibleCount).map((example) => (

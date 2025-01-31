@@ -62,12 +62,15 @@ export const Questions = () => {
 		const accordionSections = document.querySelectorAll(
 			`.${styles["questions__accordion-section"]}`
 		)
+
 		accordionSections.forEach((section, i) => {
-			setTimeout(() => {
+			const timer = setTimeout(() => {
 				section.classList.add(styles.visible)
 			}, i * 40)
+
+			return () => clearTimeout(timer)
 		})
-	})
+	}, [visibleCount])
 
 	return (
 		<section className={styles.questions}>
