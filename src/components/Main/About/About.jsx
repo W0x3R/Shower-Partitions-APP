@@ -15,7 +15,7 @@ export const About = () => {
 			<div className="container">
 				<div className={styles.about__content}>
 					<h1 className={styles.about__title}>
-						<b>Душевые перегородки</b> на заказ
+						<b>Душевые перегородки</b> на заказ в Гомеле
 					</h1>
 					<div className={styles.about__description}>
 						<div className={styles["about__description-dots"]}>
