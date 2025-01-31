@@ -14,18 +14,6 @@
 		width: 100vw;
 		background: var(--black);
 		border-bottom: none;
-
-		.nav__item {
-			padding: 1em;
-		}
-
-		.nav__item-link {
-			font-size: 1.05em;
-		}
-
-		.nav__menu-link {
-			font-size: var(--fz_1em)
-		}
 	}
 
 	@include media.bigMobile {
