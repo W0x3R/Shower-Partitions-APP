@@ -8,7 +8,7 @@
 
 	&__title {
 		@extend %title-level-two;
-		margin-bottom: 1em;
+		margin-bottom: 1.2em;
 	}
 
 	&__info {
@@ -20,7 +20,7 @@
 	}
 
 	&__info-img {
-		@include mixins.sizes(19em, 29em);
+		@include mixins.sizes(17.5em, 27.5em);
 		animation: scaleAndFilterPriceImage 4.3s infinite ease-in-out;
 
 		&.desktop {
@@ -37,11 +37,11 @@
 
 			@include media.bigMobile {
 				display: block;
-				@include mixins.sizes(26em, 36em);
+				@include mixins.sizes(24em, 34em);
 			}
 
 			@include media.mediumMobile {
-				@include mixins.sizes(29em, 39em);
+				@include mixins.sizes(27em, 37em);
 			}
 		}
 	}
@@ -64,29 +64,29 @@
 	}
 
 	&__info-text {
-		font-size: 1.5em;
+		font-size: 1.3em;
 		letter-spacing: .04em;
 		text-align: center;
 
 		@include media.bigMobile {
-			font-size: 1.95em;
+			font-size: 1.8em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 2.25em;
+			font-size: 1.95em;
 		}
 	}
 
 	&__info-subtext {
-		font-size: 1.35em;
+		font-size: 1.15em;
 		text-align: center;
 
 		@include media.bigMobile {
-			font-size: 1.75em;
+			font-size: 1.65em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.9em;
+			font-size: 1.8em;
 		}
 	}
 
@@ -94,7 +94,7 @@
 		position: relative;
 		@include mixins.flexSpaceAroundCenter;
 		column-gap: .625em;
-		padding: 1.6em 2.6em;
+		padding: 1.5em 2.5em;
 		overflow: hidden;
 		opacity: 0.9;
 		background-color: var(--main-green);
