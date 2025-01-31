@@ -146,54 +146,9 @@
 		}
 	}
 
-	&__items-btn {
-		position: relative;
-		@include mixins.flexCenter;
-		column-gap: 7px;
-		padding-bottom: 4px;
-		font-size: 19px;
-		transition: all 0.45s ease-in-out;
-		color: var(--main-green);
+	&__more-btn {
+		@extend %showMoreBtn;
 		max-width: max-content;
 		align-self: center;
-
-		@include media.bigMobile {
-			font-size: 18px;
-		}
-
-		@include media.mediumMobile {
-			font-size: 16px;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			width: 100%;
-			border-bottom: 2px dotted var(--main-green);
-			transition: var(--basic-transition);
-		}
-
-		& span {
-			font-size: 23px;
-			line-height: 6px;
-		}
-
-		@include media.hoverAndActive {
-			color: var(--main-green);
-
-			&::after {
-				width: 50%;
-			}
-		}
-
-		@include media.focusVisible {
-			&::after {
-				border-bottom: none;
-				box-shadow: 0 1px 0 1px var(--red);
-			}
-		}
 	}
 }

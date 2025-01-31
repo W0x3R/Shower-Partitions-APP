@@ -84,56 +84,6 @@
 	}
 
 	&__items-btn {
-		position: relative;
-		@include mixins.flexCenter;
-		column-gap: 7px;
-		padding-bottom: 4px;
-		font-size: 20px;
-		transition: all 0.45s ease-in-out;
-		color: var(--main-green);
-
-		@include media.bigMobile {
-			font-size: 18px;
-		}
-
-		@include media.mediumMobile {
-			font-size: 17px;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			width: 100%;
-			border-bottom: 2px dotted var(--main-green);
-			transition: var(--basic-transition);
-		}
-
-		& svg {
-			transition: var(--basic-transition);
-			@include mixins.sizes(18px, 18px);
-			fill: var(--main-green);
-		}
-
-		@include media.hoverAndActive {
-			color: var(--main-green);
-
-			& svg {
-				transform: rotate(180deg);
-			}
-
-			&::after {
-				width: 50%;
-			}
-		}
-
-		@include media.focusVisible {
-			&::after {
-				border-bottom: none;
-				box-shadow: 0 1px 0 1px var(--red);
-			}
-		}
+		@extend %showMoreBtn;
 	}
 }
