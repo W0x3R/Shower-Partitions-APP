@@ -71,7 +71,7 @@
 
 	&__description-dot {
 		display: inline-block;
-		@include mixins.sizes(9px, 9px);
+		@include mixins.sizes(12px, 12px);
 		border: 2px solid var(--main-green);
 		border-radius: var(--border-r-circle);
 		animation: wave 2s linear infinite;
