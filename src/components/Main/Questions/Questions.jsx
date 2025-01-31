@@ -11,6 +11,11 @@ export const Questions = () => {
 
 	const handleShowMoreQuestions = () => {
 		setVisibleCount((prev) => Math.min(prev + 2, accordionData.length))
+		const liveRegion = document.getElementById("aria-accordion-live-status")
+		if (liveRegion) {
+			liveRegion.textContent = "Добавлены два новых вопроса"
+			setTimeout(() => (liveRegion.textContent = ""), 100)
+		}
 	}
 
 	const renderQuestions = () =>
