@@ -95,16 +95,16 @@
 }
 
 %header-texts-fonts {
-	font-size: 0.98em;
+	font-size: 0.95em;
 	letter-spacing: var(--basic-letter-spacing);
 	text-align: center;
 
 	@include media.bigMobile {
-		font-size: 1.5em;
+		font-size: 1.4em
 	}
 
 	@include media.mediumMobile {
-		font-size: 1.7em;
+		font-size: 1.6em;
 	}
 }
 
