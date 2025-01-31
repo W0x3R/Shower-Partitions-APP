@@ -5,7 +5,7 @@
 .header {
 	&__top {
 		@include mixins.flexSpaceBetweenCenter;
-		padding-bottom: .525em;
+		padding-bottom: 0.6em;
 		font-size: clamp(12px, 1.48vw, 16px);
 		border-bottom: var(--border-b-white-2);
 		position: relative;
