@@ -4,9 +4,9 @@
 
 .header {
 	&__top {
-		font-size: clamp(12px, 1.44vw, 16px);
 		@include mixins.flexSpaceBetweenCenter;
 		padding-bottom: .525em;
+		font-size: clamp(12px, 1.48vw, 16px);
 		border-bottom: var(--border-b-white-2);
 		position: relative;
 		z-index: 100;
