@@ -37,16 +37,18 @@
 		padding-inline: 12px;
 		max-width: 260px;
 		height: 3.7em;
+		opacity: 0.85;
 		background-color: var(--black);
 		border-radius: 15px;
 		border: none;
-		transition: background-color .3s ease, border-radius .5s ease;
+		transition: background-color .3s ease, border-radius .5s ease, opacity .3s ease;
 		font-weight: 600;
 		color: var(--white);
 		cursor: pointer;
 
 		@include media.hoverAndActive {
 			border-radius: 20px;
+			opacity: 1;
 		}
 
 		@include media.focusVisible {
@@ -71,6 +73,7 @@
 
 	&__types-btn.active {
 		background-color: var(--main-green);
+		opacity: 1;
 	}
 
 	&__items {
