@@ -6,7 +6,7 @@
 	background-color: var(--white);
 
 	@include media.smallMobile {
-		font-size: clamp(6px, 1.9vw, 7.4px);
+		font-size: clamp(6px, 1.9vw, 7.2px);
 	}
 
 	&__inner {
@@ -97,7 +97,7 @@
 
 		& span {
 			padding-right: 30px;
-			font-size: 1.3em;
+			font-size: 1.35em;
 			color: #000;
 			font-weight: 700;
 			letter-spacing: .03em;
@@ -106,11 +106,11 @@
 			text-align: left;
 
 			@include media.bigMobile {
-				font-size: 1.65em;
+				font-size: 1.75em;
 			}
 
 			@include media.mediumMobile {
-				font-size: 1.95em;
+				font-size: 2em;
 			}
 		}
 	}
@@ -123,14 +123,14 @@
 		transition: all .3s ease-in-out;
 
 		& p {
-			font-size: 1.1em;
+			font-size: 1.15em;
 			font-weight: 500;
 			line-height: 1.3125em;
 			letter-spacing: .03em;
 			color: #939393;
 
 			@include media.bigMobile {
-				font-size: 1.45em;
+				font-size: 1.5em;
 			}
 
 			@include media.mediumMobile {

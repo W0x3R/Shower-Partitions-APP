@@ -51,7 +51,7 @@
 		}
 
 		@include media.mediumMobile {
-			font-size: 2.77em;
+			font-size: 2.8em;
 		}
 	}
 
@@ -154,16 +154,16 @@
 	}
 
 	&__features-text {
-		font-size: .87em;
+		font-size: 0.9em;
 		letter-spacing: .04em;
 		text-align: center;
 
 		@include media.bigMobile {
-			font-size: 1.05em;
+			font-size: 1.1em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 0.95em;
+			font-size: 1em;
 		}
 	}
 
@@ -216,7 +216,7 @@
 		}
 
 		& span {
-			font-size: 1em;
+			font-size: 1.1em;
 			white-space: nowrap;
 
 			@include media.bigMobile {
@@ -224,7 +224,7 @@
 			}
 
 			@include media.smallMobile {
-				font-size: 1.2em;
+				font-size: 1.3em;
 			}
 		}
 
@@ -245,7 +245,7 @@
 
 		@include media.bigMobile {
 			max-width: 100%;
-			font-size: 1.31em;
+			font-size: 1.4em;
 		}
 	}
 }
