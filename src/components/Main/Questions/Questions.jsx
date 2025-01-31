@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Cross from "../../../assets/main/cross.svg?react"
+import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import questionImg from "../../../assets/main/questions-img.png"
 import styles from "./Questions.module.scss"
 import { accordionData } from "../../data/accordionData"
@@ -63,11 +64,11 @@ export const Questions = () => {
 							{renderQuestions()}
 							{visibleCount < accordionData.length && (
 								<button
-									className={styles["questions__items-btn"]}
+									className={styles["questions__more-btn"]}
 									onClick={handleShowMoreQuestions}
 								>
 									Показать еще вопросы
-									<span>&#10549;</span>
+									<QuestionsShowMoreImgBtn aria-hidden="true" />
 								</button>
 							)}
 						</div>
