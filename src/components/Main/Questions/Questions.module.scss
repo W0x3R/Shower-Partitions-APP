@@ -5,10 +5,6 @@
 	@extend %photos-section;
 	background-color: var(--white);
 
-	@include media.smallMobile {
-		font-size: clamp(6px, 1.9vw, 7.2px);
-	}
-
 	&__inner {
 		display: flex;
 		flex-direction: column;
