@@ -25,16 +25,12 @@
 	}
 
 	&__content {
-		padding-block: 5.4em 5em;
-
-		@include media.bigMobile {
-			padding-top: 6em;
-		}
+		padding-block: 5.8em;
 	}
 
 	&__title {
-		margin-bottom: 0.7em;
-		font-size: 3.1em;
+		margin-bottom: 0.8em;
+		font-size: 3.5em;
 		letter-spacing: .05em;
 		font-weight: 300;
 
@@ -43,7 +39,7 @@
 		}
 
 		@include media.bigMobile {
-			margin-bottom: 0.7375em;
+			margin-bottom: 1em;
 			text-align: center;
 			line-height: 1.1em;
 		}
@@ -180,7 +176,7 @@
 		position: relative;
 		@include mixins.flexSpaceAroundCenter;
 		column-gap: .625em;
-		padding: 1.6em 2.4em;
+		padding: 1.8em 2.6em;
 		overflow: hidden;
 		opacity: 0.9;
 		background-color: var(--main-green);
@@ -202,7 +198,11 @@
 		}
 
 		@include media.bigMobile {
-			padding: 1.9em 1.6em;
+			padding: 2em 1.6em;
+		}
+
+		@include media.smallMobile {
+			padding: 1.7em 1em;
 		}
 
 		@include media.hoverAndActive {
@@ -238,7 +238,7 @@
 
 	&__order-text {
 		max-width: min-content;
-		font-size: .89em;
+		font-size: 1.1em;
 		letter-spacing: .04em;
 
 		@include media.bigMobile {
