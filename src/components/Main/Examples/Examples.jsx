@@ -35,6 +35,12 @@ export const Examples = () => {
 		setVisibleCount((prev) =>
 			Math.min(prev + stepIncrease, examplesData.length)
 		)
+
+		const liveRegion = document.getElementById("aria-examples-live-status")
+		if (liveRegion) {
+			liveRegion.textContent = `Добавлены ${stepIncrease} новых фото`
+			setTimeout(() => (liveRegion.textContent = ""), 100)
+		}
 	}
 
 	useEffect(() => {
@@ -61,8 +67,13 @@ export const Examples = () => {
 						width="351"
 						height="243"
 					/>
-					<FullScreenIcon />
+					<FullScreenIcon aria-hidden="true" />
 				</a>
+				<div
+					id="aria-examples-live-status"
+					aria-live="polite"
+					className="sr-only"
+				></div>
 			</div>
 		))
 	}, [visibleCount])
@@ -96,6 +107,7 @@ export const Examples = () => {
 						<button
 							className={styles["examples__items-btn"]}
 							onClick={handleShowMorePictures}
+							aria-label={`Показать еще ${stepIncrease} фото`}
 						>
 							Загрузить еще фото
 							<ExamplesShowMoreImgBtn aria-hidden="true" />
