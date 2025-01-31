@@ -30,7 +30,8 @@ export const Price = () => {
 							alt=""
 						/>
 						<a className={styles["price__info-link"]} href="#">
-							<span>Написать в Telegram</span> <img src={clickHand} alt="" />
+							<span>Связаться с нами в Telegram</span>
+							<img src={clickHand} alt="" />
 						</a>
 					</div>
 				</div>
