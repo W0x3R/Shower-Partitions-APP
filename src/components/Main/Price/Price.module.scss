@@ -94,7 +94,7 @@
 		position: relative;
 		@include mixins.flexSpaceAroundCenter;
 		column-gap: .625em;
-		padding: 1.25em 2.6em;
+		padding: 1.6em 2.6em;
 		overflow: hidden;
 		opacity: 0.9;
 		background-color: var(--main-green);
@@ -117,7 +117,11 @@
 		}
 
 		@include media.bigMobile {
-			padding: 1.7em 3.3em;
+			padding: 2em 3.3em;
+		}
+
+		@include media.mediumMobile {
+			padding-block: 2.2em;
 		}
 
 		@include media.hoverAndActive {
