@@ -2,6 +2,8 @@
 @use "./styles/variables";
 @use "./styles/media";
 @use './styles/global.scss';
+@use './styles/fonts.scss';
+
 
 html {
 	box-sizing: border-box;
@@ -21,7 +23,7 @@ body {
 	/* Убираем отступы по умолчанию */
 	padding: 0;
 	/* Убираем внутренние отступы */
-	font-family: Arial, sans-serif;
+	font-family: 'VelaSans', Arial, sans-serif;
 	/* Задаем шрифт по умолчанию */
 	font-size: 1rem;
 	/* Размер шрифта по умолчанию */
