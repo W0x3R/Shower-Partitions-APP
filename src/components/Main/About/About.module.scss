@@ -4,8 +4,8 @@
 
 .about {
 	position: relative;
-	padding-top: 12.5rem;
-	margin-top: -12.5rem;
+	padding-top: 12rem;
+	margin-top: -12rem;
 	font-size: clamp(11px, 1.659vw, 16px);
 
 	@include media.mediumMobile {
@@ -25,28 +25,34 @@
 	}
 
 	&__content {
-		padding-block: 5.8em;
+		padding-block: 7em;
 	}
 
 	&__title {
-		margin-bottom: 0.8em;
-		font-size: 3.5em;
+		margin-bottom: 0.9em;
+		max-width: 62%;
+		font-size: 2.7em;
 		letter-spacing: .05em;
-		line-height: 1.2em;
+		line-height: 130%;
 		font-weight: 300;
 
 		& b {
 			font-weight: 700;
 		}
 
+		@include media.tablet {
+			max-width: 85%;
+		}
+
 		@include media.bigMobile {
 			margin-bottom: 1em;
+			max-width: 100%;
 			text-align: center;
 			line-height: 1.1em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 2.8em;
+			font-size: 2.4em;
 		}
 	}
 
@@ -71,7 +77,7 @@
 
 	&__description-dot {
 		display: inline-block;
-		@include mixins.sizes(12px, 12px);
+		@include mixins.sizes(11px, 11px);
 		border: 2px solid var(--main-green);
 		border-radius: var(--border-r-circle);
 		animation: wave 2s linear infinite;
@@ -96,16 +102,19 @@
 	}
 
 	&__description-text {
-		margin-bottom: 1.7em;
-		max-width: 40%;
-		font-size: 1.5em;
+		margin-bottom: 1.8em;
+		max-width: 36%;
+		font-size: 1.3em;
 		letter-spacing: 0.025em;
 
 		@include media.bigMobile {
-			margin-bottom: 1.8em;
-			max-width: 90%;
+			max-width: 78%;
 			text-align: center;
-			font-size: 1.85em;
+			font-size: 1.6em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.5em;
 		}
 	}
 
@@ -178,7 +187,7 @@
 		position: relative;
 		@include mixins.flexSpaceAroundCenter;
 		column-gap: .625em;
-		padding: 1.8em 2.6em;
+		padding: 1.6em 2.2em;
 		overflow: hidden;
 		opacity: 0.9;
 		background-color: var(--main-green);
@@ -200,7 +209,7 @@
 		}
 
 		@include media.bigMobile {
-			padding: 2em 1.6em;
+			padding: 1.9em 1.6em;
 		}
 
 		@include media.smallMobile {
@@ -220,7 +229,7 @@
 			white-space: nowrap;
 
 			@include media.bigMobile {
-				font-size: 1.4em;
+				font-size: 1.3em;
 			}
 
 			@include media.smallMobile {
@@ -240,12 +249,12 @@
 
 	&__order-text {
 		max-width: min-content;
-		font-size: 1.1em;
+		font-size: 1em;
 		letter-spacing: .04em;
 
 		@include media.bigMobile {
 			max-width: 100%;
-			font-size: 1.4em;
+			font-size: 1.3em;
 		}
 	}
 }
