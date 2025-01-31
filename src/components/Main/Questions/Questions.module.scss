@@ -78,6 +78,13 @@
 		}
 	}
 
+	&__accordion-text {
+		@extend %main-texts-fonts;
+		padding-right: 30px;
+		font-weight: 700;
+		text-align: left;
+	}
+
 	&__accordion-btn {
 		display: flex;
 		justify-content: space-between;
