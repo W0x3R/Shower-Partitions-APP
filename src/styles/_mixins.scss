@@ -148,20 +148,19 @@
 }
 
 %title-level-two {
-	margin-bottom: 0.4em;
-	font-size: 2.85em;
+	margin-bottom: 0.8em;
+	font-size: 2.3em;
 	letter-spacing: 0.05em;
 	line-height: 1.2em;
 	text-align: center;
 
 	@include media.bigMobile {
-		font-size: 2.9em;
+		font-size: 2.6em;
 		line-height: 1.1em;
-		margin-bottom: 0.6em;
 	}
 
 	@include media.mediumMobile {
-		font-size: 3.25em;
+		font-size: 2.7em;
 	}
 }
 
@@ -169,7 +168,7 @@
 	position: relative;
 	flex-wrap: wrap;
 	gap: 1.5625em;
-	font-size: clamp(10px, 1.35vw, 18px);
+	font-size: clamp(11px, 1.4vw, 18px);
 
 	@include media.bigMobile {
 		font-size: clamp(10px, 2vw, 15px);
@@ -208,12 +207,12 @@
 }
 
 %image-card-img {
-	@include sizes(19.5em, 13.5em);
+	@include sizes(19em, 13em);
 	border-radius: 10px;
 	transition: filter .3s ease;
 
 	@include media.mediumMobile {
-		@include sizes(22.5em, 15.5em);
+		@include sizes(22em, 15em);
 	}
 }
 
