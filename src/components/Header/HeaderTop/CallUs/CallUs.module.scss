@@ -12,7 +12,7 @@
 		row-gap: 0.41em;
 	}
 
-	&>p span {
+	& span {
 		font-weight: 400;
 	}
 
@@ -31,7 +31,6 @@
 
 		@include media.mediumMobile {
 			font-size: 1.85em;
-			letter-spacing: .0313em;
 		}
 
 		@include media.focusVisible {
