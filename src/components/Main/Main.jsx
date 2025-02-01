@@ -4,6 +4,7 @@ import { Products } from "./Products/Products"
 import { Examples } from "./Examples/Examples"
 import { Price } from "./Price/Price"
 import { Questions } from "./Questions/Questions"
+import { Standards } from "./Standarts/Standards"
 
 export const Main = () => {
 	return (
@@ -13,6 +14,7 @@ export const Main = () => {
 			<Examples />
 			<Price />
 			<Questions />
+			<Standards />
 		</main>
 	)
 }
