@@ -42,7 +42,6 @@
 		border-radius: 15px;
 		border: none;
 		transition: background-color .3s ease, border-radius .5s ease, opacity .3s ease;
-		font-weight: 600;
 		color: var(--white);
 		cursor: pointer;
 
@@ -68,6 +67,8 @@
 
 		& span {
 			font-size: 1em;
+			font-weight: 600;
+			letter-spacing: var(--basic-letter-spacing);
 		}
 	}
 
@@ -133,6 +134,7 @@
 
 	&__item-text {
 		font-size: 0.95em;
+		letter-spacing: var(--basic-letter-spacing);
 
 		@include media.tablet {
 			font-size: 1em;
