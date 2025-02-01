@@ -4,7 +4,7 @@ import { Products } from "./Products/Products"
 import { Examples } from "./Examples/Examples"
 import { Price } from "./Price/Price"
 import { Questions } from "./Questions/Questions"
-import { Standards } from "./Standarts/Standards"
+import { Standards } from "./Standards/Standards"
 
 export const Main = () => {
 	return (
