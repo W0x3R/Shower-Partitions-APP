@@ -239,3 +239,17 @@
 		filter: none;
 	}
 }
+
+@keyframes scaleAndRotateQuestionsImg {
+	0% {
+		transform: scale(1) rotate(-5deg);
+	}
+
+	50% {
+		transform: scale(1.02) rotate(0deg);
+	}
+
+	100% {
+		transform: scale(1) rotate(-5deg);
+	}
+}

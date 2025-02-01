@@ -1,5 +1,6 @@
 @use '../../../styles/mixins';
 @use '../../../styles/media';
+@use '../../../styles/animations';
 
 .questions {
 	@extend %photos-section;
@@ -14,6 +15,7 @@
 		width: 23em;
 		background: transparent;
 		margin-bottom: 1em;
+		animation: scaleAndRotateQuestionsImg 3s infinite ease-in-out;
 
 		@include media.bigMobile {
 			width: 28em;
