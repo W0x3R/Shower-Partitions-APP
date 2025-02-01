@@ -6,10 +6,8 @@
 	background-color: var(--white);
 
 	&__inner {
-		display: flex;
+		@include mixins.flexCenter;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 	}
 
 	&__img {
@@ -86,15 +84,12 @@
 	}
 
 	&__accordion-btn {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include mixins.flexSpaceBetweenCenter;
 		width: 100%;
 
 		@include media.focusVisible {
 			.questions__accordion-text {
 				border-bottom: 2px solid var(--red);
-
 			}
 		}
 	}
