@@ -1,0 +1,140 @@
+@use '../../../styles/mixins';
+@use '../../../styles/media';
+
+.standards {
+	@extend %photos-section;
+
+	&__text-wrapper {
+		align-self: baseline;
+	}
+
+	&__title {
+		margin-bottom: 1em;
+		font-size: 2.45em;
+		letter-spacing: 0.05em;
+		line-height: 1.2em;
+		text-align: center;
+
+		@include media.bigMobile {
+			font-size: 2.55em;
+			line-height: 1.1em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.75em;
+		}
+	}
+
+	&__text {
+		@extend %main-texts-fonts;
+		margin-bottom: 1.2em;
+		text-align: center;
+	}
+
+	&__info-wrapper {
+		display: flex;
+		flex-direction: column;
+		row-gap: 3.1em;
+		align-items: center;
+
+		@include media.bigMobile {
+			row-gap: 2.8em;
+			font-size: clamp(8.6px, 1.65vw, 11.8px);
+		}
+
+		@include media.mediumMobile {
+			font-size: clamp(5.8px, 1.75vw, 8.8px);
+		}
+	}
+
+	&__info-inner {
+		position: relative;
+	}
+
+	&__block {
+		display: flex;
+		column-gap: 26px;
+
+		@include media.bigMobile {
+			column-gap: 14px;
+		}
+	}
+
+	&__block-num {
+		font-size: 2.4em;
+		color: var(--main-green);
+
+		@include media.bigMobile {
+			font-size: 2.8em;
+		}
+
+		@include media.mediumMobile {
+			position: relative;
+			bottom: 8px;
+			font-size: 3.2em;
+		}
+	}
+
+	&__block-img {
+		@include mixins.sizes(55em, 33em);
+
+		@include media.bigMobile {
+			@include mixins.sizes(52em, 34em)
+		}
+
+		@include media.mediumMobile {
+			@include mixins.sizes(47em, 31em)
+		}
+	}
+
+	&__block-content {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 1em;
+		max-width: 65%;
+		background-color: rgb(255 255 255 / 90%);
+
+		@include media.bigMobile {
+			padding: 0.8em;
+			max-width: 72%;
+		}
+
+		@include media.mediumMobile {
+			max-width: 82%;
+		}
+	}
+
+	&__block-title {
+		margin-bottom: .4em;
+		color: var(--black);
+		font-size: 1.7em;
+		letter-spacing: 0.03em;
+		line-height: 1.6;
+		font-weight: 700;
+
+		@include media.bigMobile {
+			margin-bottom: 0.2em;
+			font-size: 2.1em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.35em;
+		}
+	}
+
+	&__block-text {
+		font-size: 1.15em;
+		line-height: 1.4em;
+		letter-spacing: 0.03em;
+
+		@include media.bigMobile {
+			font-size: 1.4em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.65em;
+		}
+	}
+}
