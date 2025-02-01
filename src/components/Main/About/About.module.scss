@@ -31,7 +31,7 @@
 	&__title {
 		margin-bottom: 0.9em;
 		max-width: 62%;
-		font-size: 2.7em;
+		font-size: 2.85em;
 		letter-spacing: .05em;
 		line-height: 130%;
 		font-weight: 300;
@@ -52,7 +52,7 @@
 		}
 
 		@include media.mediumMobile {
-			font-size: 2.4em;
+			font-size: 2.55em;
 		}
 	}
 
@@ -103,18 +103,18 @@
 
 	&__description-text {
 		margin-bottom: 1.8em;
-		max-width: 36%;
-		font-size: 1.3em;
-		letter-spacing: 0.025em;
+		max-width: 45%;
+		font-size: 1.5em;
+		letter-spacing: 0.03em;
 
 		@include media.bigMobile {
 			max-width: 78%;
 			text-align: center;
-			font-size: 1.6em;
+			font-size: 1.8em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.5em;
+			font-size: 1.75em;
 		}
 	}
 
