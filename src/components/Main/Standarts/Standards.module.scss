@@ -9,20 +9,7 @@
 	}
 
 	&__title {
-		margin-bottom: 1em;
-		font-size: 2.45em;
-		letter-spacing: 0.05em;
-		line-height: 1.3em;
-		text-align: center;
-
-		@include media.bigMobile {
-			font-size: 2.55em;
-			line-height: 1.1em;
-		}
-
-		@include media.mediumMobile {
-			font-size: 2.75em;
-		}
+		@extend %title-level-three;
 	}
 
 	&__text {
