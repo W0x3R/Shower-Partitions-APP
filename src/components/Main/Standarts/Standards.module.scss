@@ -12,7 +12,7 @@
 		margin-bottom: 1em;
 		font-size: 2.45em;
 		letter-spacing: 0.05em;
-		line-height: 1.2em;
+		line-height: 1.3em;
 		text-align: center;
 
 		@include media.bigMobile {
@@ -110,8 +110,8 @@
 		margin-bottom: .4em;
 		color: var(--black);
 		font-size: 1.7em;
-		letter-spacing: 0.03em;
-		line-height: 1.6;
+		letter-spacing: var(--basic-letter-spacing);
+		line-height: 1.5;
 		font-weight: 700;
 
 		@include media.bigMobile {
@@ -127,7 +127,7 @@
 	&__block-text {
 		font-size: 1.15em;
 		line-height: 1.4em;
-		letter-spacing: 0.03em;
+		letter-spacing: var(--basic-letter-spacing);
 
 		@include media.bigMobile {
 			font-size: 1.4em;
