@@ -27,38 +27,77 @@
 		letter-spacing: var(--basic-letter-spacing);
 
 		@include media.bigMobile {
-			font-size: 1.6em;
+			font-size: 1.65em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.75em;
+			margin-bottom: 0.8em;
+			font-size: 1.8em;
 		}
 	}
 
 	&__block {
-		// max-height: 100px;
-		// overflow: hidden;
+		margin-bottom: 0.8em;
+		max-height: 105px;
+		overflow: hidden;
+
+		@include media.desktop {
+			max-height: 121px;
+		}
+
+		@include media.bigMobile {
+			margin-bottom: 2em;
+			max-height: 150px;
+		}
+
+		@include media.mediumMobile {
+			margin-bottom: 1.2em;
+			max-height: 208px;
+		}
+
+		@media only screen and (max-width: 453px) {
+			max-height: 186px;
+		}
+
+		@include media.smallMobile {
+			margin-bottom: 1.8em;
+		}
+
+		&.expanded {
+			max-height: 100%;
+			overflow: visible;
+		}
 	}
 
 	&__block-title {
 		margin-bottom: 0.5349em;
 		font-size: 2.15em;
-
+		letter-spacing: 0.05em;
+		line-height: 1.3em;
 
 		@include media.bigMobile {
-			margin-bottom: 0.711em;
-			font-size: 2.25em;
+			margin-bottom: 0.75em;
+			font-size: 2.2em;
 		}
 
 		@include media.mediumMobile {
+			margin-bottom: 0.626em;
 			font-size: 2.3em;
 		}
 	}
 
 	&__list {
 		padding-left: 1.25em;
-		margin-bottom: 1.1em;
+		margin-bottom: 1.15em;
 		list-style-type: disc;
+
+		@include media.bigMobile {
+			margin-bottom: 1.65em;
+		}
+
+		@include media.mediumMobile {
+			margin-bottom: 1.44em;
+		}
 	}
 
 	&__item {
@@ -67,11 +106,11 @@
 		letter-spacing: var(--basic-letter-spacing);
 
 		@include media.bigMobile {
-			font-size: 1.6em;
+			font-size: 1.65em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.75em;
+			font-size: 1.8em;
 		}
 	}
 
@@ -83,14 +122,23 @@
 	&__block-subtitle {
 		margin-bottom: 0.575em;
 		font-size: 2em;
+		letter-spacing: 0.05em;
+		line-height: 1.3em;
 
 		@include media.bigMobile {
-			margin-bottom: 0.7805em;
+			margin-bottom: 0.8049em;
 			font-size: 2.05em;
 		}
 
 		@include media.mediumMobile {
+			margin-bottom: 0.6856em;
 			font-size: 2.1em;
 		}
+	}
+
+	&__more-btn {
+		@extend %showMoreBtn;
+		max-width: max-content;
+		margin: 0 auto;
 	}
 }
