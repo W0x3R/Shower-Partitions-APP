@@ -1,50 +1,66 @@
+@use '../../../../styles/mixins';
+@use '../../../../styles/media';
+@use '../../../../styles/animations';
+
 .popup {
-	position: fixed;
-	inset: 0;
-	left: 50%;
-	top: 50%;
-	opacity: 0;
-	pointer-events: none;
-	width: 100%;
-	height: 100%;
+	@include mixins.fixed-center-fullscreen;
 	transform: translate(-50%, -50%);
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(24, 24, 27, 0.98);
 	z-index: 100000000;
 	cursor: pointer;
 	transition: opacity .2s ease;
 
+	&.hide {
+		animation: navHide 0.3s forwards;
+	}
+
 	&.visible {
-		opacity: 1;
-		pointer-events: all;
+		animation: navShow 0.3s forwards;
 	}
 
 	&__content {
 		position: relative;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include mixins.sizes(100%, 100%);
+		@include mixins.flexCenter;
 	}
 
 	&__img {
-		width: 55%;
+		width: 61em;
 		cursor: default;
+
+		@include media.bigMobile {
+			width: 95%;
+		}
 	}
 
 	&__btn {
 		position: absolute;
-		top: 10px;
-		right: 10px;
-		width: 38px;
-		height: 38px;
-		border-radius: 8px;
+		top: 1px;
+		right: 1px;
+		@include mixins.sizes(46px, 46px);
 		cursor: pointer;
-		background: rgb(255, 255, 255);
-		color: #000000;
+		background-color: rgba(24, 24, 27, 0.65);
+		transition: var(--basic-transition);
 
-		& span {
-			font-size: 20px;
+		& svg {
+			@include mixins.sizes(17px, 17px);
+			fill: #dbdbdb;
+			transition: opacity .15s ease;
+			transform: var(--f-button-transform);
+			filter: drop-shadow(1px 1px 1px rgba(24, 24, 27, 0.15));
+			pointer-events: none;
+		}
+
+		@include media.hoverAndActive {
+			background-color: rgba(70, 70, 73, 0.65);
+
+			& svg {
+				fill: white;
+			}
+		}
+
+		@include media.focusVisible {
+			box-shadow: rgb(219, 219, 219) 0px 0px 0px 2px inset;
 		}
 	}
 }
