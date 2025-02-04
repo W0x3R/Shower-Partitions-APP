@@ -18,12 +18,14 @@ import {
 	nickelFurniturePopup,
 	chromeFurniturePopup,
 } from "../../data/productsData"
+import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import { Popup } from "./Popup/Popup"
 import styles from "./ShowerPartitionsDescription.module.scss"
 
 export const ShowerPartitionsDescription = () => {
 	const [isPopupOpen, setIsPopupOpen] = useState(null)
 	const [activePopupImg, setActivePopupImg] = useState(null)
+	const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false)
 
 	const handlePopupOpen = (e, src) => {
 		e.preventDefault()
@@ -37,13 +39,17 @@ export const ShowerPartitionsDescription = () => {
 		setActivePopupImg(null)
 	}
 
+	const handleDescriptionExpand = () => setIsDescriptionExpanded(true)
+
 	return (
 		<section className={styles.descriptions}>
 			<div className="container">
 				<h4 className={styles["descriptions__title"]}>
 					Душевые перегородки из стекла в Гомеле
 				</h4>
-				<div className={styles.descriptions__block}>
+				<div
+					className={`${styles.descriptions__block} ${isDescriptionExpanded ? styles.expanded : ""}`}
+				>
 					<p className={styles.descriptions__text}>
 						Стеклянные душевые перегородки — современное решение для оформления
 						и разделения ванной комнаты на функциональные зоны. В отличие от
@@ -342,6 +348,16 @@ export const ShowerPartitionsDescription = () => {
 						выезда мастера на замеры будущей душевой кабины.
 					</p>
 				</div>
+				{!isDescriptionExpanded && (
+					<button
+						className={styles["descriptions__more-btn"]}
+						onClick={handleDescriptionExpand}
+						aria-label="Показать еще 2 вопроса"
+					>
+						Раскрыть полностью
+						<QuestionsShowMoreImgBtn />
+					</button>
+				)}
 			</div>
 			<Popup
 				isPopupOpen={isPopupOpen}
