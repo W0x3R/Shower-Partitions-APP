@@ -85,11 +85,11 @@
 
 		@include media.bigMobile {
 			padding: 0.8em;
-			max-width: 72%;
+			max-width: 76%;
 		}
 
 		@include media.mediumMobile {
-			max-width: 82%;
+			max-width: 85%;
 		}
 	}
 
@@ -117,11 +117,11 @@
 		letter-spacing: var(--basic-letter-spacing);
 
 		@include media.bigMobile {
-			font-size: 1.4em;
+			font-size: 1.5em;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.65em;
+			font-size: 1.75em;
 		}
 	}
 }
