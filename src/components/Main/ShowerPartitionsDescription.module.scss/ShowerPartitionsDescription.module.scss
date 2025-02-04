@@ -6,15 +6,33 @@
 
 	&__title {
 		margin-bottom: 0.8em;
-		font-size: 2.3em;
+		font-size: 2.35em;
 		letter-spacing: 0.05em;
 		line-height: 1.3em;
 		text-align: center;
+
+		@include media.bigMobile {
+			font-size: 2.45em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.55em;
+		}
 	}
 
 	&__text {
 		margin-bottom: 1em;
-		font-size: 1.1em;
+		font-size: 1.15em;
+		line-height: 1.4em;
+		letter-spacing: var(--basic-letter-spacing);
+
+		@include media.bigMobile {
+			font-size: 1.6em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.75em;
+		}
 	}
 
 	&__block {
@@ -23,8 +41,18 @@
 	}
 
 	&__block-title {
-		margin-bottom: 0.647em;
-		font-size: 1.7em;
+		margin-bottom: 0.5349em;
+		font-size: 2.15em;
+
+
+		@include media.bigMobile {
+			margin-bottom: 0.711em;
+			font-size: 2.25em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.3em;
+		}
 	}
 
 	&__list {
@@ -34,7 +62,17 @@
 	}
 
 	&__item {
-		font-size: 1.1em;
+		font-size: 1.15em;
+		line-height: 1.4em;
+		letter-spacing: var(--basic-letter-spacing);
+
+		@include media.bigMobile {
+			font-size: 1.6em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.75em;
+		}
 	}
 
 	&__item-link {
@@ -43,7 +81,16 @@
 	}
 
 	&__block-subtitle {
-		margin-bottom: 0.7333em;
-		font-size: 1.5em;
+		margin-bottom: 0.575em;
+		font-size: 2em;
+
+		@include media.bigMobile {
+			margin-bottom: 0.7805em;
+			font-size: 2.05em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.1em;
+		}
 	}
 }
