@@ -1,10 +1,17 @@
 import styles from "./Popup.module.scss"
+import BlackCross from "../../../../assets/main/black-cross.svg?react"
 
-export const Popup = ({ isPopupOpen, handlePopupClose, activePopupImg }) => {
+export const Popup = ({
+	isPopupOpen,
+	handlePopupCloseOnClick,
+	activePopupImg,
+	handlePopupCloseOnEsc,
+}) => {
 	return (
 		<div
 			className={`${styles.popup} ${isPopupOpen ? styles.visible : ""}`}
-			onClick={handlePopupClose}
+			onClick={handlePopupCloseOnClick}
+			onKeyDown={(e) => handlePopupCloseOnEsc(e)}
 		>
 			<div className={styles.popup__content}>
 				<img
@@ -12,8 +19,8 @@ export const Popup = ({ isPopupOpen, handlePopupClose, activePopupImg }) => {
 					src={activePopupImg}
 					onClick={(e) => e.stopPropagation()}
 				></img>
-				<button className={styles.popup__btn} onClick={handlePopupClose}>
-					<span>X</span>
+				<button className={styles.popup__btn} onClick={handlePopupCloseOnClick}>
+					<BlackCross />
 				</button>
 			</div>
 		</div>
