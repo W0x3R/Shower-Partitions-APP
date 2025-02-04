@@ -34,8 +34,8 @@ import chromeFurniture from "../../assets/main/хромовая фурнитур
 import chromeFurniturePopup from "../../assets/main/хромовая фурнитура popup.webp"
 import swingingDoor from "../../assets/main/распашная дверь.webp"
 import swingingDoorPopup from "../../assets/main/распашная дверь popup.webp"
-import rolingDoor from "../../assets/main/откатная дверь.webp"
-import rolingDoorPopup from "../../assets/main/откатная дверь popup.webp"
+import rollingDoor from "../../assets/main/откатная дверь.webp"
+import rollingDoorPopup from "../../assets/main/откатная дверь popup.webp"
 
 export const productsData = {
 	showers: [
@@ -129,38 +129,38 @@ export const productsData = {
 	furniture: [
 		{
 			id: "1_furniture",
-			title: "Хром",
+			title: "Черный",
 			imgSrc: blackFurniture,
 			popupImgSrc: blackFurniturePopup,
-			alt: "На изображении отображено как выглядит фурнитура цвета хром для душевых перегородок.",
-		},
-		{
-			id: "2_furniture",
-			title: "Черный",
-			imgSrc: goldFurniture,
-			popupImgSrc: goldFurniturePopup,
 			alt: "На изображении отображено как выглядит фурнитура черного цвета для душевых перегородок.",
 		},
 		{
-			id: "3_furniture",
+			id: "2_furniture",
 			title: "Золото",
-			imgSrc: bronzeFurniture,
-			popupImgSrc: bronzeFurniturePopup,
+			imgSrc: goldFurniture,
+			popupImgSrc: goldFurniturePopup,
 			alt: "На изображении отображено как выглядит фурнитура золотого цвета для душевых перегородок.",
 		},
 		{
-			id: "4_furniture",
+			id: "3_furniture",
 			title: "Бронза",
-			imgSrc: nickelFurniture,
-			popupImgSrc: nickelFurniturePopup,
+			imgSrc: bronzeFurniture,
+			popupImgSrc: bronzeFurniturePopup,
 			alt: "На изображении отображено как выглядит фурнитура бронзового цвета для душевых перегородок.",
 		},
 		{
-			id: "5_furniture",
+			id: "4_furniture",
 			title: "Никель",
+			imgSrc: nickelFurniture,
+			popupImgSrc: nickelFurniturePopup,
+			alt: "На изображении отображено как выглядит фурнитура цвета никель для душевых перегородок.",
+		},
+		{
+			id: "5_furniture",
+			title: "Хром",
 			imgSrc: chromeFurniture,
 			popupImgSrc: chromeFurniturePopup,
-			alt: "На изображении отображено как выглядит фурнитура цвета никель для душевых перегородок.",
+			alt: "На изображении отображено как выглядит фурнитура цвета хром для душевых перегородок.",
 		},
 	],
 	typeOpening: [
@@ -174,8 +174,8 @@ export const productsData = {
 		{
 			id: "2_typeOpening",
 			title: "Откатная",
-			imgSrc: rolingDoor,
-			popupImgSrc: rolingDoorPopup,
+			imgSrc: rollingDoor,
+			popupImgSrc: rollingDoorPopup,
 			alt: "На изображении отображено как выглядит душевая перегородка с откатным типом открытия",
 		},
 	],
