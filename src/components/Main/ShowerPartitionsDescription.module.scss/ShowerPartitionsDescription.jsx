@@ -18,6 +18,7 @@ import {
 	nickelFurniturePopup,
 	chromeFurniturePopup,
 } from "../../data/productsData"
+import ReactFocusLock from "react-focus-lock"
 import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import { Popup } from "./Popup/Popup"
 import styles from "./ShowerPartitionsDescription.module.scss"
@@ -359,12 +360,17 @@ export const ShowerPartitionsDescription = () => {
 					</button>
 				)}
 			</div>
-			<Popup
-				isPopupOpen={isPopupOpen}
-				setIsPopupOpen={setIsPopupOpen}
-				handlePopupClose={handlePopupClose}
-				activePopupImg={activePopupImg}
-			/>
+			{isPopupOpen && (
+				<ReactFocusLock returnFocus>
+					<Popup
+						isPopupOpen={isPopupOpen}
+						setIsPopupOpen={setIsPopupOpen}
+						handlePopupCloseOnClick={handlePopupCloseOnClick}
+						activePopupImg={activePopupImg}
+						handlePopupCloseOnEsc={handlePopupCloseOnEsc}
+					/>
+				</ReactFocusLock>
+			)}
 		</section>
 	)
 }
