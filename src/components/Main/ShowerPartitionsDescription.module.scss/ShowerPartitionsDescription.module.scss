@@ -115,8 +115,20 @@
 	}
 
 	&__item-link {
+		display: inline-block;
 		color: var(--main-green);
+		outline: none;
 		cursor: pointer;
+		opacity: 0.9;
+		transition: var(--basic-transition);
+
+		@include media.hoverAndActive {
+			box-shadow: 0 2px 0 0 var(--red)
+		}
+
+		@include media.focusVisible {
+			box-shadow: 0 2px 0 0 var(--red)
+		}
 	}
 
 	&__block-subtitle {
