@@ -1,0 +1,49 @@
+@use '../../../styles/mixins';
+@use '../../../styles/media';
+
+.descriptions {
+	@extend %photos-section;
+
+	&__title {
+		margin-bottom: 0.8em;
+		font-size: 2.3em;
+		letter-spacing: 0.05em;
+		line-height: 1.3em;
+		text-align: center;
+	}
+
+	&__text {
+		margin-bottom: 1em;
+		font-size: 1.1em;
+	}
+
+	&__block {
+		// max-height: 100px;
+		// overflow: hidden;
+	}
+
+	&__block-title {
+		margin-bottom: 0.647em;
+		font-size: 1.7em;
+	}
+
+	&__list {
+		padding-left: 1.25em;
+		margin-bottom: 1.1em;
+		list-style-type: disc;
+	}
+
+	&__item {
+		font-size: 1.1em;
+	}
+
+	&__item-link {
+		color: var(--main-green);
+		cursor: pointer;
+	}
+
+	&__block-subtitle {
+		margin-bottom: 0.7333em;
+		font-size: 1.5em;
+	}
+}

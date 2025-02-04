@@ -5,6 +5,7 @@ import { Examples } from "./Examples/Examples"
 import { Price } from "./Price/Price"
 import { Questions } from "./Questions/Questions"
 import { Standards } from "./Standards/Standards"
+import { ShowerPartitionsDescription } from "./ShowerPartitionsDescription.module.scss/ShowerPartitionsDescription"
 
 export const Main = () => {
 	return (
@@ -15,6 +16,7 @@ export const Main = () => {
 			<Price />
 			<Questions />
 			<Standards />
+			<ShowerPartitionsDescription />
 		</main>
 	)
 }
