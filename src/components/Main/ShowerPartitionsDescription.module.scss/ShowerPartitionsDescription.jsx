@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import {
 	showerPartitionPopup,
 	cornerShowerPopup,
@@ -22,23 +22,53 @@ import ReactFocusLock from "react-focus-lock"
 import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import { Popup } from "./Popup/Popup"
 import styles from "./ShowerPartitionsDescription.module.scss"
+import {
+	disableBodyScrollIncludeScrollbar,
+	enableBodyScrollIncludeScrollbar,
+} from "../../../utils/setBodyScroll"
 
 export const ShowerPartitionsDescription = () => {
 	const [isPopupOpen, setIsPopupOpen] = useState(null)
 	const [activePopupImg, setActivePopupImg] = useState(null)
 	const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false)
+	const firstLinkRef = useRef(null)
 
-	const handlePopupOpen = (e, src) => {
+	const handlePopupOpenOnClick = (e, src) => {
 		e.preventDefault()
 		setIsPopupOpen(true)
 		setActivePopupImg(src)
+		disableBodyScrollIncludeScrollbar()
 	}
 
-	const handlePopupClose = () => {
+	const handlePopupCloseOnClick = () => {
 		setIsPopupOpen(false)
 		setIsPopupOpen(false)
 		setActivePopupImg(null)
+		enableBodyScrollIncludeScrollbar()
 	}
+
+	const handlePopupOpenOnEnter = (e, src) => {
+		if (e.code === "Enter") {
+			e.preventDefault()
+			setIsPopupOpen(true)
+			setActivePopupImg(src)
+			disableBodyScrollIncludeScrollbar()
+		}
+	}
+
+	const handlePopupCloseOnEsc = (e) => {
+		if (e.code === "Escape") {
+			setIsPopupOpen(false)
+			setActivePopupImg(null)
+			enableBodyScrollIncludeScrollbar()
+		}
+	}
+
+	useEffect(() => {
+		if (isDescriptionExpanded === true) {
+			firstLinkRef.current.focus({ preventScroll: true })
+		}
+	}, [isDescriptionExpanded])
 
 	const handleDescriptionExpand = () => setIsDescriptionExpanded(true)
 
@@ -131,8 +161,13 @@ export const ShowerPartitionsDescription = () => {
 					<ul className={styles.descriptions__list}>
 						<li className={styles.descriptions__item}>
 							<a
+								ref={firstLinkRef}
+								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpen(e, showerPartitionPopup)}
+								onClick={(e) => handlePopupOpenOnClick(e, showerPartitionPopup)}
+								onKeyDown={(e) =>
+									handlePopupOpenOnEnter(e, showerPartitionPopup)
+								}
 							>
 								Линейное ограждение душевой&nbsp;
 							</a>
@@ -144,8 +179,10 @@ export const ShowerPartitionsDescription = () => {
 						</li>
 						<li className={styles.descriptions__item}>
 							<a
+								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpen(e, cornerShowerPopup)}
+								onClick={(e) => handlePopupOpenOnClick(e, cornerShowerPopup)}
+								onKeyDown={(e) => handlePopupOpenOnEnter(e, cornerShowerPopup)}
 							>
 								Угловое ограждение душевой&nbsp;
 							</a>
@@ -156,8 +193,9 @@ export const ShowerPartitionsDescription = () => {
 						</li>
 						<li className={styles.descriptions__item}>
 							<a
+								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpen(e, showerCabinPopup)}
+								onClick={(e) => handlePopupOpenOnClick(e, showerCabinPopup)}
 							>
 								П-образная перегородка душевой&nbsp;
 							</a>
@@ -166,8 +204,11 @@ export const ShowerPartitionsDescription = () => {
 						</li>
 						<li className={styles.descriptions__item}>
 							<a
+								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpen(e, trapezoidalShowerPopup)}
+								onClick={(e) =>
+									handlePopupOpenOnClick(e, trapezoidalShowerPopup)
+								}
 							>
 								Трапециевидная перегородка душевой&nbsp;
 							</a>
@@ -179,29 +220,33 @@ export const ShowerPartitionsDescription = () => {
 						Угловые, П-образные и трапециевидные душевые ограждения из стекла
 						дополняются&nbsp;
 						<a
+							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpen(e, swingingDoorPopup)}
+							onClick={(e) => handlePopupOpenOnClick(e, swingingDoorPopup)}
 						>
 							раздвижными&nbsp;
 						</a>
 						или&nbsp;
 						<a
+							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpen(e, rollingDoorPopup)}
+							onClick={(e) => handlePopupOpenOnClick(e, rollingDoorPopup)}
 						>
 							откатными&nbsp;
 						</a>
 						дверями. Двери могут быть&nbsp;
 						<a
+							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpen(e, alcoveDoorPopup)}
+							onClick={(e) => handlePopupOpenOnClick(e, alcoveDoorPopup)}
 						>
 							одинарными
 						</a>
 						&nbsp; и&nbsp;
 						<a
+							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpen(e, alcoveShowerPopup)}
+							onClick={(e) => handlePopupOpenOnClick(e, alcoveShowerPopup)}
 						>
 							двойными
 						</a>
@@ -216,8 +261,11 @@ export const ShowerPartitionsDescription = () => {
 					<ul className={styles.descriptions__list}>
 						<li className={styles.descriptions__item}>
 							<a
+								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpen(e, transparentGlassPopup)}
+								onClick={(e) =>
+									handlePopupOpenOnClick(e, transparentGlassPopup)
+								}
 							>
 								Прозрачное&nbsp;
 							</a>
@@ -225,8 +273,9 @@ export const ShowerPartitionsDescription = () => {
 						</li>
 						<li className={styles.descriptions__item}>
 							<a
+								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpen(e, brightenedGlassPopup)}
+								onClick={(e) => handlePopupOpenOnClick(e, brightenedGlassPopup)}
 							>
 								Осветленное&nbsp;
 							</a>
@@ -235,8 +284,9 @@ export const ShowerPartitionsDescription = () => {
 						</li>
 						<li className={styles.descriptions__item}>
 							<a
+								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpen(e, frostedGlassPopup)}
+								onClick={(e) => handlePopupOpenOnClick(e, frostedGlassPopup)}
 							>
 								Матовое&nbsp;
 							</a>
@@ -244,8 +294,11 @@ export const ShowerPartitionsDescription = () => {
 						</li>
 						<li className={styles.descriptions__item}>
 							<a
+								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpen(e, tonedGraphiteGlassPopup)}
+								onClick={(e) =>
+									handlePopupOpenOnClick(e, tonedGraphiteGlassPopup)
+								}
 							>
 								Цветное&nbsp;
 							</a>
@@ -266,36 +319,41 @@ export const ShowerPartitionsDescription = () => {
 						Наша компания использует качественный алюминиевый профиль и надежную
 						фурнитуру. Их также можно выбрать по цвету —{" "}
 						<a
+							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpen(e, blackFurniturePopup)}
+							onClick={(e) => handlePopupOpenOnClick(e, blackFurniturePopup)}
 						>
 							черный
 						</a>
 						, под&nbsp;
 						<a
+							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpen(e, goldFurniturePopup)}
+							onClick={(e) => handlePopupOpenOnClick(e, goldFurniturePopup)}
 						>
 							золото
 						</a>
 						,&nbsp;
 						<a
+							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpen(e, nickelFurniturePopup)}
+							onClick={(e) => handlePopupOpenOnClick(e, nickelFurniturePopup)}
 						>
 							никель
 						</a>
 						,&nbsp;
 						<a
+							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpen(e, bronzeFurniturePopup)}
+							onClick={(e) => handlePopupOpenOnClick(e, bronzeFurniturePopup)}
 						>
 							бронзу
 						</a>
 						,&nbsp;
 						<a
+							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpen(e, chromeFurniturePopup)}
+							onClick={(e) => handlePopupOpenOnClick(e, chromeFurniturePopup)}
 						>
 							хром
 						</a>
