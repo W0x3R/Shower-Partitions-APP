@@ -9,7 +9,7 @@ export const Popup = ({
 }) => {
 	return (
 		<div
-			className={`${styles.popup} ${isPopupOpen ? styles.visible : ""}`}
+			className={`${styles.popup} ${isPopupOpen ? styles.visible : styles.hide}`}
 			onClick={handlePopupCloseOnClick}
 			onKeyDown={(e) => handlePopupCloseOnEsc(e)}
 		>
