@@ -180,3 +180,23 @@ export const productsData = {
 		},
 	],
 }
+
+export {
+	showerPartitionPopup,
+	cornerShowerPopup,
+	showerCabinPopup,
+	trapezoidalShowerPopup,
+	swingingDoorPopup,
+	rollingDoorPopup,
+	alcoveDoorPopup,
+	alcoveShowerPopup,
+	transparentGlassPopup,
+	brightenedGlassPopup,
+	frostedGlassPopup,
+	tonedGraphiteGlassPopup,
+	blackFurniturePopup,
+	goldFurniturePopup,
+	bronzeFurniturePopup,
+	nickelFurniturePopup,
+	chromeFurniturePopup,
+}
