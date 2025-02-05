@@ -26,44 +26,28 @@ import { setTypeOfFurnitureAltData } from "../../data/showerPartitionsDescriptio
 import { reasonsListData } from "../../data/showerPartitionsDescriptionData/reasonsListData"
 
 export const ShowerPartitionsDescription = () => {
-	const [isPopupOpen, setIsPopupOpen] = useState(null)
-	const [activePopupImg, setActivePopupImg] = useState(null)
-	const [activePopupAlt, setActivePopupAlt] = useState(null)
+	const [popupData, setPopupData] = useState({
+		isOpen: false,
+		img: null,
+		alt: null,
+	})
 	const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false)
 
-	const handlePopupOpenOnClick = (e, src, alt) => {
-		e.preventDefault()
-		setIsPopupOpen(true)
-		setActivePopupImg(src)
-		setActivePopupAlt(alt)
-		disableBodyScrollIncludeScrollbar()
-	}
-
-	const handlePopupCloseOnClick = () => {
-		setIsPopupOpen(false)
-		setActivePopupImg(null)
-		setActivePopupAlt(null)
-		enableBodyScrollIncludeScrollbar()
-	}
-
-	const handlePopupOpenOnEnter = (e, src, alt) => {
-		if (e.code === "Enter") {
+	const handlePopupOpen = (e, src, alt) => {
+		if (e.type === "click" || (e.type === "keydown" && e.code === "Enter")) {
 			e.preventDefault()
-			setIsPopupOpen(true)
-			setActivePopupImg(src)
-			setActivePopupAlt(alt)
+			setPopupData({ isOpen: true, img: src, alt })
 			disableBodyScrollIncludeScrollbar()
 		}
 	}
 
-	const handlePopupCloseOnEsc = (e) => {
-		if (e.code === "Escape") {
-			setIsPopupOpen(false)
-			setActivePopupImg(null)
+	const handlePopupClose = (e) => {
+		if (e.type === "click" || (e.type === "keydown" && e.code === "Escape")) {
+			setPopupData({ isOpen: false, img: null, alt: null })
 			enableBodyScrollIncludeScrollbar()
-			setActivePopupAlt(null)
 		}
 	}
+
 	useEffect(() => {
 		const firstLink = document.querySelector(
 			`.${styles["descriptions__item-link"]}`
@@ -142,8 +126,8 @@ export const ShowerPartitionsDescription = () => {
 									<a
 										tabIndex={isDescriptionExpanded ? 0 : -1}
 										className={styles["descriptions__item-link"]}
-										onClick={(e) => handlePopupOpenOnClick(e, src, alt)}
-										onKeyDown={(e) => handlePopupOpenOnEnter(e, src, alt)}
+										onClick={(e) => handlePopupOpen(e, src, alt)}
+										onKeyDown={(e) => handlePopupOpen(e, src, alt)}
 										aria-label={aria}
 									>
 										{title}&nbsp;
@@ -160,14 +144,14 @@ export const ShowerPartitionsDescription = () => {
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
 							onClick={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									swingingDoorPopup,
 									setTypeOfDoorsAltData("развижными")
 								)
 							}
 							onKeyDown={(e) =>
-								handlePopupOpenOnEnter(
+								handlePopupOpen(
 									e,
 									swingingDoorPopup,
 									setTypeOfDoorsAltData("развижными")
@@ -182,14 +166,14 @@ export const ShowerPartitionsDescription = () => {
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
 							onClick={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									rollingDoorPopup,
 									setTypeOfDoorsAltData("откатными")
 								)
 							}
 							onKeyDown={(e) =>
-								handlePopupOpenOnEnter(
+								handlePopupOpen(
 									e,
 									rollingDoorPopup,
 									setTypeOfDoorsAltData("откатными")
@@ -204,14 +188,14 @@ export const ShowerPartitionsDescription = () => {
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
 							onClick={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									alcoveDoorPopup,
 									setTypeOfDoorsAltData("одинарными")
 								)
 							}
 							onKeyDown={(e) =>
-								handlePopupOpenOnEnter(
+								handlePopupOpen(
 									e,
 									alcoveDoorPopup,
 									setTypeOfDoorsAltData("одинарными")
@@ -226,14 +210,14 @@ export const ShowerPartitionsDescription = () => {
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
 							onClick={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									alcoveShowerPopup,
 									setTypeOfDoorsAltData("двойными")
 								)
 							}
 							onKeyDown={(e) =>
-								handlePopupOpenOnEnter(
+								handlePopupOpen(
 									e,
 									alcoveShowerPopup,
 									setTypeOfDoorsAltData("двойными")
@@ -259,8 +243,8 @@ export const ShowerPartitionsDescription = () => {
 										<a
 											tabIndex={isDescriptionExpanded ? 0 : -1}
 											className={styles["descriptions__item-link"]}
-											onClick={(e) => handlePopupOpenOnClick(e, src, alt)}
-											onKeyDown={(e) => handlePopupOpenOnClick(e, src, alt)}
+											onClick={(e) => handlePopupOpen(e, src, alt)}
+											onKeyDown={(e) => handlePopupOpen(e, src, alt)}
 											aria-label={aria}
 										>
 											{title}&nbsp;
@@ -287,14 +271,14 @@ export const ShowerPartitionsDescription = () => {
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
 							onClick={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									blackFurniturePopup,
 									setTypeOfFurnitureAltData("черного")
 								)
 							}
 							onKeyDown={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									blackFurniturePopup,
 									setTypeOfFurnitureAltData("черного")
@@ -309,14 +293,14 @@ export const ShowerPartitionsDescription = () => {
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
 							onClick={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									goldFurniturePopup,
 									setTypeOfFurnitureAltData("золотистого")
 								)
 							}
 							onKeyDown={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									goldFurniturePopup,
 									setTypeOfFurnitureAltData("золотистого")
@@ -331,14 +315,14 @@ export const ShowerPartitionsDescription = () => {
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
 							onClick={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									nickelFurniturePopup,
 									setTypeOfFurnitureAltData("никелевого")
 								)
 							}
 							onKeyDown={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									nickelFurniturePopup,
 									setTypeOfFurnitureAltData("никелевого")
@@ -353,14 +337,14 @@ export const ShowerPartitionsDescription = () => {
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
 							onClick={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									bronzeFurniturePopup,
 									setTypeOfFurnitureAltData("бронзового")
 								)
 							}
 							onKeyDown={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									bronzeFurniturePopup,
 									setTypeOfFurnitureAltData("бронзового")
@@ -375,14 +359,14 @@ export const ShowerPartitionsDescription = () => {
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
 							onClick={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									chromeFurniturePopup,
 									setTypeOfFurnitureAltData("хромового")
 								)
 							}
 							onKeyDown={(e) =>
-								handlePopupOpenOnClick(
+								handlePopupOpen(
 									e,
 									chromeFurniturePopup,
 									setTypeOfFurnitureAltData("хромового")
@@ -432,15 +416,13 @@ export const ShowerPartitionsDescription = () => {
 					</button>
 				)}
 			</div>
-			{isPopupOpen && (
+			{popupData.isOpen && (
 				<ReactFocusLock returnFocus>
 					<Popup
-						isPopupOpen={isPopupOpen}
-						setIsPopupOpen={setIsPopupOpen}
-						handlePopupCloseOnClick={handlePopupCloseOnClick}
-						activePopupImg={activePopupImg}
-						activePopupAlt={activePopupAlt}
-						handlePopupCloseOnEsc={handlePopupCloseOnEsc}
+						isPopupOpen={popupData.isOpen}
+						handlePopupClose={handlePopupClose}
+						activePopupImg={popupData.img}
+						activePopupAlt={popupData.alt}
 					/>
 				</ReactFocusLock>
 			)}

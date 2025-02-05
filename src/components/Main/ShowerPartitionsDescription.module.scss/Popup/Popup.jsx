@@ -4,10 +4,9 @@ import { useEffect, useRef } from "react"
 
 export const Popup = ({
 	isPopupOpen,
-	handlePopupCloseOnClick,
+	handlePopupClose,
 	activePopupImg,
 	activePopupAlt,
-	handlePopupCloseOnEsc,
 }) => {
 	const popupRef = useRef(null)
 
@@ -22,8 +21,8 @@ export const Popup = ({
 	return (
 		<div
 			className={`${styles.popup} ${isPopupOpen ? styles.visible : styles.hide}`}
-			onClick={handlePopupCloseOnClick}
-			onKeyDown={(e) => handlePopupCloseOnEsc(e)}
+			onClick={(e) => handlePopupClose(e)}
+			onKeyDown={(e) => handlePopupClose(e)}
 			role="dialog"
 			aria-modal="true"
 			aria-label="Вы можете закрыть это окно с помощью нажатия клавиши escape"
@@ -42,7 +41,7 @@ export const Popup = ({
 				/>
 				<button
 					className={styles.popup__btn}
-					onClick={handlePopupCloseOnClick}
+					onClick={(e) => handlePopupClose(e)}
 					aria-label="Закрыть изображение"
 				>
 					<BlackCross />
