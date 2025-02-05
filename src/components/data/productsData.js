@@ -153,14 +153,14 @@ export const productsData = {
 			title: "Никель",
 			imgSrc: nickelFurniture,
 			popupImgSrc: nickelFurniturePopup,
-			alt: "На изображении отображено как выглядит фурнитура цвета никель для душевых перегородок.",
+			alt: "На изображении отображено как выглядит фурнитура никелевого цвета для душевых перегородок.",
 		},
 		{
 			id: "5_furniture",
 			title: "Хром",
 			imgSrc: chromeFurniture,
 			popupImgSrc: chromeFurniturePopup,
-			alt: "На изображении отображено как выглядит фурнитура цвета хром для душевых перегородок.",
+			alt: "На изображении отображено как выглядит фурнитура хромового цвета для душевых перегородок.",
 		},
 	],
 	typeOpening: [

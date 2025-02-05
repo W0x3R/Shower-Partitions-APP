@@ -1,17 +1,9 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import {
-	showerPartitionPopup,
-	cornerShowerPopup,
-	showerCabinPopup,
-	trapezoidalShowerPopup,
 	swingingDoorPopup,
 	rollingDoorPopup,
 	alcoveDoorPopup,
 	alcoveShowerPopup,
-	transparentGlassPopup,
-	brightenedGlassPopup,
-	frostedGlassPopup,
-	tonedGraphiteGlassPopup,
 	blackFurniturePopup,
 	goldFurniturePopup,
 	bronzeFurniturePopup,
@@ -26,32 +18,40 @@ import {
 	disableBodyScrollIncludeScrollbar,
 	enableBodyScrollIncludeScrollbar,
 } from "../../../utils/setBodyScroll"
+import { firstListData } from "../../data/showerPartitionsDescriptionData/firstListData"
+import { showerTypesData } from "../../data/showerPartitionsDescriptionData/showerTypesData"
+import { setTypeOfDoorsAltData } from "../../data/showerPartitionsDescriptionData/typeOfDoorsAltData"
+import { typeOfGlassesData } from "../../data/showerPartitionsDescriptionData/typeOfGlassesData"
+import { setTypeOfFurnitureAltData } from "../../data/showerPartitionsDescriptionData/typeOfFurnitureAltData"
+import { reasonsListData } from "../../data/showerPartitionsDescriptionData/reasonsListData"
 
 export const ShowerPartitionsDescription = () => {
 	const [isPopupOpen, setIsPopupOpen] = useState(null)
 	const [activePopupImg, setActivePopupImg] = useState(null)
+	const [activePopupAlt, setActivePopupAlt] = useState(null)
 	const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false)
-	const firstLinkRef = useRef(null)
 
-	const handlePopupOpenOnClick = (e, src) => {
+	const handlePopupOpenOnClick = (e, src, alt) => {
 		e.preventDefault()
 		setIsPopupOpen(true)
 		setActivePopupImg(src)
+		setActivePopupAlt(alt)
 		disableBodyScrollIncludeScrollbar()
 	}
 
 	const handlePopupCloseOnClick = () => {
 		setIsPopupOpen(false)
-		setIsPopupOpen(false)
 		setActivePopupImg(null)
+		setActivePopupAlt(null)
 		enableBodyScrollIncludeScrollbar()
 	}
 
-	const handlePopupOpenOnEnter = (e, src) => {
+	const handlePopupOpenOnEnter = (e, src, alt) => {
 		if (e.code === "Enter") {
 			e.preventDefault()
 			setIsPopupOpen(true)
 			setActivePopupImg(src)
+			setActivePopupAlt(alt)
 			disableBodyScrollIncludeScrollbar()
 		}
 	}
@@ -61,12 +61,15 @@ export const ShowerPartitionsDescription = () => {
 			setIsPopupOpen(false)
 			setActivePopupImg(null)
 			enableBodyScrollIncludeScrollbar()
+			setActivePopupAlt(null)
 		}
 	}
-
 	useEffect(() => {
+		const firstLink = document.querySelector(
+			`.${styles["descriptions__item-link"]}`
+		)
 		if (isDescriptionExpanded === true) {
-			firstLinkRef.current.focus({ preventScroll: true })
+			firstLink.focus({ preventScroll: true })
 		}
 	}, [isDescriptionExpanded])
 
@@ -98,39 +101,13 @@ export const ShowerPartitionsDescription = () => {
 						из лучших материалов для ванной. И вот почему:
 					</p>
 					<ul className={styles.descriptions__list}>
-						<li className={styles.descriptions__item}>
-							Гигиеничность. Стекло не является питательной средой для бактерий,
-							грибов, а потому оно препятствует образованию плесени.
-						</li>
-						<li className={styles.descriptions__item}>
-							Экологическая чистота. Стекло изготавливается из кварца —
-							природного минерала (песка), безопасного для здоровья.
-						</li>
-						<li className={styles.descriptions__item}>
-							Прочность. Ограждение из закаленного стекла отличается высокой
-							механической прочностью, необходимой для стенок душевой. При
-							одинаковой толщине оно в 5 раз прочнее обычного стекла, а потому
-							оно не разобьется даже от сильного удара.
-						</li>
-						<li className={styles.descriptions__item}>
-							Устойчивость к температурным перепадам. Обычное стекло при
-							перепадах температур трескается, но если оно закаленное, такого не
-							произойдет — поэтому можно принимать контрастный душ и не бояться,
-							что перегородка лопнет.
-						</li>
-						<li className={styles.descriptions__item}>
-							Безопасность. Даже если приложить к стеклу настолько большую силу,
-							что оно разобьется (что маловероятно), полотно рассыплется на
-							множество осколков с неострыми гранями — повредиться о них сложно.
-						</li>
-						<li className={styles.descriptions__item}>
-							Простой уход. Не сложнее чем за зеркалом — достаточно распылить
-							средство для стекла и вытереть сухой ветошью.
-						</li>
-						<li className={styles.descriptions__item}>
-							Долговечность. При правильной эксплуатации стеклянная перегородка
-							для душа может прослужить вечно.
-						</li>
+						{firstListData.map(({ id, text }) => {
+							return (
+								<li key={id} className={styles.descriptions__item}>
+									{text}
+								</li>
+							)
+						})}
 					</ul>
 					<p className={styles.descriptions__text}>
 						Душевое ограждение из стекла удачно вписывается в ванную,
@@ -159,62 +136,22 @@ export const ShowerPartitionsDescription = () => {
 						изготовлением перегородок для душа следующего типа:
 					</p>
 					<ul className={styles.descriptions__list}>
-						<li className={styles.descriptions__item}>
-							<a
-								ref={firstLinkRef}
-								tabIndex={isDescriptionExpanded ? 0 : -1}
-								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpenOnClick(e, showerPartitionPopup)}
-								onKeyDown={(e) =>
-									handlePopupOpenOnEnter(e, showerPartitionPopup)
-								}
-							>
-								Линейное ограждение душевой&nbsp;
-							</a>
-							— стационарное стеклянное полотно с дверью (распашной, раздвижной)
-							или без двери. Используется при расположении душа в нише или в
-							дальнем углу ванной комнаты. Часто сочетается с дополнительными
-							непрозрачными перегородками из того же материала, из которого
-							выполнены стены.
-						</li>
-						<li className={styles.descriptions__item}>
-							<a
-								tabIndex={isDescriptionExpanded ? 0 : -1}
-								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpenOnClick(e, cornerShowerPopup)}
-								onKeyDown={(e) => handlePopupOpenOnEnter(e, cornerShowerPopup)}
-							>
-								Угловое ограждение душевой&nbsp;
-							</a>
-							— два полотна располагаются под углом 90 градусов друг к другу,
-							образуя квадратную или прямоугольную зону. Иногда используются
-							более сложные конструкции (с 3 или 4 стенками, примыкающими к углу
-							ванной комнаты).
-						</li>
-						<li className={styles.descriptions__item}>
-							<a
-								tabIndex={isDescriptionExpanded ? 0 : -1}
-								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpenOnClick(e, showerCabinPopup)}
-							>
-								П-образная перегородка душевой&nbsp;
-							</a>
-							— ограждение с 3 полотнами, примыкающее к одной стене и образующее
-							с ней прямоугольную или квадратную зону.
-						</li>
-						<li className={styles.descriptions__item}>
-							<a
-								tabIndex={isDescriptionExpanded ? 0 : -1}
-								className={styles["descriptions__item-link"]}
-								onClick={(e) =>
-									handlePopupOpenOnClick(e, trapezoidalShowerPopup)
-								}
-							>
-								Трапециевидная перегородка душевой&nbsp;
-							</a>
-							— ограждение, которое вместе с одной из стен ванной образует
-							трапецию
-						</li>
+						{showerTypesData.map(({ id, title, text, aria, src, alt }) => {
+							return (
+								<li key={id} className={styles.descriptions__item}>
+									<a
+										tabIndex={isDescriptionExpanded ? 0 : -1}
+										className={styles["descriptions__item-link"]}
+										onClick={(e) => handlePopupOpenOnClick(e, src, alt)}
+										onKeyDown={(e) => handlePopupOpenOnEnter(e, src, alt)}
+										aria-label={aria}
+									>
+										{title}&nbsp;
+									</a>
+									{text}
+								</li>
+							)
+						})}
 					</ul>
 					<p className={styles.descriptions__text}>
 						Угловые, П-образные и трапециевидные душевые ограждения из стекла
@@ -222,15 +159,43 @@ export const ShowerPartitionsDescription = () => {
 						<a
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpenOnClick(e, swingingDoorPopup)}
+							onClick={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									swingingDoorPopup,
+									setTypeOfDoorsAltData("развижными")
+								)
+							}
+							onKeyDown={(e) =>
+								handlePopupOpenOnEnter(
+									e,
+									swingingDoorPopup,
+									setTypeOfDoorsAltData("развижными")
+								)
+							}
+							aria-label="Открыть изображение душевой с раздвижными дверями"
 						>
-							раздвижными&nbsp;
+							раздвижными
 						</a>
-						или&nbsp;
+						,&nbsp;или&nbsp;
 						<a
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpenOnClick(e, rollingDoorPopup)}
+							onClick={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									rollingDoorPopup,
+									setTypeOfDoorsAltData("откатными")
+								)
+							}
+							onKeyDown={(e) =>
+								handlePopupOpenOnEnter(
+									e,
+									rollingDoorPopup,
+									setTypeOfDoorsAltData("откатными")
+								)
+							}
+							aria-label="Открыть изображение душевой с откатными дверями"
 						>
 							откатными&nbsp;
 						</a>
@@ -238,7 +203,21 @@ export const ShowerPartitionsDescription = () => {
 						<a
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpenOnClick(e, alcoveDoorPopup)}
+							onClick={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									alcoveDoorPopup,
+									setTypeOfDoorsAltData("одинарными")
+								)
+							}
+							onKeyDown={(e) =>
+								handlePopupOpenOnEnter(
+									e,
+									alcoveDoorPopup,
+									setTypeOfDoorsAltData("одинарными")
+								)
+							}
+							aria-label="Открыть изображение душевой с одинарными дверями"
 						>
 							одинарными
 						</a>
@@ -246,7 +225,21 @@ export const ShowerPartitionsDescription = () => {
 						<a
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpenOnClick(e, alcoveShowerPopup)}
+							onClick={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									alcoveShowerPopup,
+									setTypeOfDoorsAltData("двойными")
+								)
+							}
+							onKeyDown={(e) =>
+								handlePopupOpenOnEnter(
+									e,
+									alcoveShowerPopup,
+									setTypeOfDoorsAltData("двойными")
+								)
+							}
+							aria-label="Открыть изображение душевой с двойными дверями"
 						>
 							двойными
 						</a>
@@ -259,52 +252,24 @@ export const ShowerPartitionsDescription = () => {
 						следующие виды стекла:
 					</p>
 					<ul className={styles.descriptions__list}>
-						<li className={styles.descriptions__item}>
-							<a
-								tabIndex={isDescriptionExpanded ? 0 : -1}
-								className={styles["descriptions__item-link"]}
-								onClick={(e) =>
-									handlePopupOpenOnClick(e, transparentGlassPopup)
-								}
-							>
-								Прозрачное&nbsp;
-							</a>
-							— стандартное каленое стекло толщиной 8–10 мм.
-						</li>
-						<li className={styles.descriptions__item}>
-							<a
-								tabIndex={isDescriptionExpanded ? 0 : -1}
-								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpenOnClick(e, brightenedGlassPopup)}
-							>
-								Осветленное&nbsp;
-							</a>
-							— максимально прозрачное полотно, обладающее наибольшей
-							светопропускающей способностью и естественной передачей цвета.
-						</li>
-						<li className={styles.descriptions__item}>
-							<a
-								tabIndex={isDescriptionExpanded ? 0 : -1}
-								className={styles["descriptions__item-link"]}
-								onClick={(e) => handlePopupOpenOnClick(e, frostedGlassPopup)}
-							>
-								Матовое&nbsp;
-							</a>
-							— полупрозрачное с матовой поверхностью.
-						</li>
-						<li className={styles.descriptions__item}>
-							<a
-								tabIndex={isDescriptionExpanded ? 0 : -1}
-								className={styles["descriptions__item-link"]}
-								onClick={(e) =>
-									handlePopupOpenOnClick(e, tonedGraphiteGlassPopup)
-								}
-							>
-								Цветное&nbsp;
-							</a>
-							(тонированное или окрашенное в массе) — бронзовое, черное, другие
-							цвета.
-						</li>
+						{typeOfGlassesData.map(
+							({ id, title, spanText, aria, src, alt }) => {
+								return (
+									<li key={id} className={styles.descriptions__item}>
+										<a
+											tabIndex={isDescriptionExpanded ? 0 : -1}
+											className={styles["descriptions__item-link"]}
+											onClick={(e) => handlePopupOpenOnClick(e, src, alt)}
+											onKeyDown={(e) => handlePopupOpenOnClick(e, src, alt)}
+											aria-label={aria}
+										>
+											{title}&nbsp;
+										</a>
+										<span>{spanText}</span>
+									</li>
+								)
+							}
+						)}
 					</ul>
 					<p className={styles.descriptions__text}>
 						Перегородки и раздвижные душевые двери могут быть дополнены
@@ -317,11 +282,25 @@ export const ShowerPartitionsDescription = () => {
 					</h6>
 					<p className={styles.descriptions__text}>
 						Наша компания использует качественный алюминиевый профиль и надежную
-						фурнитуру. Их также можно выбрать по цвету —{" "}
+						фурнитуру. Их также можно выбрать по цвету —&nbsp;
 						<a
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpenOnClick(e, blackFurniturePopup)}
+							onClick={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									blackFurniturePopup,
+									setTypeOfFurnitureAltData("черного")
+								)
+							}
+							onKeyDown={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									blackFurniturePopup,
+									setTypeOfFurnitureAltData("черного")
+								)
+							}
+							aria-label="Открыть изображение с фурнитурой черного цвета"
 						>
 							черный
 						</a>
@@ -329,7 +308,21 @@ export const ShowerPartitionsDescription = () => {
 						<a
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpenOnClick(e, goldFurniturePopup)}
+							onClick={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									goldFurniturePopup,
+									setTypeOfFurnitureAltData("золотистого")
+								)
+							}
+							onKeyDown={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									goldFurniturePopup,
+									setTypeOfFurnitureAltData("золотистого")
+								)
+							}
+							aria-label="Открыть изображение с фурнитурой золотистого цвета"
 						>
 							золото
 						</a>
@@ -337,7 +330,21 @@ export const ShowerPartitionsDescription = () => {
 						<a
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpenOnClick(e, nickelFurniturePopup)}
+							onClick={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									nickelFurniturePopup,
+									setTypeOfFurnitureAltData("никелевого")
+								)
+							}
+							onKeyDown={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									nickelFurniturePopup,
+									setTypeOfFurnitureAltData("никелевого")
+								)
+							}
+							aria-label="Открыть изображение с фурнитурой цвета никель"
 						>
 							никель
 						</a>
@@ -345,7 +352,21 @@ export const ShowerPartitionsDescription = () => {
 						<a
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpenOnClick(e, bronzeFurniturePopup)}
+							onClick={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									bronzeFurniturePopup,
+									setTypeOfFurnitureAltData("бронзового")
+								)
+							}
+							onKeyDown={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									bronzeFurniturePopup,
+									setTypeOfFurnitureAltData("бронзового")
+								)
+							}
+							aria-label="Открыть изображение с фурнитурой бронзового цвета"
 						>
 							бронзу
 						</a>
@@ -353,7 +374,21 @@ export const ShowerPartitionsDescription = () => {
 						<a
 							tabIndex={isDescriptionExpanded ? 0 : -1}
 							className={styles["descriptions__item-link"]}
-							onClick={(e) => handlePopupOpenOnClick(e, chromeFurniturePopup)}
+							onClick={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									chromeFurniturePopup,
+									setTypeOfFurnitureAltData("хромового")
+								)
+							}
+							onKeyDown={(e) =>
+								handlePopupOpenOnClick(
+									e,
+									chromeFurniturePopup,
+									setTypeOfFurnitureAltData("хромового")
+								)
+							}
+							aria-label="Открыть изображение с фурнитурой цвета хром"
 						>
 							хром
 						</a>
@@ -371,34 +406,13 @@ export const ShowerPartitionsDescription = () => {
 						Вот почему клиенты выбирают нас:
 					</p>
 					<ul className={styles.descriptions__list}>
-						<li className={styles.descriptions__item}>
-							Полный цикл услуг — составление проекта, замер, изготовление,
-							доставка, сборка.
-						</li>
-						<li className={styles.descriptions__item}>
-							Производство душевых ограждений — в Гомеле.
-						</li>
-						<li className={styles.descriptions__item}>
-							Высокое качество — остекления, профиля, фурнитуры.
-						</li>
-						<li className={styles.descriptions__item}>
-							Срок изготовления перегородок — от 10 суток.
-						</li>
-						<li className={styles.descriptions__item}>
-							Время доставки и сборки — 1 день.
-						</li>
-						<li className={styles.descriptions__item}>
-							Гарантия — 1,5 года на остекление, фурнитуру и прочие материалы.
-						</li>
-						<li className={styles.descriptions__item}>
-							Профессиональные монтажники — мастера делают работу аккуратно,
-							обеспечивая сохранность имеющихся покрытий.
-						</li>
-						<li className={styles.descriptions__item}>
-							Отсутствие лишних трат — конечная стоимость указывается в
-							договоре, после завершения работ она не изменяется, доплачивать ни
-							за что не придется.
-						</li>
+						{reasonsListData.map(({ id, text }) => {
+							return (
+								<li key={id} className={styles.descriptions__item}>
+									{text}
+								</li>
+							)
+						})}
 					</ul>
 					<p className={styles.descriptions__text}>
 						Чтобы заказать стеклянные душевые ограждения для ванной комнаты,
@@ -425,6 +439,7 @@ export const ShowerPartitionsDescription = () => {
 						setIsPopupOpen={setIsPopupOpen}
 						handlePopupCloseOnClick={handlePopupCloseOnClick}
 						activePopupImg={activePopupImg}
+						activePopupAlt={activePopupAlt}
 						handlePopupCloseOnEsc={handlePopupCloseOnEsc}
 					/>
 				</ReactFocusLock>
