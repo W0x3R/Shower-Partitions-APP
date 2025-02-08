@@ -39,41 +39,41 @@
 
 	&__block {
 		margin-bottom: 0.8em;
-		max-height: 105px;
+		max-height: 102px;
 		overflow: hidden;
 
 		@include media.desktop {
 			max-height: 128px;
 		}
 
-		@media only screen and (max-width: 810px) {
+		@media only screen and (max-width: 820px) {
 			max-height: 102px;
 		}
 
 		@include media.bigMobile {
 			margin-bottom: 2em;
-			max-height: 150px;
+			max-height: 140px;
 		}
 
 		@media only screen and (max-width: 552px) {
-			max-height: 175px;
+			max-height: 162px;
 		}
 
 		@include media.mediumMobile {
 			margin-bottom: 1.2em;
-			max-height: 185px;
+			max-height: 172px;
 		}
 
 		@media only screen and (max-width: 450px) {
-			max-height: 170px;
+			max-height: 155px;
 		}
 
 		@media only screen and (max-width: 415px) {
-			max-height: 166px;
+			max-height: 142px;
 		}
 
 		@include media.smallMobile {
-			max-height: 185px;
+			max-height: 172px;
 			margin-bottom: 1.8em;
 		}
 
