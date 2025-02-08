@@ -1,0 +1,42 @@
+@use '../../styles/mixins';
+@use '../../styles/media';
+
+.information {
+
+	&__title {
+		margin-bottom: 0.575em;
+		font-size: 1.5em;
+		letter-spacing: 0.05em;
+		line-height: 1.3em;
+		color: var(--white);
+
+		@include media.bigMobile {
+			margin-bottom: 0.375em;
+			font-size: 2.2em;
+			text-align: center;
+		}
+	}
+
+	&__list {
+		@include media.bigMobile {
+			text-align: center;
+		}
+	}
+
+	&__item {
+		font-size: 1em;
+		letter-spacing: var(--basic-letter-spacing);
+		line-height: 1.6em;
+		font-style: normal;
+
+		@include media.bigMobile {
+			font-size: 1.4em;
+			line-height: 1.4em;
+			text-align: center;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.45em;
+		}
+	}
+}
