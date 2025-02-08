@@ -4,7 +4,9 @@
 .benefits {
 
 	&__wrapper {
-		margin-bottom: 2em;
+		@include media.bigMobile {
+			margin-bottom: 2em;
+		}
 	}
 
 	&__title {
