@@ -42,7 +42,11 @@
 		overflow: hidden;
 
 		@include media.desktop {
-			max-height: 121px;
+			max-height: 128px;
+		}
+
+		@media only screen and (max-width: 810px) {
+			max-height: 102px;
 		}
 
 		@include media.bigMobile {
@@ -50,17 +54,30 @@
 			max-height: 150px;
 		}
 
-		@include media.mediumMobile {
-			margin-bottom: 1.2em;
-			max-height: 208px;
+		@media only screen and (max-width: 552px) {
+			max-height: 175px;
 		}
 
-		@media only screen and (max-width: 453px) {
-			max-height: 186px;
+		@include media.mediumMobile {
+			margin-bottom: 1.2em;
+			max-height: 185px;
+		}
+
+		@media only screen and (max-width: 450px) {
+			max-height: 170px;
+		}
+
+		@media only screen and (max-width: 415px) {
+			max-height: 166px;
 		}
 
 		@include media.smallMobile {
+			max-height: 185px;
 			margin-bottom: 1.8em;
+		}
+
+		@media only screen and (max-width: 345px) {
+			max-height: 205px;
 		}
 
 		&.expanded {
