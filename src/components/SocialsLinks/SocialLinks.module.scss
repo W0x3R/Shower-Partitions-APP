@@ -1,11 +1,17 @@
 @use '../../styles/mixins';
 @use '../../styles/media';
+@use '../../styles/animations';
 
 .socials {
 	display: flex;
 
 	&-header {
 		column-gap: 1em;
+	}
+
+	&-footer {
+		column-gap: 1.4em;
+		justify-content: center;
 	}
 
 	&__link {
@@ -23,6 +29,14 @@
 
 		&-sizes {
 			@include mixins.sizes(2.5em, auto);
+		}
+
+		&-contacts-sizes {
+			@include mixins.sizes(2.8em, auto);
+
+			@include media.bigMobile {
+				width: 4.2em;
+			}
 		}
 
 		& svg {
