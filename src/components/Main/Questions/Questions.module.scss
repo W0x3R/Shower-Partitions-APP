@@ -66,10 +66,22 @@
 	}
 
 	&__accordion-text {
-		@extend %main-texts-fonts;
 		padding-right: 30px;
 		font-weight: 700;
 		text-align: left;
+		color: var(--black);
+		font-size: 1.4em;
+		letter-spacing: var(--basic-letter-spacing);
+		line-height: 1.4;
+
+		@include media.bigMobile {
+			font-size: 1.9em;
+			line-height: 1.3;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.1em;
+		}
 	}
 
 	&__accordion-btn {
