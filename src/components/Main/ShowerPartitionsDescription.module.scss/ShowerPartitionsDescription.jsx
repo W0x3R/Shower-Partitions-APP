@@ -412,7 +412,7 @@ export const ShowerPartitionsDescription = () => {
 						aria-label="Показать еще 2 вопроса"
 					>
 						Раскрыть полностью
-						<QuestionsShowMoreImgBtn />
+						<QuestionsShowMoreImgBtn aria-hidden="true" />
 					</button>
 				)}
 			</div>
