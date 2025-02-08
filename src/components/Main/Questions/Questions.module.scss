@@ -3,7 +3,7 @@
 @use '../../../styles/animations';
 
 .questions {
-	@extend %photos-section;
+	@extend %section;
 	background-color: var(--white);
 
 	&__inner {

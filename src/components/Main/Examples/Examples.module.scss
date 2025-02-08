@@ -3,7 +3,7 @@
 @use '../../../styles/animations';
 
 .examples {
-	@extend %photos-section;
+	@extend %section;
 	background-color: var(--white-251);
 
 	&__texts {

@@ -2,11 +2,11 @@
 @use '../../../styles/media';
 
 .products {
-	@extend %photos-section;
+	@extend %section;
 	background-color: var(--white);
 
 	&__title {
-		@extend %title-level-two
+		@extend %title-level-two;
 	}
 
 	&__text {

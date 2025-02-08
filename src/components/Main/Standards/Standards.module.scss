@@ -2,7 +2,7 @@
 @use '../../../styles/media';
 
 .standards {
-	@extend %photos-section;
+	@extend %section;
 
 	&__text-wrapper {
 		align-self: baseline;

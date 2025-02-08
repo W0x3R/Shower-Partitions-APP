@@ -2,7 +2,7 @@
 @use '../../../styles/media';
 
 .descriptions {
-	@extend %photos-section;
+	@extend %section;
 
 	&__title {
 		margin-bottom: 0.8em;

@@ -3,7 +3,7 @@
 @use '../../../styles/animations';
 
 .price {
-	@extend %photos-section;
+	@extend %section;
 	background: var(--gray-bg-gradient);
 
 	&__title {
