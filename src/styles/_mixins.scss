@@ -322,3 +322,49 @@
 		}
 	}
 }
+
+%footer-title {
+	margin-bottom: 0.575em;
+	font-size: 1.5em;
+	letter-spacing: 0.05em;
+	line-height: 1.2em;
+	color: var(--white);
+
+	@include media.bigMobile {
+		margin-bottom: 0.375em;
+		font-size: 2.2em;
+		text-align: center;
+	}
+}
+
+%footer-text {
+	display: flex;
+	align-items: center;
+	column-gap: .75em;
+	margin-bottom: 0.7em;
+	font-size: 1em;
+	letter-spacing: var(--basic-letter-spacing);
+	line-height: 1.3em;
+	font-style: normal;
+
+	@include media.bigMobile {
+		margin-bottom: 0.6em;
+		font-size: 1.6em
+	}
+}
+
+%footer-link {
+	display: inline-block;
+	font-weight: 600;
+	transition: var(--basic-transition);
+	cursor: pointer;
+
+	@include media.hoverAndActive {
+		color: var(--main-green);
+	}
+
+	@include media.focusVisible {
+		outline: none;
+		box-shadow: var(--focus-shadow);
+	}
+}

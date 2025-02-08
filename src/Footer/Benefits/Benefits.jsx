@@ -10,7 +10,7 @@ export const Benefits = () => {
 				{benefitsData.map(({ id, text }) => {
 					return (
 						<li key={id} className={styles.benefits__item}>
-							<CheckIcon className="footer__icon" />
+							<CheckIcon className="footer__icon" aria-hidden="true" />
 							{text}
 						</li>
 					)
