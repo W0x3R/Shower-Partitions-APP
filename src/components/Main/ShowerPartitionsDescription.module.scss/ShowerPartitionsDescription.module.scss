@@ -123,6 +123,10 @@
 		line-height: 1.4;
 		letter-spacing: var(--basic-letter-spacing);
 
+		&:not(:last-child) {
+			margin-bottom: 0.4em;
+		}
+
 		@include media.bigMobile {
 			font-size: 1.65em;
 			line-height: 1.3;
