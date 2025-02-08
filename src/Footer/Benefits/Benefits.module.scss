@@ -1,0 +1,48 @@
+@use '../../styles/mixins';
+@use '../../styles/media';
+
+.benefits {
+
+	&__wrapper {
+		margin-bottom: 2em;
+	}
+
+	&__title {
+		margin-bottom: 0.575em;
+		font-size: 1.5em;
+		letter-spacing: 0.05em;
+		line-height: 1.2em;
+		color: var(--white);
+
+		@include media.bigMobile {
+			margin-bottom: 0.375em;
+			font-size: 2.2em;
+			text-align: center;
+		}
+	}
+
+	&__list {}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		column-gap: .75em;
+		font-size: 1em;
+		letter-spacing: var(--basic-letter-spacing);
+		line-height: 1.3em;
+		font-style: normal;
+		color: #CACACA;
+
+		&:not(:last-child) {
+			margin-bottom: 0.7em;
+		}
+
+		@include media.bigMobile {
+			font-size: 1.6em;
+
+			&:not(:last-child) {
+				margin-bottom: 0.5em;
+			}
+		}
+	}
+}
