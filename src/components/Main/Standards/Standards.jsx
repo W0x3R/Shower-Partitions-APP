@@ -16,10 +16,11 @@ export const Standards = () => {
 						return (
 							<div key={number} className={styles["standards__info-inner"]}>
 								<div className={styles.standards__block}>
-									<p className={styles["standards__block-num"]}>01</p>
+									<p className={styles["standards__block-num"]}>{number}</p>
 									<img
 										className={styles["standards__block-img"]}
 										src={imageSrc}
+										alt=""
 									/>
 									<div className={styles["standards__block-content"]}>
 										<p className={styles["standards__block-title"]}>{title}</p>
