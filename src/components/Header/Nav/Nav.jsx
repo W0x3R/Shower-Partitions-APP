@@ -44,12 +44,7 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 			id="burger-open-nav"
 		>
 			<ul className={styles.nav__list}>
-				<NavItems
-					styles={styles}
-					titleItems={["Главная", "Портфолио"]}
-					onBurgerClick={onBurgerClick}
-				/>
-
+				<NavItems styles={styles} onBurgerClick={onBurgerClick} />
 				<DropdownItem
 					styles={styles}
 					actions={{
@@ -64,6 +59,7 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 						"Стоимость",
 						"Полезные статьи и новости",
 					]}
+					links={["delivery", "price", "blog"]}
 				/>
 
 				<DropdownItem
@@ -76,6 +72,7 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 					menuName={"company"}
 					title="О компании"
 					menuItems={["Наши контакты"]}
+					links={["contacts"]}
 				/>
 			</ul>
 		</nav>

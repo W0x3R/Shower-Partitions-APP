@@ -9,6 +9,7 @@ export const DropdownItem = ({
 	menuName,
 	title,
 	menuItems,
+	links,
 }) => {
 	const handleMenuActions = (value) =>
 		setIsMenuOpen((prev) => ({ ...prev, [menuName]: value }))
@@ -67,6 +68,7 @@ export const DropdownItem = ({
 				}}
 				menuName={menuName}
 				menuItems={menuItems}
+				links={links}
 			/>
 		</li>
 	)

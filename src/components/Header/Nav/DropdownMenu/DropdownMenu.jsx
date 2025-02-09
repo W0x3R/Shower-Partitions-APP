@@ -11,6 +11,7 @@ export const DropdownMenu = ({
 	},
 	menuItems,
 	menuName,
+	links,
 }) => {
 	const navMenuRef = useRef()
 	return (
@@ -35,6 +36,7 @@ export const DropdownMenu = ({
 									handleCloseMenuClick()
 								}
 							}}
+							to={links[i]}
 						>
 							{item}
 						</NavLink>

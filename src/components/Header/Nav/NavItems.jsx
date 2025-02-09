@@ -1,20 +1,27 @@
 import { NavLink } from "react-router-dom"
 
-export const NavItems = ({ styles, titleItems, onBurgerClick }) => {
+export const NavItems = ({ styles, onBurgerClick }) => {
 	return (
 		<>
-			{titleItems.map((navItem) => {
-				return (
-					<li className={styles.nav__item} key={navItem}>
-						<NavLink
-							className={styles["nav__item-link"]}
-							onClick={onBurgerClick}
-						>
-							{navItem}
-						</NavLink>
-					</li>
-				)
-			})}
+			<li className={styles.nav__item}>
+				<NavLink
+					end
+					to="."
+					className={styles["nav__item-link"]}
+					onClick={onBurgerClick}
+				>
+					Главная
+				</NavLink>
+			</li>
+			<li className={styles.nav__item}>
+				<NavLink
+					className={styles["nav__item-link"]}
+					onClick={onBurgerClick}
+					to="portfolio"
+				>
+					Портфолио
+				</NavLink>
+			</li>
 		</>
 	)
 }
