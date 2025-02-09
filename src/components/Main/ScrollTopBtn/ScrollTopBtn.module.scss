@@ -1,0 +1,29 @@
+@use '../../../styles/mixins';
+@use '../../../styles/media';
+
+.btn__scroll-top {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	@include mixins.hide;
+	transition: var(--basic-transition);
+
+	&.visible {
+		@include mixins.show;
+		opacity: 0.9;
+	}
+
+	& svg {
+		@include mixins.sizes(3.6rem, 3.6rem);
+	}
+
+	@include media.smallMobile {
+		& svg {
+			@include mixins.sizes(3.2rem, 3.2rem);
+		}
+	}
+
+	@include media.hoverAndActive {
+		opacity: 1;
+	}
+}

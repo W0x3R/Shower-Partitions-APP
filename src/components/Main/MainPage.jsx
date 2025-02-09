@@ -5,6 +5,7 @@ import { Price } from "./Price/Price"
 import { Questions } from "./Questions/Questions"
 import { Standards } from "./Standards/Standards"
 import { ShowerPartitionsDescription } from "./ShowerPartitionsDescription.module.scss/ShowerPartitionsDescription"
+import ScrollTopBtn from "./ScrollTopBtn/ScrollTopBtn"
 
 export const MainPage = () => {
 	return (
@@ -16,6 +17,7 @@ export const MainPage = () => {
 			<Questions />
 			<Standards />
 			<ShowerPartitionsDescription />
+			<ScrollTopBtn />
 		</>
 	)
 }
