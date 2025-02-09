@@ -1,4 +1,3 @@
-import styles from "./Main.module.scss"
 import { About } from "./About/About"
 import { Products } from "./Products/Products"
 import { Examples } from "./Examples/Examples"
@@ -7,9 +6,9 @@ import { Questions } from "./Questions/Questions"
 import { Standards } from "./Standards/Standards"
 import { ShowerPartitionsDescription } from "./ShowerPartitionsDescription.module.scss/ShowerPartitionsDescription"
 
-export const Main = () => {
+export const MainPage = () => {
 	return (
-		<main className={styles.main}>
+		<>
 			<About />
 			<Products />
 			<Examples />
@@ -17,6 +16,6 @@ export const Main = () => {
 			<Questions />
 			<Standards />
 			<ShowerPartitionsDescription />
-		</main>
+		</>
 	)
 }
