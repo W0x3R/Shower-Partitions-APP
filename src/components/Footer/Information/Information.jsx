@@ -1,4 +1,4 @@
-import { informationData } from "../../components/data/informationData"
+import { informationData } from "../../../components/data/informationData"
 import styles from "./Information.module.scss"
 
 export const Information = () => {

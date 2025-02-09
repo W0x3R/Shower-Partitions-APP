@@ -1,9 +1,9 @@
-import SocialLinks from "../../components/SocialsLinks/SocialLinks"
-import LocationIcon from "../../assets/footer/location.svg?react"
-import TimeIcon from "../../assets/footer/time.svg?react"
-import CallIcon from "../../assets/footer/call.svg?react"
-import MailIcon from "../../assets/footer/mail.svg?react"
-import QuestionIcon from "../../assets/footer/question.svg?react"
+import SocialLinks from "../../../components/SocialsLinks/SocialLinks"
+import LocationIcon from "../../../assets/footer/location.svg?react"
+import TimeIcon from "../../../assets/footer/time.svg?react"
+import CallIcon from "../../../assets/footer/call.svg?react"
+import MailIcon from "../../../assets/footer/mail.svg?react"
+import QuestionIcon from "../../../assets/footer/question.svg?react"
 import styles from "./Contacts.module.scss"
 
 export const Contacts = () => {

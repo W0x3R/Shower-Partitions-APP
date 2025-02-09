@@ -1,5 +1,5 @@
-import { benefitsData } from "../../components/data/benefitsData"
-import CheckIcon from "../../assets/footer/check.svg?react"
+import { benefitsData } from "../../../components/data/benefitsData"
+import CheckIcon from "../../../assets/footer/check.svg?react"
 import styles from "./Benefits.module.scss"
 
 export const Benefits = () => {
