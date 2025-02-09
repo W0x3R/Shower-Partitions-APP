@@ -68,10 +68,6 @@
 			max-height: 155px;
 		}
 
-		@media only screen and (max-width: 415px) {
-			max-height: 142px;
-		}
-
 		@include media.smallMobile {
 			max-height: 172px;
 			margin-bottom: 1.8em;
