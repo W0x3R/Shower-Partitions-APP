@@ -1,8 +1,8 @@
 import {
-	cornerShowerPopup,
-	showerCabinPopup,
-	showerPartitionPopup,
-	trapezoidalShowerPopup,
+	cornerShowerPopupImg,
+	showerCabinPopupImg,
+	showerPartitionPopupImg,
+	trapezoidalShowerPopupImg,
 } from "../productsData"
 
 export const showerTypesData = [
@@ -11,7 +11,7 @@ export const showerTypesData = [
 		title: "Линейное ограждение душевой",
 		text: ` — стационарное стеклянное полотно с дверью (распашной, раздвижной) или без двери. Используется при расположении душа в нише или в дальнем углу ванной комнаты. Часто сочетается с дополнительными непрозрачными перегородками из того же материала, из которого выполнены стены.`,
 		aria: "Открыть изображение душевой с линейным ограждением",
-		src: showerPartitionPopup,
+		imgSrc: showerPartitionPopupImg,
 		alt: "На изображении отображено как выглядит линейное ограждение душевой.",
 	},
 	{
@@ -20,7 +20,7 @@ export const showerTypesData = [
 		text: ` — два полотна располагаются под углом 90 градусов друг к другу, образуя квадратную или прямоугольную зону. Иногда используются
 		более сложные конструкции (с 3 или 4 стенками, примыкающими к углу ванной комнаты).`,
 		aria: "Открыть изображение душевой с угловым ограждением",
-		src: cornerShowerPopup,
+		imgSrc: cornerShowerPopupImg,
 		alt: "На изображении отображено как выглядит угловое ограждение душевой.",
 	},
 	{
@@ -28,7 +28,7 @@ export const showerTypesData = [
 		title: "П-образная перегородка душевой",
 		text: ` — ограждение с 3 полотнами, примыкающее к одной стене и образующее с ней прямоугольную или квадратную зону.`,
 		aria: "Открыть изображение душевой с П-образной перегородкой",
-		src: showerCabinPopup,
+		imgSrc: showerCabinPopupImg,
 		alt: "На изображении отображено как выглядит П-образная перегородка душевой.",
 	},
 	{
@@ -36,7 +36,7 @@ export const showerTypesData = [
 		title: "Трапециевидная перегородка душевой",
 		text: ` — ограждение, которое вместе с одной из стен ванной образует трапецию`,
 		aria: "Открыть изображение душевой с трапециевидной перегородкой",
-		src: trapezoidalShowerPopup,
+		imgSrc: trapezoidalShowerPopupImg,
 		alt: "На изображении отображено как выглядит трапециевидная перегородка душевой.",
 	},
 ]

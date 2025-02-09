@@ -54,29 +54,31 @@ export const Examples = () => {
 	}, [visibleCount])
 
 	const renderedSlides = useMemo(() => {
-		return examplesData.slice(0, visibleCount).map((example) => (
-			<div className={`${styles.examples__item}`} key={example.id}>
-				<a
-					className={styles["examples__item-link"]}
-					data-fancybox="gallery"
-					href={example.sliderImg}
-				>
-					<img
-						className={styles["examples__item-img"]}
-						alt={example.alt}
-						src={example.mainImg}
-						width="351"
-						height="243"
-					/>
-					<FullScreenIcon aria-hidden="true" />
-				</a>
-				<div
-					id="aria-examples-live-status"
-					aria-live="polite"
-					className="sr-only"
-				></div>
-			</div>
-		))
+		return examplesData
+			.slice(0, visibleCount)
+			.map(({ id, imgSrc, popupImgSrc, alt }) => (
+				<div className={`${styles.examples__item}`} key={id}>
+					<a
+						className={styles["examples__item-link"]}
+						data-fancybox="gallery"
+						href={popupImgSrc}
+					>
+						<img
+							className={styles["examples__item-img"]}
+							alt={alt}
+							src={imgSrc}
+							width="351"
+							height="243"
+						/>
+						<FullScreenIcon aria-hidden="true" />
+					</a>
+					<div
+						id="aria-examples-live-status"
+						aria-live="polite"
+						className="sr-only"
+					></div>
+				</div>
+			))
 	}, [visibleCount])
 
 	return (

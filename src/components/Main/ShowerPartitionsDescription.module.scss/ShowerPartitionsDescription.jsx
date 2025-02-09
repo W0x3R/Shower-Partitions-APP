@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react"
 import {
-	swingingDoorPopup,
-	rollingDoorPopup,
-	alcoveDoorPopup,
-	alcoveShowerPopup,
-	blackFurniturePopup,
-	goldFurniturePopup,
-	bronzeFurniturePopup,
-	nickelFurniturePopup,
-	chromeFurniturePopup,
+	swingingDoorPopupImg,
+	rollingDoorPopupImg,
+	alcoveDoorPopupImg,
+	alcoveShowerPopupImg,
+	blackFurniturePopupImg,
+	goldFurniturePopupImg,
+	bronzeFurniturePopupImg,
+	nickelFurniturePopupImg,
+	chromeFurniturePopupImg,
 } from "../../data/productsData"
 import ReactFocusLock from "react-focus-lock"
 import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
@@ -120,14 +120,14 @@ export const ShowerPartitionsDescription = () => {
 						изготовлением перегородок для душа следующего типа:
 					</p>
 					<ul className={styles.descriptions__list}>
-						{showerTypesData.map(({ id, title, text, aria, src, alt }) => {
+						{showerTypesData.map(({ id, title, text, aria, imgSrc, alt }) => {
 							return (
 								<li key={id} className={styles.descriptions__item}>
 									<a
 										tabIndex={isDescriptionExpanded ? 0 : -1}
 										className={styles["descriptions__item-link"]}
-										onClick={(e) => handlePopupOpen(e, src, alt)}
-										onKeyDown={(e) => handlePopupOpen(e, src, alt)}
+										onClick={(e) => handlePopupOpen(e, imgSrc, alt)}
+										onKeyDown={(e) => handlePopupOpen(e, imgSrc, alt)}
 										aria-label={aria}
 									>
 										{title}&nbsp;
@@ -146,14 +146,14 @@ export const ShowerPartitionsDescription = () => {
 							onClick={(e) =>
 								handlePopupOpen(
 									e,
-									swingingDoorPopup,
+									swingingDoorPopupImg,
 									setTypeOfDoorsAltData("развижными")
 								)
 							}
 							onKeyDown={(e) =>
 								handlePopupOpen(
 									e,
-									swingingDoorPopup,
+									swingingDoorPopupImg,
 									setTypeOfDoorsAltData("развижными")
 								)
 							}
@@ -168,14 +168,14 @@ export const ShowerPartitionsDescription = () => {
 							onClick={(e) =>
 								handlePopupOpen(
 									e,
-									rollingDoorPopup,
+									rollingDoorPopupImg,
 									setTypeOfDoorsAltData("откатными")
 								)
 							}
 							onKeyDown={(e) =>
 								handlePopupOpen(
 									e,
-									rollingDoorPopup,
+									rollingDoorPopupImg,
 									setTypeOfDoorsAltData("откатными")
 								)
 							}
@@ -190,14 +190,14 @@ export const ShowerPartitionsDescription = () => {
 							onClick={(e) =>
 								handlePopupOpen(
 									e,
-									alcoveDoorPopup,
+									alcoveDoorPopupImg,
 									setTypeOfDoorsAltData("одинарными")
 								)
 							}
 							onKeyDown={(e) =>
 								handlePopupOpen(
 									e,
-									alcoveDoorPopup,
+									alcoveDoorPopupImg,
 									setTypeOfDoorsAltData("одинарными")
 								)
 							}
@@ -212,14 +212,14 @@ export const ShowerPartitionsDescription = () => {
 							onClick={(e) =>
 								handlePopupOpen(
 									e,
-									alcoveShowerPopup,
+									alcoveShowerPopupImg,
 									setTypeOfDoorsAltData("двойными")
 								)
 							}
 							onKeyDown={(e) =>
 								handlePopupOpen(
 									e,
-									alcoveShowerPopup,
+									alcoveShowerPopupImg,
 									setTypeOfDoorsAltData("двойными")
 								)
 							}
@@ -237,14 +237,14 @@ export const ShowerPartitionsDescription = () => {
 					</p>
 					<ul className={styles.descriptions__list}>
 						{typeOfGlassesData.map(
-							({ id, title, spanText, aria, src, alt }) => {
+							({ id, title, spanText, aria, imgSrc, alt }) => {
 								return (
 									<li key={id} className={styles.descriptions__item}>
 										<a
 											tabIndex={isDescriptionExpanded ? 0 : -1}
 											className={styles["descriptions__item-link"]}
-											onClick={(e) => handlePopupOpen(e, src, alt)}
-											onKeyDown={(e) => handlePopupOpen(e, src, alt)}
+											onClick={(e) => handlePopupOpen(e, imgSrc, alt)}
+											onKeyDown={(e) => handlePopupOpen(e, imgSrc, alt)}
 											aria-label={aria}
 										>
 											{title}&nbsp;
@@ -273,14 +273,14 @@ export const ShowerPartitionsDescription = () => {
 							onClick={(e) =>
 								handlePopupOpen(
 									e,
-									blackFurniturePopup,
+									blackFurniturePopupImg,
 									setTypeOfFurnitureAltData("черного")
 								)
 							}
 							onKeyDown={(e) =>
 								handlePopupOpen(
 									e,
-									blackFurniturePopup,
+									blackFurniturePopupImg,
 									setTypeOfFurnitureAltData("черного")
 								)
 							}
@@ -295,14 +295,14 @@ export const ShowerPartitionsDescription = () => {
 							onClick={(e) =>
 								handlePopupOpen(
 									e,
-									goldFurniturePopup,
+									goldFurniturePopupImg,
 									setTypeOfFurnitureAltData("золотистого")
 								)
 							}
 							onKeyDown={(e) =>
 								handlePopupOpen(
 									e,
-									goldFurniturePopup,
+									goldFurniturePopupImg,
 									setTypeOfFurnitureAltData("золотистого")
 								)
 							}
@@ -317,14 +317,14 @@ export const ShowerPartitionsDescription = () => {
 							onClick={(e) =>
 								handlePopupOpen(
 									e,
-									nickelFurniturePopup,
+									nickelFurniturePopupImg,
 									setTypeOfFurnitureAltData("никелевого")
 								)
 							}
 							onKeyDown={(e) =>
 								handlePopupOpen(
 									e,
-									nickelFurniturePopup,
+									nickelFurniturePopupImg,
 									setTypeOfFurnitureAltData("никелевого")
 								)
 							}
@@ -339,14 +339,14 @@ export const ShowerPartitionsDescription = () => {
 							onClick={(e) =>
 								handlePopupOpen(
 									e,
-									bronzeFurniturePopup,
+									bronzeFurniturePopupImg,
 									setTypeOfFurnitureAltData("бронзового")
 								)
 							}
 							onKeyDown={(e) =>
 								handlePopupOpen(
 									e,
-									bronzeFurniturePopup,
+									bronzeFurniturePopupImg,
 									setTypeOfFurnitureAltData("бронзового")
 								)
 							}
@@ -361,14 +361,14 @@ export const ShowerPartitionsDescription = () => {
 							onClick={(e) =>
 								handlePopupOpen(
 									e,
-									chromeFurniturePopup,
+									chromeFurniturePopupImg,
 									setTypeOfFurnitureAltData("хромового")
 								)
 							}
 							onKeyDown={(e) =>
 								handlePopupOpen(
 									e,
-									chromeFurniturePopup,
+									chromeFurniturePopupImg,
 									setTypeOfFurnitureAltData("хромового")
 								)
 							}

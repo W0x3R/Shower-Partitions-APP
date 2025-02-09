@@ -12,14 +12,14 @@ export const Standards = () => {
 					</p>
 				</div>
 				<div className={styles["standards__info-wrapper"]}>
-					{standardsData.map(({ number, title, subtitle, imageSrc }) => {
+					{standardsData.map(({ number, title, subtitle, imgSrc }) => {
 						return (
 							<div key={number} className={styles["standards__info-inner"]}>
 								<div className={styles.standards__block}>
 									<p className={styles["standards__block-num"]}>{number}</p>
 									<img
 										className={styles["standards__block-img"]}
-										src={imageSrc}
+										src={imgSrc}
 										alt=""
 									/>
 									<div className={styles["standards__block-content"]}>

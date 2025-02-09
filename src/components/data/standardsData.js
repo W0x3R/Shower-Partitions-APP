@@ -12,7 +12,7 @@ const standardsData = [
 									молотком по торцу изделия. Если у вас получится, то стекло
 									распадётся на большое количество не острых фрагментов,
 									повредиться ими невозможно.`,
-		imageSrc: standardsGlassImg,
+		imgSrc: standardsGlassImg,
 	},
 	{
 		number: "02",
@@ -22,7 +22,7 @@ const standardsData = [
 									для безопасной эксплуатации. Мы вам советуем стекло толщиной
 									минимум 8мм, его свойств и прочности хватит с запасом для
 									уверенного пользования.`,
-		imageSrc: standardsThicknessGlassImg,
+		imgSrc: standardsThicknessGlassImg,
 	},
 	{
 		number: "03",
@@ -32,7 +32,7 @@ const standardsData = [
 									чем "пескоструйная обработка", но такое стекло обладает
 									очевидными плюсами: его гораздо проще мыть в отличии от
 									"пескоструя" и визуально такое стекло более однородно.`,
-		imageSrc: standardsMatteGlassImg,
+		imgSrc: standardsMatteGlassImg,
 	},
 ]
 
