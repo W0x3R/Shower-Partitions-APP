@@ -9,7 +9,7 @@
 		font-size: clamp(12px, 1.48vw, 16px);
 		border-bottom: var(--border-b-white-2);
 		position: relative;
-		z-index: 100;
+		z-index: 10;
 		color: var(--white);
 
 		@include media.bigMobile {
