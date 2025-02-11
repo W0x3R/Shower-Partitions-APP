@@ -6,7 +6,7 @@
 	@include mixins.fixed-center-fullscreen;
 	transform: translate(-50%, -50%);
 	background-color: rgba(24, 24, 27, 0.98);
-	z-index: 100000000;
+	z-index: 10;
 	cursor: pointer;
 	transition: opacity .2s ease;
 
