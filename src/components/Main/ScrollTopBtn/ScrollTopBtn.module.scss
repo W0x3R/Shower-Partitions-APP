@@ -1,29 +1,45 @@
 @use '../../../styles/mixins';
 @use '../../../styles/media';
+@use '../../../styles/animations';
 
 .btn__scroll-top {
 	position: fixed;
 	bottom: 10px;
 	right: 10px;
-	@include mixins.hide;
-	transition: var(--basic-transition);
+	display: none;
+	border-radius: var(--border-r-circle);
+	transition: opacity .3s ease-in-out;
 
 	&.visible {
-		@include mixins.show;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		opacity: 0.9;
 	}
 
 	& svg {
 		@include mixins.sizes(3.6rem, 3.6rem);
+
+		@include media.mediumMobile {
+			width: 3.4rem;
+			height: 3.4rem;
+		}
+	}
+
+	@include media.bigMobile {
+		right: 5px;
+		bottom: 60px;
 	}
 
 	@include media.smallMobile {
-		& svg {
-			@include mixins.sizes(3.2rem, 3.2rem);
-		}
+		@include mixins.sizes(3.2rem, 3.2rem);
 	}
 
 	@include media.hoverAndActive {
 		opacity: 1;
+	}
+
+	@include media.focusVisible {
+		outline: var(--focus-outline);
 	}
 }

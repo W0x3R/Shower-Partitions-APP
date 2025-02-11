@@ -34,8 +34,9 @@ const ScrollTopBtn = () => {
 		<button
 			className={`${styles["btn__scroll-top"]} ${isScrollBtnVisible ? styles.visible : ""}`}
 			onClick={scrollTop}
+			aria-label="Прокрутить страницу вверх"
 		>
-			<ArrowTopIcon />
+			<ArrowTopIcon aria-hidden="true" />
 		</button>
 	)
 }
