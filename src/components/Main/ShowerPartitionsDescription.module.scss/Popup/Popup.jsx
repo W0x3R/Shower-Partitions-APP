@@ -40,6 +40,7 @@ export const Popup = ({
 					alt={activePopupAlt}
 				/>
 				<button
+					type="button"
 					className={styles.popup__btn}
 					onClick={(e) => handlePopupClose(e)}
 					aria-label="Закрыть изображение"

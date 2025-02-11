@@ -411,6 +411,7 @@ export const ShowerPartitionsDescription = () => {
 				</div>
 				{!isDescriptionExpanded && (
 					<button
+						type="button"
 						className={styles["descriptions__more-btn"]}
 						onClick={handleDescriptionExpand}
 						aria-label="Показать еще 2 вопроса"

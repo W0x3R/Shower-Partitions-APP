@@ -43,6 +43,7 @@ export const Products = () => {
 								key={i}
 								onClick={() => handleButtonActive(data.activeBtnValue)}
 								className={`${styles["products__types-btn"]} ${activeBtn === data.activeBtnValue ? styles.active : ""}`}
+								type="button"
 								role="tab"
 								aria-selected={activeBtn === data.activeBtnValue}
 								id={`tab-${data.activeBtnValue}`}
@@ -73,7 +74,7 @@ export const Products = () => {
 						aria-labelledby={`tab-${activeBtn}`}
 					>
 						{productsData[activeBtn].map(
-							({ id, title, imgSrc, popupImgSrc, alt }) => {
+							({ id, title, imgSrc, popupImgSrc, alt }, i) => {
 								return (
 									<figure className={styles.products__item} key={id}>
 										<a
@@ -92,7 +93,13 @@ export const Products = () => {
 											<FullScreenIcon />
 										</a>
 										<figcaption>
-											<p className={styles["products__item-text"]}>{title}</p>
+											<p
+												data-fancybox-trigger="gallery"
+												data-fancybox-index={i}
+												className={styles["products__item-text"]}
+											>
+												{title}
+											</p>
 										</figcaption>
 									</figure>
 								)

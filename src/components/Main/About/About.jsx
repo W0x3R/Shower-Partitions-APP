@@ -53,8 +53,8 @@ export const About = () => {
 						})}
 					</div>
 					<div className={styles.about__order}>
-						<button className={styles["about__order-btn"]}>
-							<span> Рассчитать цену по моим размерам</span>
+						<button className={styles["about__order-btn"]} type="button">
+							<span>Рассчитать цену по моим размерам</span>
 							<img src={clickHand} alt="" />
 						</button>
 						<p className={styles["about__order-text"]}>

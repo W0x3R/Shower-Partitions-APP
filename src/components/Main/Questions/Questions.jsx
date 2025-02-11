@@ -23,6 +23,7 @@ export const Questions = () => {
 			return (
 				<div key={id} className={styles["questions__accordion-section"]}>
 					<button
+						type="button"
 						id={`accordion-btn-${id}`}
 						className={styles["questions__accordion-btn"]}
 						onClick={() => handleToggleAccordion(id)}

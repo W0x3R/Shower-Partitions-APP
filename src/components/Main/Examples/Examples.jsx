@@ -108,6 +108,7 @@ export const Examples = () => {
 					{renderedSlides}
 					{visibleCount < examplesData.length && (
 						<button
+							type="button"
 							className={styles["examples__items-btn"]}
 							onClick={handleShowMorePictures}
 							aria-label={`Показать еще ${stepIncrease} фото`}
