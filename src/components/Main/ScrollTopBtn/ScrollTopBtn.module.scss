@@ -19,8 +19,7 @@
 		@include mixins.sizes(3.6rem, 3.6rem);
 
 		@include media.mediumMobile {
-			width: 3.4rem;
-			height: 3.4rem;
+			@include mixins.sizes(3.4rem, 3.4rem);
 		}
 	}
 
