@@ -303,12 +303,10 @@
 	@include flexCenter;
 	column-gap: 7px;
 	padding-bottom: 4px;
-	font-size: 21px;
+	font-size: 20px;
 	letter-spacing: var(--basic-letter-spacing);
 	transition: all 0.45s ease-in-out;
 	color: var(--main-green);
-	max-width: max-content;
-	align-self: center;
 
 	&::after {
 		content: "";
@@ -329,14 +327,18 @@
 
 	@include media.bigMobile {
 		font-size: 18px;
+
+		& svg {
+			@include sizes(16px, 16px);
+		}
 	}
 
 	@include media.mediumMobile {
-		font-size: 17px;
-	}
-
-	@include media.smallMobile {
 		font-size: 16px;
+
+		& svg {
+			@include sizes(14px, 14px);
+		}
 	}
 
 	@include media.hoverAndActive {
