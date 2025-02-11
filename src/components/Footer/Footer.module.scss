@@ -9,6 +9,7 @@
 
 	@include media.bigMobile {
 		font-size: clamp(9.5px, 2.2vw, 11.3px);
+		padding-bottom: 6em;
 	}
 
 	&__wrapper {
@@ -16,7 +17,6 @@
 		justify-content: space-between;
 
 		@include media.bigMobile {
-			justify-content: space-between;
 			flex-direction: column;
 			align-items: center;
 		}
