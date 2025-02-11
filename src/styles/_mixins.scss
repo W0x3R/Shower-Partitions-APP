@@ -255,7 +255,7 @@
 %images-cards {
 	position: relative;
 	flex-wrap: wrap;
-	gap: 1.5625em;
+	gap: 1.5em;
 	font-size: clamp(11px, 1.4vw, 18px);
 
 	@include media.bigMobile {
@@ -270,12 +270,12 @@
 %image-card {
 	@include flexCenter;
 	flex-direction: column;
-	flex: 0 0 calc((100% - 2 * 1.5625em) / 3);
+	flex: 0 0 calc((100% - 2 * 1.5em) / 3);
 	cursor: pointer;
 	text-align: center;
 
 	@include media.bigMobile {
-		flex-basis: calc((100% - 1 * 1.5625em) / 2);
+		flex-basis: calc((100% - 1 * 1.5em) / 2);
 	}
 
 	@include media.mediumMobile {
