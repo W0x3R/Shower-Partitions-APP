@@ -8,14 +8,13 @@
 	bottom: 0;
 	right: 0;
 	width: 100vw;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	@include mixins.hide;
+
+	display: none;
 
 	@include media.bigMobile {
-		@include mixins.show;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		font-size: clamp(12px, 3vw, 16px);
 	}
 
@@ -27,12 +26,23 @@
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		background: rgb(65 180 230);
+		background: rgb(38 125 165);
 		flex-basis: 50%;
 		min-height: 50px;
+		outline: none;
 
 		@include media.mediumMobile {
 			min-height: 45px;
+		}
+
+		@include media.hoverAndActive {
+			& svg {
+				animation: scaleAndRotateQuestionsImg 1s infinite;
+			}
+		}
+
+		@include media.focusVisible {
+			border: 2px solid red;
 		}
 	}
 
@@ -40,12 +50,23 @@
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-		background: #1e9220;
+		background: #1e7c20;
 		flex-basis: 50%;
 		min-height: 50px;
+		outline: none;
 
 		@include media.mediumMobile {
 			min-height: 45px;
+		}
+
+		@include media.hoverAndActive {
+			& svg {
+				animation: scaleAndRotateQuestionsImg 1s infinite;
+			}
+		}
+
+		@include media.focusVisible {
+			border: 2px solid red;
 		}
 	}
 
