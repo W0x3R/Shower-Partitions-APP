@@ -12,7 +12,7 @@
 	display: none;
 
 	@include media.bigMobile {
-		@include media.flexSpaceBetweenCenter;
+		@include mixins.flexSpaceBetweenCenter;
 		font-size: clamp(12px, 3vw, 16px);
 	}
 
@@ -21,7 +21,7 @@
 	}
 
 	&-telegram {
-		@include media.flexSpaceBetweenCenter;
+		@include mixins.flexSpaceBetweenCenter;
 		background: rgb(38 125 165);
 		flex-basis: 50%;
 		min-height: 50px;
@@ -43,7 +43,7 @@
 	}
 
 	&-phone {
-		@include media.flexSpaceBetweenCenter;
+		@include mixins.flexSpaceBetweenCenter;
 		background: #1e7c20;
 		flex-basis: 50%;
 		min-height: 50px;
