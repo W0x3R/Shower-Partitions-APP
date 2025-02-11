@@ -19,6 +19,12 @@
 	align-items: center;
 }
 
+@mixin flexSpaceEvenlyCenter {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
 @mixin flexSpaceBetweenCenter {
 	display: flex;
 	justify-content: space-between;

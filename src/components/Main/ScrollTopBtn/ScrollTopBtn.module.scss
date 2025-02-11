@@ -11,9 +11,7 @@
 	transition: opacity .3s ease-in-out;
 
 	&.visible {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include mixins.flexCenter;
 		opacity: 0.9;
 	}
 
