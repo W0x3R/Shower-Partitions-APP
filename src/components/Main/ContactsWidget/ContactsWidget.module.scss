@@ -21,47 +21,13 @@
 	}
 
 	&-telegram {
-		@include mixins.flexSpaceBetweenCenter;
+		@extend %contacts-widget-link;
 		background: rgb(38 125 165);
-		flex-basis: 50%;
-		min-height: 50px;
-		outline: none;
-
-		@include media.mediumMobile {
-			min-height: 45px;
-		}
-
-		@include media.hoverAndActive {
-			& svg {
-				animation: scaleAndRotateQuestionsImg 1s infinite;
-			}
-		}
-
-		@include media.focusVisible {
-			border: 2px solid red;
-		}
 	}
 
 	&-phone {
-		@include mixins.flexSpaceBetweenCenter;
+		@extend %contacts-widget-link;
 		background: #1e7c20;
-		flex-basis: 50%;
-		min-height: 50px;
-		outline: none;
-
-		@include media.mediumMobile {
-			min-height: 45px;
-		}
-
-		@include media.hoverAndActive {
-			& svg {
-				animation: scaleAndRotateQuestionsImg 1s infinite;
-			}
-		}
-
-		@include media.focusVisible {
-			border: 2px solid red;
-		}
 	}
 
 	&-text {

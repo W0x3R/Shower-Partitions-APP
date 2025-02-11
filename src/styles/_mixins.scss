@@ -367,6 +367,27 @@
 	}
 }
 
+%contacts-widget-link {
+	@include flexSpaceEvenlyCenter;
+	flex-basis: 50%;
+	min-height: 48px;
+	outline: none;
+
+	@include media.mediumMobile {
+		min-height: 43px;
+	}
+
+	@include media.hoverAndActive {
+		& svg {
+			animation: scaleAndRotateQuestionsImg 1s infinite;
+		}
+	}
+
+	@include media.focusVisible {
+		border: 2px solid var(--red);
+	}
+}
+
 %footer-title {
 	margin-bottom: 0.575em;
 	font-size: 1.5em;
