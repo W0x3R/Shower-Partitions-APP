@@ -1,0 +1,56 @@
+@use '../../../styles/mixins';
+@use '../../../styles/media';
+@use '../../../styles/animations';
+
+.contacts__widget {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	@include mixins.hide;
+
+	@include media.bigMobile {
+		@include mixins.show;
+		font-size: clamp(12px, 3vw, 16px);
+	}
+
+	& svg {
+		@include mixins.sizes(2.1em, 2.1em)
+	}
+
+	&-telegram {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		background: rgb(65 180 230);
+		flex-basis: 50%;
+		min-height: 50px;
+
+		@include media.mediumMobile {
+			min-height: 45px;
+		}
+	}
+
+	&-phone {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		background: #1e9220;
+		flex-basis: 50%;
+		min-height: 50px;
+
+		@include media.mediumMobile {
+			min-height: 45px;
+		}
+	}
+
+	&-text {
+		font-size: 1.4em;
+		letter-spacing: var(--basic-letter-spacing);
+	}
+}
