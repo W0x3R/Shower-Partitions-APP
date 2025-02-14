@@ -6,15 +6,30 @@ import { createHtmlPlugin } from "vite-plugin-html"
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: "/Shower-Partitions-APP/",
+	// base: "/Shower-Partitions-APP/",
 	plugins: [
 		react(),
 		svgo(),
 		svgr(),
 		createHtmlPlugin({
-			minify: true, // Включение минимизации HTML
+			minify: {
+				collapseWhitespace: true,
+				removeComments: true,
+				removeAttributeQuotes: true,
+			},
 		}),
 	],
+	build: {
+		minify: "esbuild",
+		sourcemap: false,
+		cssCodeSplit: true,
+		rollupOptions: {
+			treeshake: true,
+		},
+		cleanCssOptions: {
+			level: 2,
+		},
+	},
 	server: {
 		port: 3000,
 		open: true,
