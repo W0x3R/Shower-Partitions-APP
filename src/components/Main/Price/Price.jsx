@@ -13,6 +13,7 @@ export const Price = () => {
 					<img
 						className={`${styles["price__info-img"]} ${styles.desktop}`}
 						src={showerImage}
+						loading="lazy"
 						alt=""
 					/>
 					<div className={styles["price__text-wrapper"]}>
@@ -26,6 +27,7 @@ export const Price = () => {
 						</p>
 						<img
 							className={`${styles["price__info-img"]} ${styles.mobile}`}
+							loading="lazy"
 							src={showerImage}
 							alt=""
 						/>

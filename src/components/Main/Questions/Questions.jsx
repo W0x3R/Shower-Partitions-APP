@@ -78,7 +78,12 @@ export const Questions = () => {
 			<div className="container">
 				<div className={styles.questions__inner}>
 					<h3 className={styles.questions__title}>Часто задаваемые вопросы</h3>
-					<img className={styles.questions__img} src={questionImg} alt="" />
+					<img
+						className={styles.questions__img}
+						src={questionImg}
+						loading="lazy"
+						alt=""
+					/>
 					<div className={styles["questions__accordion-wrapper"]}>
 						<div className={styles["questions__accordion"]}>
 							{renderQuestions()}

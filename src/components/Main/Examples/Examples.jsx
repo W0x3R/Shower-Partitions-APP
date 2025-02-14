@@ -65,6 +65,7 @@ export const Examples = () => {
 					>
 						<img
 							className={styles["examples__item-img"]}
+							loading="lazy"
 							alt={alt}
 							src={imgSrc}
 							width="351"

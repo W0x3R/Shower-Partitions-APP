@@ -20,6 +20,7 @@ export const Standards = () => {
 									<img
 										className={styles["standards__block-img"]}
 										src={imgSrc}
+										loading="lazy"
 										alt=""
 									/>
 									<div className={styles["standards__block-content"]}>
