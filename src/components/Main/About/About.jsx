@@ -42,7 +42,7 @@ export const About = () => {
 					</div>
 					<div className={styles.about__features}>
 						<div className={styles["about__features-item"]}>
-							<img src={featureCircle} />
+							<img src={featureCircle} alt="" />
 							<p className={styles["about__features-text"]}>
 								<b>Закаленное стекло</b>
 								<br />
