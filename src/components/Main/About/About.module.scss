@@ -20,6 +20,24 @@
 		margin-top: -8rem;
 	}
 
+	&__background-big {
+		@include mixins.fullscreen-bg;
+		display: block;
+
+		@include media.mediumMobile {
+			display: none;
+		}
+	}
+
+	&__background-small {
+		@include mixins.fullscreen-bg;
+		display: none;
+
+		@include media.mediumMobile {
+			display: block;
+		}
+	}
+
 	&__background {
 		@include mixins.fullscreen-bg;
 	}

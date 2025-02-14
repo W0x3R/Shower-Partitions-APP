@@ -1,4 +1,6 @@
 import styles from "./About.module.scss"
+import mainBgBig from "../../../assets/main/main-bg-big.webp"
+import mainBgSmall from "../../../assets/main/main-bg-small.webp"
 import featureCircle from "../../../assets/main/feature-circle.svg?url"
 import clickHand from "../../../assets/main/click-hand.svg?url"
 
@@ -12,6 +14,12 @@ export const About = () => {
 	return (
 		<section className={styles.about}>
 			<div className={styles.about__background} aria-hidden="true" />
+			<img className={styles["about__background-big"]} src={mainBgBig} alt="" />
+			<img
+				className={styles["about__background-small"]}
+				src={mainBgSmall}
+				alt=""
+			/>
 			<div className="container">
 				<div className={styles.about__content}>
 					<h1 className={styles.about__title}>

@@ -91,13 +91,8 @@
 	position: absolute;
 	inset: 0;
 	z-index: -1;
-	background-image: url('../../../assets/main/main-bg-big.webp');
-	background-position: center;
-	background-size: cover;
-
-	@include media.mediumMobile {
-		background-image: url('../../../assets/main/main-bg-small.webp');
-	}
+	@include sizes(100%, 100%);
+	object-fit: cover;
 }
 
 %header-texts-fonts {
