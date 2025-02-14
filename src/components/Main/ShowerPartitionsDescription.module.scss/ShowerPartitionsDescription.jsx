@@ -124,7 +124,7 @@ export const ShowerPartitionsDescription = () => {
 							{showerTypesData.map(({ id, title, text, aria, imgSrc, alt }) => {
 								return (
 									<li key={id} className={styles.descriptions__item}>
-										<a
+										<button
 											tabIndex={isDescriptionExpanded ? 0 : -1}
 											className={styles["descriptions__item-link"]}
 											onClick={(e) => handlePopupOpen(e, imgSrc, alt)}
@@ -132,7 +132,7 @@ export const ShowerPartitionsDescription = () => {
 											aria-label={aria}
 										>
 											{title}&nbsp;
-										</a>
+										</button>
 										{text}
 									</li>
 								)
@@ -141,7 +141,7 @@ export const ShowerPartitionsDescription = () => {
 						<p className={styles.descriptions__text}>
 							Угловые, П-образные и трапециевидные душевые ограждения из стекла
 							дополняются&nbsp;
-							<a
+							<button
 								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
 								onClick={(e) =>
@@ -161,9 +161,9 @@ export const ShowerPartitionsDescription = () => {
 								aria-label="Открыть изображение душевой с раздвижными дверями"
 							>
 								раздвижными
-							</a>
+							</button>
 							,&nbsp;или&nbsp;
-							<a
+							<button
 								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
 								onClick={(e) =>
@@ -183,9 +183,9 @@ export const ShowerPartitionsDescription = () => {
 								aria-label="Открыть изображение душевой с откатными дверями"
 							>
 								откатными&nbsp;
-							</a>
+							</button>
 							дверями. Двери могут быть&nbsp;
-							<a
+							<button
 								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
 								onClick={(e) =>
@@ -205,9 +205,9 @@ export const ShowerPartitionsDescription = () => {
 								aria-label="Открыть изображение душевой с одинарными дверями"
 							>
 								одинарными
-							</a>
+							</button>
 							&nbsp; и&nbsp;
-							<a
+							<button
 								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
 								onClick={(e) =>
@@ -227,7 +227,7 @@ export const ShowerPartitionsDescription = () => {
 								aria-label="Открыть изображение душевой с двойными дверями"
 							>
 								двойными
-							</a>
+							</button>
 							.
 						</p>
 						<h6 className={styles["descriptions__block-subtitle"]}>
@@ -243,7 +243,7 @@ export const ShowerPartitionsDescription = () => {
 								({ id, title, spanText, aria, imgSrc, alt }) => {
 									return (
 										<li key={id} className={styles.descriptions__item}>
-											<a
+											<button
 												tabIndex={isDescriptionExpanded ? 0 : -1}
 												className={styles["descriptions__item-link"]}
 												onClick={(e) => handlePopupOpen(e, imgSrc, alt)}
@@ -251,7 +251,7 @@ export const ShowerPartitionsDescription = () => {
 												aria-label={aria}
 											>
 												{title}&nbsp;
-											</a>
+											</button>
 											<span>{spanText}</span>
 										</li>
 									)
@@ -270,7 +270,7 @@ export const ShowerPartitionsDescription = () => {
 						<p className={styles.descriptions__text}>
 							Наша компания использует качественный алюминиевый профиль и
 							надежную фурнитуру. Их также можно выбрать по цвету —&nbsp;
-							<a
+							<button
 								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
 								onClick={(e) =>
@@ -290,9 +290,9 @@ export const ShowerPartitionsDescription = () => {
 								aria-label="Открыть изображение с фурнитурой черного цвета"
 							>
 								черный
-							</a>
+							</button>
 							, под&nbsp;
-							<a
+							<button
 								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
 								onClick={(e) =>
@@ -312,9 +312,9 @@ export const ShowerPartitionsDescription = () => {
 								aria-label="Открыть изображение с фурнитурой золотистого цвета"
 							>
 								золото
-							</a>
+							</button>
 							,&nbsp;
-							<a
+							<button
 								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
 								onClick={(e) =>
@@ -334,9 +334,9 @@ export const ShowerPartitionsDescription = () => {
 								aria-label="Открыть изображение с фурнитурой цвета никель"
 							>
 								никель
-							</a>
+							</button>
 							,&nbsp;
-							<a
+							<button
 								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
 								onClick={(e) =>
@@ -356,9 +356,9 @@ export const ShowerPartitionsDescription = () => {
 								aria-label="Открыть изображение с фурнитурой бронзового цвета"
 							>
 								бронзу
-							</a>
+							</button>
 							,&nbsp;
-							<a
+							<button
 								tabIndex={isDescriptionExpanded ? 0 : -1}
 								className={styles["descriptions__item-link"]}
 								onClick={(e) =>
@@ -378,7 +378,7 @@ export const ShowerPartitionsDescription = () => {
 								aria-label="Открыть изображение с фурнитурой цвета хром"
 							>
 								хром
-							</a>
+							</button>
 							&nbsp; и другие металлы.
 						</p>
 						<h6 className={styles["descriptions__block-subtitle"]}>
