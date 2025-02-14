@@ -2,12 +2,6 @@
 @use '../../../../styles/media';
 
 .logo {
-	width: 5em;
-
-	@include media.bigMobile {
-		width: 7em;
-	}
-
 	@include media.focusVisible {
 		outline: none;
 
@@ -17,8 +11,13 @@
 	}
 
 	&__img {
-		@include mixins.sizes(100%, auto);
+		@include mixins.sizes(5em, 5em);
 		border-radius: 10px;
+
+		@include media.bigMobile {
+			@include mixins.sizes(7em, 7em);
+		}
+
 	}
 
 	&__link {
