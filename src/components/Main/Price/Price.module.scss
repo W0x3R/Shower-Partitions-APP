@@ -37,11 +37,11 @@
 
 			@include media.bigMobile {
 				display: block;
-				@include mixins.sizes(24em, 34em);
+				@include mixins.sizes(24em, 36em);
 			}
 
 			@include media.mediumMobile {
-				@include mixins.sizes(27em, 37em);
+				@include mixins.sizes(27em, 40em);
 			}
 		}
 	}
