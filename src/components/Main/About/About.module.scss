@@ -234,7 +234,7 @@
 		}
 
 		@include media.hoverAndActive {
-			opacity: 1;
+			background-color: var(--main-green);
 		}
 
 		@include media.focusVisible {
