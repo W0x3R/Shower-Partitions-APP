@@ -4,7 +4,7 @@
 
 .questions {
 	@extend %section;
-	background-color: var(--white);
+	background-color: var(--white-251);
 
 	&__inner {
 		@include mixins.flexCenter;
@@ -12,13 +12,13 @@
 	}
 
 	&__img {
-		width: 23em;
+		@include mixins.sizes(23em, 18em);
 		background: transparent;
 		margin-bottom: 1em;
 		animation: scaleAndRotateQuestionsImg 3s infinite ease-in-out;
 
 		@include media.bigMobile {
-			width: 28em;
+			@include mixins.sizes(28em, 22em);
 		}
 	}
 
