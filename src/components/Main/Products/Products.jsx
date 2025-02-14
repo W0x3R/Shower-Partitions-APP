@@ -85,10 +85,11 @@ export const Products = () => {
 										>
 											<img
 												className={styles["products__item-img"]}
+												loading="lazy"
 												alt={alt}
 												src={imgSrc}
-												width="351"
-												height="243"
+												width="342"
+												height="234"
 											/>
 											<FullScreenIcon />
 										</a>
