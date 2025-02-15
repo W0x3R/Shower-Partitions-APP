@@ -3,7 +3,7 @@
 @use '../../styles/animations';
 
 .delivery {
-	padding-block: 4em;
+	padding-block: 3.5em;
 	font-size: clamp(12px, 1.35vw, 16px);
 	color: var(--text-main-color);
 
@@ -106,7 +106,7 @@
 
 	&__aside-title {
 		margin-bottom: 1em;
-		font-size: 1.5em;
+		font-size: 1.6em;
 		letter-spacing: 0.03em;
 		line-height: 1.3em;
 		text-align: center;
