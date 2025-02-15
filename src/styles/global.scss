@@ -24,6 +24,15 @@
 	padding-top: .625em;
 	height: 12rem;
 
+	&.black {
+		background-color: var(--dark-bg);
+		height: 10.5rem;
+
+		@include media.bigMobile {
+			height: max-content;
+		}
+	}
+
 	@include media.bigMobile {
 		height: 8rem;
 	}
