@@ -1,6 +1,20 @@
+import { useLocation } from "react-router-dom"
 import styles from "./Burger.module.scss"
+import { useEffect } from "react"
 
 export const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
+	const location = useLocation()
+
+	useEffect(() => {
+		const header = document.querySelector(".header")
+
+		if (location.pathname === "/delivery" && !isBurgerActive) {
+			header.classList.add("black")
+		} else {
+			header.classList.remove("black")
+		}
+	}, [isBurgerActive, location])
+
 	return (
 		<button
 			className={`${styles.burger} ${isBurgerActive ? styles.open : styles.close}`}
