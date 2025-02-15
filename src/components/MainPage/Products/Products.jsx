@@ -2,7 +2,7 @@ import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useRef, useState } from "react"
 import styles from "./Products.module.scss"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
-import { productsData } from "../../data/productsData"
+import { productsData } from "../../../data/productsData"
 import { useLocation } from "react-router-dom"
 
 export const Products = () => {

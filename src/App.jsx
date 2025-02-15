@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import "./App.scss"
 import Layout from "./Layout/Layout"
-import { MainPage } from "./components/Main/MainPage"
+import { MainPage } from "./components/MainPage/MainPage"
 import { Delivery } from "./components/Delivery/Delivery"
 
 function App() {

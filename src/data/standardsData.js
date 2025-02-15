@@ -1,6 +1,6 @@
-import standardsGlassImg from "../../assets/main/zakalyonnoe-steklo.webp"
-import standardsThicknessGlassImg from "../../assets/main/tolshina-stekla.webp"
-import standardsMatteGlassImg from "../../assets/main/matovoe-steklo.webp"
+import standardsGlassImg from "../assets/main/zakalyonnoe-steklo.webp"
+import standardsThicknessGlassImg from "../assets/main/tolshina-stekla.webp"
+import standardsMatteGlassImg from "../assets/main/matovoe-steklo.webp"
 
 const standardsData = [
 	{

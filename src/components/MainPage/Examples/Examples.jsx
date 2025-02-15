@@ -1,10 +1,10 @@
 import Fancybox from "../../FancyApp/FancyBox"
+import { useEffect, useMemo, useRef, useState } from "react"
+import { useLocation } from "react-router-dom"
 import ExamplesShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import styles from "./Examples.module.scss"
-import examplesData from "../../data/examplesData"
-import { useEffect, useMemo, useRef, useState } from "react"
-import { useLocation } from "react-router-dom"
+import examplesData from "../../../data/examplesData"
 
 export const Examples = () => {
 	const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 500)

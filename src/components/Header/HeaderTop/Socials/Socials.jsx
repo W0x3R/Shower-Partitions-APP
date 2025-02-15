@@ -1,4 +1,4 @@
-import SocialLinks from "../../../SocialsLinks/SocialLinks"
+import SocialLinks from "../../../Widgets/SocialsLinks/SocialLinks"
 import styles from "./Socials.module.scss"
 
 export const Socials = () => {

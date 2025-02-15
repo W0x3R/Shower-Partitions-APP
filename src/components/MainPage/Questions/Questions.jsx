@@ -3,7 +3,7 @@ import Cross from "../../../assets/main/cross.svg?react"
 import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import questionImg from "../../../assets/main/questions-img.png"
 import styles from "./Questions.module.scss"
-import { accordionData } from "../../data/accordionData"
+import { accordionData } from "../../../data/accordionData"
 
 export const Questions = () => {
 	const [expandedIndex, setExpandedIndex] = useState([])

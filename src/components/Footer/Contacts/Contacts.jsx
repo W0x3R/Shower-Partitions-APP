@@ -1,4 +1,4 @@
-import SocialLinks from "../../../components/SocialsLinks/SocialLinks"
+import SocialLinks from "../../Widgets/SocialsLinks/SocialLinks"
 import LocationIcon from "../../../assets/footer/location.svg?react"
 import TimeIcon from "../../../assets/footer/time.svg?react"
 import CallIcon from "../../../assets/footer/call.svg?react"
