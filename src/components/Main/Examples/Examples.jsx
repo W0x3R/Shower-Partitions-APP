@@ -3,12 +3,16 @@ import ExamplesShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import styles from "./Examples.module.scss"
 import examplesData from "../../data/examplesData"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
+import { useLocation } from "react-router-dom"
 
 export const Examples = () => {
 	const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 500)
 	const [visibleCount, setVisibleCount] = useState(isMobileView ? 3 : 6)
 	const [stepIncrease, setStepIncrease] = useState(isMobileView ? 3 : 6)
+
+	const location = useLocation()
+	const examplesRef = useRef(null)
 
 	useEffect(() => {
 		let prevWidth = window.innerWidth
@@ -53,6 +57,12 @@ export const Examples = () => {
 		})
 	}, [visibleCount])
 
+	useEffect(() => {
+		if (location.hash === "#examples" && examplesRef.current) {
+			examplesRef.current.scrollIntoView({ behavior: "smooth" })
+		}
+	}, [location])
+
 	const renderedSlides = useMemo(() => {
 		return examplesData
 			.slice(0, visibleCount)
@@ -83,7 +93,7 @@ export const Examples = () => {
 	}, [visibleCount])
 
 	return (
-		<section className={styles.examples}>
+		<section className={styles.examples} ref={examplesRef}>
 			<div className="container">
 				<div className={styles.examples__texts}>
 					<h2 className={styles.examples__title}>
