@@ -1,11 +1,14 @@
 import Fancybox from "../../FancyApp/FancyBox"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from "./Products.module.scss"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import { productsData } from "../../data/productsData"
+import { useLocation } from "react-router-dom"
 
 export const Products = () => {
 	const [activeBtn, setActiveBtn] = useState("showers")
+	const location = useLocation()
+	const productsRef = useRef(null)
 
 	const buttonsData = [
 		{ text: "Формы душевых", activeBtnValue: "showers" },
@@ -27,8 +30,14 @@ export const Products = () => {
 		})
 	})
 
+	useEffect(() => {
+		if (location.hash === "#products" && productsRef.current) {
+			productsRef.current.scrollIntoView({ behavior: "smooth" })
+		}
+	}, [location])
+
 	return (
-		<section className={styles.products}>
+		<section className={styles.products} ref={productsRef}>
 			<div className="container">
 				<h2 className={styles.products__title}>
 					Душевые перегородки по вашим размерам
