@@ -1,0 +1,26 @@
+.breadcrumb {
+	margin-top: 2.5em;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		column-gap: 15px;
+		letter-spacing: var(--basic-letter-spacing);
+		font-size: 1.15em;
+
+		& span {
+			color: var(--black);
+		}
+	}
+
+	&__link {
+		color: #8C8C8C;
+		font-weight: 500;
+	}
+
+	&__current-page {
+		color: var(--black);
+		font-weight: 700;
+	}
+}
