@@ -8,7 +8,10 @@ export const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 	useEffect(() => {
 		const header = document.querySelector(".header")
 
-		if (location.pathname === "/delivery" && !isBurgerActive) {
+		if (
+			location.pathname === "/delivery" ||
+			(location.pathname === "/price" && !isBurgerActive)
+		) {
 			header.classList.add("black")
 		} else {
 			header.classList.remove("black")
