@@ -54,12 +54,8 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 					}}
 					menuName={"customer"}
 					title="Покупателям"
-					menuItems={[
-						"Доставка и оплата",
-						"Стоимость",
-						"Полезные статьи и новости",
-					]}
-					links={["delivery", "price", "blog"]}
+					menuItems={["Доставка и оплата", "Стоимость", "Полезные статьи"]}
+					links={["delivery", "price", "article"]}
 				/>
 
 				<DropdownItem
