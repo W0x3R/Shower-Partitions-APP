@@ -26,9 +26,10 @@ export const DropdownMenu = ({
 						<NavLink
 							className={styles["nav__menu-link"]}
 							onFocus={() => handleMenuActions(true)}
-							onClick={() => {
+							onClick={(e) => {
 								handleCloseMenuClick()
 								onBurgerClick()
+								e.target.blur()
 							}}
 							onBlur={() => {
 								if (i === menuItems.length - 1) {
