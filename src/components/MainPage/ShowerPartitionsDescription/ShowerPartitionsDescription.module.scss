@@ -21,26 +21,7 @@
 	}
 
 	&__text {
-		font-size: 1.15em;
-		line-height: 1.4;
-		letter-spacing: var(--basic-letter-spacing);
-
-		&:not(:last-child) {
-			margin-bottom: 1em;
-		}
-
-		@include media.bigMobile {
-			font-size: 1.65em;
-			line-height: 1.2;
-		}
-
-		@include media.mediumMobile {
-			font-size: 1.8em;
-
-			&:not(:last-child) {
-				margin-bottom: 0.8em;
-			}
-		}
+		@extend %useful-text-fonts;
 	}
 
 	&__block {

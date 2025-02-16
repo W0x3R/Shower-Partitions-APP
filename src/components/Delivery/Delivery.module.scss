@@ -71,22 +71,7 @@
 	}
 
 	&__text {
-		font-size: 1.2em;
-		line-height: 1.4em;
-		letter-spacing: var(--basic-letter-spacing);
-
-		&:not(:last-child) {
-			margin-bottom: 1em;
-		}
-
-		@include media.bigMobile {
-			line-height: 1.3em;
-			font-size: 1.65em;
-		}
-
-		@include media.mediumMobile {
-			font-size: 1.9em;
-		}
+		@extend %useful-text-fonts;
 	}
 
 	&__aside {
