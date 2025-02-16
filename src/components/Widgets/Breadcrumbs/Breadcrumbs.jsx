@@ -7,12 +7,21 @@ export const Breadcrumbs = ({ currentPage }) => {
 			<div className="container">
 				<ul className={styles.breadcrumb__list}>
 					<li className={styles.breadcrumb__item}>
-						<Link className={styles.breadcrumb__link} to="/">
+						<Link
+							className={styles.breadcrumb__link}
+							to="/"
+							aria-label="Перейти на главную страницу"
+						>
 							Главная
 						</Link>
 					</li>
 					<span>&#10073;</span>
-					<li className={styles["breadcrumb__current-page"]}>{currentPage}</li>
+					<li
+						className={styles["breadcrumb__current-page"]}
+						aria-label={`Текущая страница - ${currentPage}`}
+					>
+						{currentPage}
+					</li>
 				</ul>
 			</div>
 		</nav>
