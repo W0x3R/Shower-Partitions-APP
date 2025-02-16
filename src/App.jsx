@@ -3,7 +3,7 @@ import "./App.scss"
 import Layout from "./Layout/Layout"
 import { MainPage } from "./components/MainPage/MainPage"
 import { DeliveryPage } from "./components/Delivery/DeliveryPage"
-import { Price } from "./components/ServicesCost/ServicesCost"
+import { ServicesCostPage } from "./components/ServicesCost/ServicesCostPage"
 
 function App() {
 	return (
@@ -12,7 +12,7 @@ function App() {
 				<Route path="/" element={<Layout />}>
 					<Route index element={<MainPage />} />
 					<Route path="delivery" element={<DeliveryPage />} />
-					<Route path="price" element={<Price />} />
+					<Route path="price" element={<ServicesCostPage />} />
 				</Route>
 			</Routes>
 			<div className="App"></div>
