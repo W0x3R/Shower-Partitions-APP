@@ -1,3 +1,5 @@
+@use '../../../styles/media';
+
 .breadcrumb {
 	margin-top: 2.5em;
 
@@ -17,6 +19,16 @@
 	&__link {
 		color: #8C8C8C;
 		font-weight: 500;
+		transition: var(--basic-transition);
+
+		@include media.hoverAndActive {
+			color: var(--black)
+		}
+
+		@include media.focusVisible {
+			outline: none;
+			box-shadow: var(--focus-shadow);
+		}
 	}
 
 	&__current-page {
