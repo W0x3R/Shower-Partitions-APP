@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../Widgets/Breadcrumbs/Breadcrumbs"
 import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
 import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
 import { Delivery } from "./Delivery"
+import { AsideInfoWidget } from "../Widgets/AsideInfoWidget/AsideInfoWidget"
 
 export const DeliveryPage = () => {
 	return (
@@ -21,7 +22,8 @@ export const DeliveryPage = () => {
 				/>
 			</Helmet>
 			<Breadcrumbs currentPage="Оплата и доставка" />
-			<Delivery />
+
+			<Delivery aside={<AsideInfoWidget />} />
 			<ContactsWidget />
 			<ScrollTopBtn />
 		</>

@@ -1,6 +1,5 @@
 @use '../../styles/mixins';
 @use '../../styles/media';
-@use '../../styles/animations';
 
 .delivery {
 	padding-block: 3.5em;
@@ -53,88 +52,5 @@
 
 	&__text {
 		@extend %useful-text-fonts;
-	}
-
-	&__aside {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 2.5em 1em;
-		border-radius: 16px;
-		width: 32%;
-		height: max-content;
-		background-image: url('../../assets/delivery/aside-bg.webp');
-		background-size: cover;
-		background-position: center;
-
-		@include media.bigMobile {
-			display: none;
-		}
-	}
-
-	&__aside-title {
-		margin-bottom: 1em;
-		font-size: 1.6em;
-		letter-spacing: 0.03em;
-		line-height: 1.3em;
-		text-align: center;
-		color: var(--white);
-	}
-
-	&__aside-link {
-		position: relative;
-		@include mixins.flexSpaceEvenlyCenter;
-		column-gap: .625em;
-		padding: 1.2em 3em;
-		overflow: hidden;
-		width: 78%;
-		background-color: var(--dark-green);
-		border-radius: 15px;
-		transition: var(--basic-transition);
-		color: var(--white);
-
-		&:not(:last-child) {
-			margin-bottom: 2.5em;
-		}
-
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			background: var(--white);
-			@include mixins.sizes(10%, 300%);
-			transform: rotate(45deg) translateY(-50%);
-			animation: glare 3s linear infinite;
-			opacity: 0.8;
-		}
-
-		@include media.tablet {
-			width: 90%;
-		}
-
-		@include media.hoverAndActive {
-			background-color: var(--main-green);
-		}
-
-		@include media.focusVisible {
-			outline: var(--focus-outline);
-		}
-
-		& span {
-			font-size: 1.2em;
-			font-weight: 600;
-			letter-spacing: var(--basic-letter-spacing);
-			white-space: nowrap;
-		}
-
-		& img {
-			width: 26px;
-			animation: scaleAndRotate 2.2s linear infinite;
-
-			@include media.desktop {
-				width: 22px;
-			}
-		}
 	}
 }
