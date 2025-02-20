@@ -1,0 +1,85 @@
+@use '../../styles/media';
+@use '../../styles/mixins';
+
+.article {
+	padding-block: 3.5em;
+	font-size: clamp(12px, 1.35vw, 16px);
+	color: var(--text-main-color);
+
+	@include media.bigMobile {
+		font-size: clamp(9.5px, 1.65vw, 12px);
+	}
+
+	@include media.mediumMobile {
+		font-size: clamp(7.5px, 1.85vw, 9.5px);
+	}
+
+	&__title-wrapper {
+		position: relative;
+		margin-bottom: 2em;
+	}
+
+	&__title {
+		@include mixins.abs-center;
+		@extend %title-level-one;
+		padding-inline: 0.8em;
+		width: 100%;
+		color: var(--white);
+	}
+
+	&__img {
+		width: 100%;
+		height: 26em;
+		margin-bottom: 2.5em;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 10px;
+
+		@include media.bigMobile {
+			justify-content: center;
+		}
+
+	}
+
+	&__block {
+		width: 65%;
+
+		@include media.bigMobile {
+			width: 100%;
+		}
+	}
+
+	&__block-title {
+		@extend %title-level-two;
+		text-align: left;
+
+		@include media.bigMobile {
+			text-align: center;
+		}
+	}
+
+	&__block-text {
+		@extend %useful-text-fonts;
+	}
+
+	&__list {
+		@extend %useful-text-list;
+	}
+
+	&__item {
+		@extend %useful-text-item;
+	}
+
+	&__block-subtitle {
+		@extend %title-level-three;
+		margin-bottom: 0.6em;
+		text-align: left;
+
+		@include media.bigMobile {
+			text-align: center;
+		}
+	}
+}
