@@ -22,7 +22,6 @@ export const DeliveryPage = () => {
 				/>
 			</Helmet>
 			<Breadcrumbs currentPage="Оплата и доставка" />
-
 			<Delivery aside={<AsideInfoWidget />} />
 			<ContactsWidget />
 			<ScrollTopBtn />
