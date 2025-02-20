@@ -2,9 +2,9 @@ import { Link } from "react-router-dom"
 import styles from "./AsideInfoWidget.module.scss"
 import clickHand from "../../../assets/main/click-hand.svg?url"
 
-export const AsideInfoWidget = () => {
+export const AsideInfoWidget = ({ sticky }) => {
 	return (
-		<aside className={styles.aside}>
+		<aside className={`${styles.aside} ${sticky ? styles.sticky : ""}`}>
 			<h3 className={styles.aside__title}>Каталог продукции и фурнитуры</h3>
 			<Link
 				className={styles.aside__link}

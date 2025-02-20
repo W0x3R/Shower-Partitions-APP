@@ -18,6 +18,11 @@
 		display: none;
 	}
 
+	&.sticky {
+		position: sticky;
+		top: 8%;
+	}
+
 	&__title {
 		margin-bottom: 1em;
 		font-size: 1.6em;
