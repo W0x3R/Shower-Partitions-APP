@@ -1,6 +1,12 @@
 import { AsideInfoWidget } from "../Widgets/AsideInfoWidget/AsideInfoWidget"
 import articleBgImg from "../../assets/article/bg.webp"
 import styles from "./Article.module.scss"
+import constructionsData from "../../data/article/constructionsData"
+import typesData from "../../data/article/typesData"
+import openingTypes from "../../data/article/openingTypes"
+import glassesTypes from "../../data/article/glassesTypes"
+import usefulTipsData from "../../data/article/usefulTipsData"
+import reasonsToContactData from "../../data/article/reasonsToContactData"
 
 export const Article = () => {
 	return (
@@ -36,33 +42,13 @@ export const Article = () => {
 							дизайна. Перечислим главные преимущества данной конструкции:
 						</p>
 						<ul className={styles.article__list}>
-							<li className={styles.article__item}>
-								Надежность — изделие изготавливается из закаленного стекла,
-								которое устойчиво к температурным перепадам, влаге. Его
-								механическая прочность выше в несколько раз по сравнению с
-								конструкциями из обычного стекла.
-							</li>
-							<li className={styles.article__item}>
-								Безопасность — даже если приложить большое механическое
-								воздействие, и каленое стекло разобьется, оно расколется на
-								осколки с тупыми гранями. Они являются безопасными для человека.
-							</li>
-							<li className={styles.article__item}>
-								Устойчивость к грибку — стекло не является питательной средой
-								для плесени, других грибов, которые любят жить во влажных
-								помещениях.
-							</li>
-							<li className={styles.article__item}>
-								Простой уход — он заключается лишь в удалении оставленных
-								отпечатков пальцев, следов от брызг, которые видны только на
-								глянцевой поверхности стекла.
-							</li>
-							<li className={styles.article__item}>
-								Компактность — перегородка из стекла подходит даже для маленькой
-								ванной, так как она занимает мало места и не загромождает
-								пространство, делает его визуально более просторным, светлым,
-								уютным.
-							</li>
+							{constructionsData.map(({ id, text }) => {
+								return (
+									<li key={id} className={styles.article__item}>
+										{text}
+									</li>
+								)
+							})}
 						</ul>
 						<p className={styles["article__block-text"]}>
 							От душевой кабины ограждение отличается тем, что приобретается и
@@ -90,22 +76,13 @@ export const Article = () => {
 							По типу конструкции выделяют перегородки:
 						</p>
 						<ul className={styles.article__list}>
-							<li className={styles.article__item}>
-								Линейные — это ограждения, устанавливаемые в одну линию. Они
-								могут отгородить от остальной части помещения ванну или душевую
-								зону, которая обычно в этом случае имеет 2 или 3 стены,
-								принадлежащие самой ванной комнате.
-							</li>
-							<li className={styles.article__item}>
-								Угловые — это перегородки с двумя полотнами, устанавливаемые в
-								углу помещения. Часто угловые ограждения ставят с поддонами или
-								трапами.
-							</li>
-							<li className={styles.article__item}>
-								П-образные — это ограждающие конструкции в форме буквы «П».
-								Состоят из 3 стеклянных полотен, установка которых происходит у
-								одной из стен ванной (не в углу).
-							</li>
+							{typesData.map(({ id, text }) => {
+								return (
+									<li key={id} className={styles.article__item}>
+										{text}
+									</li>
+								)
+							})}
 						</ul>
 						<p className={styles["article__block-text"]}>
 							В последнем случае душевая перегородка может быть квадратной,
@@ -121,25 +98,13 @@ export const Article = () => {
 							могут быть:
 						</p>
 						<ul className={styles.article__list}>
-							<li className={styles.article__item}>
-								Распашными. Обычно дверь открывается «на себя». Поэтому она
-								занимает дополнительное пространство. Это удобно, но данное
-								решение подходит только для ванных комнат с достаточно большой
-								площадью.
-							</li>
-							<li className={styles.article__item}>
-								Раздвижными. Это такие же двери, как у шкафов-купе — они
-								раздвигаются в стороны по направляющим рельсам, установленным
-								сверху или снизу (либо и там, и там). Раздвижной механизм не
-								требует дополнительного пространства для распахивания дверных
-								створок, а потом его можно эксплуатировать. Это решение подходит
-								для любых, в том числе маленьких ванных.
-							</li>
-							<li className={styles.article__item}>
-								Гармошкой. Представляют собой дверцу, которая складывается как
-								гармошка — она тоже не занимает много места, и может
-								использоваться в небольших по площади помещениях.
-							</li>
+							{openingTypes.map(({ id, text }) => {
+								return (
+									<li key={id} className={styles.article__item}>
+										{text}
+									</li>
+								)
+							})}
 						</ul>
 						<h3 className={styles["article__block-subtitle"]}>
 							По типу остекления
@@ -149,33 +114,13 @@ export const Article = () => {
 							стекла:
 						</p>
 						<ul className={styles.article__list}>
-							<li className={styles.article__item}>
-								Прозрачное — пропускает свет и не скрывает пространство душевой.
-								Сохраняет единство пространства и стиля.
-							</li>
-							<li className={styles.article__item}>
-								Матовое — пропускает свет, предварительно рассеивая его. Поэтому
-								за ограждением не видно находящегося внутри человека — только
-								его силуэт.
-							</li>
-							<li className={styles.article__item}>
-								Осветленное — обесцвеченное, а потому пропускающее максимум
-								света и не искажающее изображение. Тоже является прозрачным.
-							</li>
-							<li className={styles.article__item}>
-								Цветное — окрашенное в некоторый цвет. Оно остается прозрачным,
-								но в то же время цветным. Стекло может быть окрашено в массе,
-								также необходимый цвет ему можно придать с помощью тонировки
-								пленкой.
-							</li>
-							<li className={styles.article__item}>
-								С рисунком, узором, фото — декоративные элементы размещаются во
-								время пескоструйной обработки или методом фотопечати.
-							</li>
-							<li className={styles.article__item}>
-								Гладкое (обычное) или фактурной — например, с рифленой
-								поверхностью.
-							</li>
+							{glassesTypes.map(({ id, text }) => {
+								return (
+									<li key={id} className={styles.article__item}>
+										{text}
+									</li>
+								)
+							})}
 						</ul>
 						<p className={styles["article__block-text"]}>
 							Тип остекления подбирается с учетом стиля дизайна ванной комнаты,
@@ -190,28 +135,13 @@ export const Article = () => {
 							следующие параметры:
 						</p>
 						<ul className={styles.article__list}>
-							<li className={styles.article__item}>
-								Толщина стекла. Чем оно толще, тем прочнее. Идеально будет 8–10
-								мм.
-							</li>
-							<li className={styles.article__item}>
-								Качество фурнитуры. Она определяет долговечность перегородки для
-								ванной.
-							</li>
-							<li className={styles.article__item}>
-								Площадь помещения. Использование перегородок с распашными
-								дверями рационально только в больших ванных комнатах, в других
-								лучшим выбором станет гармошка или раздвижной механизм.
-							</li>
-							<li className={styles.article__item}>
-								Место, отведенное под душевую. В зависимости от этого может быть
-								выбрана линейная, угловая или П-образная конструкция.
-							</li>
-							<li className={styles.article__item}>
-								Дизайн интерьера. Алюминиевый профиль и фурнитуру, остекление
-								нужно выбирать под уже существующий стиль, чтобы они хорошо
-								сочетались.
-							</li>
+							{usefulTipsData.map(({ id, text }) => {
+								return (
+									<li key={id} className={styles.article__item}>
+										{text}
+									</li>
+								)
+							})}
 						</ul>
 						<p className={styles["article__block-text"]}>
 							Также берите в учет, какое количество людей может одновременно
@@ -232,32 +162,13 @@ export const Article = () => {
 							почему стоит обратиться к нам:
 						</p>
 						<ul className={styles.article__list}>
-							<li className={styles.article__item}>
-								10–15 суток — таков срок изготовления стеклянного душевого
-								ограждения.
-							</li>
-							<li className={styles.article__item}>
-								1 день — столько времени нам нужно для доставки и монтажа
-								перегородки.
-							</li>
-							<li className={styles.article__item}>
-								1,5 года — это срок гарантии на материалы и профиль, так как мы
-								уверены в их высоком качестве.
-							</li>
-							<li className={styles.article__item}>
-								Аккуратность — наши специалисты выполняют монтаж, сохранив
-								целостность отделки стен, пола и потолка, поддона и других
-								элементов.
-							</li>
-							<li className={styles.article__item}>
-								Доступные цены — мы являемся производителями перегородок, а не
-								перекупщиками.
-							</li>
-							<li className={styles.article__item}>
-								Максимальная ориентированность на клиента — стеклянная
-								перегородка для душевой изготавливается по индивидуальным
-								размерам с учетом пожеланий заказчика.
-							</li>
+							{reasonsToContactData.map(({ id, text }) => {
+								return (
+									<li key={id} className={styles.article__item}>
+										{text}
+									</li>
+								)
+							})}
 						</ul>
 						<p className={styles["article__block-text"]}>
 							Чтобы оформить заказ на изготовление стеклянной перегородки в
