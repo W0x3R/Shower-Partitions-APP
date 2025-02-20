@@ -43,36 +43,11 @@
 	}
 
 	&__list {
-		padding-left: 1.25em;
-		margin-bottom: 1.15em;
-		list-style-type: disc;
-
-		@include media.bigMobile {
-			margin-bottom: 1.65em;
-		}
-
-		@include media.mediumMobile {
-			margin-bottom: 1.44em;
-		}
+		@extend %useful-text-list;
 	}
 
 	&__item {
-		font-size: 1.15em;
-		line-height: 1.4;
-		letter-spacing: var(--basic-letter-spacing);
-
-		&:not(:last-child) {
-			margin-bottom: 0.4em;
-		}
-
-		@include media.bigMobile {
-			font-size: 1.65em;
-			line-height: 1.3;
-		}
-
-		@include media.mediumMobile {
-			font-size: 1.8em;
-		}
+		@extend %useful-text-item;
 	}
 
 	&__item-link {
