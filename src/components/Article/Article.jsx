@@ -1,4 +1,3 @@
-import { AsideInfoWidget } from "../Widgets/AsideInfoWidget/AsideInfoWidget"
 import articleBgImg from "../../assets/article/bg.webp"
 import styles from "./Article.module.scss"
 import constructionsData from "../../data/article/constructionsData"
@@ -8,7 +7,7 @@ import glassesTypes from "../../data/article/glassesTypes"
 import usefulTipsData from "../../data/article/usefulTipsData"
 import reasonsToContactData from "../../data/article/reasonsToContactData"
 
-export const Article = () => {
+export const Article = (children) => {
 	return (
 		<section className={styles.article}>
 			<div className="container">
@@ -177,7 +176,7 @@ export const Article = () => {
 							выезда замерщика на дом.
 						</p>
 					</div>
-					<AsideInfoWidget sticky />
+					{children.aside}
 				</div>
 			</div>
 		</section>
