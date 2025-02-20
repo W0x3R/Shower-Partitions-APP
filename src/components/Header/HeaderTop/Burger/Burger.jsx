@@ -10,7 +10,8 @@ export const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 
 		if (
 			location.pathname === "/delivery" ||
-			(location.pathname === "/price" && !isBurgerActive)
+			location.pathname === "/price" ||
+			(location.pathname === "/article" && !isBurgerActive)
 		) {
 			header.classList.add("black")
 		} else {
