@@ -20,6 +20,9 @@ export default defineConfig({
 		}),
 	],
 	build: {
+		outDir: "dist",
+		assetsDir: "assets",
+		emptyOutDir: true,
 		minify: "esbuild",
 		sourcemap: false,
 		cssCodeSplit: true,
