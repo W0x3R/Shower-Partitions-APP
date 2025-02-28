@@ -11,6 +11,7 @@ export const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 		if (
 			location.pathname === "/delivery" ||
 			location.pathname === "/price" ||
+			location.pathname === "/contacts" ||
 			(location.pathname === "/article" && !isBurgerActive)
 		) {
 			header.classList.add("black")
