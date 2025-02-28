@@ -45,9 +45,9 @@
 	&__socials-inner {
 		@extend %footer-text;
 		margin-bottom: 0;
-	}
 
-	&__socials-text {
-		font-style: normal;
+		@include media.bigMobile {
+			margin-bottom: 0.3em;
+		}
 	}
 }
