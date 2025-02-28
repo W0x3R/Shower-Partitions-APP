@@ -46,12 +46,25 @@
 		}
 
 		&-contacts-sizes {
+			@include mixins.sizes(3.2em, auto);
+
+			@include media.bigMobile {
+				width: 4.5em;
+			}
+
+			@include media.mediumMobile {
+				width: 5.5em;
+			}
+		}
+
+		&-footer-sizes {
 			@include mixins.sizes(2.8em, auto);
 
 			@include media.bigMobile {
 				width: 4.2em;
 			}
 		}
+
 
 		& svg {
 			@include mixins.sizes(100%, 100%);

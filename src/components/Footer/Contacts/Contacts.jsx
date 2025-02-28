@@ -66,7 +66,7 @@ export const Contacts = () => {
 					</div>
 					<SocialLinks
 						gap="socials-footer"
-						sizes="socials__link-contacts-sizes"
+						sizes="socials__link-footer-sizes"
 					/>
 				</div>
 			</div>
