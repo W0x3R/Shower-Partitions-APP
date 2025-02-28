@@ -215,6 +215,14 @@
 		font-size: 1.2em;
 		text-align: center;
 		color: var(--red);
+
+		@include media.bigMobile {
+			font-size: 1.7em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2em;
+		}
 	}
 
 	&__form-btn {

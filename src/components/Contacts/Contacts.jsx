@@ -111,8 +111,12 @@ export const Contacts = () => {
 					<form
 						onSubmit={handleSubmit(onSubmit)}
 						className={styles.contacts__form}
+						aria-labelledby="contact-form-title"
 					>
-						<h2 className={styles["contacts__form-title"]}>
+						<h2
+							className={styles["contacts__form-title"]}
+							id="contact-form-title"
+						>
 							Ответим в течение дня, заполните форму
 						</h2>
 						<input
