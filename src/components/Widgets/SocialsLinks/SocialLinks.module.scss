@@ -14,6 +14,20 @@
 		justify-content: center;
 	}
 
+	&-contacts {
+		column-gap: 1.4em;
+		justify-content: center;
+
+		@include media.bigMobile {
+			column-gap: 1.9em;
+		}
+
+		@include media.mediumMobile {
+			column-gap: 2.4em;
+		}
+	}
+
+
 	&__link {
 		display: inline-block;
 		transition: var(--basic-transition);
