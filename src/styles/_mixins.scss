@@ -110,6 +110,26 @@
 	}
 }
 
+%contacts-texts-fonts {
+	display: flex;
+	align-items: center;
+	column-gap: 0.75em;
+	margin-bottom: 0.7em;
+	color: var(--white);
+	font-size: 1.2em;
+	letter-spacing: 0.02em;
+	line-height: 1.4;
+
+	@include media.bigMobile {
+		font-size: 1.7em;
+		line-height: 1.3;
+	}
+
+	@include media.mediumMobile {
+		font-size: 2em;
+	}
+}
+
 %main-texts-fonts {
 	color: var(--black);
 	font-size: 1.5em;
