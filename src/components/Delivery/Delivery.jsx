@@ -13,7 +13,7 @@ export const Delivery = (children) => {
 						<img
 							className={styles.delivery__img}
 							src={carImg}
-							width="100%"
+							width="30em"
 							alt=""
 							loading="lazy"
 						/>
