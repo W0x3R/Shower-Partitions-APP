@@ -5,6 +5,7 @@ import { MainPage } from "./components/MainPage/MainPage"
 import { DeliveryPage } from "./components/Delivery/DeliveryPage"
 import { ServicesCostPage } from "./components/ServicesCost/ServicesCostPage"
 import { ArticlePage } from "./components/Article/ArticlePage"
+import { Contacts } from "./components/Contacts/Contacts"
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 					<Route path="delivery" element={<DeliveryPage />} />
 					<Route path="price" element={<ServicesCostPage />} />
 					<Route path="article" element={<ArticlePage />} />
+					<Route path="contacts" element={<Contacts />} />
 				</Route>
 			</Routes>
 			<div className="App"></div>
