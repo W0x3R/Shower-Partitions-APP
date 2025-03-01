@@ -39,9 +39,10 @@
 		column-gap: 10px;
 
 		@include media.bigMobile {
+			flex-direction: column;
 			justify-content: center;
+			align-items: center;
 		}
-
 	}
 
 	&__block {
@@ -63,6 +64,12 @@
 
 	&__block-text {
 		@extend %useful-text-fonts;
+
+		&:last-child {
+			@include media.bigMobile {
+				margin-bottom: 2em;
+			}
+		}
 	}
 
 	&__list {
