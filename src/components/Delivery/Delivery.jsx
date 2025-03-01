@@ -1,4 +1,4 @@
-import carImg from "../../assets/delivery/car.webp"
+import carImg from "../../assets/delivery/car.png"
 import styles from "./Delivery.module.scss"
 
 export const Delivery = (children) => {
@@ -13,7 +13,7 @@ export const Delivery = (children) => {
 						<img
 							className={styles.delivery__img}
 							src={carImg}
-							width="30em"
+							width="100%"
 							alt=""
 							loading="lazy"
 						/>
