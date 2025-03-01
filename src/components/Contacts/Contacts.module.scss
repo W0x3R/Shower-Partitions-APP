@@ -11,7 +11,7 @@
 	background-size: cover;
 
 	@include media.bigMobile {
-		font-size: clamp(7.2px, 2vw, 12px);
+		font-size: clamp(7.5px, 2vw, 12px);
 	}
 
 	&__wrapper {
