@@ -23,6 +23,7 @@
 		column-gap: 10px;
 
 		@include media.bigMobile {
+			flex-direction: column;
 			justify-content: center;
 		}
 	}
@@ -52,5 +53,11 @@
 
 	&__text {
 		@extend %useful-text-fonts;
+
+		&:last-child {
+			@include media.bigMobile {
+				margin-bottom: 2.5em;
+			}
+		}
 	}
 }
