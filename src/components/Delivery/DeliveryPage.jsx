@@ -5,7 +5,7 @@ import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
 import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
 import { Delivery } from "./Delivery"
 import { AsideInfoWidget } from "../Widgets/AsideInfoWidget/AsideInfoWidget"
-import carImg from "../../assets/delivery/car.webp"
+import carImg from "../../assets/delivery/car.png"
 
 export const DeliveryPage = () => {
 	const location = useLocation()
@@ -55,7 +55,7 @@ export const DeliveryPage = () => {
 				/>
 				<meta name="twitter:image" content={ogImage} />
 				{/* Preloading image */}
-				<link rel="preload" href={carImg} as="image" type="image/webp" />
+				<link rel="preload" href={carImg} as="image" type="image/png" />
 			</Helmet>
 			<Breadcrumbs currentPage="Оплата и доставка" />
 			<Delivery aside={<AsideInfoWidget />} />
