@@ -15,7 +15,13 @@ export const Article = (children) => {
 					<h1 className={styles.article__title}>
 						<b>Душевая перегородка из стекла — советы по выбору</b>
 					</h1>
-					<img className={styles.article__img} src={articleBgImg} alt="" />
+					<img
+						className={styles.article__img}
+						width="100%"
+						height="430px"
+						src={articleBgImg}
+						alt=""
+					/>
 				</div>
 				<div className={styles["article__wrapper"]}>
 					<div className={styles["article__block"]}>
