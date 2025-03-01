@@ -8,26 +8,27 @@
 	align-items: center;
 	padding: 2.5em 1em;
 	border-radius: 16px;
-	width: 32%;
+	width: 28em;
 	height: max-content;
 	background-image: url('../../../assets/delivery/aside-bg.webp');
 	background-size: cover;
 	background-position: center;
 
 	@include media.bigMobile {
-		display: none;
+		width: 40em;
 	}
 
 	&.sticky {
 		position: sticky;
 		top: 8%;
+
+		@include media.bigMobile {
+			position: static;
+		}
 	}
 
 	&__title {
-		margin-bottom: 1em;
-		font-size: 1.6em;
-		letter-spacing: 0.03em;
-		line-height: 1.3em;
+		@extend %title-level-five;
 		text-align: center;
 		color: var(--white);
 	}
