@@ -421,16 +421,16 @@ export const ShowerPartitionsDescription = () => {
 					</button>
 				)}
 			</div>
-			{popupData.isOpen && (
-				<ReactFocusLock returnFocus>
-					<Popup
-						isPopupOpen={popupData.isOpen}
-						handlePopupClose={handlePopupClose}
-						activePopupImg={popupData.img}
-						activePopupAlt={popupData.alt}
-					/>
-				</ReactFocusLock>
-			)}
+			(
+			<ReactFocusLock returnFocus disabled={!popupData.isOpen}>
+				<Popup
+					isPopupOpen={popupData.isOpen}
+					handlePopupClose={handlePopupClose}
+					activePopupImg={popupData.img}
+					activePopupAlt={popupData.alt}
+				/>
+			</ReactFocusLock>
+			)
 		</section>
 	)
 }
