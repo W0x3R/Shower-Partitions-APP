@@ -5,7 +5,7 @@ import { useContext, useEffect, useRef } from "react"
 import clickHandImg from "../../../assets/main/click-hand.svg?url"
 import PopupFormContext from "../../../context/PopupFormContext"
 
-const CallBackForm = () => {
+const CallBackForm = ({ title, isEmailShow }) => {
 	const { isFormPopupOpen } = useContext(PopupFormContext)
 	const {
 		register,
@@ -39,7 +39,7 @@ const CallBackForm = () => {
 			aria-labelledby="contact-form-title"
 		>
 			<h2 className={styles.form__title} id="contact-form-title">
-				Ответим в течение дня, заполните форму
+				{title}
 			</h2>
 			<input
 				className={`${styles.form__input} ${errors.name?.message ? styles.resetIndent : ""}`}
@@ -95,22 +95,24 @@ const CallBackForm = () => {
 					{errors.phone?.message}
 				</p>
 			)}
-			<input
-				className={`${styles.form__input} ${errors.email?.message ? styles.resetIndent : ""}`}
-				{...register("email", {
-					required: "Email обязателен",
-					pattern: {
-						value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
-						message: "Неверный формат email",
-					},
-				})}
-				placeholder="Ваш email"
-				onChange={(e) => {
-					setValue("email", e.target.value)
-					trigger("email")
-				}}
-				aria-invalid={errors.email ? "true" : "false"}
-			/>
+			{isEmailShow && (
+				<input
+					className={`${styles.form__input} ${errors.email?.message ? styles.resetIndent : ""}`}
+					{...register("email", {
+						required: "Email обязателен",
+						pattern: {
+							value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
+							message: "Неверный формат email",
+						},
+					})}
+					placeholder="Ваш email"
+					onChange={(e) => {
+						setValue("email", e.target.value)
+						trigger("email")
+					}}
+					aria-invalid={errors.email ? "true" : "false"}
+				/>
+			)}
 			{errors.email && (
 				<p role="alert" className={styles.form__error}>
 					{errors.email?.message}

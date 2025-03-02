@@ -30,7 +30,10 @@ const FormPopup = () => {
 				aria-hidden={!isFormPopupOpen}
 			>
 				<div className={styles.popup__content}>
-					<CallBackForm isPopupOpen={isFormPopupOpen} />
+					<CallBackForm
+						title="Свяжемся с Вами в течение дня, заполните форму"
+						isEmailShow={false}
+					/>
 					<button
 						type="button"
 						className={styles.popup__btn}
