@@ -3,26 +3,7 @@
 @use '../../../../styles/animations';
 
 .popup {
-	@include mixins.fixed-center-fullscreen;
-	transform: translate(-50%, -50%);
-	background-color: rgba(24, 24, 27, 0.98);
-	z-index: 10;
-	cursor: pointer;
-	transition: opacity .2s ease;
-
-	&.hide {
-		animation: navHide 0.3s forwards;
-	}
-
-	&.visible {
-		animation: navShow 0.3s forwards;
-	}
-
-	&__content {
-		position: relative;
-		@include mixins.sizes(100%, 100%);
-		@include mixins.flexCenter;
-	}
+	@include mixins.popup;
 
 	&__img {
 		width: 61em;
@@ -30,37 +11,6 @@
 
 		@include media.bigMobile {
 			width: 95%;
-		}
-	}
-
-	&__btn {
-		position: absolute;
-		top: 1px;
-		right: 1px;
-		@include mixins.sizes(46px, 46px);
-		cursor: pointer;
-		background-color: rgba(24, 24, 27, 0.65);
-		transition: var(--basic-transition);
-
-		& svg {
-			@include mixins.sizes(17px, 17px);
-			fill: #dbdbdb;
-			transition: opacity .15s ease;
-			transform: var(--f-button-transform);
-			filter: drop-shadow(1px 1px 1px rgba(24, 24, 27, 0.15));
-			pointer-events: none;
-		}
-
-		@include media.hoverAndActive {
-			background-color: rgba(70, 70, 73, 0.65);
-
-			& svg {
-				fill: var(--white);
-			}
-		}
-
-		@include media.focusVisible {
-			box-shadow: rgb(219, 219, 219) 0px 0px 0px 2px inset;
 		}
 	}
 }
