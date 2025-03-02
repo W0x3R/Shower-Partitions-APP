@@ -19,6 +19,17 @@ export const CallBackForm = () => {
 		console.log("Отправка данных:", data)
 		reset()
 	}
+
+	const callBackBtnRef = useRef(null)
+
+	useEffect(() => {
+		if (isFormPopupOpen) {
+			setTimeout(() => {
+				callBackBtnRef.current?.focus()
+			}, 50)
+		}
+	}, [isFormPopupOpen])
+
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
@@ -47,6 +58,7 @@ export const CallBackForm = () => {
 					trigger("name")
 				}}
 				aria-invalid={errors.name ? "true" : "false"}
+				ref={callBackBtnRef}
 			/>
 			{errors.name && (
 				<p role="alert" className={styles.form__error}>
