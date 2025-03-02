@@ -1,0 +1,7 @@
+@use '../../styles/mixins';
+@use '../../styles/media';
+@use '../../styles/animations';
+
+.popup {
+	@include mixins.popup;
+}
