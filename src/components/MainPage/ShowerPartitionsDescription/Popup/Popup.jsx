@@ -1,6 +1,6 @@
+import { useEffect, useRef, useState } from "react"
 import styles from "./Popup.module.scss"
 import BlackCross from "../../../../assets/main/black-cross.svg?react"
-import { useEffect, useRef } from "react"
 
 export const Popup = ({
 	isPopupOpen,
@@ -8,6 +8,16 @@ export const Popup = ({
 	activePopupImg,
 	activePopupAlt,
 }) => {
+	const [isVisible, setIsVisible] = useState(false)
+
+	useEffect(() => {
+		if (isPopupOpen) {
+			setIsVisible(true)
+		} else {
+			setTimeout(() => setIsVisible(false), 400)
+		}
+	}, [isPopupOpen])
+
 	const popupRef = useRef(null)
 
 	useEffect(() => {
@@ -21,6 +31,7 @@ export const Popup = ({
 	return (
 		<div
 			className={`${styles.popup} ${isPopupOpen ? styles.visible : styles.hide}`}
+			style={{ display: isVisible ? "flex" : "none" }}
 			onClick={(e) => handlePopupClose(e)}
 			onKeyDown={(e) => handlePopupClose(e)}
 			role="dialog"
