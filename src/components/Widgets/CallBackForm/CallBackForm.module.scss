@@ -10,6 +10,7 @@
 	width: 30em;
 	background-color: rgba(28, 28, 28, 0.96);
 	border-radius: 15px;
+	cursor: default;
 
 	@include media.bigMobile {
 		padding: 3em 2.5em;
