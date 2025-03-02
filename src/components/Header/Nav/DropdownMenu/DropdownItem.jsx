@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom"
-import { DropdownMenu } from "./DropdownMenu"
+import DropdownMenu from "./DropdownMenu"
 import isDesktop from "../../../../utils/isDesktop"
 import isHoverSupported from "../../../../utils/isHoverSupported"
 
-export const DropdownItem = ({
+const DropdownItem = ({
 	styles,
 	actions: { onBurgerClick, isMenuOpen, setIsMenuOpen },
 	menuName,
@@ -73,3 +73,5 @@ export const DropdownItem = ({
 		</li>
 	)
 }
+
+export default DropdownItem

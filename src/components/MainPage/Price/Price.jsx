@@ -2,7 +2,7 @@ import styles from "./Price.module.scss"
 import showerImage from "../../../assets/main/shower-partition.webp"
 import clickHand from "../../../assets/main/click-hand.svg?url"
 
-export const Price = () => {
+const Price = () => {
 	return (
 		<section className={styles.price}>
 			<div className="container">
@@ -41,3 +41,5 @@ export const Price = () => {
 		</section>
 	)
 }
+
+export default Price

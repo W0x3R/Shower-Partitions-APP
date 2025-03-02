@@ -1,7 +1,7 @@
 import styles from "./Adress.module.scss"
 import Location from "../../../../assets/header/location.svg?react"
 
-export const Adress = () => {
+const Adress = () => {
 	return (
 		<div className={styles.adress}>
 			<Location className={styles.adress__img} aria-hidden="true" />
@@ -15,3 +15,5 @@ export const Adress = () => {
 		</div>
 	)
 }
+
+export default Adress

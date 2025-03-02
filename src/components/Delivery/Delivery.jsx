@@ -1,7 +1,8 @@
-import carImg from "../../assets/delivery/car.png"
 import styles from "./Delivery.module.scss"
+import carImg from "../../assets/delivery/car.png"
+import AsideInfoWidget from "../Widgets/AsideInfoWidget/AsideInfoWidget"
 
-export const Delivery = (children) => {
+const Delivery = () => {
 	return (
 		<section className={styles.delivery}>
 			<div className="container">
@@ -38,9 +39,11 @@ export const Delivery = (children) => {
 							загруженности производства и региона доставки.
 						</p>
 					</div>
-					{children.aside}
+					<AsideInfoWidget />
 				</div>
 			</div>
 		</section>
 	)
 }
+
+export default Delivery

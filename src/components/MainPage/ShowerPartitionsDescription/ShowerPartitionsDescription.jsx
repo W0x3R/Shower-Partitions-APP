@@ -1,3 +1,5 @@
+import styles from "./ShowerPartitionsDescription.module.scss"
+import ReactFocusLock from "react-focus-lock"
 import { useEffect, useState } from "react"
 import {
 	swingingDoorPopupImg,
@@ -10,22 +12,20 @@ import {
 	nickelFurniturePopupImg,
 	chromeFurniturePopupImg,
 } from "../../../data/productsData"
-import ReactFocusLock from "react-focus-lock"
 import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
-import styles from "./ShowerPartitionsDescription.module.scss"
-import { Popup } from "./Popup/Popup"
+import Popup from "./Popup/Popup"
 import {
 	disableBodyScrollIncludeScrollbar,
 	enableBodyScrollIncludeScrollbar,
 } from "../../../utils/setBodyScroll"
-import { firstListData } from "../../../data/showerPartitionsDescriptionData/firstListData"
-import { showerTypesData } from "../../../data/showerPartitionsDescriptionData/showerTypesData"
-import { setTypeOfDoorsAltData } from "../../../data/showerPartitionsDescriptionData/typeOfDoorsAltData"
-import { typeOfGlassesData } from "../../../data/showerPartitionsDescriptionData/typeOfGlassesData"
-import { setTypeOfFurnitureAltData } from "../../../data/showerPartitionsDescriptionData/typeOfFurnitureAltData"
-import { reasonsListData } from "../../../data/showerPartitionsDescriptionData/reasonsListData"
+import firstListData from "../../../data/showerPartitionsDescriptionData/firstListData"
+import showerTypesData from "../../../data/showerPartitionsDescriptionData/showerTypesData"
+import setTypeOfDoorsAltData from "../../../data/showerPartitionsDescriptionData/typeOfDoorsAltData"
+import typeOfGlassesData from "../../../data/showerPartitionsDescriptionData/typeOfGlassesData"
+import setTypeOfFurnitureAltData from "../../../data/showerPartitionsDescriptionData/typeOfFurnitureAltData"
+import reasonsListData from "../../../data/showerPartitionsDescriptionData/reasonsListData"
 
-export const ShowerPartitionsDescription = () => {
+const ShowerPartitionsDescription = () => {
 	const [popupData, setPopupData] = useState({
 		isOpen: false,
 		img: null,
@@ -434,3 +434,5 @@ export const ShowerPartitionsDescription = () => {
 		</section>
 	)
 }
+
+export default ShowerPartitionsDescription

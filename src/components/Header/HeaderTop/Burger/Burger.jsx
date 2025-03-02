@@ -1,8 +1,8 @@
-import { useLocation } from "react-router-dom"
 import styles from "./Burger.module.scss"
+import { useLocation } from "react-router-dom"
 import { useEffect } from "react"
 
-export const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
+const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 	const location = useLocation()
 
 	useEffect(() => {
@@ -48,3 +48,5 @@ export const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 		</button>
 	)
 }
+
+export default Burger

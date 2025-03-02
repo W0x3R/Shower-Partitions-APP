@@ -1,4 +1,4 @@
-export const informationData = [
+const informationData = [
 	{
 		id: "information_0",
 		text: `ООО "ГАРДЕРОБНЫЕ СИСТЕМЫ"`,
@@ -28,3 +28,5 @@ export const informationData = [
 		text: `помещ. VIIа, комната 460`,
 	},
 ]
+
+export default informationData

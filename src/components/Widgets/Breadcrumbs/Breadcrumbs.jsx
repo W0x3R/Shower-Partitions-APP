@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
 import styles from "./Breadcrumbs.module.scss"
+import { Link } from "react-router-dom"
 
-export const Breadcrumbs = ({ currentPage }) => {
+const Breadcrumbs = ({ currentPage }) => {
 	return (
 		<nav className={styles.breadcrumb} aria-label="breadcrumb">
 			<div className="container">
@@ -27,3 +27,5 @@ export const Breadcrumbs = ({ currentPage }) => {
 		</nav>
 	)
 }
+
+export default Breadcrumbs

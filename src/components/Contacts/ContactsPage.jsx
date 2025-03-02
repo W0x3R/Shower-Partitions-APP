@@ -1,13 +1,13 @@
 import { useLocation } from "react-router-dom"
 import { Helmet } from "react-helmet"
-import { Contacts } from "./Contacts"
-import { Breadcrumbs } from "../Widgets/Breadcrumbs/Breadcrumbs"
-import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
-import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
 import bgImg from "../../assets/contacts/bg.png"
 import callUsImg from "../../assets/contacts/callUs.png"
+import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
+import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
+import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
+import Contacts from "./Contacts"
 
-export const ContactsPage = () => {
+const ContactsPage = () => {
 	const location = useLocation()
 	const currentUrl = `https://garderobsystem.ru${location.pathname}`
 	const ogImage =
@@ -63,3 +63,5 @@ export const ContactsPage = () => {
 		</>
 	)
 }
+
+export default ContactsPage

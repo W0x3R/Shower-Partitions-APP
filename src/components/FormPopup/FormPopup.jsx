@@ -1,11 +1,11 @@
+import styles from "./FormPopup.module.scss"
 import { useContext, useEffect, useState } from "react"
 import ReactFocusLock from "react-focus-lock"
-import PopupFormContext from "../../context/PopupFormContext"
-import { CallBackForm } from "../Widgets/CallBackForm/CallBackForm"
-import styles from "./FormPopup.module.scss"
 import BlackCross from "../../assets/main/black-cross.svg?react"
+import PopupFormContext from "../../context/PopupFormContext"
+import CallBackForm from "../Widgets/CallBackForm/CallBackForm"
 
-export const FormPopup = () => {
+const FormPopup = () => {
 	const { isFormPopupOpen, handleFormPopupClose } = useContext(PopupFormContext)
 	const [isVisible, setIsVisible] = useState(false)
 
@@ -44,3 +44,5 @@ export const FormPopup = () => {
 		</ReactFocusLock>
 	)
 }
+
+export default FormPopup

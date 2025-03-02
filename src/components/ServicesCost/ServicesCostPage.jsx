@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet"
-import { Price } from "./ServicesCost"
-import { Breadcrumbs } from "../Widgets/Breadcrumbs/Breadcrumbs"
+import { useLocation } from "react-router-dom"
+import Price from "./ServicesCost"
+import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
 import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
-import { useLocation } from "react-router-dom"
 
-export const ServicesCostPage = () => {
+const ServicesCostPage = () => {
 	const location = useLocation()
 	const currentUrl = `https://garderobsystem.ru${location.pathname}`
 	const ogImage =
@@ -55,3 +55,5 @@ export const ServicesCostPage = () => {
 		</>
 	)
 }
+
+export default ServicesCostPage

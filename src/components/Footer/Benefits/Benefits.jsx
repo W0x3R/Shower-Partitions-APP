@@ -1,8 +1,8 @@
-import { benefitsData } from "../../../data/benefitsData"
-import CheckIcon from "../../../assets/footer/check.svg?react"
 import styles from "./Benefits.module.scss"
+import CheckIcon from "../../../assets/footer/check.svg?react"
+import { benefitsData } from "../../../data/benefitsData"
 
-export const Benefits = () => {
+const Benefits = () => {
 	return (
 		<div className={styles.benefits__wrapper}>
 			<h6 className={styles.benefits__title}>Преимущества</h6>
@@ -19,3 +19,5 @@ export const Benefits = () => {
 		</div>
 	)
 }
+
+export default Benefits

@@ -1,8 +1,8 @@
+import styles from "./ServicesCost.module.scss"
 import priceDescriptionData from "../../data/priceDescriptionData"
 import priceTableData from "../../data/priceTableData"
-import styles from "./ServicesCost.module.scss"
 
-export const Price = () => {
+const Price = () => {
 	return (
 		<section className={styles.cost}>
 			<div className="container">
@@ -48,3 +48,5 @@ export const Price = () => {
 		</section>
 	)
 }
+
+export default Price

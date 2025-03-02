@@ -1,7 +1,7 @@
 import { useRef } from "react"
 import { NavLink } from "react-router-dom"
 
-export const DropdownMenu = ({
+const DropdownMenu = ({
 	styles,
 	actions: {
 		onBurgerClick,
@@ -47,3 +47,5 @@ export const DropdownMenu = ({
 		</ul>
 	)
 }
+
+export default DropdownMenu

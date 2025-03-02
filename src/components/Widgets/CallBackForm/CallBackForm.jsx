@@ -1,11 +1,11 @@
+import styles from "./CallBackForm.module.scss"
 import InputMask from "@mona-health/react-input-mask"
 import { useForm } from "react-hook-form"
 import { useContext, useEffect, useRef } from "react"
-import PopupFormContext from "../../../context/PopupFormContext"
-import styles from "./CallBackForm.module.scss"
 import clickHandImg from "../../../assets/main/click-hand.svg?url"
+import PopupFormContext from "../../../context/PopupFormContext"
 
-export const CallBackForm = () => {
+const CallBackForm = () => {
 	const { isFormPopupOpen } = useContext(PopupFormContext)
 	const {
 		register,
@@ -160,3 +160,5 @@ export const CallBackForm = () => {
 		</form>
 	)
 }
+
+export default CallBackForm

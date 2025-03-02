@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 
-export const NavItems = ({ styles, onBurgerClick }) => {
+const NavItems = ({ styles, onBurgerClick }) => {
 	return (
 		<>
 			<li className={styles.nav__item}>
@@ -25,3 +25,4 @@ export const NavItems = ({ styles, onBurgerClick }) => {
 		</>
 	)
 }
+export default NavItems

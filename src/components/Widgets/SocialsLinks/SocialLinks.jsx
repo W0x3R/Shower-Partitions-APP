@@ -1,8 +1,8 @@
+import styles from "./SocialLinks.module.scss"
 import Whatsapp from "../../../assets/header/whatsapp.svg?react"
 import Viber from "../../../assets/header/viber.svg?react"
 import Telegram from "../../../assets/header/telegram.svg?react"
 import Instagram from "../../../assets/header/instagram.svg?react"
-import styles from "./SocialLinks.module.scss"
 
 const SocialLinks = ({ gap, sizes }) => {
 	const socialLinksData = [

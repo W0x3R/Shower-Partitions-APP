@@ -1,11 +1,11 @@
+import styles from "./Questions.module.scss"
 import { useEffect, useState } from "react"
 import Cross from "../../../assets/main/cross.svg?react"
 import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import questionImg from "../../../assets/main/questions-img.png"
-import styles from "./Questions.module.scss"
-import { accordionData } from "../../../data/accordionData"
+import accordionData from "../../../data/accordionData"
 
-export const Questions = () => {
+const Questions = () => {
 	const [expandedIndex, setExpandedIndex] = useState([])
 	const [visibleCount, setVisibleCount] = useState(2)
 
@@ -104,3 +104,5 @@ export const Questions = () => {
 		</section>
 	)
 }
+
+export default Questions

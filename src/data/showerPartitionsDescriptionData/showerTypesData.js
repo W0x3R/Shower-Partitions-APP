@@ -4,8 +4,7 @@ import {
 	showerPartitionPopupImg,
 	trapezoidalShowerPopupImg,
 } from "../productsData"
-
-export const showerTypesData = [
+const showerTypesData = [
 	{
 		id: "shower_types_0",
 		title: "Линейное ограждение душевой",
@@ -40,3 +39,5 @@ export const showerTypesData = [
 		alt: "На изображении отображено как выглядит трапециевидная перегородка душевой.",
 	},
 ]
+
+export default showerTypesData

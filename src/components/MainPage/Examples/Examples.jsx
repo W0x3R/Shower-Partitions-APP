@@ -1,12 +1,12 @@
+import styles from "./Examples.module.scss"
 import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { useLocation } from "react-router-dom"
 import ExamplesShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
-import styles from "./Examples.module.scss"
 import examplesData from "../../../data/examplesData"
 
-export const Examples = () => {
+const Examples = () => {
 	const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 500)
 	const [visibleCount, setVisibleCount] = useState(isMobileView ? 3 : 6)
 	const [stepIncrease, setStepIncrease] = useState(isMobileView ? 3 : 6)
@@ -133,3 +133,5 @@ export const Examples = () => {
 		</section>
 	)
 }
+
+export default Examples

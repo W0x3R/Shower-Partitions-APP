@@ -1,7 +1,7 @@
-import SocialLinks from "../../../Widgets/SocialsLinks/SocialLinks"
 import styles from "./Socials.module.scss"
+import SocialLinks from "../../../Widgets/SocialsLinks/SocialLinks"
 
-export const Socials = () => {
+const Socials = () => {
 	return (
 		<div className={styles.socials} aria-labelledby="online-question">
 			<p className={`header__animation header__texts`} id="online-question">
@@ -11,3 +11,5 @@ export const Socials = () => {
 		</div>
 	)
 }
+
+export default Socials

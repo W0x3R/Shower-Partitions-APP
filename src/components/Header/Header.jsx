@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react"
-import HeaderTop from "./HeaderTop/HeaderTop"
-import { Nav } from "./Nav/Nav"
-import { disableBodyScroll, enableBodyScroll } from "../../utils/setBodyScroll"
 import ReactFocusLock from "react-focus-lock"
+import HeaderTop from "./HeaderTop/HeaderTop"
+import Nav from "./Nav/Nav"
+import { disableBodyScroll, enableBodyScroll } from "../../utils/setBodyScroll"
 import isMobile from "../../utils/isMobile"
 
 const Header = () => {

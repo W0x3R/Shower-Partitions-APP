@@ -1,4 +1,4 @@
-export const reasonsListData = [
+const reasonsListData = [
 	{
 		id: "reasons_0",
 		text: `Полный цикл услуг — составление проекта, замер, изготовление,
@@ -36,3 +36,5 @@ export const reasonsListData = [
 		за что не придется.`,
 	},
 ]
+
+export default reasonsListData

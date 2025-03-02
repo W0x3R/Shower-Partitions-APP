@@ -1,12 +1,12 @@
-import { useContext } from "react"
-import PopupFormContext from "../../../context/PopupFormContext"
 import styles from "./About.module.scss"
-import mainBgBig from "../../../assets/main/main-bg-big.webp"
+import { useContext } from "react"
 import mainBgSmall from "../../../assets/main/main-bg-small.webp"
+import mainBgBig from "../../../assets/main/main-bg-big.webp"
 import featureCircle from "../../../assets/main/feature-circle.svg?url"
 import clickHand from "../../../assets/main/click-hand.svg?url"
+import PopupFormContext from "../../../context/PopupFormContext"
 
-export const About = () => {
+const About = () => {
 	const { handleFormPopupOpen } = useContext(PopupFormContext)
 
 	const featuresItemsText = [
@@ -82,3 +82,5 @@ export const About = () => {
 		</section>
 	)
 }
+
+export default About

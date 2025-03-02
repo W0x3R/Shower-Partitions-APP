@@ -5,7 +5,7 @@ import {
 	transparentGlassPopupImg,
 } from "../productsData"
 
-export const typeOfGlassesData = [
+const typeOfGlassesData = [
 	{
 		id: "glasses_types_0",
 		title: "Бесцветное",
@@ -40,3 +40,5 @@ export const typeOfGlassesData = [
 		alt: "На изображении отображено как выглядит цветное стекло для душевых перегородок.",
 	},
 ]
+
+export default typeOfGlassesData

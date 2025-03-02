@@ -1,9 +1,9 @@
 import styles from "./Nav.module.scss"
 import { useEffect, useRef, useState } from "react"
-import { DropdownItem } from "./DropdownMenu/DropdownItem"
-import { NavItems } from "./NavItems"
+import DropdownItem from "./DropdownMenu/DropdownItem"
+import NavItems from "./NavItems"
 
-export const Nav = ({ isBurgerActive, onBurgerClick }) => {
+const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	const [isFixed, setIsFixed] = useState(false)
 
 	const [isMenuOpen, setIsMenuOpen] = useState({
@@ -57,7 +57,6 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 					menuItems={["Доставка и оплата", "Стоимость", "Полезные статьи"]}
 					links={["delivery", "price", "article"]}
 				/>
-
 				<DropdownItem
 					styles={styles}
 					actions={{
@@ -74,3 +73,5 @@ export const Nav = ({ isBurgerActive, onBurgerClick }) => {
 		</nav>
 	)
 }
+
+export default Nav

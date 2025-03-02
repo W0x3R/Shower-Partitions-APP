@@ -1,10 +1,10 @@
+import styles from "./AsideInfoWidget.module.scss"
 import { Link } from "react-router-dom"
 import { useContext } from "react"
-import PopupFormContext from "../../../context/PopupFormContext"
-import styles from "./AsideInfoWidget.module.scss"
 import clickHand from "../../../assets/main/click-hand.svg?url"
+import PopupFormContext from "../../../context/PopupFormContext"
 
-export const AsideInfoWidget = ({ sticky }) => {
+const AsideInfoWidget = ({ sticky }) => {
 	const { handleFormPopupOpen } = useContext(PopupFormContext)
 
 	return (
@@ -50,3 +50,5 @@ export const AsideInfoWidget = ({ sticky }) => {
 		</aside>
 	)
 }
+
+export default AsideInfoWidget

@@ -5,7 +5,7 @@ import {
 	enableBodyScrollIncludeScrollbar,
 } from "../utils/setBodyScroll"
 
-export const PopupFormProvider = ({ children }) => {
+const PopupFormProvider = ({ children }) => {
 	const [isFormPopupOpen, setIsFormPopupOpen] = useState(false)
 
 	const handleFormPopupOpen = (e) => {
@@ -31,3 +31,5 @@ export const PopupFormProvider = ({ children }) => {
 		</PopupFormContext.Provider>
 	)
 }
+
+export default PopupFormProvider

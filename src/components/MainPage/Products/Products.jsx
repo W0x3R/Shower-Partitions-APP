@@ -1,11 +1,11 @@
+import styles from "./Products.module.scss"
 import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useRef, useState } from "react"
-import styles from "./Products.module.scss"
+import { useLocation } from "react-router-dom"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import { productsData } from "../../../data/productsData"
-import { useLocation } from "react-router-dom"
 
-export const Products = () => {
+const Products = () => {
 	const [activeBtn, setActiveBtn] = useState("showers")
 	const location = useLocation()
 	const productsRef = useRef(null)
@@ -121,3 +121,5 @@ export const Products = () => {
 		</section>
 	)
 }
+
+export default Products

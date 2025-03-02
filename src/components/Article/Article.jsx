@@ -1,5 +1,6 @@
-import articleBgImg from "../../assets/article/bg.webp"
 import styles from "./Article.module.scss"
+import AsideInfoWidget from "../Widgets/AsideInfoWidget/AsideInfoWidget"
+import articleBgImg from "../../assets/article/bg.webp"
 import constructionsData from "../../data/article/constructionsData"
 import typesData from "../../data/article/typesData"
 import openingTypes from "../../data/article/openingTypes"
@@ -7,7 +8,7 @@ import glassesTypes from "../../data/article/glassesTypes"
 import usefulTipsData from "../../data/article/usefulTipsData"
 import reasonsToContactData from "../../data/article/reasonsToContactData"
 
-export const Article = (children) => {
+const Article = () => {
 	return (
 		<section className={styles.article}>
 			<div className="container">
@@ -182,9 +183,11 @@ export const Article = (children) => {
 							выезда замерщика на дом.
 						</p>
 					</div>
-					{children.aside}
+					<AsideInfoWidget sticky />
 				</div>
 			</div>
 		</section>
 	)
 }
+
+export default Article

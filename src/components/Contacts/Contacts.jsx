@@ -1,14 +1,14 @@
 import styles from "./Contacts.module.scss"
 import callUsImg from "../../assets/contacts/callUs.png"
-import SocialLinks from "../Widgets/SocialsLinks/SocialLinks"
 import LocationIcon from "../../assets/contacts/location.svg?react"
+import QuestionIcon from "../../assets/contacts/question.svg?react"
 import TimeIcon from "../../assets/contacts/time.svg?react"
 import CallIcon from "../../assets/contacts/call.svg?react"
 import MailIcon from "../../assets/contacts/mail.svg?react"
-import QuestionIcon from "../../assets/contacts/question.svg?react"
-import { CallBackForm } from "../Widgets/CallBackForm/CallBackForm"
+import SocialLinks from "../Widgets/SocialsLinks/SocialLinks"
+import CallBackForm from "../Widgets/CallBackForm/CallBackForm"
 
-export const Contacts = () => {
+const Contacts = () => {
 	return (
 		<section className={styles.contacts}>
 			<div className="container">
@@ -96,3 +96,5 @@ export const Contacts = () => {
 		</section>
 	)
 }
+
+export default Contacts

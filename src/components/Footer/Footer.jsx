@@ -1,9 +1,9 @@
 import styles from "./Footer.module.scss"
-import { Benefits } from "./Benefits/Benefits"
-import { Contacts } from "./Contacts/Contacts"
-import { Information } from "./Information/Information"
+import Contacts from "./Contacts/Contacts"
+import Information from "./Information/Information"
+import Benefits from "./Benefits/Benefits"
 
-export const Footer = () => {
+const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<div className="container">

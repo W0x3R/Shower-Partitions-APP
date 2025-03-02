@@ -1,12 +1,12 @@
+import styles from "./Contacts.module.scss"
 import SocialLinks from "../../Widgets/SocialsLinks/SocialLinks"
 import LocationIcon from "../../../assets/footer/location.svg?react"
 import TimeIcon from "../../../assets/footer/time.svg?react"
 import CallIcon from "../../../assets/footer/call.svg?react"
 import MailIcon from "../../../assets/footer/mail.svg?react"
 import QuestionIcon from "../../../assets/footer/question.svg?react"
-import styles from "./Contacts.module.scss"
 
-export const Contacts = () => {
+const Contacts = () => {
 	return (
 		<div className={styles.contacts}>
 			<div className={styles["contacts__wrapper"]}>
@@ -73,3 +73,5 @@ export const Contacts = () => {
 		</div>
 	)
 }
+
+export default Contacts

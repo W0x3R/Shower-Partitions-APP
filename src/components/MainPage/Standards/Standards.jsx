@@ -1,7 +1,7 @@
 import styles from "./Standards.module.scss"
 import standardsData from "../../../data/standardsData"
 
-export const Standards = () => {
+const Standards = () => {
 	return (
 		<section className={styles.standards}>
 			<div className="container">
@@ -38,3 +38,5 @@ export const Standards = () => {
 		</section>
 	)
 }
+
+export default Standards

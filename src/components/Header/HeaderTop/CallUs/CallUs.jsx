@@ -1,8 +1,8 @@
+import styles from "./CallUs.module.scss"
 import { useContext } from "react"
 import PopupFormContext from "../../../../context/PopupFormContext"
-import styles from "./CallUs.module.scss"
 
-export const CallUs = () => {
+const CallUs = () => {
 	const { handleFormPopupOpen } = useContext(PopupFormContext)
 
 	return (
@@ -37,3 +37,5 @@ export const CallUs = () => {
 		</div>
 	)
 }
+
+export default CallUs

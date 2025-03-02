@@ -1,7 +1,7 @@
-import { informationData } from "../../../data/informationData"
 import styles from "./Information.module.scss"
+import informationData from "../../../data/informationData"
 
-export const Information = () => {
+const Information = () => {
 	return (
 		<div>
 			<h6 className={styles.information__title}>Информация</h6>
@@ -17,3 +17,5 @@ export const Information = () => {
 		</div>
 	)
 }
+
+export default Information

@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react"
 import styles from "./Popup.module.scss"
+import { useEffect, useRef, useState } from "react"
 import BlackCross from "../../../../assets/main/black-cross.svg?react"
 
-export const Popup = ({
+const Popup = ({
 	isPopupOpen,
 	handlePopupClose,
 	activePopupImg,
@@ -62,3 +62,5 @@ export const Popup = ({
 		</div>
 	)
 }
+
+export default Popup

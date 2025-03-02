@@ -1,13 +1,12 @@
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
-import { Breadcrumbs } from "../Widgets/Breadcrumbs/Breadcrumbs"
+import carImg from "../../assets/delivery/car.png"
+import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
 import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
-import { Delivery } from "./Delivery"
-import { AsideInfoWidget } from "../Widgets/AsideInfoWidget/AsideInfoWidget"
-import carImg from "../../assets/delivery/car.png"
+import Delivery from "./Delivery"
 
-export const DeliveryPage = () => {
+const DeliveryPage = () => {
 	const location = useLocation()
 	const currentUrl = `https://garderobsystem.ru${location.pathname}`
 	const ogImage =
@@ -58,9 +57,11 @@ export const DeliveryPage = () => {
 				<link rel="preload" href={carImg} as="image" type="image/png" />
 			</Helmet>
 			<Breadcrumbs currentPage="Оплата и доставка" />
-			<Delivery aside={<AsideInfoWidget />} />
+			<Delivery />
 			<ContactsWidget />
 			<ScrollTopBtn />
 		</>
 	)
 }
+
+export default DeliveryPage

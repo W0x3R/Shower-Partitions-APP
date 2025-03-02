@@ -1,13 +1,12 @@
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
-import { AsideInfoWidget } from "../Widgets/AsideInfoWidget/AsideInfoWidget"
-import { Breadcrumbs } from "../Widgets/Breadcrumbs/Breadcrumbs"
+import articleBg from "../../assets/article/bg.webp"
+import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
 import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
-import { Article } from "./Article"
-import articleBg from "../../assets/article/bg.webp"
+import Article from "./Article"
 
-export const ArticlePage = () => {
+const ArticlePage = () => {
 	const location = useLocation()
 	const currentUrl = `https://garderobsystem.ru${location.pathname}`
 	const ogImage =
@@ -55,9 +54,11 @@ export const ArticlePage = () => {
 				<link rel="preload" href={articleBg} as="image" type="image/webp" />
 			</Helmet>
 			<Breadcrumbs currentPage="Душевая перегородка из стекла — советы по выбору" />
-			<Article aside={<AsideInfoWidget sticky />} />
+			<Article />
 			<ContactsWidget />
 			<ScrollTopBtn />
 		</>
 	)
 }
+
+export default ArticlePage
