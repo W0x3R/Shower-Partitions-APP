@@ -32,6 +32,7 @@ export const CallBackForm = () => {
 
 	return (
 		<form
+			onClick={(e) => e.stopPropagation()}
 			onSubmit={handleSubmit(onSubmit)}
 			className={styles.form}
 			aria-labelledby="contact-form-title"
