@@ -7,7 +7,7 @@
 	background-color: var(--white-251);
 
 	&__inner {
-		@include mixins.flexCenter;
+		@include mixins.useFlex(center, center);
 		flex-direction: column;
 	}
 
@@ -15,7 +15,7 @@
 		@include mixins.sizes(23em, 18em);
 		background: transparent;
 		margin-bottom: 1em;
-		animation: scaleAndRotateQuestionsImg 3s infinite ease-in-out;
+		animation: scaleAndRotateImg 3s infinite ease-in-out;
 
 		@include media.bigMobile {
 			@include mixins.sizes(28em, 22em);
@@ -23,7 +23,7 @@
 	}
 
 	&__title {
-		@extend %title-level-three;
+		@extend %titleLevelThree;
 	}
 
 	&__accordion-wrapper {
@@ -85,7 +85,7 @@
 	}
 
 	&__accordion-btn {
-		@include mixins.flexSpaceBetweenCenter;
+		@include mixins.useFlex(space-between, center);
 		width: 100%;
 
 		@include media.focusVisible {
@@ -125,7 +125,7 @@
 	}
 
 	&__accordion-subtext {
-		@extend %main-subtexts-fonts;
+		@extend %mainSubtextsFonts;
 		font-weight: 500;
 		color: #939393;
 	}

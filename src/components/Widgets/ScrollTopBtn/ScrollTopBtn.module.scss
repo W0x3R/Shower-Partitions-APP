@@ -11,7 +11,7 @@
 	transition: opacity .3s ease-in-out;
 
 	&.visible {
-		@include mixins.flexCenter;
+		@include mixins.useFlex(center, center);
 		opacity: 0.9;
 	}
 

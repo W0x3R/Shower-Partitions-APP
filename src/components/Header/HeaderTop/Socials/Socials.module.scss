@@ -2,7 +2,7 @@
 @use '../../../../styles/media';
 
 .socials {
-	@include mixins.flexCenter;
+	@include mixins.useFlex(center, center);
 	flex-direction: column;
 	row-gap: .31rem;
 

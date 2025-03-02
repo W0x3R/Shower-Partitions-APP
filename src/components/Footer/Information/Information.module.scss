@@ -4,7 +4,7 @@
 .information {
 
 	&__title {
-		@extend %footer-title;
+		@extend %footerTitle;
 	}
 
 	&__list {
@@ -16,12 +16,12 @@
 	&__item {
 		font-size: 1em;
 		letter-spacing: var(--basic-letter-spacing);
-		line-height: 1.6em;
+		line-height: 1.6;
 		font-style: normal;
 
 		@include media.bigMobile {
 			font-size: 1.4em;
-			line-height: 1.4em;
+			line-height: 1.4;
 			text-align: center;
 		}
 

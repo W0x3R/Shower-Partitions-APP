@@ -3,7 +3,7 @@
 @use '../../../../styles/animations';
 
 .callUs {
-	@include mixins.flexCenter;
+	@include mixins.useFlex(center, center);
 	flex-direction: column;
 	row-gap: .31em;
 	font-weight: 600;

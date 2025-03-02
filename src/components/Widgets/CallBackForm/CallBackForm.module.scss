@@ -22,7 +22,7 @@
 	}
 
 	&__title {
-		@extend %title-level-three;
+		@extend %titleLevelThree;
 		margin-bottom: 1em;
 		text-align: center;
 		color: var(--white);

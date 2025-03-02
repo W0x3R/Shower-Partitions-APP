@@ -2,7 +2,7 @@
 @use '../../../../styles/media';
 
 .adress {
-	@include mixins.flexCenter;
+	@include mixins.useFlex(center, center);
 	column-gap: .31em;
 
 	@include media.bigMobile {

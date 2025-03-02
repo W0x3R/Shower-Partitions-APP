@@ -1,12 +1,11 @@
+@use '../../../styles/mixins';
 @use '../../../styles/media';
 
 .breadcrumb {
 	margin-top: 2.5em;
 
 	&__list {
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
+		@include mixins.useFlex(flex-start, center);
 		column-gap: 15px;
 		letter-spacing: var(--basic-letter-spacing);
 		font-size: 1.15em;

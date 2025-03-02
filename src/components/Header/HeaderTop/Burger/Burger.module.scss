@@ -9,9 +9,8 @@
 	border-radius: var(--border-r-circle);
 	cursor: pointer;
 
-
 	@include media.bigMobile {
-		@include mixins.flexCenter;
+		@include mixins.useFlex(center, center);
 		flex-direction: column;
 		row-gap: 9px;
 	}

@@ -20,7 +20,7 @@
 		position: fixed;
 		inset: 0;
 		z-index: 1;
-		@include mixins.flexCenterStart;
+		@include mixins.useFlex(center, flex-start);
 		padding-block: 20em 4em;
 		@include mixins.sizes(100vw, 100vh);
 		font-size: clamp(9px, 2vw, 12px);
@@ -29,16 +29,16 @@
 
 	@include media.bigMobile {
 		&_open {
-			animation: navShow 0.3s forwards;
+			animation: smoothShow 0.4s forwards;
 		}
 
 		&_hide {
-			animation: navHide 0.3s forwards;
+			animation: smoothHide 0.4s forwards;
 		}
 	}
 
 	&__list {
-		@include mixins.flexSpaceAroundCenter;
+		@include mixins.useFlex(space-around, center);
 
 		@include media.bigMobile {
 			flex-direction: column;
@@ -71,7 +71,7 @@
 		}
 
 		@include media.bigMobile {
-			@include mixins.flexCenterStart;
+			@include mixins.useFlex(center, flex-start);
 			flex-direction: column;
 			padding: 0;
 			margin-bottom: 1.5em;
@@ -86,7 +86,7 @@
 
 	&__link-wrapper {
 		@include media.bigMobile {
-			@include mixins.flexSpaceBetweenCenter;
+			@include mixins.useFlex(space-between, center);
 			width: 100%;
 		}
 
@@ -146,7 +146,7 @@
 		}
 
 		&_open {
-			@include mixins.flexCenterStart;
+			@include mixins.useFlex(center, flex-start);
 			flex-direction: column;
 			@include mixins.show;
 

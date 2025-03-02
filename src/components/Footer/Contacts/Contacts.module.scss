@@ -9,31 +9,20 @@
 	}
 
 	&__title {
-		@extend %footer-title;
+		@extend %footerTitle;
 	}
 
-	&__adress {
-		@extend %footer-text;
-	}
-
-	&__time {
-		@extend %footer-text;
-	}
-
-	&__call {
-		@extend %footer-text;
-	}
-
-	&__number-link {
-		@extend %footer-link;
-	}
-
+	&__title,
+	&__adress,
+	&__time,
+	&__call,
 	&__mail {
-		@extend %footer-text;
+		@extend %footerText;
 	}
 
+	&__number-link,
 	&__mail-link {
-		@extend %footer-link;
+		@extend %footerLink;
 	}
 
 	&__social {
@@ -43,7 +32,7 @@
 	}
 
 	&__socials-inner {
-		@extend %footer-text;
+		@extend %footerText;
 		margin-bottom: 0;
 
 		@include media.bigMobile {

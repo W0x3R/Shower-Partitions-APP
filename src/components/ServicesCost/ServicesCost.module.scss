@@ -15,7 +15,7 @@
 	}
 
 	&__title {
-		@extend %title-level-one;
+		@extend %titleLevelOne;
 	}
 
 	&__table {
@@ -132,10 +132,10 @@
 	}
 
 	&__subtitle {
-		@extend %title-level-two;
+		@extend %titleLevelTwo;
 	}
 
 	&__description {
-		@extend %useful-text-fonts;
+		@extend %usefulTextFonts;
 	}
 }

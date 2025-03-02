@@ -1,55 +1,31 @@
 @use 'sass:math';
 @use './_media';
 
-@mixin flexStartStart {
+@mixin useFlex($justify-content, $align-items ) {
 	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: $justify-content;
+	align-items: $align-items;
 }
 
-@mixin flexCenter {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-@mixin flexSpaceEvenlyCenter {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-}
-
-@mixin flexSpaceBetweenCenter {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-@mixin flexSpaceAroundCenter {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-
-@mixin flexCenterStart {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-}
-
-@mixin abs-center {
+@mixin absCenter {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-@mixin fixed-center-fullscreen {
+@mixin fixedCenterFullscreen {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	@include sizes(100%, 100%);
+}
+
+@mixin setBackgroundImage ($url) {
+	background-image: url($url);
+	background-position: center;
+	background-size: cover;
 }
 
 @mixin hide {
@@ -80,7 +56,7 @@
 	transform-origin: center center;
 }
 
-@mixin fullscreen-bg {
+@mixin fullscreenBg {
 	position: absolute;
 	inset: 0;
 	z-index: -1;
@@ -88,7 +64,7 @@
 	object-fit: cover;
 }
 
-%header-texts-fonts {
+%headerTextsFonts {
 	font-size: 1em;
 	letter-spacing: var(--basic-letter-spacing);
 	line-height: 1.4;
@@ -103,7 +79,7 @@
 	}
 }
 
-%contacts-texts-fonts {
+%contactsTextsFonts {
 	display: flex;
 	align-items: center;
 	column-gap: 0.75em;
@@ -123,7 +99,7 @@
 	}
 }
 
-%main-texts-fonts {
+%mainTextsFonts {
 	color: var(--black);
 	font-size: 1.5em;
 	letter-spacing: var(--basic-letter-spacing);
@@ -139,7 +115,7 @@
 	}
 }
 
-%main-subtexts-fonts {
+%mainSubtextsFonts {
 	font-size: 1.3em;
 	line-height: 1.4em;
 	letter-spacing: var(--basic-letter-spacing);
@@ -154,7 +130,7 @@
 	}
 }
 
-%useful-text-fonts {
+%usefulTextFonts {
 	font-size: 1.15em;
 	line-height: 1.4;
 	letter-spacing: var(--basic-letter-spacing);
@@ -177,7 +153,7 @@
 	}
 }
 
-%useful-text-list {
+%usefulTextList {
 	padding-left: 1.25em;
 	margin-bottom: 1.15em;
 	list-style-type: disc;
@@ -191,7 +167,7 @@
 	}
 }
 
-%useful-text-item {
+%usefulTextItem {
 	font-size: 1.15em;
 	line-height: 1.4;
 	letter-spacing: var(--basic-letter-spacing);
@@ -210,14 +186,13 @@
 	}
 }
 
-%header-blink-animation {
+%headerBlinkAnimation {
 	content: '';
 	position: absolute;
 	left: -17px;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 8px;
-	height: 8px;
+	@include sizes(8px, 8px);
 	background-color: var(--main-green);
 	border-radius: var(--border-r-circle);
 	animation: blink 2.2s infinite;
@@ -249,7 +224,7 @@
 	}
 }
 
-%title-level-one {
+%titleLevelOne {
 	margin-bottom: 0.9em;
 	font-size: 2.55em;
 	letter-spacing: .05em;
@@ -272,7 +247,7 @@
 	}
 }
 
-%title-level-two {
+%titleLevelTwo {
 	margin-bottom: 0.6em;
 	font-size: 2.2em;
 	letter-spacing: 0.05em;
@@ -289,7 +264,7 @@
 	}
 }
 
-%title-level-three {
+%titleLevelThree {
 	margin-bottom: 1em;
 	font-size: 2.1em;
 	letter-spacing: 0.05em;
@@ -306,7 +281,7 @@
 	}
 }
 
-%title-level-five {
+%titleLevelFive {
 	margin-bottom: 0.5349em;
 	font-size: 1.9em;
 	letter-spacing: 0.05em;
@@ -324,7 +299,7 @@
 	}
 }
 
-%title-level-six {
+%titleLevelSix {
 	margin-bottom: 0.575em;
 	font-size: 1.7em;
 	letter-spacing: 0.05em;
@@ -342,7 +317,7 @@
 	}
 }
 
-%images-cards {
+%imagesCardsWrapper {
 	position: relative;
 	flex-wrap: wrap;
 	gap: 1.5em;
@@ -357,8 +332,8 @@
 	}
 }
 
-%image-card {
-	@include flexCenter;
+%imageCardBlock {
+	@include useFlex(center, center);
 	flex-direction: column;
 	flex: 0 0 calc((100% - 2 * 1.5em) / 3);
 	cursor: pointer;
@@ -373,8 +348,8 @@
 	}
 }
 
-%image-card-svg {
-	@include abs-center;
+%imageCardIcon {
+	@include absCenter;
 	@include sizes(26px, 26px);
 	opacity: 0;
 	transition: var(--basic-transition);
@@ -384,7 +359,7 @@
 	}
 }
 
-%image-card-img {
+%imageCard {
 	@include sizes(19em, 13em);
 	border-radius: 10px;
 	transition: filter .3s ease;
@@ -396,7 +371,7 @@
 
 %widgetBtn {
 	position: relative;
-	@include flexCenter;
+	@include useFlex(center, center);
 	column-gap: 1.3em;
 	padding: 1.2em 2em;
 	width: 90%;
@@ -457,7 +432,7 @@
 
 %showMoreBtn {
 	position: relative;
-	@include flexCenter;
+	@include useFlex(center, center);
 	column-gap: 7px;
 	padding-bottom: 4px;
 	font-size: 20px;
@@ -516,8 +491,8 @@
 	}
 }
 
-%contacts-widget-link {
-	@include flexSpaceEvenlyCenter;
+%contactsWidgetLink {
+	@include useFlex(space-evenly, center);
 	flex-basis: 50%;
 	min-height: 48px;
 	outline: none;
@@ -528,7 +503,7 @@
 
 	@include media.hoverAndActive {
 		& svg {
-			animation: scaleAndRotateQuestionsImg 1s infinite;
+			animation: scaleAndRotateImg 1s infinite;
 		}
 	}
 
@@ -538,7 +513,7 @@
 }
 
 @mixin popup {
-	@include fixed-center-fullscreen;
+	@include fixedCenterFullscreen;
 	z-index: 11;
 	background: #000000c7;
 	backdrop-filter: blur(5px);
@@ -546,33 +521,33 @@
 	transition: opacity .4s ease-in-out;
 
 	&.hide {
-		animation: navHide .4s forwards;
+		animation: smoothHide .4s forwards;
 	}
 
 	&.visible {
-		animation: navShow .4s forwards;
+		animation: smoothShow .4s forwards;
 	}
 
 	&__content {
+		@include useFlex(center, center);
 		@include sizes(100%, 100%);
-		@include flexCenter;
 		position: relative;
 	}
 
 	&__btn {
-		@include sizes(46px, 46px);
 		position: absolute;
 		top: 1px;
 		right: 1px;
-		cursor: pointer;
+		@include sizes(46px, 46px);
 		background-color: rgba(24, 24, 27, 0.65);
 		transition: var(--basic-transition);
+		cursor: pointer;
 
 		& svg {
+			transform: var(--f-button-transform);
 			@include sizes(17px, 17px);
 			fill: #dbdbdb;
 			transition: opacity .15s ease;
-			transform: var(--f-button-transform);
 			filter: drop-shadow(1px 1px 1px rgba(24, 24, 27, 0.15));
 			pointer-events: none;
 		}
@@ -591,11 +566,11 @@
 	}
 }
 
-%footer-title {
+%footerTitle {
 	margin-bottom: 0.575em;
 	font-size: 1.5em;
 	letter-spacing: 0.05em;
-	line-height: 1.2em;
+	line-height: 1.2;
 	color: var(--white);
 
 	@include media.bigMobile {
@@ -605,14 +580,14 @@
 	}
 }
 
-%footer-text {
+%footerText {
 	display: flex;
 	align-items: center;
 	column-gap: .75em;
 	margin-bottom: 0.7em;
 	font-size: 1em;
 	letter-spacing: var(--basic-letter-spacing);
-	line-height: 1.3em;
+	line-height: 1.3;
 	font-style: normal;
 
 	@include media.bigMobile {
@@ -621,7 +596,7 @@
 	}
 }
 
-%footer-link {
+%footerLink {
 	display: inline-block;
 	font-weight: 600;
 	transition: var(--basic-transition);

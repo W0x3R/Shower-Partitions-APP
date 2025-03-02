@@ -34,22 +34,21 @@
 	}
 
 	&__texts {
-		@extend %header-texts-fonts;
+		@extend %headerTextsFonts;
 	}
 
 	&__animation {
 		position: relative;
 
 		&::before {
-			@extend %header-blink-animation
+			@extend %headerBlinkAnimation
 		}
 	}
 }
 
 .sr-only {
 	position: absolute;
-	width: 1px;
-	height: 1px;
+	@include mixins.sizes(1px, 1px);
 	margin: -1px;
 	padding: 0;
 	border: 0;

@@ -9,11 +9,11 @@
 	}
 
 	&__title {
-		@extend %title-level-three;
+		@extend %titleLevelThree;
 	}
 
 	&__text {
-		@extend %main-texts-fonts;
+		@extend %mainTextsFonts;
 		margin-bottom: 1.2em;
 		text-align: center;
 	}

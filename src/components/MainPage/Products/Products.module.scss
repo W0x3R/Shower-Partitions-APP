@@ -6,11 +6,11 @@
 	background-color: var(--white);
 
 	&__title {
-		@extend %title-level-two;
+		@extend %titleLevelTwo;
 	}
 
 	&__text {
-		@extend %main-texts-fonts;
+		@extend %mainTextsFonts;
 		margin-bottom: 1.4em;
 		text-align: center;
 	}
@@ -78,8 +78,8 @@
 	}
 
 	&__items {
-		@include mixins.flexStartStart;
-		@extend %images-cards;
+		@include mixins.useFlex(flex-start, flex-start);
+		@extend %imagesCardsWrapper;
 	}
 
 	&__items.oneRow {
@@ -87,7 +87,7 @@
 	}
 
 	&__item {
-		@extend %image-card;
+		@extend %imageCardBlock;
 		row-gap: 0.175em;
 		transition: opacity 0.3s ease;
 		opacity: 0;
@@ -97,7 +97,7 @@
 		}
 
 		& svg {
-			@extend %image-card-svg;
+			@extend %imageCardIcon;
 		}
 
 		@include media.hoverAndActive {
@@ -129,7 +129,7 @@
 	}
 
 	&__item-img {
-		@extend %image-card-img;
+		@extend %imageCard;
 	}
 
 	&__item-text {

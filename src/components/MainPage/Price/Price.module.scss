@@ -7,12 +7,12 @@
 	background: var(--gray-bg-gradient);
 
 	&__title {
-		@extend %title-level-two;
+		@extend %titleLevelTwo;
 		margin-bottom: 1.2em;
 	}
 
 	&__info {
-		@include mixins.flexSpaceAroundCenter;
+		@include mixins.useFlex(space-around, center);
 
 		@include media.bigMobile {
 			justify-content: center;
@@ -21,7 +21,7 @@
 
 	&__info-img {
 		@include mixins.sizes(17.5em, 27.5em);
-		animation: scaleAndFilterPriceImage 4.3s infinite ease-in-out;
+		animation: scaleAndDropShadowImage 4.3s infinite ease-in-out;
 
 		&.desktop {
 			display: block;
@@ -64,18 +64,18 @@
 	}
 
 	&__info-text {
-		@extend %main-texts-fonts;
+		@extend %mainTextsFonts;
 		text-align: center;
 	}
 
 	&__info-subtext {
-		@extend %main-subtexts-fonts;
+		@extend %mainSubtextsFonts;
 		text-align: center;
 	}
 
 	&__info-link {
 		position: relative;
-		@include mixins.flexSpaceAroundCenter;
+		@include mixins.useFlex(space-around, center);
 		column-gap: .625em;
 		padding: 1.5em 2.5em;
 		overflow: hidden;

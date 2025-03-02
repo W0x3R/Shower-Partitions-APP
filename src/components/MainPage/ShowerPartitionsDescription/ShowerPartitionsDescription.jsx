@@ -421,7 +421,6 @@ const ShowerPartitionsDescription = () => {
 					</button>
 				)}
 			</div>
-			(
 			<ReactFocusLock returnFocus disabled={!popupData.isOpen}>
 				<Popup
 					isPopupOpen={popupData.isOpen}
@@ -430,7 +429,6 @@ const ShowerPartitionsDescription = () => {
 					activePopupAlt={popupData.alt}
 				/>
 			</ReactFocusLock>
-			)
 		</section>
 	)
 }

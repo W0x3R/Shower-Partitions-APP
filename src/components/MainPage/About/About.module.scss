@@ -21,7 +21,7 @@
 	}
 
 	&__background-big {
-		@include mixins.fullscreen-bg;
+		@include mixins.fullscreenBg;
 		display: block;
 
 		@include media.mediumMobile {
@@ -30,7 +30,7 @@
 	}
 
 	&__background-small {
-		@include mixins.fullscreen-bg;
+		@include mixins.fullscreenBg;
 		display: none;
 
 		@include media.mediumMobile {
@@ -39,7 +39,7 @@
 	}
 
 	&__background {
-		@include mixins.fullscreen-bg;
+		@include mixins.fullscreenBg;
 	}
 
 	&__content {
@@ -153,7 +153,7 @@
 	}
 
 	&__features-item {
-		@include mixins.flexCenter;
+		@include mixins.useFlex(center, center);
 		flex-direction: column;
 		row-gap: .5em;
 		pointer-events: none;
@@ -204,7 +204,7 @@
 
 	&__order-btn {
 		position: relative;
-		@include mixins.flexSpaceAroundCenter;
+		@include mixins.useFlex(space-around, center);
 		column-gap: .625em;
 		padding: 1.6em 2.2em;
 		overflow: hidden;

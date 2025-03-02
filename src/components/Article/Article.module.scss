@@ -20,17 +20,16 @@
 	}
 
 	&__title {
-		@include mixins.abs-center;
-		@extend %title-level-one;
+		@include mixins.absCenter;
+		@extend %titleLevelOne;
 		padding-inline: 0.8em;
 		width: 100%;
 		color: var(--white);
 	}
 
 	&__img {
-		width: 100%;
-		height: 26em;
 		margin-bottom: 2.5em;
+		@include mixins.sizes(100%, 26em);
 	}
 
 	&__wrapper {
@@ -54,7 +53,7 @@
 	}
 
 	&__block-title {
-		@extend %title-level-two;
+		@extend %titleLevelTwo;
 		text-align: left;
 
 		@include media.bigMobile {
@@ -63,7 +62,7 @@
 	}
 
 	&__block-text {
-		@extend %useful-text-fonts;
+		@extend %usefulTextFonts;
 
 		&:last-child {
 			@include media.bigMobile {
@@ -73,15 +72,15 @@
 	}
 
 	&__list {
-		@extend %useful-text-list;
+		@extend %usefulTextList;
 	}
 
 	&__item {
-		@extend %useful-text-item;
+		@extend %usefulTextItem;
 	}
 
 	&__block-subtitle {
-		@extend %title-level-three;
+		@extend %titleLevelThree;
 		margin-bottom: 0.6em;
 		text-align: left;
 

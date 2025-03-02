@@ -21,7 +21,7 @@
 	}
 
 	&__text {
-		@extend %useful-text-fonts;
+		@extend %usefulTextFonts;
 	}
 
 	&__block {
@@ -39,15 +39,15 @@
 	}
 
 	&__block-title {
-		@extend %title-level-five;
+		@extend %titleLevelFive;
 	}
 
 	&__list {
-		@extend %useful-text-list;
+		@extend %usefulTextList;
 	}
 
 	&__item {
-		@extend %useful-text-item;
+		@extend %usefulTextItem;
 	}
 
 	&__item-link {
@@ -67,7 +67,7 @@
 	}
 
 	&__block-subtitle {
-		@extend %title-level-six;
+		@extend %titleLevelSix;
 	}
 
 	&__more-btn {

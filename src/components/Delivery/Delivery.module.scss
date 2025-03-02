@@ -15,11 +15,11 @@
 	}
 
 	&__title {
-		@extend %title-level-one;
+		@extend %titleLevelOne;
 	}
 
 	&__wrapper {
-		@include mixins.flexSpaceBetweenCenter;
+		@include mixins.useFlex(space-between, center);
 		column-gap: 10px;
 
 		@include media.bigMobile {
@@ -42,7 +42,7 @@
 	}
 
 	&__subtitle {
-		@extend %title-level-two;
+		@extend %titleLevelTwo;
 		margin-bottom: 0.4em;
 		text-align: left;
 
@@ -52,7 +52,7 @@
 	}
 
 	&__text {
-		@extend %useful-text-fonts;
+		@extend %usefulTextFonts;
 
 		&:last-child {
 			@include media.bigMobile {

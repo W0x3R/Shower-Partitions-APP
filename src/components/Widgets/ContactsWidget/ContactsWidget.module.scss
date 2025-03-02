@@ -12,7 +12,7 @@
 	display: none;
 
 	@include media.bigMobile {
-		@include mixins.flexSpaceBetweenCenter;
+		@include mixins.useFlex(space-between, center);
 		font-size: clamp(12px, 3vw, 16px);
 	}
 
@@ -21,12 +21,12 @@
 	}
 
 	&-telegram {
-		@extend %contacts-widget-link;
+		@extend %contactsWidgetLink;
 		background: rgb(38 125 165);
 	}
 
 	&-phone {
-		@extend %contacts-widget-link;
+		@extend %contactsWidgetLink;
 		background: #1e7c20;
 	}
 

@@ -6,16 +6,14 @@
 	padding-block: 3.5em;
 	font-size: clamp(12px, 1.6vw, 16px);
 	color: var(--text-main-color);
-	background-image: url('../../assets/contacts/bg.png');
-	background-position: center;
-	background-size: cover;
+	@include mixins.setBackgroundImage('../../assets/contacts/bg.png');
 
 	@include media.bigMobile {
 		font-size: clamp(7.5px, 2vw, 12px);
 	}
 
 	&__wrapper {
-		@include mixins.flexSpaceBetweenCenter;
+		@include mixins.useFlex(space-between, center);
 
 		@include media.bigMobile {
 			flex-direction: column;
@@ -23,7 +21,7 @@
 	}
 
 	&__title {
-		@extend %title-level-one;
+		@extend %titleLevelOne;
 	}
 
 	&__info-wrapper {
@@ -44,7 +42,7 @@
 	}
 
 	&__info-title {
-		@extend %title-level-three;
+		@extend %titleLevelThree;
 		margin-bottom: 0.5em;
 		color: var(--white);
 	}
@@ -52,7 +50,7 @@
 	&__info-img {
 		align-self: center;
 		width: 18em;
-		animation: contactsImgShadow 3s infinite;
+		animation: imgShadow 3s infinite;
 
 		@include media.bigMobile {
 			width: 21em;
@@ -64,35 +62,26 @@
 	}
 
 	&__subtitle {
-		@extend %title-level-three;
+		@extend %titleLevelThree;
 		margin-bottom: 0.5em;
 		text-align: left
 	}
 
 	&__adress {
-		@extend %contacts-texts-fonts;
+		@extend %contactsTextsFonts;
 		font-style: normal;
 		margin-bottom: 1em;
 	}
 
-	&__time {
-		@extend %contacts-texts-fonts;
-	}
-
-	&__call {
-		@extend %contacts-texts-fonts;
-	}
-
-	&__number-link {
-		@extend %footer-link;
-	}
-
+	&__time,
+	&__call,
 	&__mail {
-		@extend %contacts-texts-fonts;
+		@extend %contactsTextsFonts;
 	}
 
+	&__number-link,
 	&__mail-link {
-		@extend %footer-link;
+		@extend %footerLink;
 	}
 
 	&__social {
@@ -102,7 +91,7 @@
 	}
 
 	&__socials-inner {
-		@extend %contacts-texts-fonts;
+		@extend %contactsTextsFonts;
 		margin-bottom: 0;
 
 		@include media.bigMobile {

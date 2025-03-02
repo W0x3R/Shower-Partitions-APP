@@ -7,12 +7,12 @@
 	background-color: var(--white-251);
 
 	&__texts {
-		@include mixins.flexCenter;
+		@include mixins.useFlex(center, center);
 		flex-direction: column;
 	}
 
 	&__title {
-		@extend %title-level-two;
+		@extend %titleLevelTwo;
 		margin-bottom: 1.2em;
 		max-width: 90%;
 
@@ -22,7 +22,7 @@
 	}
 
 	&__info {
-		@include mixins.flexCenter;
+		@include mixins.useFlex(center, center);
 		margin-bottom: 2.5em;
 		padding-inline: 10px;
 		min-width: 18em;
@@ -41,18 +41,18 @@
 	}
 
 	&__items {
-		@include mixins.flexCenter;
-		@extend %images-cards;
+		@include mixins.useFlex(center, center);
+		@extend %imagesCardsWrapper;
 	}
 
 	&__item {
 		position: relative;
-		@extend %image-card;
+		@extend %imageCardBlock;
 		transition: opacity 0.3s ease;
 		opacity: 0;
 
 		& svg {
-			@extend %image-card-svg;
+			@extend %imageCardIcon;
 		}
 
 		@include media.hoverAndActive {
@@ -82,7 +82,7 @@
 	}
 
 	&__item-img {
-		@extend %image-card-img;
+		@extend %imageCard;
 	}
 
 	&__items-btn {
