@@ -1,3 +1,5 @@
+import { useContext } from "react"
+import PopupFormContext from "../../../context/PopupFormContext"
 import styles from "./About.module.scss"
 import mainBgBig from "../../../assets/main/main-bg-big.webp"
 import mainBgSmall from "../../../assets/main/main-bg-small.webp"
@@ -5,6 +7,8 @@ import featureCircle from "../../../assets/main/feature-circle.svg?url"
 import clickHand from "../../../assets/main/click-hand.svg?url"
 
 export const About = () => {
+	const { handleFormPopupOpen } = useContext(PopupFormContext)
+
 	const featuresItemsText = [
 		"Дизайнерские решения",
 		"Тонкая рамка",
@@ -61,7 +65,11 @@ export const About = () => {
 						})}
 					</div>
 					<div className={styles.about__order}>
-						<button className={styles["about__order-btn"]} type="button">
+						<button
+							className={styles["about__order-btn"]}
+							type="button"
+							onClick={(e) => handleFormPopupOpen(e)}
+						>
 							<span>Рассчитать цену по моим размерам</span>
 							<img src={clickHand} alt="" />
 						</button>

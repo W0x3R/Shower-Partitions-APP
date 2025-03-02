@@ -1,6 +1,10 @@
+import { useContext } from "react"
+import PopupFormContext from "../../../../context/PopupFormContext"
 import styles from "./CallUs.module.scss"
 
 export const CallUs = () => {
+	const { handleFormPopupOpen } = useContext(PopupFormContext)
+
 	return (
 		<div className={styles.callUs} aria-labelledby="working-time">
 			<p
@@ -23,6 +27,7 @@ export const CallUs = () => {
 				<strong>+375 (44) 762-58-56</strong>
 			</a>
 			<button
+				onClick={(e) => handleFormPopupOpen(e)}
 				type="button"
 				className={styles.callUs__btn}
 				aria-label="Нажмите, чтобы заказать обратный звонок"

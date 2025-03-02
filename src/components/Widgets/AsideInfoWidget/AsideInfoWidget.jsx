@@ -1,20 +1,23 @@
 import { Link } from "react-router-dom"
+import { useContext } from "react"
+import PopupFormContext from "../../../context/PopupFormContext"
 import styles from "./AsideInfoWidget.module.scss"
 import clickHand from "../../../assets/main/click-hand.svg?url"
 
 export const AsideInfoWidget = ({ sticky }) => {
+	const { handleFormPopupOpen } = useContext(PopupFormContext)
+
 	return (
 		<aside className={`${styles.aside} ${sticky ? styles.sticky : ""}`}>
 			<h3 className={styles.aside__title}>Заказать обратный звонок</h3>
-			<a
+			<button
+				onClick={(e) => handleFormPopupOpen(e)}
 				className={styles.aside__link}
-				href="#"
-				rel="noopener noreferrer"
 				aria-label="Заказать обратный звонок"
 			>
 				<span>Заказать</span>
 				<img src={clickHand} alt="" />
-			</a>
+			</button>
 			<h3 className={styles.aside__title}>Связаться с нами по телефону</h3>
 			<a
 				className={styles.aside__link}
