@@ -52,7 +52,6 @@
 
 @mixin fixed-center-fullscreen {
 	position: fixed;
-	inset: 0;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -541,6 +540,60 @@
 
 	@include media.focusVisible {
 		border: 2px solid var(--red);
+	}
+}
+
+@mixin popup {
+	@include fixed-center-fullscreen;
+	z-index: 11;
+	background: #000000c7;
+	backdrop-filter: blur(5px);
+	cursor: pointer;
+	transition: opacity .4s ease-in-out;
+
+	&.hide {
+		animation: navHide .4s forwards;
+	}
+
+	&.visible {
+		animation: navShow .4s forwards;
+	}
+
+	&__content {
+		@include sizes(100%, 100%);
+		@include flexCenter;
+		position: relative;
+	}
+
+	&__btn {
+		@include sizes(46px, 46px);
+		position: absolute;
+		top: 1px;
+		right: 1px;
+		cursor: pointer;
+		background-color: rgba(24, 24, 27, 0.65);
+		transition: var(--basic-transition);
+
+		& svg {
+			@include sizes(17px, 17px);
+			fill: #dbdbdb;
+			transition: opacity .15s ease;
+			transform: var(--f-button-transform);
+			filter: drop-shadow(1px 1px 1px rgba(24, 24, 27, 0.15));
+			pointer-events: none;
+		}
+
+		@include media.hoverAndActive {
+			background-color: rgba(70, 70, 73, 0.65);
+
+			& svg {
+				fill: var(--white);
+			}
+		}
+
+		@include media.focusVisible {
+			box-shadow: rgb(219, 219, 219) 0px 0px 0px 2px inset;
+		}
 	}
 }
 
