@@ -14,9 +14,7 @@ const CallBackForm = () => {
 		trigger,
 		reset,
 		formState: { errors },
-	} = useForm({
-		defaultValues: { name: "", phone: "", email: "", text: "" },
-	})
+	} = useForm()
 
 	const onSubmit = async (data) => {
 		console.log("Отправка данных:", data)
