@@ -58,7 +58,6 @@
 	&__item {
 		padding: 1em;
 		transition: var(--basic-transition);
-		letter-spacing: var(--basic-letter-spacing);
 		color: var(--white);
 
 		@include media.bigMobile {
