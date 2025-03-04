@@ -381,7 +381,7 @@ const ShowerPartitionsDescription = () => {
 							</button>
 							&nbsp; и другие металлы.
 						</p>
-						<h6 className={styles["descriptions__block-subtitle"]}>
+						<h6 className={styles["descriptions__block-title"]}>
 							Душевые перегородки под заказ от производителя
 						</h6>
 						<p className={styles.descriptions__text}>
