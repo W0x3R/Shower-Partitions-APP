@@ -60,15 +60,6 @@
 		transition: var(--basic-transition);
 		letter-spacing: var(--basic-letter-spacing);
 		color: var(--white);
-		cursor: pointer;
-
-		@include media.hoverAndActive {
-
-			.nav__item-link,
-			.nav__item-arrow {
-				color: var(--main-green)
-			}
-		}
 
 		@include media.bigMobile {
 			@include mixins.useFlex(center, flex-start);
@@ -77,6 +68,15 @@
 			margin-bottom: 1.5em;
 			width: 100%;
 			color: var(--black);
+
+			@include media.hoverAndActive {
+
+				.nav__item-link.hasDropdown,
+				.nav__item-arrow {
+					color: var(--main-green)
+				}
+			}
+		}
 
 			&:last-child {
 				margin-bottom: 0;
@@ -116,6 +116,10 @@
 
 		@include media.mediumMobile {
 			font-size: 2.1em;
+		}
+
+		@include media.hoverAndActive {
+			color: var(--main-green)
 		}
 
 		@include media.focusVisible {
