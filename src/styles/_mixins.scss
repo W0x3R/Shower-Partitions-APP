@@ -42,7 +42,7 @@
 	content: "";
 	position: absolute;
 	display: block;
-	inset: -5px
+	inset: -8px
 }
 
 @mixin sizes($width, $height) {
@@ -145,7 +145,7 @@
 	}
 
 	@include media.mediumMobile {
-		font-size: 1.8em;
+		font-size: 1.9em;
 
 		&:not(:last-child) {
 			margin-bottom: 0.8em;
@@ -156,7 +156,6 @@
 %usefulTextList {
 	padding-left: 1.25em;
 	margin-bottom: 1.15em;
-	list-style-type: disc;
 
 	@include media.bigMobile {
 		margin-bottom: 1.65em;
@@ -529,7 +528,7 @@
 @mixin popup {
 	@include fixedCenterFullscreen;
 	z-index: 11;
-	background: #000000c7;
+	background: #000000e5;
 	backdrop-filter: blur(5px);
 	cursor: pointer;
 	transition: opacity .4s ease-in-out;
