@@ -77,9 +77,8 @@
 			}
 		}
 
-			&:last-child {
-				margin-bottom: 0;
-			}
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 
@@ -201,6 +200,7 @@
 
 	&__dropdown-item {
 		position: relative;
+		cursor: pointer;
 
 		& .nav__item-link {
 			margin-right: 5px;
@@ -217,6 +217,10 @@
 
 			.nav__item-arrow {
 				color: var(--main-green);
+			}
+
+			@include media.bigMobile {
+				background: transparent;
 			}
 		}
 	}
