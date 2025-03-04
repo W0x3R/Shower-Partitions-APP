@@ -3,5 +3,10 @@
 @use '../../styles/animations';
 
 .popup {
+	font-size: 16px;
 	@include mixins.popup;
+
+	@include media.bigMobile {
+		font-size: clamp(7.5px, 1.8vw, 12px);
+	}
 }
