@@ -182,7 +182,21 @@
 	}
 
 	@include media.mediumMobile {
-		font-size: 1.8em;
+		font-size: 1.9em;
+	}
+}
+
+@mixin usefulTextItemMarker($url) {
+	&::before {
+		content: url($url);
+		display: inline-block;
+		@include sizes(12px, 12px);
+		margin-right: 10px;
+
+		@include media.bigMobile {
+			@include sizes(10px, 10px);
+			margin-right: 8px;
+		}
 	}
 }
 
