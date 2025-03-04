@@ -114,9 +114,5 @@
 
 	&__btn {
 		@extend %widgetBtn;
-
-		@include media.bigMobile {
-			padding: 1.9em 1.6em;
-		}
 	}
 }
