@@ -125,6 +125,10 @@
 			outline: none;
 			box-shadow: var(--focus-shadow);
 		}
+
+		&::before {
+			@include mixins.increaseClickableArea;
+		}
 	}
 
 	&__menu {
