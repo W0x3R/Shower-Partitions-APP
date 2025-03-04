@@ -67,8 +67,7 @@
 		}
 
 		@include media.bigMobile {
-			margin-bottom: 1em;
-			max-width: 100%;
+			margin: 0 auto 1em;
 			text-align: center;
 		}
 
@@ -212,6 +211,7 @@
 		column-gap: .625em;
 		padding: 1.6em 2em;
 		overflow: hidden;
+		opacity: 0.9;
 		background-color: var(--dark-green);
 		border-radius: 15px;
 		transition: var(--basic-transition);
@@ -239,6 +239,7 @@
 
 		@include media.hoverAndActive {
 			background-color: var(--main-green);
+			opacity: 1;
 		}
 
 		@include media.focusVisible {
