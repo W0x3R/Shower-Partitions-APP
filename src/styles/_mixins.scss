@@ -65,7 +65,7 @@
 }
 
 %headerTextsFonts {
-	font-size: 1em;
+	font-size: 0.95em;
 	letter-spacing: var(--basic-letter-spacing);
 	line-height: 1.4;
 	text-align: center;
@@ -101,7 +101,7 @@
 
 %mainTextsFonts {
 	color: var(--black);
-	font-size: 1.5em;
+	font-size: 1.4em;
 	letter-spacing: var(--basic-letter-spacing);
 	line-height: 1.4;
 
@@ -116,7 +116,7 @@
 }
 
 %mainSubtextsFonts {
-	font-size: 1.3em;
+	font-size: 1.2em;
 	line-height: 1.4em;
 	letter-spacing: var(--basic-letter-spacing);
 
@@ -131,7 +131,7 @@
 }
 
 %usefulTextFonts {
-	font-size: 1.15em;
+	font-size: 1.2em;
 	line-height: 1.4;
 	letter-spacing: var(--basic-letter-spacing);
 
@@ -140,8 +140,8 @@
 	}
 
 	@include media.bigMobile {
-		font-size: 1.65em;
-		line-height: 1.2;
+		font-size: 1.7em;
+		line-height: 1.3;
 	}
 
 	@include media.mediumMobile {
@@ -168,7 +168,7 @@
 }
 
 %usefulTextItem {
-	font-size: 1.15em;
+	font-size: 1.2em;
 	line-height: 1.4;
 	letter-spacing: var(--basic-letter-spacing);
 
@@ -177,7 +177,7 @@
 	}
 
 	@include media.bigMobile {
-		font-size: 1.65em;
+		font-size: 1.7em;
 		line-height: 1.3;
 	}
 
@@ -212,11 +212,11 @@
 
 %section {
 	padding-block: 4em;
-	font-size: clamp(11px, 1.6vw, 16px);
+	font-size: clamp(12px, 1.6vw, 16px);
 	color: var(--text-main-color);
 
 	@include media.bigMobile {
-		font-size: clamp(9.5px, 1.5vw, 11px);
+		font-size: clamp(9.5px, 1.5vw, 12px);
 	}
 
 	@include media.mediumMobile {
@@ -226,7 +226,7 @@
 
 %titleLevelOne {
 	margin-bottom: 0.9em;
-	font-size: 2.55em;
+	font-size: 2.5em;
 	letter-spacing: .05em;
 	line-height: 1.3;
 	font-weight: 300;
@@ -249,7 +249,7 @@
 
 %titleLevelTwo {
 	margin-bottom: 0.6em;
-	font-size: 2.2em;
+	font-size: 2.1em;
 	letter-spacing: 0.05em;
 	line-height: 1.3;
 	text-align: center;
@@ -266,7 +266,7 @@
 
 %titleLevelThree {
 	margin-bottom: 1em;
-	font-size: 2.1em;
+	font-size: 1.9em;
 	letter-spacing: 0.05em;
 	line-height: 1.3;
 	text-align: center;
@@ -283,7 +283,7 @@
 
 %titleLevelFive {
 	margin-bottom: 0.5349em;
-	font-size: 1.9em;
+	font-size: 1.8em;
 	letter-spacing: 0.05em;
 	line-height: 1.3;
 
@@ -374,7 +374,7 @@
 	@include useFlex(center, center);
 	column-gap: 1.3em;
 	padding: 1.2em 2em;
-	width: 90%;
+	width: 85%;
 	overflow: hidden;
 	background-color: var(--dark-green);
 	border-radius: 15px;

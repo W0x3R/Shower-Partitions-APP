@@ -6,19 +6,19 @@
 	&__top {
 		@include mixins.useFlex(space-between, center);
 		padding-bottom: 0.6em;
-		font-size: clamp(12px, 1.48vw, 16px);
+		font-size: clamp(12px, 1.6vw, 16px);
 		border-bottom: var(--border-b-white-2);
 		position: relative;
 		z-index: 10;
 		color: var(--white);
 
 		@include media.bigMobile {
-			font-size: clamp(9.6px, 1.7vw, 12px);
+			font-size: clamp(10px, 1.7vw, 12px);
 			border-bottom: none;
 		}
 
 		@include media.mediumMobile {
-			font-size: clamp(8.2px, 2.2vw, 9.6px);
+			font-size: clamp(8.2px, 2.2vw, 10px);
 		}
 	}
 
