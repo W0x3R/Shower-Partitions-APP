@@ -45,7 +45,7 @@ const DropdownItem = ({
 					Выпадающее меню с {menuItems.length} ссылками
 				</span>
 				<NavLink
-					className={styles["nav__item-link"]}
+					className={`${styles["nav__item-link"]} ${styles.hasDropdown}`}
 					aria-describedby={`menu-desc-${menuName}`}
 					onFocus={() => handleCloseMenuClick()}
 				>
