@@ -24,7 +24,7 @@
 		padding-block: 20em 4em;
 		@include mixins.sizes(100vw, 100vh);
 		font-size: clamp(9px, 2vw, 12px);
-		background-color: #F5F8F9;
+		@include mixins.setBackgroundImage('../../../assets/main/mobileNavBg.jpg')
 	}
 
 	@include media.bigMobile {
