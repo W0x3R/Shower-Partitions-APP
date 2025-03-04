@@ -494,7 +494,7 @@
 %contactsWidgetLink {
 	@include useFlex(space-evenly, center);
 	flex-basis: 50%;
-	min-height: 48px;
+	min-height: 50px;
 	outline: none;
 
 	@include media.mediumMobile {
