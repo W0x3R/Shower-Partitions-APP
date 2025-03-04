@@ -17,9 +17,10 @@
 
 	&__types {
 		display: flex;
+		column-gap: 2em;
+		margin-bottom: 3em;
 		justify-content: center;
-		column-gap: 3em;
-		margin-bottom: 3.275em;
+		font-size: clamp(12.5px, 1.5vw, 16px);
 
 		@include media.bigMobile {
 			flex-wrap: wrap;
@@ -33,10 +34,10 @@
 	}
 
 	&__types-btn {
-		flex: 0 0 calc((100% - (3 * 3em)) / 4);
+		flex: 0 0 calc((100% - (3 * 2em)) / 4);
 		padding-inline: 12px;
-		max-width: 260px;
-		height: 3.7em;
+		max-width: 285px;
+		height: 3.8em;
 		opacity: 0.85;
 		background-color: var(--black);
 		border-radius: 15px;
