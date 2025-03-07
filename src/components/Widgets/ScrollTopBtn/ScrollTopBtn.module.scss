@@ -1,18 +1,21 @@
 @use '../../../styles/mixins';
 @use '../../../styles/media';
-@use '../../../styles/animations';
 
 .btn__scroll-top {
 	position: fixed;
 	bottom: 15px;
 	right: 15px;
-	display: none;
+	@include mixins.hide;
 	border-radius: var(--border-r-circle);
-	transition: opacity .3s ease-in-out;
+	transition: var(--basic-letter-spacing);
 
 	&.visible {
 		@include mixins.useFlex(center, center);
-		opacity: 0.9;
+		@include mixins.show;
+	}
+
+	&::before {
+		@include mixins.increaseClickableArea;
 	}
 
 	& svg {
