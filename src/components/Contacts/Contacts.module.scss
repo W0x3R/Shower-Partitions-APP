@@ -73,12 +73,6 @@
 		}
 	}
 
-	&__subtitle {
-		@extend %titleLevelThree;
-		margin-bottom: 0.5em;
-		text-align: left
-	}
-
 	&__adress {
 		@extend %contactsTextsFonts;
 		font-style: normal;
