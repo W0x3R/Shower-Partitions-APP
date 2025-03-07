@@ -1,8 +1,12 @@
 import styles from "./ServicesCost.module.scss"
+import clickHand from "../../assets/main/click-hand.svg?url"
 import priceDescriptionData from "../../data/priceDescriptionData"
 import priceTableData from "../../data/priceTableData"
+import { useContext } from "react"
+import PopupFormContext from "../../context/PopupFormContext"
 
 const Price = () => {
+	const { handleFormPopupOpen } = useContext(PopupFormContext)
 	return (
 		<section className={styles.cost}>
 			<div className="container">
@@ -33,6 +37,14 @@ const Price = () => {
 					*Стоимость может отличаться от указанной на сайте.{" "}
 					<b>Точную стоимость уточняйте</b>
 				</p>
+				<button
+					className={styles["cost__order-btn"]}
+					type="button"
+					onClick={(e) => handleFormPopupOpen(e)}
+				>
+					<span>Заказать консультацию по ценам</span>
+					<img src={clickHand} alt="" />
+				</button>
 				<h2 className={styles.cost__subtitle}>
 					Стоимость услуг доставки и монтажа: все, что вам нужно знать о наших
 					изделиях
