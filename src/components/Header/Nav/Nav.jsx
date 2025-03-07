@@ -27,6 +27,19 @@ const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	}
 
 	useEffect(() => {
+		const handleClick = (e) => {
+			if (!e.target.closest(`.${styles.nav__list}`)) {
+				setIsMenuOpen({ company: false, customer: false })
+			}
+		}
+		window.addEventListener("click", (e) => handleClick(e))
+
+		return () => {
+			window.removeEventListener("click", (e) => handleClick(e))
+		}
+	}, [])
+
+	useEffect(() => {
 		window.addEventListener("scroll", handleScroll)
 
 		return () => {
