@@ -26,7 +26,27 @@
 
 	&.black {
 		background-color: var(--dark-bg);
-		height: min-content;
+		max-height: 165px;
+
+		@media only screen and (max-width: 994px) {
+			max-height: 160px;
+		}
+
+		@media only screen and (max-width: 880px) {
+			max-height: 142px;
+		}
+
+		@media only screen and (max-width: 860px) {
+			max-height: 138px;
+		}
+
+		@media only screen and (max-width: 830px) {
+			max-height: 133px;
+		}
+
+		& nav {
+			border-bottom: none;
+		}
 	}
 
 	@include media.bigMobile {
