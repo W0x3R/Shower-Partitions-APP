@@ -8,7 +8,7 @@
 		@include mixins.useFlex(flex-start, center);
 		column-gap: 15px;
 		letter-spacing: var(--basic-letter-spacing);
-		font-size: 1.15em;
+		font-size: 1.1em;
 
 		& span {
 			color: var(--black);

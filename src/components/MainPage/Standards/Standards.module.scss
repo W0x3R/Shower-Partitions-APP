@@ -26,7 +26,7 @@
 
 		@include media.bigMobile {
 			row-gap: 2.8em;
-			font-size: clamp(8.6px, 1.65vw, 11.8px);
+			font-size: clamp(8.6px, 1.65vw, 12px);
 		}
 
 		@include media.mediumMobile {
@@ -52,7 +52,7 @@
 		color: var(--dark-green);
 
 		@include media.bigMobile {
-			font-size: 2.8em;
+			font-size: 2.6em;
 		}
 
 		@include media.mediumMobile {
@@ -112,7 +112,7 @@
 	}
 
 	&__block-text {
-		font-size: 1.2em;
+		font-size: 1.1em;
 		line-height: 1.4;
 		letter-spacing: var(--basic-letter-spacing);
 

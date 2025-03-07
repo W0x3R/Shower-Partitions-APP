@@ -131,7 +131,7 @@
 }
 
 %usefulTextFonts {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	line-height: 1.4;
 	letter-spacing: var(--basic-letter-spacing);
 
@@ -167,7 +167,7 @@
 }
 
 %usefulTextItem {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	line-height: 1.4;
 	letter-spacing: var(--basic-letter-spacing);
 
@@ -225,7 +225,7 @@
 
 %section {
 	padding-block: 4em;
-	font-size: clamp(12px, 1.6vw, 16px);
+	font-size: clamp(13px, 1.6vw, 16px);
 	color: var(--text-main-color);
 
 	@include media.bigMobile {
@@ -239,7 +239,7 @@
 
 %titleLevelOne {
 	margin-bottom: 0.9em;
-	font-size: 2.5em;
+	font-size: 2.4em;
 	letter-spacing: .05em;
 	line-height: 1.3;
 	font-weight: 300;
@@ -251,7 +251,7 @@
 
 	@include media.bigMobile {
 		margin-bottom: 1em;
-		font-size: 2.82em;
+		font-size: 2.7em;
 		text-align: center;
 	}
 

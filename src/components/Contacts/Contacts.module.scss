@@ -4,7 +4,7 @@
 
 .contacts {
 	padding-block: 3.5em;
-	font-size: clamp(12px, 1.6vw, 16px);
+	font-size: clamp(13px, 1.6vw, 16px);
 	color: var(--text-main-color);
 	@include mixins.setBackgroundImage('../../assets/contacts/bg.png');
 
