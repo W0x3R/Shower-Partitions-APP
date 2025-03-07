@@ -66,7 +66,7 @@
 
 %headerTextsFonts {
 	font-size: 0.95em;
-	letter-spacing: var(--basic-letter-spacing);
+	letter-spacing: 0;
 	line-height: 1.4;
 	text-align: center;
 
@@ -85,7 +85,7 @@
 	column-gap: 0.75em;
 	margin-bottom: 0.7em;
 	color: var(--white);
-	font-size: 1.2em;
+	font-size: 1.1em;
 	letter-spacing: 0.02em;
 	line-height: 1.4;
 
@@ -136,7 +136,7 @@
 	letter-spacing: var(--basic-letter-spacing);
 
 	&:not(:last-child) {
-		margin-bottom: 1em;
+		margin-bottom: 0.8em;
 	}
 
 	@include media.bigMobile {
@@ -146,10 +146,6 @@
 
 	@include media.mediumMobile {
 		font-size: 1.9em;
-
-		&:not(:last-child) {
-			margin-bottom: 0.8em;
-		}
 	}
 }
 
@@ -333,8 +329,8 @@
 %imagesCardsWrapper {
 	position: relative;
 	flex-wrap: wrap;
-	gap: 1.5em;
-	font-size: clamp(11px, 1.4vw, 18px);
+	gap: 1em;
+	font-size: clamp(11.5px, 1.4vw, 18px);
 
 	@include media.bigMobile {
 		font-size: clamp(10px, 2vw, 15px);
@@ -348,7 +344,7 @@
 %imageCardBlock {
 	@include useFlex(center, center);
 	flex-direction: column;
-	flex: 0 0 calc((100% - 2 * 1.5em) / 3);
+	flex: 0 0 calc((100% - 2 * 1em) / 3);
 	cursor: pointer;
 	text-align: center;
 

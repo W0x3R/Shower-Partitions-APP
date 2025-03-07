@@ -43,7 +43,7 @@
 		column-gap: 26px;
 
 		@include media.bigMobile {
-			column-gap: 14px;
+			column-gap: 10px;
 		}
 	}
 
@@ -63,10 +63,10 @@
 	}
 
 	&__block-img {
-		@include mixins.sizes(55em, 33em);
+		@include mixins.sizes(54em, 32em);
 
 		@include media.bigMobile {
-			@include mixins.sizes(52em, 34em)
+			@include mixins.sizes(52em, 32em)
 		}
 
 		@include media.mediumMobile {
@@ -80,7 +80,7 @@
 		top: 50%;
 		transform: translateY(-50%);
 		padding: 1.4em;
-		max-width: 70%;
+		max-width: 60%;
 		background-color: rgb(255 255 255 / 90%);
 
 		@include media.bigMobile {

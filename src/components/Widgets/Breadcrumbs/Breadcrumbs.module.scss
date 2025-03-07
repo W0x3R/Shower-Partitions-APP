@@ -13,6 +13,10 @@
 		& span {
 			color: var(--black);
 		}
+
+		@include media.bigMobile {
+			column-gap: 10px;
+		}
 	}
 
 	&__link {

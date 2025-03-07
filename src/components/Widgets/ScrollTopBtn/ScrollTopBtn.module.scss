@@ -16,20 +16,16 @@
 	}
 
 	& svg {
-		@include mixins.sizes(3.5rem, 3.5rem);
+		@include mixins.sizes(3.2rem, 3.2rem);
 
 		@include media.bigMobile {
-			@include mixins.sizes(3.7rem, 3.7rem);
+			@include mixins.sizes(3.6rem, 3.6rem);
 		}
 	}
 
 	@include media.bigMobile {
 		right: 5px;
 		bottom: 58px;
-	}
-
-	@include media.smallMobile {
-		@include mixins.sizes(3.2rem, 3.2rem);
 	}
 
 	@include media.hoverAndActive {

@@ -42,14 +42,26 @@
 	}
 
 	&__info-title {
-		@extend %titleLevelThree;
 		margin-bottom: 0.5em;
+		font-size: 1.8em;
+		letter-spacing: 0.05em;
+		line-height: 1.3;
+		text-align: center;
 		color: var(--white);
+
+		@include media.bigMobile {
+			font-size: 2.4em;
+			line-height: 1.1;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.7em;
+		}
 	}
 
 	&__info-img {
 		align-self: center;
-		width: 18em;
+		width: 16em;
 		animation: imgShadow 3s infinite;
 
 		@include media.bigMobile {
