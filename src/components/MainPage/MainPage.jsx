@@ -1,17 +1,17 @@
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
+import bigBg from "../../assets/main/main-bg-big.webp"
+import smallBg from "../../assets/main/main-bg-small.webp"
 import About from "./About/About"
 import Products from "./Products/Products"
 import Examples from "./Examples/Examples"
 import Price from "./Price/Price"
 import Questions from "./Questions/Questions"
 import Standards from "./Standards/Standards"
-import ShowerPartitionsDescription from "./ShowerPartitionsDescription/ShowerPartitionsDescription"
+import ShowerPartitionsDescription from "./Description/Description"
 import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
 import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
 import isMobile from "../../utils/isMobile"
-import smallBg from "../../assets/main/main-bg-small.webp"
-import bigBg from "../../assets/main/main-bg-big.webp"
 
 const MainPage = () => {
 	const location = useLocation()

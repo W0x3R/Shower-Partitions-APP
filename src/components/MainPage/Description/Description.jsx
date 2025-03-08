@@ -1,4 +1,4 @@
-import styles from "./ShowerPartitionsDescription.module.scss"
+import styles from "./Description.module.scss"
 import ReactFocusLock from "react-focus-lock"
 import { useEffect, useState } from "react"
 import {
@@ -18,12 +18,12 @@ import {
 	disableBodyScrollIncludeScrollbar,
 	enableBodyScrollIncludeScrollbar,
 } from "../../../utils/setBodyScroll"
-import firstListData from "../../../data/showerPartitionsDescriptionData/firstListData"
 import showerTypesData from "../../../data/showerPartitionsDescriptionData/showerTypesData"
 import setTypeOfDoorsAltData from "../../../data/showerPartitionsDescriptionData/typeOfDoorsAltData"
 import typeOfGlassesData from "../../../data/showerPartitionsDescriptionData/typeOfGlassesData"
 import setTypeOfFurnitureAltData from "../../../data/showerPartitionsDescriptionData/typeOfFurnitureAltData"
 import reasonsListData from "../../../data/showerPartitionsDescriptionData/reasonsListData"
+import benefitsData from "../../../data/showerPartitionsDescriptionData/benefitsData"
 
 const ShowerPartitionsDescription = () => {
 	const [popupData, setPopupData] = useState({
@@ -86,7 +86,7 @@ const ShowerPartitionsDescription = () => {
 							стекло — один из лучших материалов для ванной. И вот почему:
 						</p>
 						<ul className={styles.descriptions__list}>
-							{firstListData.map(({ id, text }) => {
+							{benefitsData.map(({ id, text }) => {
 								return (
 									<li key={id} className={styles.descriptions__item}>
 										{text}
