@@ -3,17 +3,7 @@
 @use '../../styles/animations';
 
 .cost {
-	padding-block: 3.5em;
-	font-size: clamp(13px, 1.6vw, 16px);
-	color: var(--text-main-color);
-
-	@include media.bigMobile {
-		font-size: clamp(9.5px, 2vw, 12px);
-	}
-
-	@include media.mediumMobile {
-		font-size: clamp(7.5px, 1.85vw, 9.5px);
-	}
+	@extend %section;
 
 	&__title {
 		@extend %titleLevelOne;
