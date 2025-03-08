@@ -25,7 +25,7 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 	const callBackBtnRef = useRef(null)
 
 	useEffect(() => {
-		if (isFormPopupOpen) {
+		if (isFormPopupOpen && isHoverSupported()) {
 			setTimeout(() => {
 				callBackBtnRef.current?.focus()
 			}, 50)
