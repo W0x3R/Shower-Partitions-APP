@@ -1,4 +1,4 @@
-const firstListData = [
+const benefitsData = [
 	{
 		id: 0,
 		text: `Гигиеничность. Стекло не является питательной средой для бактерий, грибов, а потому оно препятствует образованию плесени.`,
@@ -37,4 +37,4 @@ const firstListData = [
 	},
 ]
 
-export default firstListData
+export default benefitsData
