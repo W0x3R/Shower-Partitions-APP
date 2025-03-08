@@ -33,8 +33,6 @@ const Contacts = () => {
 						href="tel:+375447625856"
 						aria-label="Связаться с нами по номеру телефона"
 						title="Позвонить по номеру +375 44 762 58 56"
-						tabIndex={0}
-						rel="noopener noreferrer"
 					>
 						+375 (44) 762-58-56
 					</a>
@@ -45,7 +43,6 @@ const Contacts = () => {
 						className={styles["contacts__mail-link"]}
 						href="mailto:vyr4376@yandex.ru"
 						aria-label="Связаться с нами по email"
-						tabIndex={0}
 						rel="noopener noreferrer"
 					>
 						mail@garderobsystem.ru
