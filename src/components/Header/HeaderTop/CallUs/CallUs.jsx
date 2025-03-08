@@ -6,15 +6,15 @@ const CallUs = () => {
 	const { handleFormPopupOpen } = useContext(PopupFormContext)
 
 	return (
-		<div className={styles.callUs} aria-labelledby="working-time">
+		<div className={styles.callUs}>
 			<p
 				className="header__texts header__animation"
-				aria-labelledby="working-time-description"
+				aria-labelledby="working-time-description-header"
 			>
 				<strong aria-hidden>
 					<span>Звоните Пн-Пт</span> 9 - 18
 				</strong>
-				<span id="working-time-description" className="sr-only">
+				<span id="working-time-description-header" className="sr-only">
 					Мы работаем с понедельника по пятницу с 9 утра до 6 часов вечера
 				</span>
 			</p>
