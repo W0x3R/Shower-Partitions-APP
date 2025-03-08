@@ -3,8 +3,8 @@
 
 .btn__scroll-top {
 	position: fixed;
-	bottom: 15px;
-	right: 15px;
+	bottom: 12px;
+	right: 12px;
 	@include mixins.hide;
 	border-radius: var(--border-r-circle);
 	transition: var(--basic-letter-spacing);
