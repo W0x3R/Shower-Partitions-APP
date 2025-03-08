@@ -132,8 +132,7 @@
 	&__order-btn {
 		position: relative;
 		@include mixins.useFlex(space-around, center);
-		justify-self: center;
-		margin-bottom: 4em;
+		margin: 0 auto 4em;
 		column-gap: .625em;
 		padding: 1.6em 2em;
 		overflow: hidden;

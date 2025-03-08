@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
-import Price from "./ServicesCost"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
 import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
+import ServicesCost from "./ServicesCost"
 
 const ServicesCostPage = () => {
 	const location = useLocation()
@@ -49,7 +49,7 @@ const ServicesCostPage = () => {
 				<meta name="twitter:image" content={ogImage} />
 			</Helmet>
 			<Breadcrumbs currentPage="Стоимость услуг" />
-			<Price />
+			<ServicesCost />
 			<ContactsWidget />
 			<ScrollTopBtn />
 		</>

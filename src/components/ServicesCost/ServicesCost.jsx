@@ -5,7 +5,7 @@ import priceTableData from "../../data/priceTableData"
 import { useContext } from "react"
 import PopupFormContext from "../../context/PopupFormContext"
 
-const Price = () => {
+const ServicesCost = () => {
 	const { handleFormPopupOpen } = useContext(PopupFormContext)
 	return (
 		<section className={styles.cost}>
@@ -61,4 +61,4 @@ const Price = () => {
 	)
 }
 
-export default Price
+export default ServicesCost
