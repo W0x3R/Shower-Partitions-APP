@@ -524,17 +524,17 @@
 @mixin popup {
 	@include fixedCenterFullscreen;
 	z-index: 11;
-	background: #000000e5;
-	backdrop-filter: blur(5px);
+	background: rgba(0, 0, 0, 0.9);
+	backdrop-filter: blur(8px);
 	cursor: pointer;
-	transition: opacity .4s ease-in-out;
+	transition: opacity .2s ease-in-out;
 
 	&.hide {
-		animation: smoothHide .4s forwards;
+		animation: smoothHide .2s forwards;
 	}
 
 	&.visible {
-		animation: smoothShow .4s forwards;
+		animation: smoothShow .2s forwards;
 	}
 
 	&__content {
