@@ -21,6 +21,10 @@
 		width: 40em;
 	}
 
+	&.border {
+		border: 2px solid var(--white);
+	}
+
 	&__title {
 		margin-bottom: 1em;
 		font-size: 1.8em;

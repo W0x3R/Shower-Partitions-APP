@@ -13,7 +13,7 @@ const FormPopup = () => {
 		if (isFormPopupOpen) {
 			setIsVisible(true)
 		} else {
-			setTimeout(() => setIsVisible(false), 400)
+			setTimeout(() => setIsVisible(false), 200)
 		}
 	}, [isFormPopupOpen])
 
@@ -33,6 +33,7 @@ const FormPopup = () => {
 					<CallBackForm
 						title="Свяжемся с Вами в течение дня, заполните форму"
 						isEmailShow={false}
+						isBorderShow={true}
 					/>
 					<button
 						type="button"

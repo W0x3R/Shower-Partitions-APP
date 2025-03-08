@@ -4,8 +4,9 @@ import { useForm } from "react-hook-form"
 import { useContext, useEffect, useRef } from "react"
 import clickHandImg from "../../../assets/main/click-hand.svg?url"
 import PopupFormContext from "../../../context/PopupFormContext"
+import isHoverSupported from "../../../utils/isHoverSupported"
 
-const CallBackForm = ({ title, isEmailShow }) => {
+const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 	const { isFormPopupOpen } = useContext(PopupFormContext)
 	const {
 		register,
@@ -35,7 +36,7 @@ const CallBackForm = ({ title, isEmailShow }) => {
 		<form
 			onClick={(e) => e.stopPropagation()}
 			onSubmit={handleSubmit(onSubmit)}
-			className={styles.form}
+			className={`${styles.form} ${isBorderShow ? styles.border : ""}`}
 			aria-labelledby="contact-form-title"
 		>
 			<h2 className={styles.form__title} id="contact-form-title">
