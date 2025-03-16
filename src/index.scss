@@ -2,6 +2,7 @@
 @use "./styles/variables";
 @use "./styles/media";
 @use './styles/global.scss';
+@use '../src/components/FancyApp/fancyApp.scss';
 @use './styles/fonts.scss';
 
 html {

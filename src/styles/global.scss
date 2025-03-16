@@ -77,56 +77,7 @@
 	white-space: nowrap;
 }
 
-.fancybox__caption {
-	padding: 8px !important;
-	font-size: 20px;
-	text-align: center;
-
-	@media only screen and (max-width: 578px) {
-		padding: 6px !important;
-		font-size: 18px;
-	}
-}
-
 .footer__icon {
 	width: 1.125rem;
 	cursor: default;
-}
-
-.f-carousel {
-	max-width: 28em;
-
-	@include media.tablet {
-		max-width: 42em;
-	}
-}
-
-.f-thumbs {
-	margin-bottom: 20px !important;
-	width: 100% !important;
-}
-
-.f-carousel__dots button {
-	color: black;
-}
-
-.f-carousel__nav button {
-	color: black;
-}
-
-.f-carousel__slide img {
-	width: 24em;
-	height: auto;
-
-	@include media.tablet {
-		width: 35em;
-	}
-}
-
-.f-carousel__nav button:first-of-type {
-	right: -15px !important;
-}
-
-.f-carousel__nav button:last-of-type {
-	left: -15px !important;
 }
