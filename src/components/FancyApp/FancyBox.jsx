@@ -20,7 +20,7 @@ function Fancybox(props) {
 	})
 
 	return (
-		<div ref={containerRef} className={props.styles}>
+		<div ref={containerRef} className={props.styles || ""}>
 			{props.children}
 		</div>
 	)
