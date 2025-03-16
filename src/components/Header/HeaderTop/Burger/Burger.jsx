@@ -12,7 +12,8 @@ const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 			location.pathname === "/delivery" ||
 			location.pathname === "/price" ||
 			location.pathname === "/contacts" ||
-			(location.pathname === "/article" && !isBurgerActive)
+			location.pathname === "/article" ||
+			(location.pathname === "/portfolio" && !isBurgerActive)
 		) {
 			header.classList.add("black")
 		} else {

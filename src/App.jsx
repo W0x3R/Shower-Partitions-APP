@@ -7,6 +7,7 @@ import ServicesCostPage from "./components/ServicesCostPage/ServicesCostPage"
 import ArticlePage from "./components/ArticlePage/ArticlePage"
 import ContactsPage from "./components/ContactsPage/ContactsPage"
 import PopupFormProvider from "./context/PopupFormProvider"
+import Portfolio from "./components/PortfolioPage/Portfolio"
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 						<Route path="price" element={<ServicesCostPage />} />
 						<Route path="article" element={<ArticlePage />} />
 						<Route path="contacts" element={<ContactsPage />} />
+						<Route path="portfolio" element={<Portfolio />} />
 					</Route>
 				</Routes>
 				<div className="App"></div>

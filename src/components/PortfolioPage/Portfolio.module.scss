@@ -1,0 +1,127 @@
+@use '../../styles/mixins';
+@use '../../styles/media';
+
+.portfolio {
+	@extend %section;
+	background: var(--gray-bg-gradient);
+
+	&__title {
+		@extend %titleLevelOne;
+		margin-bottom: 1.6em;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		row-gap: 5em;
+		column-gap: 1.5em;
+		margin: 0 auto 2em auto;
+		max-width: 1280px;
+
+		@include media.tablet {
+			justify-content: center;
+		}
+	}
+
+	&__item-wrapper {
+		display: flex;
+		justify-content: center;
+		font-size: clamp(14px, 1.15vw, 16px);
+		transition: opacity 0.3s ease;
+		opacity: 0;
+
+		&.visible {
+			opacity: 1;
+		}
+
+		@include media.tablet {
+			font-size: clamp(10px, 1.4vw, 12px);
+		}
+
+		@include media.mediumMobile {
+			font-size: clamp(7px, 1.9vw, 10px);
+		}
+
+		&.row {
+			justify-content: flex-start;
+
+			@include media.tablet {
+				justify-content: center;
+			}
+		}
+	}
+
+	&__item-inner {
+		@include mixins.useFlex(center, center);
+		flex-direction: column;
+		padding: 1.5em;
+		width: 30em;
+		box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 20%);
+		border-radius: 15px;
+
+		@include media.tablet {
+			width: 46em;
+		}
+	}
+
+	&__item-title {
+		max-width: 80%;
+		font-size: 1.7em;
+		letter-spacing: 0.02em;
+		line-height: 1.3;
+		text-align: center;
+		margin-bottom: 0.9em;
+		color: var(--black);
+
+		@include media.tablet {
+			font-size: 2.3em;
+		}
+
+		@include media.bigMobile {
+			font-size: 2.55em;
+			line-height: 1.1;
+		}
+
+		@include media.mediumMobile {
+			font-size: 2.75em;
+		}
+	}
+
+	&__carousel {
+		text-align: center;
+	}
+
+	&__description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 7px;
+	}
+
+	&__description-header {
+		font-size: 1.2em;
+		line-height: 1.4;
+		font-weight: 500;
+		letter-spacing: 0;
+		color: var(--black);
+
+		@include media.tablet {
+			font-size: 1.6em;
+		}
+
+		@include media.bigMobile {
+			line-height: 1.3;
+			font-size: 1.65em;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.9em;
+		}
+	}
+
+	&__items-btn {
+		@extend %showMoreBtn;
+		margin: 0 auto;
+	}
+}
