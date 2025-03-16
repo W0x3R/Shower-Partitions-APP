@@ -71,8 +71,6 @@ const MainPage = () => {
 			<Questions />
 			<Standards />
 			<ShowerPartitionsDescription />
-			<ScrollTopBtn />
-			<ContactsWidget />
 		</>
 	)
 }

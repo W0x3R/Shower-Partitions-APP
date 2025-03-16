@@ -50,8 +50,6 @@ const ServicesCostPage = () => {
 			</Helmet>
 			<Breadcrumbs currentPage="Стоимость услуг" />
 			<ServicesCost />
-			<ContactsWidget />
-			<ScrollTopBtn />
 		</>
 	)
 }

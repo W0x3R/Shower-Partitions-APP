@@ -7,24 +7,25 @@ import ServicesCostPage from "./components/ServicesCostPage/ServicesCostPage"
 import ArticlePage from "./components/ArticlePage/ArticlePage"
 import ContactsPage from "./components/ContactsPage/ContactsPage"
 import PopupFormProvider from "./context/PopupFormProvider"
-import Portfolio from "./components/PortfolioPage/Portfolio"
+import PortfolioPage from "./components/PortfolioPage/PortfolioPage"
 
 function App() {
 	return (
 		<BrowserRouter>
-			<PopupFormProvider>
-				<Routes>
-					<Route path="/" element={<Layout />}>
-						<Route index element={<MainPage />} />
-						<Route path="delivery" element={<DeliveryPage />} />
-						<Route path="price" element={<ServicesCostPage />} />
-						<Route path="article" element={<ArticlePage />} />
-						<Route path="contacts" element={<ContactsPage />} />
-						<Route path="portfolio" element={<Portfolio />} />
-					</Route>
-				</Routes>
-				<div className="App"></div>
-			</PopupFormProvider>
+			<div className="App">
+				<PopupFormProvider>
+					<Routes>
+						<Route path="/" element={<Layout />}>
+							<Route index element={<MainPage />} />
+							<Route path="delivery" element={<DeliveryPage />} />
+							<Route path="price" element={<ServicesCostPage />} />
+							<Route path="article" element={<ArticlePage />} />
+							<Route path="contacts" element={<ContactsPage />} />
+							<Route path="portfolio" element={<PortfolioPage />} />
+						</Route>
+					</Routes>
+				</PopupFormProvider>
+			</div>
 		</BrowserRouter>
 	)
 }

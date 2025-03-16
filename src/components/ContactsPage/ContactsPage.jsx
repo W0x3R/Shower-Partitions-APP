@@ -58,8 +58,6 @@ const ContactsPage = () => {
 			</Helmet>
 			<Breadcrumbs currentPage="Наши контакты" />
 			<Contacts />
-			<ContactsWidget />
-			<ScrollTopBtn />
 		</>
 	)
 }

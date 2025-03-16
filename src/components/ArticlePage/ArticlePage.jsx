@@ -55,8 +55,6 @@ const ArticlePage = () => {
 			</Helmet>
 			<Breadcrumbs currentPage="Душевая перегородка из стекла — советы по выбору" />
 			<Article />
-			<ContactsWidget />
-			<ScrollTopBtn />
 		</>
 	)
 }

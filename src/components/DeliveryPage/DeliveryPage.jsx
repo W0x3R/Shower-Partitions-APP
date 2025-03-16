@@ -58,8 +58,6 @@ const DeliveryPage = () => {
 			</Helmet>
 			<Breadcrumbs currentPage="Оплата и доставка" />
 			<Delivery />
-			<ContactsWidget />
-			<ScrollTopBtn />
 		</>
 	)
 }

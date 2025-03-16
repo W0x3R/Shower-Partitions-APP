@@ -2,7 +2,11 @@
 @use '../../../styles/media';
 
 .breadcrumb {
-	margin-top: 2.5em;
+	padding-top: 2.5em;
+
+	&.gray {
+		background-color: #ECECEB;
+	}
 
 	&__list {
 		@include mixins.useFlex(flex-start, center);
@@ -20,7 +24,7 @@
 	}
 
 	&__link {
-		color: #8C8C8C;
+		color: #625f5f;
 		font-weight: 500;
 		transition: var(--basic-transition);
 
