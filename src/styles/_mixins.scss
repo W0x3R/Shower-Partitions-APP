@@ -117,7 +117,7 @@
 
 %mainSubtextsFonts {
 	font-size: 1.2em;
-	line-height: 1.4em;
+	line-height: 1.4;
 	letter-spacing: var(--basic-letter-spacing);
 
 	@include media.bigMobile {
