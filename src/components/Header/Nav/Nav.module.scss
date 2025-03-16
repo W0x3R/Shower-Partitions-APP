@@ -5,7 +5,7 @@
 .nav {
 	font-size: clamp(12px, 1.6vw, 16px);
 	border-bottom: var(--border-b-white-2);
-	transition: all .3s ease-in-out;
+	transition: background-color .2s ease-in-out;
 
 	&_fixed {
 		position: fixed;
@@ -13,7 +13,7 @@
 		top: 0;
 		right: 0;
 		width: 100vw;
-		background: var(--black);
+		background-color: var(--black);
 		border-bottom: none;
 	}
 
