@@ -1,6 +1,6 @@
 import styles from "./Examples.module.scss"
 import Fancybox from "../../FancyApp/FancyBox"
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useLocation } from "react-router-dom"
 import ExamplesShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
@@ -49,12 +49,14 @@ const Examples = () => {
 
 	useEffect(() => {
 		const items = document.querySelectorAll(`.${styles.examples__item}`)
+		const timeouts = []
 		items.forEach((item, i) => {
 			const timer = setTimeout(() => {
 				item.classList.add(styles.visible)
 			}, i * 40)
-			return () => clearTimeout(timer)
+			timeouts.push(timer)
 		})
+		return () => timeouts.forEach(clearTimeout)
 	}, [visibleCount])
 
 	useEffect(() => {
@@ -63,7 +65,7 @@ const Examples = () => {
 		}
 	}, [location])
 
-	const renderedSlides = useMemo(() => {
+	const renderedSlides = () => {
 		return examplesData
 			.slice(0, visibleCount)
 			.map(({ id, imgSrc, popupImgSrc, alt }) => (
@@ -90,7 +92,7 @@ const Examples = () => {
 					></div>
 				</div>
 			))
-	}, [visibleCount])
+	}
 
 	return (
 		<section className={styles.examples} ref={examplesRef}>
@@ -116,7 +118,7 @@ const Examples = () => {
 						},
 					}}
 				>
-					{renderedSlides}
+					{renderedSlides()}
 					{visibleCount < examplesData.length && (
 						<button
 							type="button"
