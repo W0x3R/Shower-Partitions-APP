@@ -1,7 +1,8 @@
-import styles from "./Products.module.scss"
 import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useRef, useState } from "react"
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import styles from "./Products.module.scss"
+import clickHand from "../../../assets/main/click-hand.svg?url"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import { productsData } from "../../../data/productsData"
 
@@ -117,6 +118,10 @@ const Products = () => {
 						)}
 					</div>
 				</Fancybox>
+				<Link className={styles["products__link"]} to="/portfolio">
+					<span>Перейти в портфолио</span>
+					<img src={clickHand} alt="" />
+				</Link>
 			</div>
 		</section>
 	)

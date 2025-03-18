@@ -1,5 +1,6 @@
 @use '../../../styles/mixins';
 @use '../../../styles/media';
+@use '../../../styles/animations';
 
 .products {
 	@extend %section;
@@ -81,6 +82,7 @@
 	&__items {
 		@include mixins.useFlex(flex-start, flex-start);
 		@extend %imagesCardsWrapper;
+		margin-bottom: 3em;
 	}
 
 	&__items.oneRow {
@@ -140,5 +142,9 @@
 		@include media.tablet {
 			font-size: 1em;
 		}
+	}
+
+	&__link {
+		@include mixins.mainPageLink(22em, 28em, 32em);
 	}
 }
