@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import styles from "./Portfolio.module.scss"
-import ExamplesShowMoreImgBtn from "../../assets/main/example-moreImg-btn.svg?react"
 import portfolioData from "../../data/portfolioData"
 import PortfolioItem from "./PortfolioItem"
 import isDesktop from "../../utils/isDesktop"
+import ShowMoreBtn from "../ShowMoreBtn/ShowMoreBtn"
 
 const Portfolio = () => {
 	const [visibleCount, setVisibleCount] = useState(4)
@@ -64,15 +64,11 @@ const Portfolio = () => {
 				</h1>
 				<div className={styles["portfolio__items"]}>{renderItems()}</div>
 				{visibleCount < portfolioData.length && (
-					<button
-						type="button"
-						className={styles["portfolio__items-btn"]}
+					<ShowMoreBtn
 						onClick={handleShowMoreItems}
-						aria-label={`Показать еще ${stepIncrease} фото`}
-					>
-						Загрузить еще фото
-						<ExamplesShowMoreImgBtn aria-hidden="true" />
-					</button>
+						aria={`Показать еще ${stepIncrease} фото`}
+						text="Загрузить еще фото"
+					/>
 				)}
 			</div>
 		</section>

@@ -1,9 +1,9 @@
 import styles from "./Questions.module.scss"
 import { useEffect, useState } from "react"
 import Cross from "../../../assets/main/cross.svg?react"
-import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import questionImg from "../../../assets/main/questions-img.png"
 import accordionData from "../../../data/accordionData"
+import ShowMoreBtn from "../../ShowMoreBtn/ShowMoreBtn"
 
 const Questions = () => {
 	const [expandedIndex, setExpandedIndex] = useState([])
@@ -88,14 +88,11 @@ const Questions = () => {
 						<div className={styles["questions__accordion"]}>
 							{renderQuestions()}
 							{visibleCount < accordionData.length && (
-								<button
-									className={styles["questions__more-btn"]}
+								<ShowMoreBtn
 									onClick={handleShowMoreQuestions}
-									aria-label="Показать еще 2 вопроса"
-								>
-									Показать еще вопросы
-									<QuestionsShowMoreImgBtn aria-hidden="true" />
-								</button>
+									aria="Показать еще 2 вопроса"
+									text="Показать еще вопросы"
+								/>
 							)}
 						</div>
 					</div>

@@ -99,6 +99,7 @@
 		position: absolute;
 		right: 8px;
 		@include mixins.sizes(34px, 34px);
+		transform: rotate(135deg);
 		transition: transform 0.4s ease-in-out;
 
 		@include media.mediumMobile {
@@ -106,7 +107,7 @@
 		}
 
 		&.open {
-			transform: rotate(135deg);
+			transform: rotate(90deg);
 		}
 	}
 
@@ -128,10 +129,5 @@
 		@extend %mainSubtextsFonts;
 		font-weight: 500;
 		color: #939393;
-	}
-
-	&__more-btn {
-		@extend %showMoreBtn;
-		align-self: center;
 	}
 }

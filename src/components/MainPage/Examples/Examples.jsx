@@ -2,9 +2,9 @@ import styles from "./Examples.module.scss"
 import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useRef, useState } from "react"
 import { useLocation } from "react-router-dom"
-import ExamplesShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
 import examplesData from "../../../data/examplesData"
+import ShowMoreBtn from "../../ShowMoreBtn/ShowMoreBtn"
 
 const Examples = () => {
 	const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 500)
@@ -120,15 +120,11 @@ const Examples = () => {
 				>
 					{renderedSlides()}
 					{visibleCount < examplesData.length && (
-						<button
-							type="button"
-							className={styles["examples__items-btn"]}
+						<ShowMoreBtn
 							onClick={handleShowMorePictures}
-							aria-label={`Показать еще ${stepIncrease} фото`}
-						>
-							Загрузить еще фото
-							<ExamplesShowMoreImgBtn aria-hidden="true" />
-						</button>
+							aria={`Показать еще ${stepIncrease} фото`}
+							text="Загрузить еще фото"
+						/>
 					)}
 				</Fancybox>
 			</div>

@@ -70,9 +70,4 @@
 	&__block-subtitle {
 		@extend %titleLevelSix;
 	}
-
-	&__more-btn {
-		@extend %showMoreBtn;
-		margin: 0 auto;
-	}
 }

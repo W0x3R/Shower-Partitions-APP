@@ -12,7 +12,6 @@ import {
 	nickelFurniturePopupImg,
 	chromeFurniturePopupImg,
 } from "../../../data/productsData"
-import QuestionsShowMoreImgBtn from "../../../assets/main/example-moreImg-btn.svg?react"
 import Popup from "./Popup/Popup"
 import {
 	disableBodyScrollIncludeScrollbar,
@@ -24,6 +23,7 @@ import typeOfGlassesData from "../../../data/showerPartitionsDescriptionData/typ
 import setTypeOfFurnitureAltData from "../../../data/showerPartitionsDescriptionData/typeOfFurnitureAltData"
 import reasonsListData from "../../../data/showerPartitionsDescriptionData/reasonsListData"
 import benefitsData from "../../../data/showerPartitionsDescriptionData/benefitsData"
+import ShowMoreBtn from "../../ShowMoreBtn/ShowMoreBtn"
 
 const ShowerPartitionsDescription = () => {
 	const [popupData, setPopupData] = useState({
@@ -410,15 +410,11 @@ const ShowerPartitionsDescription = () => {
 					</div>
 				</div>
 				{!isDescriptionExpanded && (
-					<button
-						type="button"
-						className={styles["descriptions__more-btn"]}
+					<ShowMoreBtn
 						onClick={handleDescriptionExpand}
-						aria-label="Показать еще 2 вопроса"
-					>
-						Раскрыть полностью
-						<QuestionsShowMoreImgBtn aria-hidden="true" />
-					</button>
+						aria="Показать еще 2 вопроса"
+						text="Раскрыть полностью"
+					/>
 				)}
 			</div>
 			<ReactFocusLock returnFocus disabled={!popupData.isOpen}>
