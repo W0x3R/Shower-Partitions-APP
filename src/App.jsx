@@ -8,11 +8,13 @@ import ArticlePage from "./components/ArticlePage/ArticlePage"
 import ContactsPage from "./components/ContactsPage/ContactsPage"
 import PopupFormProvider from "./context/PopupFormProvider"
 import PortfolioPage from "./components/PortfolioPage/PortfolioPage"
+import ScrollTopOnLocationChange from "./utils/scrollTopOnLocationChange"
 
 function App() {
 	return (
 		<BrowserRouter>
 			<div className="App">
+				<ScrollTopOnLocationChange />
 				<PopupFormProvider>
 					<Routes>
 						<Route path="/" element={<Layout />}>
