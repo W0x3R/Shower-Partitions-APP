@@ -2,8 +2,6 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
 import articleBg from "../../assets/article/bg.webp"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
-import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
-import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
 import Article from "./Article"
 
 const ArticlePage = () => {

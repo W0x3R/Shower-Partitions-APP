@@ -9,8 +9,6 @@ import Price from "./Price/Price"
 import Questions from "./Questions/Questions"
 import Standards from "./Standards/Standards"
 import ShowerPartitionsDescription from "./Description/Description"
-import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
-import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
 import isMobile from "../../utils/isMobile"
 
 const MainPage = () => {

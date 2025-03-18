@@ -1,5 +1,5 @@
-import styles from "./FormPopup.module.scss"
 import { useContext, useEffect, useState } from "react"
+import styles from "./FormPopup.module.scss"
 import ReactFocusLock from "react-focus-lock"
 import BlackCross from "../../assets/main/black-cross.svg?react"
 import PopupFormContext from "../../context/PopupFormContext"

@@ -2,8 +2,6 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
 import carImg from "../../assets/delivery/car.png"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
-import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
-import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
 import Delivery from "./Delivery"
 
 const DeliveryPage = () => {

@@ -1,8 +1,8 @@
+import { useContext } from "react"
 import styles from "./ServicesCost.module.scss"
 import clickHand from "../../assets/main/click-hand.svg?url"
 import priceDescriptionData from "../../data/priceDescriptionData"
 import priceTableData from "../../data/priceTableData"
-import { useContext } from "react"
 import PopupFormContext from "../../context/PopupFormContext"
 
 const ServicesCost = () => {

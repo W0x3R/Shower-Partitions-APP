@@ -3,8 +3,6 @@ import { Helmet } from "react-helmet"
 import bgImg from "../../assets/contacts/bg.png"
 import callUsImg from "../../assets/contacts/callUs.png"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
-import ContactsWidget from "../Widgets/ContactsWidget/ContactsWidget"
-import ScrollTopBtn from "../Widgets/ScrollTopBtn/ScrollTopBtn"
 import Contacts from "./Contacts"
 
 const ContactsPage = () => {
