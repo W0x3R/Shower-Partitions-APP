@@ -1,5 +1,5 @@
 import styles from "./Delivery.module.scss"
-import carImg from "../../assets/delivery/car.png"
+import carImg from "../../assets/DeliveryPage/car.png"
 import AsideInfoWidget from "../Widgets/AsideInfoWidget/AsideInfoWidget"
 
 const Delivery = () => {

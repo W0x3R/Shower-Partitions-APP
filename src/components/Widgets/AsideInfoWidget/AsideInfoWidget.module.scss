@@ -9,7 +9,7 @@
 	padding: 2.5em 1em;
 	border-radius: 16px;
 	@include mixins.sizes(30em, max-content);
-	@include mixins.setBackgroundImage('../../../assets/delivery/aside-bg.webp');
+	@include mixins.setBackgroundImage('../../../assets/DeliveryPage/aside-bg.webp');
 
 	@include media.bigMobile {
 		width: 40em;

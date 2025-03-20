@@ -1,9 +1,9 @@
 import styles from "./Questions.module.scss"
 import { useEffect, useState } from "react"
-import Cross from "../../../assets/main/cross.svg?react"
-import questionImg from "../../../assets/main/questions-img.png"
+import Cross from "../../../assets/MainPage/cross.svg?react"
+import questionImg from "../../../assets/MainPage/questions-img.png"
 import accordionData from "../../../data/accordionData"
-import ShowMoreBtn from "../../ShowMoreBtn/ShowMoreBtn"
+import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
 
 const Questions = () => {
 	const [expandedIndex, setExpandedIndex] = useState([])

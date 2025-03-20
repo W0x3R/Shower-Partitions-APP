@@ -1,147 +1,111 @@
-import firstExampleMainImg from "../assets/main/first-example-main.webp"
-import firstExampleSliderImg from "../assets/main/first-example-slider.webp"
-import secondExampleMainImg from "../assets/main/second-example-main.webp"
-import secondExampleSliderImg from "../assets/main/second-example-slider.webp"
-import thirdExampleMainImg from "../assets/main/third-example-main.webp"
-import thirdExampleSliderImg from "../assets/main/third-example-slider.webp"
-import fourthExampleMainImg from "../assets/main/fourth-example-main.webp"
-import fourthExampleSliderImg from "../assets/main/fourth-example-slider.webp"
-import fifthExampleMainImg from "../assets/main/fifth-example-main.webp"
-import fifthExampleSliderImg from "../assets/main/fifth-example-slider.webp"
-import sixthExampleMainImg from "../assets/main/sixth-example-main.webp"
-import sixthExampleSliderImg from "../assets/main/sixth-example-slider.webp"
-import seventhExampleMainImg from "../assets/main/seventh-example-main.webp"
-import seventhExampleSliderImg from "../assets/main/seventh-example-slider.webp"
-import eighthExampleMainImg from "../assets/main/eighth-example-main.webp"
-import eighthExampleSliderImg from "../assets/main/eighth-example-slider.webp"
-import ninthExampleMainImg from "../assets/main/ninth-example-main.webp"
-import ninthExampleSliderImg from "../assets/main/ninth-example-slider.webp"
-import tenthExampleMainImg from "../assets/main/tenth-example-main.webp"
-import tenthExampleSliderImg from "../assets/main/tenth-example-slider.webp"
-import eleventhExampleMainImg from "../assets/main/eleventh-example-main.webp"
-import eleventhExampleSliderImg from "../assets/main/eleventh-example-slider.webp"
-import twelfthExampleMainImg from "../assets/main/twelfth-example-main.webp"
-import twelfthExampleSliderImg from "../assets/main/twelfth-example-slider.webp"
-import thirteenthExampleMainImg from "../assets/main/thirteenth-example-main.webp"
-import thirteenthExampleSliderImg from "../assets/main/thirteenth-example-slider.webp"
-import fourteenthExampleMainImg from "../assets/main/fourteenth-example-main.webp"
-import fourteenthExampleSliderImg from "../assets/main/fourteenth-example-slider.webp"
-import fifteenthExampleMainImg from "../assets/main/fifteenth-example-main.webp"
-import fifteenthExampleSliderImg from "../assets/main/fifteenth-example-slider.webp"
-import sixteenthExampleMainImg from "../assets/main/sixteenth-example-main.webp"
-import sixteenthExampleSliderImg from "../assets/main/sixteenth-example-slider.webp"
-import seventeenthExampleMainImg from "../assets/main/seventeenth-example-main.webp"
-import seventeenthExampleSliderImg from "../assets/main/seventeenth-example-slider.webp"
-import eighteenthExampleMainImg from "../assets/main/eighteenth-example-main.webp"
-import eighteenthExampleSliderImg from "../assets/main/eighteenth-example-slider.webp"
+import ExampleImg_01 from "../assets/MainPage/examples/example-01.webp"
+import ExampleImg_02 from "../assets/MainPage/examples/example-02.webp"
+import ExampleImg_03 from "../assets/MainPage/examples/example-03.webp"
+import ExampleImg_04 from "../assets/MainPage/examples/example-04.webp"
+import ExampleImg_05 from "../assets/MainPage/examples/example-05.webp"
+import ExampleImg_06 from "../assets/MainPage/examples/example-06.webp"
+import ExampleImg_07 from "../assets/MainPage/examples/example-07.webp"
+import ExampleImg_08 from "../assets/MainPage/examples/example-08.webp"
+import ExampleImg_09 from "../assets/MainPage/examples/example-09.webp"
+import ExampleImg_10 from "../assets/MainPage/examples/example-10.webp"
+import ExampleImg_11 from "../assets/MainPage/examples/example-11.webp"
+import ExampleImg_12 from "../assets/MainPage/examples/example-12.webp"
+import ExampleImg_13 from "../assets/MainPage/examples/example-13.webp"
+import ExampleImg_14 from "../assets/MainPage/examples/example-14.webp"
+import ExampleImg_15 from "../assets/MainPage/examples/example-15.webp"
+import ExampleImg_16 from "../assets/MainPage/examples/example-16.webp"
+import ExampleImg_17 from "../assets/MainPage/examples/example-17.webp"
+import ExampleImg_18 from "../assets/MainPage/examples/example-18.webp"
 
 const examplesData = [
 	{
 		id: "examples_0",
-		imgSrc: firstExampleMainImg,
-		popupImgSrc: firstExampleSliderImg,
+		imgSrc: ExampleImg_01,
 		alt: "На изображении отображена трапециевидная душевая перегородка на фоне комнаты, оформленной в бело-черных тонах",
 	},
 	{
 		id: "examples_1",
-		imgSrc: secondExampleMainImg,
-		popupImgSrc: secondExampleSliderImg,
+		imgSrc: ExampleImg_02,
 		alt: "На изображении отображена душевая кабина на фоне комнаты, оформленной в светло-бежевых тонах",
 	},
 	{
 		id: "examples_2",
-		imgSrc: thirdExampleMainImg,
-		popupImgSrc: thirdExampleSliderImg,
+		imgSrc: ExampleImg_03,
 		alt: "На изображении отображена душевая кабина на фоне комнаты, оформленной в светло-серых тонах",
 	},
 	{
 		id: "examples_3",
-		imgSrc: fourthExampleMainImg,
-		popupImgSrc: fourthExampleSliderImg,
+		imgSrc: ExampleImg_04,
 		alt: "На изображении отображена душевая перегородка в нишу на фоне ванной комнаты, оформленной в светлых тонах",
 	},
 	{
 		id: "examples_4",
-		imgSrc: fifthExampleMainImg,
-		popupImgSrc: fifthExampleSliderImg,
+		imgSrc: ExampleImg_05,
 		alt: "На изображении отображена душевая кабина на фоне комнаты, оформленной в светло-серых тонах",
 	},
 	{
 		id: "examples_5",
-		imgSrc: sixthExampleMainImg,
-		popupImgSrc: sixthExampleSliderImg,
+		imgSrc: ExampleImg_06,
 		alt: "На изображении отображена трапециевидная душевая перегородка на фоне комнаты, оформленной в светло-серых тонах",
 	},
 	{
 		id: "examples_6",
-		imgSrc: seventhExampleMainImg,
-		popupImgSrc: seventhExampleSliderImg,
+		imgSrc: ExampleImg_07,
 		alt: "На изображении отображена душевая кабина на фоне ванной комнаты, оформленной в светло-серых тонах",
 	},
 	{
 		id: "examples_7",
-		imgSrc: eighthExampleMainImg,
-		popupImgSrc: eighthExampleSliderImg,
+		imgSrc: ExampleImg_08,
 		alt: "На изображении отображена душевая перегородка в нишу на фоне ванной комнаты, оформленной в бежевых тонах",
 	},
 	{
 		id: "examples_8",
-		imgSrc: ninthExampleMainImg,
-		popupImgSrc: ninthExampleSliderImg,
+		imgSrc: ExampleImg_09,
 		alt: "На изображении отображена трапециевидная душевая перегородка на фоне ванной комнаты, оформленной в светло-коричневых тонах",
 	},
 	{
 		id: "examples_9",
-		imgSrc: tenthExampleMainImg,
-		popupImgSrc: tenthExampleSliderImg,
+		imgSrc: ExampleImg_10,
 		alt: "На изображении отображена душевая кабина на фоне комнаты, оформленной в светлых тонах",
 	},
 	{
 		id: "examples_10",
-		imgSrc: eleventhExampleMainImg,
-		popupImgSrc: eleventhExampleSliderImg,
+		imgSrc: ExampleImg_11,
 		alt: "На изображении отображена душевая перегородка в нишу на фоне ванной комнаты, оформленной в светлых тонах",
 	},
 	{
 		id: "examples_11",
-		imgSrc: twelfthExampleMainImg,
-		popupImgSrc: twelfthExampleSliderImg,
+		imgSrc: ExampleImg_12,
 		alt: "На изображении отображена стеклянная шторка в ванную",
 	},
 	{
 		id: "examples_12",
-		imgSrc: thirteenthExampleMainImg,
-		popupImgSrc: thirteenthExampleSliderImg,
+		imgSrc: ExampleImg_13,
 		alt: "На изображении отображена угловая душевая кабина на фоне ванной комнаты, оформленной в светлых тонах",
 	},
 	{
 		id: "examples_13",
-		imgSrc: fourteenthExampleMainImg,
-		popupImgSrc: fourteenthExampleSliderImg,
+		imgSrc: ExampleImg_14,
 		alt: "На изображении отображена душевая кабина на фоне комнаты, оформленной в светлых тонах",
 	},
 	{
 		id: "examples_14",
-		imgSrc: fifteenthExampleMainImg,
-		popupImgSrc: fifteenthExampleSliderImg,
+		imgSrc: ExampleImg_15,
 		alt: "На изображении отображена душевая перегородка в нишу на фоне комнаты, оформленной в светлых тонах",
 	},
 	{
 		id: "examples_15",
-		imgSrc: sixteenthExampleMainImg,
-		popupImgSrc: sixteenthExampleSliderImg,
+		imgSrc: ExampleImg_16,
 		alt: "На изображении отображена стеклянная шторка в ванную",
 	},
 	{
 		id: "examples_16",
-		imgSrc: seventeenthExampleMainImg,
-		popupImgSrc: seventeenthExampleSliderImg,
+		imgSrc: ExampleImg_17,
 		alt: "На изображении отображена душевая кабина на фоне ванной комнаты, оформленной в светло-сиреневых тонах",
 	},
 	{
 		id: "examples_17",
-		imgSrc: eighteenthExampleMainImg,
-		popupImgSrc: eighteenthExampleSliderImg,
+		imgSrc: ExampleImg_18,
 		alt: "На изображении отображена трапециевидная душевая перегородка на фоне комнаты, оформленной в темно-светлых тонах",
 	},
 ]

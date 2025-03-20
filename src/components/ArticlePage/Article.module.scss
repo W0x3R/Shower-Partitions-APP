@@ -67,7 +67,7 @@
 
 	&__item {
 		@extend %usefulTextItem;
-		@include mixins.usefulTextItemMarker('../../assets/main/list-marker.svg');
+		@include mixins.usefulTextItemMarker('../../assets/MainPage/list-marker.svg');
 	}
 
 	&__block-subtitle {

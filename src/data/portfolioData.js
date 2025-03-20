@@ -1,22 +1,22 @@
-import portfolioImg_1_1 from "../assets/portfolio/1-1.webp"
-import portfolioImg_1_2 from "../assets/portfolio/1-2.webp"
-import portfolioImg_1_3 from "../assets/portfolio/1-3.webp"
-import portfolioImg_1_4 from "../assets/portfolio/1-4.webp"
-import portfolioImg_2_1 from "../assets/portfolio/2-1.webp"
-import portfolioImg_2_2 from "../assets/portfolio/2-2.webp"
-import portfolioImg_2_3 from "../assets/portfolio/2-3.webp"
+import PortfolioPageImg_1_1 from "../assets/PortfolioPage/1-1.webp"
+import PortfolioPageImg_1_2 from "../assets/PortfolioPage/1-2.webp"
+import PortfolioPageImg_1_3 from "../assets/PortfolioPage/1-3.webp"
+import PortfolioPageImg_1_4 from "../assets/PortfolioPage/1-4.webp"
+import PortfolioPageImg_2_1 from "../assets/PortfolioPage/2-1.webp"
+import PortfolioPageImg_2_2 from "../assets/PortfolioPage/2-2.webp"
+import PortfolioPageImg_2_3 from "../assets/PortfolioPage/2-3.webp"
 
-const portfolioData = [
+const PortfolioPageData = [
 	{
-		mainId: "portfolio_main_id_0",
-		carouselId: "portfolio_carousel_id_",
-		descriptionId: "portfolio_description_id_",
+		mainId: "PortfolioPage_main_id_0",
+		carouselId: "PortfolioPage_carousel_id_",
+		descriptionId: "PortfolioPage_description_id_",
 		title: "Угловая душевая перегородка",
 		images: [
-			portfolioImg_1_1,
-			portfolioImg_1_2,
-			portfolioImg_1_3,
-			portfolioImg_1_4,
+			PortfolioPageImg_1_1,
+			PortfolioPageImg_1_2,
+			PortfolioPageImg_1_3,
+			PortfolioPageImg_1_4,
 		],
 		descriptions: [
 			"Форма: Угловая душевая перегородка",
@@ -27,11 +27,11 @@ const portfolioData = [
 		],
 	},
 	{
-		mainId: "portfolio_main_id_1",
-		carouselId: "portfolio_carousel_id_1",
-		descriptionId: "portfolio_description_id_1",
+		mainId: "PortfolioPage_main_id_1",
+		carouselId: "PortfolioPage_carousel_id_1",
+		descriptionId: "PortfolioPage_description_id_1",
 		title: "Распашная душевая перегородка",
-		images: [portfolioImg_2_1, portfolioImg_2_2, portfolioImg_2_3],
+		images: [PortfolioPageImg_2_1, PortfolioPageImg_2_2, PortfolioPageImg_2_3],
 		descriptions: [
 			"Форма: Распашная душевая перегородка",
 			"Вид стекла: Стекло закаленное  сатин",
@@ -41,11 +41,11 @@ const portfolioData = [
 		],
 	},
 	{
-		mainId: "portfolio_main_id_2",
+		mainId: "PortfolioPage_main_id_2",
 		title: "Угловая душевая перегородка",
-		carouselId: "portfolio_carousel_id_2",
-		descriptionId: "portfolio_description_id_2",
-		images: [portfolioImg_2_1, portfolioImg_2_2, portfolioImg_2_3],
+		carouselId: "PortfolioPage_carousel_id_2",
+		descriptionId: "PortfolioPage_description_id_2",
+		images: [PortfolioPageImg_2_1, PortfolioPageImg_2_2, PortfolioPageImg_2_3],
 		descriptions: [
 			"Форма: Распашная душевая перегородка",
 			"Вид стекла: Стекло закаленное  сатин",
@@ -55,11 +55,11 @@ const portfolioData = [
 		],
 	},
 	{
-		mainId: "portfolio_main_id_3",
-		carouselId: "portfolio_carousel_id_3",
-		descriptionId: "portfolio_description_id_3",
+		mainId: "PortfolioPage_main_id_3",
+		carouselId: "PortfolioPage_carousel_id_3",
+		descriptionId: "PortfolioPage_description_id_3",
 		title: "Угловая душевая перегородка",
-		images: [portfolioImg_2_1, portfolioImg_2_2, portfolioImg_2_3],
+		images: [PortfolioPageImg_2_1, PortfolioPageImg_2_2, PortfolioPageImg_2_3],
 		descriptions: [
 			"Форма: Распашная душевая перегородка",
 			"Вид стекла: Стекло закаленное  сатин",
@@ -69,11 +69,11 @@ const portfolioData = [
 		],
 	},
 	{
-		mainId: "portfolio_main_id_4",
-		carouselId: "portfolio_carousel_id_4",
-		descriptionId: "portfolio_description_id_4",
+		mainId: "PortfolioPage_main_id_4",
+		carouselId: "PortfolioPage_carousel_id_4",
+		descriptionId: "PortfolioPage_description_id_4",
 		title: "Угловая душевая перегородка",
-		images: [portfolioImg_2_1, portfolioImg_2_2, portfolioImg_2_3],
+		images: [PortfolioPageImg_2_1, PortfolioPageImg_2_2, PortfolioPageImg_2_3],
 		descriptions: [
 			"Форма: Распашная душевая перегородка",
 			"Вид стекла: Стекло закаленное  сатин",
@@ -83,11 +83,11 @@ const portfolioData = [
 		],
 	},
 	{
-		mainId: "portfolio_main_id_5",
-		carouselId: "portfolio_carousel_id_5",
-		descriptionId: "portfolio_description_id_5",
+		mainId: "PortfolioPage_main_id_5",
+		carouselId: "PortfolioPage_carousel_id_5",
+		descriptionId: "PortfolioPage_description_id_5",
 		title: "Угловая душевая перегородка",
-		images: [portfolioImg_2_1, portfolioImg_2_2, portfolioImg_2_3],
+		images: [PortfolioPageImg_2_1, PortfolioPageImg_2_2, PortfolioPageImg_2_3],
 		descriptions: [
 			"Форма: Распашная душевая перегородка",
 			"Вид стекла: Стекло закаленное  сатин",
@@ -97,11 +97,11 @@ const portfolioData = [
 		],
 	},
 	{
-		mainId: "portfolio_main_id_6",
-		carouselId: "portfolio_carousel_id_6",
-		descriptionId: "portfolio_description_id_6",
+		mainId: "PortfolioPage_main_id_6",
+		carouselId: "PortfolioPage_carousel_id_6",
+		descriptionId: "PortfolioPage_description_id_6",
 		title: "Угловая душевая перегородка",
-		images: [portfolioImg_2_1, portfolioImg_2_2, portfolioImg_2_3],
+		images: [PortfolioPageImg_2_1, PortfolioPageImg_2_2, PortfolioPageImg_2_3],
 		descriptions: [
 			"Форма: Распашная душевая перегородка",
 			"Вид стекла: Стекло закаленное  сатин",
@@ -111,11 +111,11 @@ const portfolioData = [
 		],
 	},
 	{
-		mainId: "portfolio_main_id_7",
-		carouselId: "portfolio_carousel_id_7",
-		descriptionId: "portfolio_description_id_7",
+		mainId: "PortfolioPage_main_id_7",
+		carouselId: "PortfolioPage_carousel_id_7",
+		descriptionId: "PortfolioPage_description_id_7",
 		title: "Угловая душевая перегородка",
-		images: [portfolioImg_2_1, portfolioImg_2_2, portfolioImg_2_3],
+		images: [PortfolioPageImg_2_1, PortfolioPageImg_2_2, PortfolioPageImg_2_3],
 		descriptions: [
 			"Форма: Распашная душевая перегородка",
 			"Вид стекла: Стекло закаленное  сатин",
@@ -126,4 +126,4 @@ const portfolioData = [
 	},
 ]
 
-export default portfolioData
+export default PortfolioPageData

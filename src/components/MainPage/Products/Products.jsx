@@ -2,8 +2,8 @@ import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useRef, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import styles from "./Products.module.scss"
-import clickHand from "../../../assets/main/click-hand.svg?url"
-import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
+import clickHand from "../../../assets/MainPage/click-hand.svg?url"
+import FullScreenIcon from "../../../assets/MainPage/fullscreen-icon.svg?react"
 import { productsData } from "../../../data/productsData"
 
 const Products = () => {
@@ -83,39 +83,37 @@ const Products = () => {
 						id={`panel-${activeBtn}`}
 						aria-labelledby={`tab-${activeBtn}`}
 					>
-						{productsData[activeBtn].map(
-							({ id, title, imgSrc, popupImgSrc, alt }, i) => {
-								return (
-									<figure className={styles.products__item} key={id}>
-										<a
-											className={styles["products__item-link"]}
-											data-fancybox="gallery"
-											href={popupImgSrc}
-											data-caption={title}
+						{productsData[activeBtn].map(({ id, title, ImgSrc, alt }, i) => {
+							return (
+								<figure className={styles.products__item} key={id}>
+									<a
+										className={styles["products__item-link"]}
+										data-fancybox="gallery"
+										href={ImgSrc}
+										data-caption={title}
+									>
+										<img
+											className={styles["products__item-img"]}
+											loading="lazy"
+											alt={alt}
+											src={ImgSrc}
+											width="342"
+											height="234"
+										/>
+										<FullScreenIcon />
+									</a>
+									<figcaption>
+										<p
+											data-fancybox-trigger="gallery"
+											data-fancybox-index={i}
+											className={styles["products__item-text"]}
 										>
-											<img
-												className={styles["products__item-img"]}
-												loading="lazy"
-												alt={alt}
-												src={imgSrc}
-												width="342"
-												height="234"
-											/>
-											<FullScreenIcon />
-										</a>
-										<figcaption>
-											<p
-												data-fancybox-trigger="gallery"
-												data-fancybox-index={i}
-												className={styles["products__item-text"]}
-											>
-												{title}
-											</p>
-										</figcaption>
-									</figure>
-								)
-							}
-						)}
+											{title}
+										</p>
+									</figcaption>
+								</figure>
+							)
+						})}
 					</div>
 				</Fancybox>
 				<Link className={styles["products__link"]} to="/portfolio">

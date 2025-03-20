@@ -2,15 +2,15 @@ import styles from "./Description.module.scss"
 import ReactFocusLock from "react-focus-lock"
 import { useEffect, useState } from "react"
 import {
-	swingingDoorPopupImg,
-	rollingDoorPopupImg,
-	alcoveDoorPopupImg,
-	alcoveShowerPopupImg,
-	blackFurniturePopupImg,
-	goldFurniturePopupImg,
-	bronzeFurniturePopupImg,
-	nickelFurniturePopupImg,
-	chromeFurniturePopupImg,
+	swingingDoorImg,
+	rollingDoorImg,
+	alcoveDoorImg,
+	alcoveShowerImg,
+	blackFurnitureImg,
+	goldFurnitureImg,
+	bronzeFurnitureImg,
+	nickelFurnitureImg,
+	chromeFurnitureImg,
 } from "../../../data/productsData"
 import Popup from "./Popup/Popup"
 import {
@@ -23,7 +23,7 @@ import typeOfGlassesData from "../../../data/showerPartitionsDescriptionData/typ
 import setTypeOfFurnitureAltData from "../../../data/showerPartitionsDescriptionData/typeOfFurnitureAltData"
 import reasonsListData from "../../../data/showerPartitionsDescriptionData/reasonsListData"
 import benefitsData from "../../../data/showerPartitionsDescriptionData/benefitsData"
-import ShowMoreBtn from "../../ShowMoreBtn/ShowMoreBtn"
+import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
 
 const ShowerPartitionsDescription = () => {
 	const [popupData, setPopupData] = useState({
@@ -147,14 +147,14 @@ const ShowerPartitionsDescription = () => {
 								onClick={(e) =>
 									handlePopupOpen(
 										e,
-										swingingDoorPopupImg,
+										swingingDoorImg,
 										setTypeOfDoorsAltData("развижными")
 									)
 								}
 								onKeyDown={(e) =>
 									handlePopupOpen(
 										e,
-										swingingDoorPopupImg,
+										swingingDoorImg,
 										setTypeOfDoorsAltData("развижными")
 									)
 								}
@@ -169,14 +169,14 @@ const ShowerPartitionsDescription = () => {
 								onClick={(e) =>
 									handlePopupOpen(
 										e,
-										rollingDoorPopupImg,
+										rollingDoorImg,
 										setTypeOfDoorsAltData("откатными")
 									)
 								}
 								onKeyDown={(e) =>
 									handlePopupOpen(
 										e,
-										rollingDoorPopupImg,
+										rollingDoorImg,
 										setTypeOfDoorsAltData("откатными")
 									)
 								}
@@ -191,14 +191,14 @@ const ShowerPartitionsDescription = () => {
 								onClick={(e) =>
 									handlePopupOpen(
 										e,
-										alcoveDoorPopupImg,
+										alcoveDoorImg,
 										setTypeOfDoorsAltData("одинарными")
 									)
 								}
 								onKeyDown={(e) =>
 									handlePopupOpen(
 										e,
-										alcoveDoorPopupImg,
+										alcoveDoorImg,
 										setTypeOfDoorsAltData("одинарными")
 									)
 								}
@@ -213,14 +213,14 @@ const ShowerPartitionsDescription = () => {
 								onClick={(e) =>
 									handlePopupOpen(
 										e,
-										alcoveShowerPopupImg,
+										alcoveShowerImg,
 										setTypeOfDoorsAltData("двойными")
 									)
 								}
 								onKeyDown={(e) =>
 									handlePopupOpen(
 										e,
-										alcoveShowerPopupImg,
+										alcoveShowerImg,
 										setTypeOfDoorsAltData("двойными")
 									)
 								}
@@ -276,14 +276,14 @@ const ShowerPartitionsDescription = () => {
 								onClick={(e) =>
 									handlePopupOpen(
 										e,
-										blackFurniturePopupImg,
+										blackFurnitureImg,
 										setTypeOfFurnitureAltData("черного")
 									)
 								}
 								onKeyDown={(e) =>
 									handlePopupOpen(
 										e,
-										blackFurniturePopupImg,
+										blackFurnitureImg,
 										setTypeOfFurnitureAltData("черного")
 									)
 								}
@@ -298,14 +298,14 @@ const ShowerPartitionsDescription = () => {
 								onClick={(e) =>
 									handlePopupOpen(
 										e,
-										goldFurniturePopupImg,
+										goldFurnitureImg,
 										setTypeOfFurnitureAltData("золотистого")
 									)
 								}
 								onKeyDown={(e) =>
 									handlePopupOpen(
 										e,
-										goldFurniturePopupImg,
+										goldFurnitureImg,
 										setTypeOfFurnitureAltData("золотистого")
 									)
 								}
@@ -320,14 +320,14 @@ const ShowerPartitionsDescription = () => {
 								onClick={(e) =>
 									handlePopupOpen(
 										e,
-										nickelFurniturePopupImg,
+										nickelFurnitureImg,
 										setTypeOfFurnitureAltData("никелевого")
 									)
 								}
 								onKeyDown={(e) =>
 									handlePopupOpen(
 										e,
-										nickelFurniturePopupImg,
+										nickelFurnitureImg,
 										setTypeOfFurnitureAltData("никелевого")
 									)
 								}
@@ -342,14 +342,14 @@ const ShowerPartitionsDescription = () => {
 								onClick={(e) =>
 									handlePopupOpen(
 										e,
-										bronzeFurniturePopupImg,
+										bronzeFurnitureImg,
 										setTypeOfFurnitureAltData("бронзового")
 									)
 								}
 								onKeyDown={(e) =>
 									handlePopupOpen(
 										e,
-										bronzeFurniturePopupImg,
+										bronzeFurnitureImg,
 										setTypeOfFurnitureAltData("бронзового")
 									)
 								}
@@ -364,14 +364,14 @@ const ShowerPartitionsDescription = () => {
 								onClick={(e) =>
 									handlePopupOpen(
 										e,
-										chromeFurniturePopupImg,
+										chromeFurnitureImg,
 										setTypeOfFurnitureAltData("хромового")
 									)
 								}
 								onKeyDown={(e) =>
 									handlePopupOpen(
 										e,
-										chromeFurniturePopupImg,
+										chromeFurnitureImg,
 										setTypeOfFurnitureAltData("хромового")
 									)
 								}

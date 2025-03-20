@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react"
 import styles from "./FormPopup.module.scss"
 import ReactFocusLock from "react-focus-lock"
-import BlackCross from "../../assets/main/black-cross.svg?react"
-import PopupFormContext from "../../context/PopupFormContext"
-import CallBackForm from "../Widgets/CallBackForm/CallBackForm"
+import BlackCross from "../../../assets/MainPage/black-cross.svg?react"
+import PopupFormContext from "../../../context/PopupFormContext"
+import CallBackForm from "../../Widgets/CallBackForm/CallBackForm"
 
 const FormPopup = () => {
 	const { isFormPopupOpen, handleFormPopupClose } = useContext(PopupFormContext)

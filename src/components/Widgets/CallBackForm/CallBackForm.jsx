@@ -2,7 +2,7 @@ import styles from "./CallBackForm.module.scss"
 import InputMask from "@mona-health/react-input-mask"
 import { useForm } from "react-hook-form"
 import { useContext, useEffect, useRef } from "react"
-import clickHandImg from "../../../assets/main/click-hand.svg?url"
+import clickHandImg from "../../../assets/MainPage/click-hand.svg?url"
 import PopupFormContext from "../../../context/PopupFormContext"
 import isHoverSupported from "../../../utils/isHoverSupported"
 

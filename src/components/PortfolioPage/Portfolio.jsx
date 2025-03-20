@@ -3,7 +3,7 @@ import styles from "./Portfolio.module.scss"
 import portfolioData from "../../data/portfolioData"
 import PortfolioItem from "./PortfolioItem"
 import isDesktop from "../../utils/isDesktop"
-import ShowMoreBtn from "../ShowMoreBtn/ShowMoreBtn"
+import ShowMoreBtn from "../Widgets/ShowMoreBtn/ShowMoreBtn"
 
 const Portfolio = () => {
 	const [visibleCount, setVisibleCount] = useState(4)

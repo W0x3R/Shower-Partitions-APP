@@ -4,7 +4,7 @@
 
 .contacts {
 	@extend %section;
-	@include mixins.setBackgroundImage('../../assets/contacts/bg.png');
+	@include mixins.setBackgroundImage('../../assets/ContactsPage/bg.png');
 
 	&__wrapper {
 		@include mixins.useFlex(space-between, center);

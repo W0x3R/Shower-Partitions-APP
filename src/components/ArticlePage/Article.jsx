@@ -1,6 +1,6 @@
 import styles from "./Article.module.scss"
 import AsideInfoWidget from "../Widgets/AsideInfoWidget/AsideInfoWidget"
-import articleBgImg from "../../assets/article/bg.webp"
+import articleBgImg from "../../assets/ArticlePage/bg.webp"
 import constructionsData from "../../data/article/constructionsData"
 import typesData from "../../data/article/typesData"
 import openingTypes from "../../data/article/openingTypes"

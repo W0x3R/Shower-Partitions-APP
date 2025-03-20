@@ -1,6 +1,6 @@
 import styles from "./ContactsWidget.module.scss"
-import TelegramIcon from "../../../assets/main/telegram-contacts-widget.svg?react"
-import CallIcon from "../../../assets/main/call-contacts-widget.svg?react"
+import TelegramIcon from "../../../assets/MainPage/telegram-contacts-widget.svg?react"
+import CallIcon from "../../../assets/MainPage/call-contacts-widget.svg?react"
 
 const ContactsWidget = () => {
 	return (

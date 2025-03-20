@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
-import FormPopup from "../components/FormPopup/FormPopup"
+import FormPopup from "../components/Widgets/FormPopup/FormPopup"
 import ContactsWidget from "../components/Widgets/ContactsWidget/ContactsWidget"
 import ScrollTopBtn from "../components/Widgets/ScrollTopBtn/ScrollTopBtn"
 

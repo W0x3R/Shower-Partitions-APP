@@ -2,9 +2,9 @@ import styles from "./Examples.module.scss"
 import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useRef, useState } from "react"
 import { useLocation } from "react-router-dom"
-import FullScreenIcon from "../../../assets/main/fullscreen-icon.svg?react"
+import FullScreenIcon from "../../../assets/MainPage/fullscreen-icon.svg?react"
 import examplesData from "../../../data/examplesData"
-import ShowMoreBtn from "../../ShowMoreBtn/ShowMoreBtn"
+import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
 
 const Examples = () => {
 	const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 500)
@@ -66,32 +66,30 @@ const Examples = () => {
 	}, [location])
 
 	const renderedSlides = () => {
-		return examplesData
-			.slice(0, visibleCount)
-			.map(({ id, imgSrc, popupImgSrc, alt }) => (
-				<div className={`${styles.examples__item}`} key={id}>
-					<a
-						className={styles["examples__item-link"]}
-						data-fancybox="gallery"
-						href={popupImgSrc}
-					>
-						<img
-							className={styles["examples__item-img"]}
-							loading="lazy"
-							alt={alt}
-							src={imgSrc}
-							width="351"
-							height="243"
-						/>
-						<FullScreenIcon aria-hidden="true" />
-					</a>
-					<div
-						id="aria-examples-live-status"
-						aria-live="polite"
-						className="sr-only"
-					></div>
-				</div>
-			))
+		return examplesData.slice(0, visibleCount).map(({ id, imgSrc, alt }) => (
+			<div className={`${styles.examples__item}`} key={id}>
+				<a
+					className={styles["examples__item-link"]}
+					data-fancybox="gallery"
+					href={imgSrc}
+				>
+					<img
+						className={styles["examples__item-img"]}
+						loading="lazy"
+						alt={alt}
+						src={imgSrc}
+						width="351"
+						height="243"
+					/>
+					<FullScreenIcon aria-hidden="true" />
+				</a>
+				<div
+					id="aria-examples-live-status"
+					aria-live="polite"
+					className="sr-only"
+				></div>
+			</div>
+		))
 	}
 
 	return (

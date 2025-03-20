@@ -1,6 +1,6 @@
 import styles from "./Price.module.scss"
-import showerImage from "../../../assets/main/shower-partition.webp"
-import clickHand from "../../../assets/main/click-hand.svg?url"
+import showerImage from "../../../assets/MainPage/shower-partition.webp"
+import clickHand from "../../../assets/MainPage/click-hand.svg?url"
 
 const Price = () => {
 	return (

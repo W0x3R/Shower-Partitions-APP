@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
-import articleBg from "../../assets/article/bg.webp"
+import articleBg from "../../assets/ArticlePage/bg.webp"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import Article from "./Article"
 

@@ -1,7 +1,7 @@
 import styles from "./AsideInfoWidget.module.scss"
 import { Link } from "react-router-dom"
 import { useContext } from "react"
-import clickHand from "../../../assets/main/click-hand.svg?url"
+import clickHand from "../../../assets/MainPage/click-hand.svg?url"
 import PopupFormContext from "../../../context/PopupFormContext"
 
 const AsideInfoWidget = ({ sticky }) => {

@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom"
 import { Helmet } from "react-helmet"
-import bgImg from "../../assets/contacts/bg.png"
-import callUsImg from "../../assets/contacts/callUs.png"
+import bgImg from "../../assets/ContactsPage/bg.png"
+import callUsImg from "../../assets/ContactsPage/callUs.png"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import Contacts from "./Contacts"
 

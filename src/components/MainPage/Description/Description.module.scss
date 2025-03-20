@@ -47,7 +47,7 @@
 	}
 
 	&__item {
-		@include mixins.usefulTextItemMarker('../../../assets/main/list-marker.svg');
+		@include mixins.usefulTextItemMarker('../../../assets/MainPage/list-marker.svg');
 		@extend %usefulTextItem;
 	}
 

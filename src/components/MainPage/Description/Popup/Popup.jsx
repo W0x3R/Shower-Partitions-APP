@@ -1,6 +1,6 @@
 import styles from "./Popup.module.scss"
 import { useEffect, useRef, useState } from "react"
-import BlackCross from "../../../../assets/main/black-cross.svg?react"
+import BlackCross from "../../../../assets/MainPage/black-cross.svg?react"
 
 const Popup = ({
 	isPopupOpen,

@@ -1,6 +1,6 @@
 import styles from "./ScrollTopBtn.module.scss"
 import { useEffect, useRef, useState } from "react"
-import ArrowTopIcon from "../../../assets/main/arrow-top.svg?react"
+import ArrowTopIcon from "../../../assets/MainPage/arrow-top.svg?react"
 import scrollTop from "../../../utils/scrollTop"
 
 const ScrollTopBtn = () => {
