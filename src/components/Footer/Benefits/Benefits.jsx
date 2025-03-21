@@ -1,6 +1,6 @@
 import styles from "./Benefits.module.scss"
 import CheckIcon from "../../../assets/footer/check.svg?react"
-import { benefitsData } from "../../../data/benefitsData"
+import { benefitsData } from "../../../data/footer/benefitsData"
 
 const Benefits = () => {
 	return (

@@ -3,7 +3,7 @@ import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useRef, useState } from "react"
 import { useLocation } from "react-router-dom"
 import FullScreenIcon from "../../../assets/MainPage/fullscreen-icon.svg?react"
-import examplesData from "../../../data/examplesData"
+import examplesData from "../../../data/mainPage/examplesData"
 import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
 
 const Examples = () => {

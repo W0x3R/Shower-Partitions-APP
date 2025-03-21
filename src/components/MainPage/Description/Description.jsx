@@ -11,18 +11,18 @@ import {
 	bronzeFurnitureImg,
 	nickelFurnitureImg,
 	chromeFurnitureImg,
-} from "../../../data/productsData"
+} from "../../../data/mainPage/productsData"
 import Popup from "./Popup/Popup"
 import {
 	disableBodyScrollIncludeScrollbar,
 	enableBodyScrollIncludeScrollbar,
 } from "../../../utils/setBodyScroll"
-import showerTypesData from "../../../data/showerPartitionsDescriptionData/showerTypesData"
-import setTypeOfDoorsAltData from "../../../data/showerPartitionsDescriptionData/typeOfDoorsAltData"
-import typeOfGlassesData from "../../../data/showerPartitionsDescriptionData/typeOfGlassesData"
-import setTypeOfFurnitureAltData from "../../../data/showerPartitionsDescriptionData/typeOfFurnitureAltData"
-import reasonsListData from "../../../data/showerPartitionsDescriptionData/reasonsListData"
-import benefitsData from "../../../data/showerPartitionsDescriptionData/benefitsData"
+import showerTypesData from "../../../data/mainPage/descriptionsData/showerTypesData"
+import setTypeOfDoorsAltData from "../../../data/mainPage/descriptionsData/typeOfDoorsAltData"
+import typeOfGlassesData from "../../../data/mainPage/descriptionsData/typeOfGlassesData"
+import setTypeOfFurnitureAltData from "../../../data/mainPage/descriptionsData/typeOfFurnitureAltData"
+import reasonsListData from "../../../data/mainPage/descriptionsData/reasonsListData"
+import benefitsData from "../../../data/mainPage/descriptionsData/benefitsData"
 import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
 
 const ShowerPartitionsDescription = () => {

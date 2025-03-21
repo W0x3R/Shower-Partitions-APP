@@ -1,5 +1,5 @@
 import styles from "./Standards.module.scss"
-import standardsData from "../../../data/standardsData"
+import standardsData from "../../../data/mainPage/standardsData"
 
 const Standards = () => {
 	return (

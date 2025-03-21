@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import styles from "./Portfolio.module.scss"
-import portfolioData from "../../data/portfolioData"
+import portfolioData from "../../data/portfolioPage/portfolioData"
 import PortfolioItem from "./PortfolioItem"
 import isDesktop from "../../utils/isDesktop"
 import ShowMoreBtn from "../Widgets/ShowMoreBtn/ShowMoreBtn"

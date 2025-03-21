@@ -1,12 +1,12 @@
 import styles from "./Article.module.scss"
 import AsideInfoWidget from "../Widgets/AsideInfoWidget/AsideInfoWidget"
 import articleBgImg from "../../assets/ArticlePage/bg.webp"
-import constructionsData from "../../data/article/constructionsData"
-import typesData from "../../data/article/typesData"
-import openingTypes from "../../data/article/openingTypes"
-import glassesTypes from "../../data/article/glassesTypes"
-import usefulTipsData from "../../data/article/usefulTipsData"
-import reasonsToContactData from "../../data/article/reasonsToContactData"
+import constructionsData from "../../data/articlePage/constructionsData"
+import typesData from "../../data/articlePage/typesData"
+import openingTypes from "../../data/articlePage/openingTypes"
+import glassesTypes from "../../data/articlePage/glassesTypes"
+import usefulTipsData from "../../data/articlePage/usefulTipsData"
+import reasonsToContactData from "../../data/articlePage/reasonsToContactData"
 
 const Article = () => {
 	return (

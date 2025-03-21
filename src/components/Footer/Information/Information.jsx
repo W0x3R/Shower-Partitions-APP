@@ -1,5 +1,5 @@
 import styles from "./Information.module.scss"
-import informationData from "../../../data/informationData"
+import informationData from "../../../data/footer/informationData"
 
 const Information = () => {
 	return (

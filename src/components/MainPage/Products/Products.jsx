@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom"
 import styles from "./Products.module.scss"
 import clickHand from "../../../assets/MainPage/click-hand.svg?url"
 import FullScreenIcon from "../../../assets/MainPage/fullscreen-icon.svg?react"
-import { productsData } from "../../../data/productsData"
+import { productsData } from "../../../data/mainPage/productsData"
 
 const Products = () => {
 	const [activeBtn, setActiveBtn] = useState("showers")

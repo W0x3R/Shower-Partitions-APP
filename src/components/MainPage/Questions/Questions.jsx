@@ -2,7 +2,7 @@ import styles from "./Questions.module.scss"
 import { useEffect, useState } from "react"
 import Cross from "../../../assets/MainPage/cross.svg?react"
 import questionImg from "../../../assets/MainPage/questions-img.png"
-import accordionData from "../../../data/accordionData"
+import questionsData from "../../../data/mainPage/questionsData"
 import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
 
 const Questions = () => {
@@ -10,7 +10,7 @@ const Questions = () => {
 	const [visibleCount, setVisibleCount] = useState(2)
 
 	const handleShowMoreQuestions = () => {
-		setVisibleCount((prev) => Math.min(prev + 2, accordionData.length))
+		setVisibleCount((prev) => Math.min(prev + 2, questionsData.length))
 		const liveRegion = document.getElementById("aria-accordion-live-status")
 		if (liveRegion) {
 			liveRegion.textContent = "Добавлены два новых вопроса"
@@ -19,7 +19,7 @@ const Questions = () => {
 	}
 
 	const renderQuestions = () =>
-		accordionData.slice(0, visibleCount).map(({ id, title, answer }) => {
+		questionsData.slice(0, visibleCount).map(({ id, title, answer }) => {
 			return (
 				<div key={id} className={styles["questions__accordion-section"]}>
 					<button
@@ -87,7 +87,7 @@ const Questions = () => {
 					<div className={styles["questions__accordion-wrapper"]}>
 						<div className={styles["questions__accordion"]}>
 							{renderQuestions()}
-							{visibleCount < accordionData.length && (
+							{visibleCount < questionsData.length && (
 								<ShowMoreBtn
 									onClick={handleShowMoreQuestions}
 									aria="Показать еще 2 вопроса"
