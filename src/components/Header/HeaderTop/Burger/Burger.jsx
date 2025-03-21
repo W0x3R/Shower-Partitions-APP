@@ -7,14 +7,7 @@ const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 
 	useEffect(() => {
 		const header = document.querySelector(".header")
-
-		if (
-			location.pathname === "/delivery" ||
-			location.pathname === "/price" ||
-			location.pathname === "/contacts" ||
-			location.pathname === "/article" ||
-			(location.pathname === "/portfolio" && !isBurgerActive)
-		) {
+		if (location.pathname.length > 1 && !isBurgerActive) {
 			header.classList.add("black")
 		} else {
 			header.classList.remove("black")
