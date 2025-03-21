@@ -9,6 +9,7 @@ import ContactsPage from "./components/ContactsPage/ContactsPage"
 import PopupFormProvider from "./context/PopupFormProvider"
 import PortfolioPage from "./components/PortfolioPage/PortfolioPage"
 import ScrollTopOnLocationChange from "./utils/scrollTopOnLocationChange"
+import NotFoundPage from "./components/NotFound/NotFoundPage"
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 							<Route path="article" element={<ArticlePage />} />
 							<Route path="contacts" element={<ContactsPage />} />
 							<Route path="portfolio" element={<PortfolioPage />} />
+							<Route path="*" element={<NotFoundPage />} />
 						</Route>
 					</Routes>
 				</PopupFormProvider>

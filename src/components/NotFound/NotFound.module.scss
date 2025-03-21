@@ -1,0 +1,39 @@
+@use '../../styles/mixins';
+@use '../../styles/media';
+
+.error {
+	@extend %section;
+
+
+	&__title {
+		@extend %titleLevelTwo;
+		margin-bottom: 0.5em;
+	}
+
+	&__subtitle {
+		@extend %titleLevelFive;
+		margin-bottom: 0;
+		text-align: center;
+		font-weight: 500;
+	}
+
+	&__img {
+		margin: 0.6em auto;
+		display: block;
+		width: 48em;
+
+		@include media.smallMobile {
+			width: 38em;
+		}
+	}
+
+	&__text {
+		@extend %titleLevelFive;
+		text-align: center;
+	}
+
+	&__text-link {
+		@extend %footerLink;
+		color: var(--main-green);
+	}
+}
