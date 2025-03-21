@@ -9,7 +9,7 @@ const DropdownMenu = ({
 		handleMenuActions,
 		handleCloseMenuClick,
 	},
-	menuItems,
+	dropdownMenuItems,
 	menuName,
 	links,
 }) => {
@@ -20,7 +20,7 @@ const DropdownMenu = ({
 			id={`menu-${menuName}`}
 			ref={navMenuRef}
 		>
-			{menuItems.map((item, i) => {
+			{dropdownMenuItems.map((item, i) => {
 				return (
 					<li key={item} className={styles["nav__menu-item"]}>
 						<NavLink
@@ -32,7 +32,7 @@ const DropdownMenu = ({
 								e.target.blur()
 							}}
 							onBlur={() => {
-								if (i === menuItems.length - 1) {
+								if (i === dropdownMenuItems.length - 1) {
 									navMenuRef.current.classList.remove(styles["nav__menu_open"])
 									handleCloseMenuClick()
 								}

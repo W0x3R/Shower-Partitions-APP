@@ -6,10 +6,7 @@ import isHoverSupported from "../../../../utils/isHoverSupported"
 const DropdownItem = ({
 	styles,
 	actions: { onBurgerClick, isMenuOpen, setIsMenuOpen },
-	menuName,
-	title,
-	menuItems,
-	links,
+	data: { menuName, title, dropdownMenuItems, links },
 }) => {
 	const handleMenuActions = (value) =>
 		setIsMenuOpen((prev) => ({ ...prev, [menuName]: value }))
@@ -42,7 +39,7 @@ const DropdownItem = ({
 		>
 			<div className={styles["nav__link-wrapper"]}>
 				<span id={`menu-desc-${menuName}`} className="sr-only">
-					Выпадающее меню с {menuItems.length} ссылками
+					Выпадающее меню с {dropdownMenuItems.length} ссылками
 				</span>
 				<NavLink
 					className={`${styles["nav__item-link"]} ${styles.hasDropdown}`}
@@ -67,7 +64,7 @@ const DropdownItem = ({
 					handleCloseMenuClick,
 				}}
 				menuName={menuName}
-				menuItems={menuItems}
+				dropdownMenuItems={dropdownMenuItems}
 				links={links}
 			/>
 		</li>

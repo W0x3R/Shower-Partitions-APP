@@ -2,6 +2,7 @@ import styles from "./Nav.module.scss"
 import { useEffect, useRef, useState } from "react"
 import DropdownItem from "./DropdownMenu/DropdownItem"
 import NavItems from "./NavItems"
+import dropdownItemData from "../../../data/nav/dropdownItemData"
 
 const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	const [isFixed, setIsFixed] = useState(false)
@@ -58,30 +59,20 @@ const Nav = ({ isBurgerActive, onBurgerClick }) => {
 		>
 			<ul className={styles.nav__list}>
 				<NavItems styles={styles} onBurgerClick={onBurgerClick} />
-				<DropdownItem
-					styles={styles}
-					actions={{
-						onBurgerClick,
-						isMenuOpen,
-						setIsMenuOpen,
-					}}
-					menuName={"customer"}
-					title="Покупателям"
-					menuItems={["Доставка и оплата", "Стоимость", "Полезные статьи"]}
-					links={["delivery", "price", "article"]}
-				/>
-				<DropdownItem
-					styles={styles}
-					actions={{
-						onBurgerClick,
-						isMenuOpen,
-						setIsMenuOpen,
-					}}
-					menuName={"company"}
-					title="О компании"
-					menuItems={["Наши контакты"]}
-					links={["contacts"]}
-				/>
+				{dropdownItemData.map((data) => {
+					return (
+						<DropdownItem
+							key={data.id}
+							styles={styles}
+							actions={{
+								onBurgerClick,
+								isMenuOpen,
+								setIsMenuOpen,
+							}}
+							data={data}
+						/>
+					)
+				})}
 			</ul>
 		</nav>
 	)
