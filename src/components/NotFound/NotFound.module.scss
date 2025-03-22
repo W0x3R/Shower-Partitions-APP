@@ -4,7 +4,6 @@
 .error {
 	@extend %section;
 
-
 	&__title {
 		@extend %titleLevelTwo;
 		margin-bottom: 0.5em;
@@ -29,6 +28,7 @@
 
 	&__text {
 		@extend %titleLevelFive;
+		font-weight: 500;
 		text-align: center;
 	}
 

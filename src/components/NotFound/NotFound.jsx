@@ -18,7 +18,7 @@ const NotFound = () => {
 					<Link className={styles["error__text-link"]} to="/">
 						главную страницу
 					</Link>{" "}
-					или воспользуйтесь меню сайта.
+					или воспользуйтесь меню сайта
 				</h3>
 			</div>
 		</div>
