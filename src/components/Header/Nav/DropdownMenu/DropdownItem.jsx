@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import DropdownMenu from "./DropdownMenu"
 import isDesktop from "../../../../utils/isDesktop"
 import isHoverSupported from "../../../../utils/isHoverSupported"
@@ -8,6 +8,10 @@ const DropdownItem = ({
 	actions: { onBurgerClick, isMenuOpen, setIsMenuOpen },
 	data: { menuName, title, dropdownMenuItems, links },
 }) => {
+	const location = useLocation()
+
+	const findMatchesPath = links.some((link) => `/${link}` === location.pathname)
+
 	const handleMenuActions = (value) =>
 		setIsMenuOpen((prev) => ({ ...prev, [menuName]: value }))
 
@@ -42,14 +46,15 @@ const DropdownItem = ({
 					Выпадающее меню с {dropdownMenuItems.length} ссылками
 				</span>
 				<NavLink
-					className={`${styles["nav__item-link"]} ${styles.hasDropdown}`}
+					className={`${styles["nav__item-link"]} ${styles.hasDropdown} ${findMatchesPath ? styles.active : ""}`}
 					aria-describedby={`menu-desc-${menuName}`}
 					onFocus={() => handleCloseMenuClick()}
+					to="#"
 				>
 					{title}
 				</NavLink>
 				<span
-					className={`${styles["nav__item-arrow"]} ${isMenuOpen[menuName] ? styles["nav__item-arrow_open"] : ""}`}
+					className={`${styles["nav__item-arrow"]} ${isMenuOpen[menuName] ? styles["nav__item-arrow_open"] : ""} ${findMatchesPath ? styles.active : ""}`}
 					aria-hidden="true"
 				>
 					▼

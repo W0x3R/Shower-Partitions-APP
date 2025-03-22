@@ -129,6 +129,10 @@
 		&::before {
 			@include mixins.increaseClickableArea;
 		}
+
+		&.active {
+			color: var(--main-green)
+		}
 	}
 
 	&__menu {
@@ -239,6 +243,10 @@
 
 		&_open {
 			transform: rotate(180deg);
+		}
+
+		&.active {
+			color: var(--main-green);
 		}
 	}
 }
