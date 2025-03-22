@@ -18,11 +18,19 @@ const About = () => {
 	return (
 		<section className={styles.about}>
 			<div className={styles.about__background} aria-hidden="true" />
-			<img className={styles["about__background-big"]} src={mainBgBig} alt="" />
+			<img
+				className={styles["about__background-big"]}
+				src={mainBgBig}
+				alt=""
+				width="1680"
+				height="920"
+			/>
 			<img
 				className={styles["about__background-small"]}
 				src={mainBgSmall}
 				alt=""
+				width="500"
+				height="920"
 			/>
 			<div className="container">
 				<div className={styles.about__content}>
