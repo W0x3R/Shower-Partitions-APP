@@ -70,6 +70,8 @@ const Contacts = () => {
 							<img
 								className={styles["contacts__info-img"]}
 								src={callUsImg}
+								width="256"
+								height="256"
 								alt=""
 							/>
 							<div className={styles["contacts__socials-inner"]}>

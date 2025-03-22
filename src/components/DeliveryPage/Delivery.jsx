@@ -14,7 +14,8 @@ const Delivery = () => {
 						<img
 							className={styles.delivery__img}
 							src={carImg}
-							width="100%"
+							width="915"
+							height="686"
 							alt=""
 							loading="lazy"
 						/>

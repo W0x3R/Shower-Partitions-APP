@@ -12,7 +12,12 @@ const NotFound = () => {
 				<h2 className={styles.error__subtitle}>
 					Возможно, ссылка устарела или была введена неправильно
 				</h2>
-				<img className={styles.error__img} src={notFoundGif} />
+				<img
+					className={styles.error__img}
+					src={notFoundGif}
+					width="770"
+					height="580"
+				/>
 				<h3 className={styles.error__text}>
 					Попробуйте вернуться на{" "}
 					<Link className={styles["error__text-link"]} to="/">

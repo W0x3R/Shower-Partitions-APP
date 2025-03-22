@@ -18,7 +18,7 @@ const Article = () => {
 					</h1>
 					<img
 						className={styles.article__img}
-						width="100%"
+						width="1408"
 						height="430px"
 						src={articleBgImg}
 						alt=""
