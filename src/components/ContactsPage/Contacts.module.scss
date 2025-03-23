@@ -55,7 +55,7 @@
 
 	&__info-img {
 		align-self: center;
-		width: 16em;
+		@include mixins.sizes(16em, auto);
 		animation: imgShadow 3s infinite;
 
 		@include media.bigMobile {
