@@ -14,6 +14,14 @@
 	&__img {
 		@include mixins.sizes(120px, 120px);
 		fill: var(--white);
+
+		@include media.desktop {
+			@include mixins.sizes(100px, 100px);
+		}
+
+		@include media.bigMobile {
+			@include mixins.sizes(80px, 80px);
+		}
 	}
 
 	&__text {
@@ -23,6 +31,6 @@
 		overflow: hidden;
 		white-space: nowrap;
 		border-right: 2px solid var(--white);
-		animation: typing 3s .6s steps(80) infinite, typingBlink 1.2s infinite;
+		animation: typing 5s 1s steps(60) infinite, typingBlink 1s infinite;
 	}
 }
