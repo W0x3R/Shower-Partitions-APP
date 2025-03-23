@@ -1,4 +1,6 @@
 import { Outlet } from "react-router-dom"
+import { Suspense } from "react"
+import { Spinner } from "../components/Widgets/Spinner/Spinner"
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 import FormPopup from "../components/Widgets/FormPopup/FormPopup"
@@ -10,7 +12,9 @@ const Layout = () => {
 		<>
 			<Header />
 			<main>
-				<Outlet />
+				<Suspense fallback={<Spinner />}>
+					<Outlet />
+				</Suspense>
 			</main>
 			<FormPopup />
 			<ContactsWidget />

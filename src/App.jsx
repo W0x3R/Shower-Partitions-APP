@@ -1,15 +1,27 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { lazy } from "react"
 import "./App.scss"
 import Layout from "./Layout/Layout"
-import MainPage from "./components/MainPage/MainPage"
-import DeliveryPage from "./components/DeliveryPage/DeliveryPage"
-import ServicesCostPage from "./components/ServicesCostPage/ServicesCostPage"
-import ArticlePage from "./components/ArticlePage/ArticlePage"
-import ContactsPage from "./components/ContactsPage/ContactsPage"
 import PopupFormProvider from "./context/PopupFormProvider"
-import PortfolioPage from "./components/PortfolioPage/PortfolioPage"
 import ScrollTopOnLocationChange from "./utils/scrollTopOnLocationChange"
-import NotFoundPage from "./components/NotFound/NotFoundPage"
+
+const MainPage = lazy(() => import("./components/MainPage/MainPage"))
+const DeliveryPage = lazy(
+	() => import("./components/DeliveryPage/DeliveryPage")
+)
+const ServicesCostPage = lazy(
+	() => import("./components/ServicesCostPage/ServicesCostPage")
+)
+const ArticlePage = lazy(() => import("./components/ArticlePage/ArticlePage"))
+const ContactsPage = lazy(
+	() => import("./components/ContactsPage/ContactsPage")
+)
+const PortfolioPage = lazy(
+	() => import("./components/PortfolioPage/PortfolioPage")
+)
+const NotFoundPage = lazy(
+	() => import("./components/NotFoundPage/NotFoundPage")
+)
 
 function App() {
 	return (

@@ -19,7 +19,7 @@
 	&__img {
 		margin: 0.6em auto;
 		display: block;
-		width: 48em;
+		@include mixins.sizes(48em, auto);
 
 		@include media.smallMobile {
 			width: 38em;
@@ -27,7 +27,7 @@
 	}
 
 	&__text {
-		@extend %titleLevelFive;
+		@extend %titleLevelSix;
 		font-weight: 500;
 		text-align: center;
 	}
