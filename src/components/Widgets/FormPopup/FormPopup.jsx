@@ -22,28 +22,33 @@ const FormPopup = () => {
 			<div
 				className={`${styles.popup} ${isFormPopupOpen ? styles.visible : styles.hide}`}
 				style={{ display: isVisible ? "flex" : "none" }}
-				onClick={(e) => handleFormPopupClose(e)}
+				onMouseUp={(e) => {
+					handleFormPopupClose(e)
+				}}
 				onKeyDown={(e) => handleFormPopupClose(e)}
 				role="dialog"
 				aria-modal="true"
 				aria-label="Вы можете закрыть это окно с помощью нажатия клавиши escape"
 				aria-hidden={!isFormPopupOpen}
 			>
-				<div className={styles.popup__content}>
+				<div
+					className={styles.popup__content}
+					onMouseUp={(e) => e.stopPropagation()}
+				>
 					<CallBackForm
 						title="Свяжемся с Вами в течение дня, заполните форму"
 						isEmailShow={false}
 						isBorderShow={true}
 					/>
-					<button
-						type="button"
-						className={styles.popup__btn}
-						onClick={(e) => handleFormPopupClose(e)}
-						aria-label="Закрыть изображение"
-					>
-						<BlackCross />
-					</button>
 				</div>
+				<button
+					type="button"
+					className={styles.popup__btn}
+					onClick={(e) => handleFormPopupClose(e)}
+					aria-label="Закрыть изображение"
+				>
+					<BlackCross />
+				</button>
 			</div>
 		</ReactFocusLock>
 	)

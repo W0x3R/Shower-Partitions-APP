@@ -10,14 +10,13 @@ const PopupFormProvider = ({ children }) => {
 
 	const handleFormPopupOpen = (e) => {
 		if (e.type === "click" || (e.type === "keydown" && e.code === "Enter")) {
-			e.preventDefault()
 			setIsFormPopupOpen(true)
 			disableBodyScrollIncludeScrollbar()
 		}
 	}
 
 	const handleFormPopupClose = (e) => {
-		if (e.type === "click" || (e.type === "keydown" && e.code === "Escape")) {
+		if (e.type === "mouseup" || (e.type === "keydown" && e.code === "Escape")) {
 			setIsFormPopupOpen(false)
 			enableBodyScrollIncludeScrollbar()
 		}
