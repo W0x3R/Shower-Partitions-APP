@@ -6,6 +6,8 @@ import clickHandImg from "../../../assets/MainPage/click-hand.svg?url"
 import PopupFormContext from "../../../context/PopupFormContext"
 import isHoverSupported from "../../../utils/isHoverSupported"
 
+const formKey = import.meta.env.VITE_WEB3FORMS_KEY
+
 const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 	const { isFormPopupOpen } = useContext(PopupFormContext)
 	const {
@@ -18,8 +20,26 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 	} = useForm()
 
 	const onSubmit = async (data) => {
-		console.log("Отправка данных:", data)
-		reset()
+		const formData = new FormData()
+		for (const key in data) {
+			formData.append(key, data[key])
+		}
+		formData.append("subject", "Новая заявка!")
+		formData.append("access_key", formKey)
+
+		const response = await fetch("https://api.web3forms.com/submit", {
+			method: "POST",
+			body: formData,
+		})
+
+		const result = await response.json()
+
+		if (result.success) {
+			reset()
+			alert("Форма успешно отправлена!")
+		} else {
+			alert("Ошибка отправки: " + result.message)
+		}
 	}
 
 	const callBackBtnRef = useRef(null)
@@ -77,7 +97,7 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 						const digits = value.replace(/\D/g, "")
 						const operatorCode = value.match(/\+375 \((\d{2})\)/)?.[1]
 						if (!operatorCode) return "Введите код оператора"
-						if (!["44", "25", "29"].includes(operatorCode))
+						if (!["44", "25", "29", "33", "17"].includes(operatorCode))
 							return "Неверный код оператора"
 						if (digits.length < 12) return "Введите номер полностью"
 						return true
