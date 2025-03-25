@@ -6,12 +6,24 @@ import Instagram from "../../../assets/header/instagram.svg?react"
 
 const SocialLinks = ({ gap, sizes }) => {
 	const socialLinksData = [
-		{ element: Whatsapp, href: "#", ariaLabel: "Связаться с нами в Whatsapp" },
-		{ element: Viber, href: "#", ariaLabel: "Связаться с нами в Viber" },
-		{ element: Telegram, href: "#", ariaLabel: "Связаться с нами в Telegram" },
+		{
+			element: Whatsapp,
+			href: "https://wa.me/+375447854381",
+			ariaLabel: "Связаться с нами в Whatsapp",
+		},
+		{
+			element: Viber,
+			href: "viber://add?number=375447854381",
+			ariaLabel: "Связаться с нами в Viber",
+		},
+		{
+			element: Telegram,
+			href: "https://telegram.im/@georgiyzm",
+			ariaLabel: "Связаться с нами в Telegram",
+		},
 		{
 			element: Instagram,
-			href: "#",
+			href: "https://www.instagram.com/showers_gomel/?igsh=bHptd2hnN2s4Y2F1#",
 			ariaLabel: "Связаться с нами в Instagram",
 		},
 	]

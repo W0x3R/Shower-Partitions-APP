@@ -30,22 +30,22 @@ const Contacts = () => {
 					<CallIcon className="footer__icon" aria-hidden="true" />
 					<a
 						className={styles["contacts__number-link"]}
-						href="tel:+375447625856"
+						href="tel:+375447854381"
 						aria-label="Связаться с нами по номеру телефона"
-						title="Позвонить по номеру +375 44 762 58 56"
+						title="Позвонить по номеру +375 44 785 43 81"
 					>
-						+375 (44) 762-58-56
+						+375 (44) 785-43-81
 					</a>
 				</div>
 				<div className={styles.contacts__mail}>
 					<MailIcon className="footer__icon" aria-hidden="true" />
 					<a
 						className={styles["contacts__mail-link"]}
-						href="mailto:vyr4376@yandex.ru"
+						href="mailto:showers.gomel@mail.ru"
 						aria-label="Связаться с нами по email"
 						rel="noopener noreferrer"
 					>
-						mail@garderobsystem.ru
+						showers.gomel@mail.ru
 					</a>
 				</div>
 				<div

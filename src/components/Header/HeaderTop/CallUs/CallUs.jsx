@@ -20,11 +20,11 @@ const CallUs = () => {
 			</p>
 			<a
 				className={styles.callUs__link}
-				href="tel:+375447625856"
+				href="tel:+375447854381"
 				aria-label="Связаться с нами по номеру телефона"
-				title="Позвонить по номеру +375 44 762 58 56"
+				title="Позвонить по номеру +375 44 785 43 81"
 			>
-				<strong>+375 (44) 762-58-56</strong>
+				<strong>+375 (44) 785-43-81</strong>
 			</a>
 			<button
 				onClick={(e) => handleFormPopupOpen(e)}

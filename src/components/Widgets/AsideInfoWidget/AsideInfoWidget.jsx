@@ -21,7 +21,7 @@ const AsideInfoWidget = ({ sticky }) => {
 			<h3 className={styles.aside__title}>Связаться с нами по телефону</h3>
 			<a
 				className={styles.aside__link}
-				href="tel:+375447625856"
+				href="tel:+375447854381"
 				aria-label="Связаться с нами по номеру телефона"
 			>
 				<span>Позвонить</span>
