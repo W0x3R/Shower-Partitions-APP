@@ -4,7 +4,7 @@ import notFoundGif from "../../assets/notFoundPage/not-found-gif.gif"
 
 const NotFound = () => {
 	return (
-		<div className={styles.error}>
+		<section className={styles.error}>
 			<div className="container">
 				<h1 className={styles.error__title}>
 					<b>Упс! Кажется, такой страницы не существует</b>
@@ -26,7 +26,7 @@ const NotFound = () => {
 					или воспользуйтесь меню сайта
 				</h3>
 			</div>
-		</div>
+		</section>
 	)
 }
 
