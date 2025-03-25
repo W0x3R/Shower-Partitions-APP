@@ -548,8 +548,8 @@
 
 	&__content {
 		@include useFlex(center, center);
-		@include sizes(100%, 100%);
 		position: relative;
+		margin: 0 auto;
 	}
 
 	&__btn {
