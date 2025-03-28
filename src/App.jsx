@@ -25,6 +25,12 @@ const SuccessfulMessageSendingPage = lazy(
 			"./components/SuccessfulMessageSendingPage/SuccessfulMessageSendingPage"
 		)
 )
+const UnsuccessfulMessageSendingPage = lazy(
+	() =>
+		import(
+			"./components/UnsuccessfulMessageSendingPage/UnsuccessfulMessageSendingPage"
+		)
+)
 const NotFoundPage = lazy(
 	() => import("./components/NotFoundPage/NotFoundPage")
 )
@@ -46,6 +52,10 @@ function App() {
 							<Route
 								path="successful"
 								element={<SuccessfulMessageSendingPage />}
+							/>
+							<Route
+								path="unsuccessful"
+								element={<UnsuccessfulMessageSendingPage />}
 							/>
 							<Route path="*" element={<NotFoundPage />} />
 						</Route>
