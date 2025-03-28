@@ -9,18 +9,14 @@ export const benefitsData = [
 	},
 	{
 		id: "benefits_2",
-		text: "Бесплатный 3D проект",
+		text: "По индвивидуальным параметрам",
 	},
 	{
 		id: "benefits_3",
-		text: "Без предоплаты",
-	},
-	{
-		id: "benefits_4",
 		text: "Гарантия 18 месяцев",
 	},
 	{
-		id: "benefits_5",
+		id: "benefits_4",
 		text: "Беспроцентная рассрочка",
 	},
 ]
