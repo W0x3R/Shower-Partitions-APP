@@ -19,6 +19,12 @@ const ContactsPage = lazy(
 const PortfolioPage = lazy(
 	() => import("./components/PortfolioPage/PortfolioPage")
 )
+const SuccessfulMessageSendingPage = lazy(
+	() =>
+		import(
+			"./components/SuccessfulMessageSendingPage/SuccessfulMessageSendingPage"
+		)
+)
 const NotFoundPage = lazy(
 	() => import("./components/NotFoundPage/NotFoundPage")
 )
@@ -37,6 +43,10 @@ function App() {
 							<Route path="article" element={<ArticlePage />} />
 							<Route path="contacts" element={<ContactsPage />} />
 							<Route path="portfolio" element={<PortfolioPage />} />
+							<Route
+								path="successful"
+								element={<SuccessfulMessageSendingPage />}
+							/>
 							<Route path="*" element={<NotFoundPage />} />
 						</Route>
 					</Routes>
