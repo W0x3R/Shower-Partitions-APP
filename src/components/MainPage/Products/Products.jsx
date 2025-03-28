@@ -116,7 +116,11 @@ const Products = () => {
 						})}
 					</div>
 				</Fancybox>
-				<Link className={styles["products__link"]} to="/portfolio">
+				<Link
+					className={styles["products__link"]}
+					to="/portfolio"
+					aria-label="Перейти на страницу с нашими работами"
+				>
 					<span>Перейти в портфолио</span>
 					<img src={clickHand} alt="" />
 				</Link>
