@@ -5,11 +5,14 @@ import { useContext, useEffect, useRef } from "react"
 import clickHandImg from "../../../assets/MainPage/click-hand.svg?url"
 import PopupFormContext from "../../../context/PopupFormContext"
 import isHoverSupported from "../../../utils/isHoverSupported"
+import { useNavigate } from "react-router-dom"
 
 const formKey = import.meta.env.VITE_WEB3FORMS_KEY
 
 const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
-	const { isFormPopupOpen } = useContext(PopupFormContext)
+	const navigate = useNavigate()
+	const { isFormPopupOpen, handleFormPopupCloseRedirect } =
+		useContext(PopupFormContext)
 	const {
 		register,
 		handleSubmit,
@@ -36,10 +39,11 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 
 		if (result.success) {
 			reset()
-			alert("Форма успешно отправлена!")
+			navigate("/successful")
 		} else {
-			alert("Ошибка отправки: " + result.message)
+			navigate("/unsuccessful")
 		}
+		handleFormPopupCloseRedirect()
 	}
 
 	const callBackBtnRef = useRef(null)

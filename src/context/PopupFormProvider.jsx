@@ -22,9 +22,19 @@ const PopupFormProvider = ({ children }) => {
 		}
 	}
 
+	const handleFormPopupCloseRedirect = () => {
+		setIsFormPopupOpen(false)
+		enableBodyScrollIncludeScrollbar()
+	}
+
 	return (
 		<PopupFormContext.Provider
-			value={{ isFormPopupOpen, handleFormPopupOpen, handleFormPopupClose }}
+			value={{
+				isFormPopupOpen,
+				handleFormPopupOpen,
+				handleFormPopupClose,
+				handleFormPopupCloseRedirect,
+			}}
 		>
 			{children}
 		</PopupFormContext.Provider>
