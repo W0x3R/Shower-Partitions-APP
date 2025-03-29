@@ -24,7 +24,7 @@ const PortfolioItem = memo(({ data }) => {
 				}}
 			>
 				<h2 className={styles["portfolio__item-title"]}>{title}</h2>
-				<Carousel options={{ Thumbs: { type: "classic" } }}>
+				<Carousel options={{ Thumbs: { type: "classic", minCount: 1 } }}>
 					{images.map((image, id) => {
 						return (
 							<div
