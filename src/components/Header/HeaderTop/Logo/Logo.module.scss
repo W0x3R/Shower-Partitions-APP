@@ -11,11 +11,11 @@
 	}
 
 	&__img {
-		@include mixins.sizes(5em, 5em);
+		@include mixins.sizes(5.5em, auto);
 		border-radius: 10px;
 
 		@include media.bigMobile {
-			@include mixins.sizes(7em, 7em);
+			width: 7em;
 		}
 
 	}
