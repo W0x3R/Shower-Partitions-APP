@@ -11,21 +11,6 @@ const Contacts = () => {
 		<div className={styles.contacts}>
 			<div className={styles["contacts__wrapper"]}>
 				<h6 className={styles.contacts__title}>Наши контакты</h6>
-				<address className={styles.contacts__adress}>
-					<LocationIcon className="footer__icon" aria-hidden="true" />
-					Наш адрес: Беларусь,
-					<br /> г.Гомель, ул. Гомельская 25
-				</address>
-				<div className={styles.contacts__time}>
-					<TimeIcon className="footer__icon" aria-hidden="true" />
-					<p aria-labelledby="working-time-description-footer">
-						Пн-Пт: 9:00 - 18:00 <br />
-						Сб-Вс - выходные
-					</p>
-					<span id="working-time-description-footer" className="sr-only">
-						Мы работаем с понедельника по пятницу с 9 утра до 6 часов вечера
-					</span>
-				</div>
 				<div className={styles.contacts__call}>
 					<CallIcon className="footer__icon" aria-hidden="true" />
 					<a

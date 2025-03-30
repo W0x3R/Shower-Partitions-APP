@@ -27,6 +27,11 @@ import portfolioPageImg_14_1 from "../../assets/portfolioPage/14-1.webp"
 import portfolioPageImg_15_1 from "../../assets/portfolioPage/15-1.webp"
 import portfolioPageImg_16_1 from "../../assets/portfolioPage/16-1.webp"
 import portfolioPageImg_17_1 from "../../assets/portfolioPage/17-1.webp"
+import portfolioPageImg_18_1 from "../../assets/portfolioPage/18-1.webp"
+import portfolioPageImg_19_1 from "../../assets/portfolioPage/19-1.webp"
+import portfolioPageImg_20_1 from "../../assets/portfolioPage/20-1.webp"
+import portfolioPageImg_21_1 from "../../assets/portfolioPage/21-1.webp"
+import portfolioPageImg_21_2 from "../../assets/portfolioPage/21-1.webp"
 
 const portfolioPageData = [
 	{
@@ -187,7 +192,7 @@ const portfolioPageData = [
 		images: [portfolioPageImg_11_1],
 		descriptions: [
 			"Форма: Душевая перегородка в нишу",
-			"Фурнитура: Золото  глянец",
+			"Фурнитура: Золото глянец",
 			"Стекло: Прозрачное закаленное, 8мм",
 			"Тип открывания дверей: Распашной",
 			"Стоимость: 2491р",
@@ -282,6 +287,66 @@ const portfolioPageData = [
 			"Тип открывания дверей: Распашной",
 			"Стоимость: 2633р",
 			"Размеры: 2000*913*585",
+		],
+	},
+	{
+		mainId: "portfolioPage_main_id_17",
+		carouselId: "portfolioPage_carousel_id_17",
+		descriptionId: "portfolioPage_description_id_17",
+		title: "Душевая шторка в ванную",
+		images: [portfolioPageImg_18_1],
+		descriptions: [
+			"Форма: Душевая шторка в ванную",
+			"Фурнитура: Черная",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: -",
+			"Стоимость: -",
+			"Размеры: -",
+		],
+	},
+	{
+		mainId: "portfolioPage_main_id_18",
+		carouselId: "portfolioPage_carousel_id_18",
+		descriptionId: "portfolioPage_description_id_18",
+		title: "Душевая перегородка в нишу",
+		images: [portfolioPageImg_19_1],
+		descriptions: [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Хром мат.",
+			"Стекло: Прозрачное осветленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: -",
+			"Размеры: -",
+		],
+	},
+	{
+		mainId: "portfolioPage_main_id_19",
+		carouselId: "portfolioPage_carousel_id_19",
+		descriptionId: "portfolioPage_description_id_19",
+		title: "Душевая угловая перегородка",
+		images: [portfolioPageImg_20_1],
+		descriptions: [
+			"Форма: Душевая угловая перегородка",
+			"Фурнитура: Черный мат.",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Откатной",
+			"Стоимость: -",
+			"Размеры: -",
+		],
+	},
+	{
+		mainId: "portfolioPage_main_id_20",
+		carouselId: "portfolioPage_carousel_id_20",
+		descriptionId: "portfolioPage_description_id_20",
+		title: "Душевая перегородка в ванную",
+		images: [portfolioPageImg_21_1, portfolioPageImg_21_2],
+		descriptions: [
+			"Форма: Душевая перегородка в ванную",
+			"Фурнитура: Черная",
+			"Стекло: Матовое закаленное, 8мм",
+			"Тип открывания дверей: Раздвижной",
+			"Стоимость: -",
+			"Размеры: -",
 		],
 	},
 ]
