@@ -1,6 +1,5 @@
 import styles from "./HeaderTop.module.scss"
 import Logo from "./Logo/Logo"
-import Adress from "./Adress/Adress"
 import Description from "./Description/Description"
 import Socials from "./Socials/Socials"
 import CallUs from "./CallUs/CallUs"
@@ -13,7 +12,6 @@ const HeaderTop = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 		>
 			<Logo />
 			<Description />
-			<Adress />
 			<Socials />
 			<CallUs />
 			<Burger
