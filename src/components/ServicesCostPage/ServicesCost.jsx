@@ -1,8 +1,8 @@
 import { useContext } from "react"
 import styles from "./ServicesCost.module.scss"
 import clickHand from "../../assets/MainPage/click-hand.svg?url"
+import articleBgImg from "../../assets/ArticlePage/bg.webp"
 import priceDescriptionData from "../../data/pricePage/priceDescriptionData"
-import priceTableData from "../../data/pricePage/priceTableData"
 import PopupFormContext from "../../context/PopupFormContext"
 
 const ServicesCost = () => {
@@ -10,41 +10,18 @@ const ServicesCost = () => {
 	return (
 		<section className={styles.cost}>
 			<div className="container">
-				<h1 className={styles.cost__title}>
-					<b>Стоимость</b>
-				</h1>
-				<table className={styles.cost__table}>
-					<thead className={styles["cost__table-head"]}>
-						<tr>
-							<th>Наименование работ</th>
-							<th>Стоимость</th>
-							<th>Доп. информация</th>
-						</tr>
-					</thead>
-					<tbody className={styles["cost__table-body"]}>
-						{priceTableData.map(({ id, name, cost, extraInfo }) => {
-							return (
-								<tr key={id}>
-									<td>{name}</td>
-									<td>{cost}</td>
-									<td>{extraInfo}</td>
-								</tr>
-							)
-						})}
-					</tbody>
-				</table>
-				<p className={styles.cost__text}>
-					*Стоимость может отличаться от указанной на сайте.{" "}
-					<b>Точную стоимость уточняйте</b>
-				</p>
-				<button
-					className={styles["cost__order-btn"]}
-					type="button"
-					onClick={(e) => handleFormPopupOpen(e)}
-				>
-					<span>Заказать консультацию по ценам</span>
-					<img src={clickHand} alt="" />
-				</button>
+				<div className={styles["cost__title-wrapper"]}>
+					<h1 className={styles.cost__title}>
+						<b>Стоимость услуг</b>
+					</h1>
+					<img
+						className={styles.cost__img}
+						src={articleBgImg}
+						alt=""
+						width="1408"
+						height="430"
+					/>
+				</div>
 				<h2 className={styles.cost__subtitle}>
 					Стоимость услуг доставки и монтажа: все, что вам нужно знать о наших
 					изделиях
@@ -56,6 +33,14 @@ const ServicesCost = () => {
 						</p>
 					)
 				})}
+				<button
+					className={styles["cost__order-btn"]}
+					type="button"
+					onClick={(e) => handleFormPopupOpen(e)}
+				>
+					<span>Заказать консультацию по ценам</span>
+					<img src={clickHand} alt="" />
+				</button>
 			</div>
 		</section>
 	)

@@ -1,3 +1,4 @@
+import articleBgImg from "../../assets/ArticlePage/bg.webp"
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
@@ -45,6 +46,7 @@ const ServicesCostPage = () => {
 					content="Посмотрите цены на установку, замер и доставку стеклянных душевых перегородок в Гомеле. Честные расценки и качественный сервис!"
 				/>
 				<meta name="twitter:image" content={ogImage} />
+				<link rel="preload" href={articleBgImg} as="image" type="image/webp" />
 			</Helmet>
 			<Breadcrumbs currentPage="Стоимость услуг" />
 			<ServicesCost />
