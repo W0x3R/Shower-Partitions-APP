@@ -67,12 +67,6 @@
 		}
 	}
 
-	&__adress {
-		@extend %contactsTextsFonts;
-		font-style: normal;
-		margin-bottom: 1em;
-	}
-
 	&__time,
 	&__call,
 	&__mail {

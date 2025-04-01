@@ -1,6 +1,5 @@
 import styles from "./Contacts.module.scss"
 import callUsImg from "../../assets/ContactsPage/callUs.png"
-import LocationIcon from "../../assets/ContactsPage/location.svg?react"
 import QuestionIcon from "../../assets/ContactsPage/question.svg?react"
 import TimeIcon from "../../assets/ContactsPage/time.svg?react"
 import CallIcon from "../../assets/ContactsPage/call.svg?react"
@@ -20,14 +19,6 @@ const Contacts = () => {
 						<h2 className={styles["contacts__info-title"]}>
 							Наши <b>контакты</b>
 						</h2>
-						<address className={styles.contacts__adress}>
-							<LocationIcon
-								className={styles.contacts__icon}
-								aria-hidden="true"
-							/>
-							Наш адрес: Беларусь,
-							<br /> г.Гомель, ул. Гомельская 25
-						</address>
 						<div className={styles.contacts__time}>
 							<TimeIcon className={styles.contacts__icon} aria-hidden="true" />
 							<p aria-labelledby="working-time-description-footer">
