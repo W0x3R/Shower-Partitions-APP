@@ -135,7 +135,7 @@
 	line-height: 1.4;
 	letter-spacing: var(--basic-letter-spacing);
 
-	&:not(:last-child) {
+	&:not(:last-of-type) {
 		margin-bottom: 0.8em;
 	}
 
