@@ -19,7 +19,7 @@ const Article = () => {
 					<img
 						className={styles.article__img}
 						width="1408"
-						height="430px"
+						height="430"
 						src={articleBgImg}
 						alt=""
 					/>
