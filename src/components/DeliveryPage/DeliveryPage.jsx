@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
-import carImg from "../../assets/DeliveryPage/car.png"
+import carImg from "../../assets/DeliveryPage/car-gif.gif"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import Delivery from "./Delivery"
 

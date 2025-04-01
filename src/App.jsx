@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { HashRouter as Router, Route, Routes } from "react-router-dom"
 import { lazy } from "react"
 import "./App.scss"
 import Layout from "./Layout/Layout"
@@ -37,7 +37,7 @@ const NotFoundPage = lazy(
 
 function App() {
 	return (
-		<BrowserRouter>
+		<Router>
 			<div className="App">
 				<ScrollTopOnLocationChange />
 				<PopupFormProvider>
@@ -62,7 +62,7 @@ function App() {
 					</Routes>
 				</PopupFormProvider>
 			</div>
-		</BrowserRouter>
+		</Router>
 	)
 }
 

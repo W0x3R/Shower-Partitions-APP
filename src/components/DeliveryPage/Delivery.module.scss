@@ -1,5 +1,6 @@
 @use '../../styles/mixins';
 @use '../../styles/media';
+@use '../../styles/animations';
 
 .delivery {
 	@extend %section;
@@ -9,7 +10,7 @@
 	}
 
 	&__wrapper {
-		@include mixins.useFlex(space-between, center);
+		@include mixins.useFlex(space-between, stretch);
 		column-gap: 10px;
 
 		@include media.bigMobile {
@@ -18,36 +19,130 @@
 		}
 	}
 
-	&__content-wrapper {
-		width: 65%;
-
-		@include media.bigMobile {
-			width: 100%;
-		}
-	}
-
 	&__img {
-		margin-bottom: 2em;
-		@include mixins.sizes(100%, auto)
+		display: block;
+		margin: 0 auto 2em;
+		@include mixins.sizes(44em, auto);
+
+		@include media.smallMobile {
+			width: 38em;
+		}
 	}
 
 	&__subtitle {
 		@extend %titleLevelTwo;
-		margin-bottom: 0.4em;
-		text-align: left;
+		margin-bottom: 1em;
+		text-align: center;
+	}
 
-		@include media.bigMobile {
-			text-align: center;
+	&__stages-wrapper {
+		position: relative;
+	}
+
+	&__stages-item {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 2em;
+
+		&:nth-of-type(even) {
+			display: flex;
+			flex-direction: row-reverse
+		}
+
+		&:nth-child(odd) .delivery__stages-content {
+			padding-right: 2em;
+			text-align: right;
+
+			@include media.mediumMobile {
+				text-align: left;
+				padding-right: 0;
+				padding-left: 3.5em;
+			}
+		}
+
+		&:nth-child(even) .delivery__stages-content {
+			padding-left: 2em;
+			text-align: left;
+
+			@include media.mediumMobile {
+				padding-left: 3.5em;
+			}
 		}
 	}
 
-	&__text {
-		@extend %usefulTextFonts;
+	&__stages-content {
+		width: 50%;
 
-		&:last-child {
-			@include media.bigMobile {
-				margin-bottom: 2.5em;
-			}
+		@include media.mediumMobile {
+			width: 100%;
+		}
+	}
+
+	&__stage-title {
+		margin-bottom: 0.5em;
+		font-size: 1.6em;
+		letter-spacing: 0.05em;
+		line-height: 1.3;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		@include media.bigMobile {
+			font-size: 2em;
+			line-height: 1.1;
+		}
+
+		@include media.mediumMobile {
+			margin-bottom: 0.6856em;
+			font-size: 2.1em;
+		}
+
+	}
+
+	&__stage-text {
+		font-size: 1.1em;
+		font-weight: 300;
+		color: var(--black);
+		line-height: 1.55;
+
+		@include media.bigMobile {
+			font-size: 1.6em;
+			line-height: 1.45;
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.9em;
+		}
+	}
+
+	&__stage-line {
+		position: absolute;
+		inset: 0;
+		margin: 0 auto;
+		background: var(--black);
+		@include mixins.sizes(2px, auto);
+
+		@include media.mediumMobile {
+			margin: 0;
+		}
+	}
+
+	&__stage-circle {
+		position: absolute;
+		z-index: 1;
+		@include mixins.sizes(25px, 25px);
+		background: var(--main-green);
+		border-radius: var(--border-r-circle);
+		transform: translateX(50%);
+		right: 50%;
+		animation: boxShadow 3s linear infinite;
+
+		@include media.bigMobile {
+			@include mixins.sizes(22px, 22px);
+		}
+
+		@include media.mediumMobile {
+			right: 100%;
+			@include mixins.sizes(20px, 20px);
 		}
 	}
 }
