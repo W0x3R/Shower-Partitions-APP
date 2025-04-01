@@ -14,7 +14,8 @@ import isMobile from "../../utils/isMobile"
 const MainPage = () => {
 	const location = useLocation()
 	const currentUrl = `https://garderobsystem.ru${location.pathname}`
-	const ogImage = "https://W0x3R.github.io/Shower-Partitions-APP/og-image.jpg"
+	const ogImage =
+		"https://W0x3R.github.io/Shower-Partitions-APP/main-og-img.jpg"
 	return (
 		<>
 			<Helmet>
