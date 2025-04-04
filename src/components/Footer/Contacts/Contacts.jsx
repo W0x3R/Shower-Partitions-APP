@@ -1,6 +1,5 @@
 import styles from "./Contacts.module.scss"
 import SocialLinks from "../../Widgets/SocialsLinks/SocialLinks"
-import LocationIcon from "../../../assets/footer/location.svg?react"
 import TimeIcon from "../../../assets/footer/time.svg?react"
 import CallIcon from "../../../assets/footer/call.svg?react"
 import MailIcon from "../../../assets/footer/mail.svg?react"
