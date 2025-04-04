@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import { lazy } from "react"
 import "./App.scss"
 import Layout from "./Layout/Layout"
@@ -37,7 +37,7 @@ const NotFoundPage = lazy(
 
 function App() {
 	return (
-		<Router>
+		<Router basename="/Shower-Partitions-APP">
 			<div className="App">
 				<ScrollTopOnLocationChange />
 				<PopupFormProvider>

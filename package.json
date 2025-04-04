@@ -3,15 +3,31 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
-	"homepage": "https://W0x3R.github.io/Shower-Partitions-APP",
+	"homepage": "https://w0x3r.github.io/Shower-Partitions-APP",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"deploy": "gh-pages -d dist",
+		"postbuild": "react-snap",
+		"deploy": "gh-pages -d build",
 		"check lint": "eslint .",
 		"fix lint": "eslint --fix .",
 		"preview": "vite preview",
-		"clean": "rd /s /q dist"
+		"clean": "rd /s /q build"
+	},
+	"reactSnap": {
+		"puppeteerArgs": [
+			"--no-sandbox"
+		],
+		"include": [
+			"/",
+			"/contacts",
+			"/portfolio",
+			"/price",
+			"/delivery",
+			"/article",
+			"/successful",
+			"/unsuccessful"
+		]
 	},
 	"dependencies": {
 		"@fancyapps/ui": "^5.0.36",

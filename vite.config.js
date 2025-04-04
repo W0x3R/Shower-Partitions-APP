@@ -20,10 +20,11 @@ export default defineConfig({
 		}),
 	],
 	build: {
-		outDir: "dist",
+		outDir: "build",
 		assetsDir: "assets",
 		emptyOutDir: true,
 		minify: "esbuild",
+		target: ["es2015"],
 		sourcemap: false,
 		cssCodeSplit: true,
 		rollupOptions: {
