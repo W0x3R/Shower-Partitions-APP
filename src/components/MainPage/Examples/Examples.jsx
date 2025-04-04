@@ -81,7 +81,7 @@ const Examples = () => {
 						width="351"
 						height="243"
 					/>
-					<FullScreenIcon aria-hidden="true" />
+					<FullScreenIcon aria-hidden="true" width={26} height={26} />
 				</a>
 				<div
 					id="aria-examples-live-status"
@@ -122,6 +122,8 @@ const Examples = () => {
 							onClick={handleShowMorePictures}
 							aria={`Показать еще ${stepIncrease} фото`}
 							text="Загрузить еще фото"
+							width={18}
+							height={18}
 						/>
 					)}
 				</Fancybox>

@@ -180,7 +180,7 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 				disabled={Object.keys(errors).length > 0}
 			>
 				<span>Отправить</span>
-				<img src={clickHandImg} alt="" />
+				<img src={clickHandImg} alt="" width={26} height={26} />
 			</button>
 		</form>
 	)

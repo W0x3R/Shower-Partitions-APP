@@ -39,7 +39,7 @@ const ServicesCost = () => {
 					onClick={(e) => handleFormPopupOpen(e)}
 				>
 					<span>Заказать консультацию по ценам</span>
-					<img src={clickHand} alt="" />
+					<img src={clickHand} alt="" width={26} height={26} />
 				</button>
 			</div>
 		</section>

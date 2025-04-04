@@ -16,7 +16,7 @@ const AsideInfoWidget = ({ sticky }) => {
 				aria-label="Заказать обратный звонок"
 			>
 				<span>Заказать</span>
-				<img src={clickHand} alt="" />
+				<img src={clickHand} alt="" width={26} height={26} />
 			</button>
 			<h3 className={styles.aside__title}>Связаться с нами по телефону</h3>
 			<a
@@ -25,7 +25,7 @@ const AsideInfoWidget = ({ sticky }) => {
 				aria-label="Связаться с нами по номеру телефона"
 			>
 				<span>Позвонить</span>
-				<img src={clickHand} alt="" />
+				<img src={clickHand} alt="" width={26} height={26} />
 			</a>
 			<h3 className={styles.aside__title}>Каталог продукции и фурнитуры</h3>
 			<Link
@@ -34,7 +34,7 @@ const AsideInfoWidget = ({ sticky }) => {
 				aria-label="Посмотреть каталог продукции и фурнитуры"
 			>
 				<span>Посмотреть</span>
-				<img src={clickHand} alt="" />
+				<img src={clickHand} alt="" width={26} height={26} />
 			</Link>
 			<h3 className={styles.aside__title}>
 				Примеры душевых перегородок в интерьере
@@ -45,7 +45,7 @@ const AsideInfoWidget = ({ sticky }) => {
 				aria-label="Посмотреть примеры душевых перегородок в интерьере"
 			>
 				<span>Посмотреть</span>
-				<img src={clickHand} alt="" />
+				<img src={clickHand} alt="" width={26} height={26} />
 			</Link>
 		</aside>
 	)

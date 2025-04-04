@@ -37,7 +37,7 @@ const ScrollTopBtn = () => {
 			onClick={scrollTop}
 			aria-label="Прокрутить страницу вверх"
 		>
-			<ArrowTopIcon aria-hidden="true" />
+			<ArrowTopIcon aria-hidden="true" width={51} height={51} />
 		</button>
 	)
 }

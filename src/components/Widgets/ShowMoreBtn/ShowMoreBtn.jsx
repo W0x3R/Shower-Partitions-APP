@@ -10,7 +10,7 @@ const ShowMoreBtn = ({ onClick, aria, text }) => {
 			aria-label={aria}
 		>
 			{text}
-			<ShowMoreImgBtn aria-hidden="true" />
+			<ShowMoreImgBtn aria-hidden="true" width={18} height={18} />
 		</button>
 	)
 }

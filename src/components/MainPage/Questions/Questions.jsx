@@ -33,6 +33,8 @@ const Questions = () => {
 						<span className={styles["questions__accordion-text"]}>{title}</span>
 						<Cross
 							className={`${styles["questions__accordion-icon"]} ${expandedIndex.includes(id) ? styles.open : ""}`}
+							width={34}
+							height={34}
 							aria-hidden="true"
 						/>
 					</button>
@@ -83,6 +85,8 @@ const Questions = () => {
 						src={questionImg}
 						loading="lazy"
 						alt=""
+						width={368}
+						height={288}
 					/>
 					<div className={styles["questions__accordion-wrapper"]}>
 						<div className={styles["questions__accordion"]}>

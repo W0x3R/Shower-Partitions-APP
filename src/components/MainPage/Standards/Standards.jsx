@@ -22,6 +22,8 @@ const Standards = () => {
 										src={imgSrc}
 										loading="lazy"
 										alt=""
+										width={864}
+										height={512}
 									/>
 									<div className={styles["standards__block-content"]}>
 										<p className={styles["standards__block-title"]}>{title}</p>

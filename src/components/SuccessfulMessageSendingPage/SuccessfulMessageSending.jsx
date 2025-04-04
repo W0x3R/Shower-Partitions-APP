@@ -24,7 +24,7 @@ export const SuccessfulMessageSending = () => {
 						</h2>
 						<Link className={styles["successful__link"]} to="/portfolio">
 							<span>Перейти в портфолио</span>
-							<img src={clickHand} alt="" />
+							<img src={clickHand} alt="" width={26} height={26} />
 						</Link>
 					</div>
 				</div>

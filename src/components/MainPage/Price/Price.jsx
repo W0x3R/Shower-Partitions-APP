@@ -15,6 +15,8 @@ const Price = () => {
 						src={showerImage}
 						loading="lazy"
 						alt=""
+						width={288}
+						height={448}
 					/>
 					<div className={styles["price__text-wrapper"]}>
 						<p className={styles["price__info-text"]}>
@@ -30,10 +32,12 @@ const Price = () => {
 							loading="lazy"
 							src={showerImage}
 							alt=""
+							width={275}
+							height={410}
 						/>
 						<a className={styles["price__info-link"]} href="#">
 							<span>Связаться с нами в Telegram</span>
-							<img src={clickHand} alt="" />
+							<img src={clickHand} alt="" width={26} height={26} />
 						</a>
 					</div>
 				</div>

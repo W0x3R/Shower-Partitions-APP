@@ -39,6 +39,14 @@ const Popup = ({
 			aria-label="Вы можете закрыть это окно с помощью нажатия клавиши escape"
 			aria-hidden={!isPopupOpen}
 		>
+			<button
+				type="button"
+				className={styles.popup__btn}
+				onClick={(e) => handlePopupClose(e)}
+				aria-label="Закрыть изображение"
+			>
+				<BlackCross width={46} height={46} />
+			</button>
 			<div
 				className={styles.popup__content}
 				ref={popupRef}
@@ -49,15 +57,9 @@ const Popup = ({
 					src={activePopupImg}
 					onClick={(e) => e.stopPropagation()}
 					alt={activePopupAlt}
+					width={976}
+					height={607}
 				/>
-				<button
-					type="button"
-					className={styles.popup__btn}
-					onClick={(e) => handlePopupClose(e)}
-					aria-label="Закрыть изображение"
-				>
-					<BlackCross />
-				</button>
 			</div>
 		</div>
 	)
