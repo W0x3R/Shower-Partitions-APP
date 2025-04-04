@@ -48,7 +48,7 @@ const DropdownItem = ({
 				<NavLink
 					className={`${styles["nav__item-link"]} ${styles.hasDropdown} ${findMatchesPath ? styles.active : ""}`}
 					aria-describedby={`menu-desc-${menuName}`}
-					onFocus={() => handleCloseMenuClick()}
+					onFocus={handleCloseMenuClick}
 					to="#"
 				>
 					{title}
