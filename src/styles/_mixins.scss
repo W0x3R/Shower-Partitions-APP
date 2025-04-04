@@ -134,10 +134,7 @@
 	font-size: 1.1em;
 	line-height: 1.4;
 	letter-spacing: var(--basic-letter-spacing);
-
-	&:not(:last-of-type) {
-		margin-bottom: 0.8em;
-	}
+	margin-bottom: 0.8em;
 
 	@include media.bigMobile {
 		font-size: 1.7em;
@@ -550,6 +547,7 @@
 		@include useFlex(center, center);
 		position: relative;
 		margin: 0 auto;
+		outline: none;
 	}
 
 	&__btn {

@@ -46,7 +46,7 @@ const Contacts = () => {
 							<MailIcon className={styles.contacts__icon} aria-hidden="true" />
 							<a
 								className={styles["contacts__mail-link"]}
-								href="showers.gomel@mail.ru"
+								href="mailto:showers.gomel@mail.ru"
 								aria-label="Связаться с нами по email"
 								tabIndex={0}
 								rel="noopener noreferrer"

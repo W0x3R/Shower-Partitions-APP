@@ -46,7 +46,7 @@
 		position: relative;
 		padding: 1.2em 1.2em;
 		overflow: hidden;
-		background: #F8FAFB;
+		background: rgb(248, 250, 251);
 		border-radius: 15px;
 		opacity: 0;
 		transition: opacity .3s ease-in-out;
@@ -58,7 +58,6 @@
 		@include media.mediumMobile {
 			padding: 2em 1.8em;
 		}
-
 
 		&.visible {
 			opacity: 1;
