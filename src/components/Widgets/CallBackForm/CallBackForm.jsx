@@ -59,6 +59,7 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 	return (
 		<form
 			onClick={(e) => e.stopPropagation()}
+			onMouseUp={(e) => e.stopPropagation()}
 			onSubmit={handleSubmit(onSubmit)}
 			className={`${styles.form} ${isBorderShow ? styles.border : ""}`}
 			aria-labelledby="contact-form-title"

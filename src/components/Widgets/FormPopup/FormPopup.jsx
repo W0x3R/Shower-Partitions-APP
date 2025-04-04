@@ -22,19 +22,14 @@ const FormPopup = () => {
 			<div
 				className={`${styles.popup} ${isFormPopupOpen ? styles.visible : styles.hide}`}
 				style={{ display: isVisible ? "flex" : "none" }}
-				onMouseUp={(e) => {
-					handleFormPopupClose(e)
-				}}
+				onMouseUp={(e) => handleFormPopupClose(e)}
 				onKeyDown={(e) => handleFormPopupClose(e)}
 				role="dialog"
 				aria-modal="true"
 				aria-label="Вы можете закрыть это окно с помощью нажатия клавиши escape"
 				aria-hidden={!isFormPopupOpen}
 			>
-				<div
-					className={styles.popup__content}
-					onMouseUp={(e) => e.stopPropagation()}
-				>
+				<div className={styles.popup__content}>
 					<CallBackForm
 						title="Свяжемся с Вами в течение дня, заполните форму"
 						isEmailShow={false}
