@@ -44,10 +44,10 @@
 	}
 
 	&__content {
-		padding-block: 8em;
+		padding-block: 10em;
 
 		@include media.bigMobile {
-			padding-block: 6.5em;
+			padding-block: 5.5em;
 		}
 	}
 
@@ -64,7 +64,7 @@
 		}
 
 		@include media.tablet {
-			max-width: 85%;
+			max-width: 80%;
 		}
 
 		@include media.bigMobile {
@@ -73,7 +73,7 @@
 		}
 
 		@include media.mediumMobile {
-			font-size: 2.5em;
+			font-size: 2.3em;
 		}
 	}
 
@@ -228,10 +228,6 @@
 			transform: rotate(45deg) translateY(-50%);
 			animation: glare 3s linear infinite;
 			opacity: 0.8;
-		}
-
-		@include media.bigMobile {
-			padding: 1.9em 1.6em;
 		}
 
 		@include media.smallMobile {

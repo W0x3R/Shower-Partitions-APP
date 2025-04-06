@@ -262,12 +262,12 @@
 	text-align: center;
 
 	@include media.bigMobile {
-		font-size: 2.7em;
+		font-size: 2.6em;
 		line-height: 1.1;
 	}
 
 	@include media.mediumMobile {
-		font-size: 2.9em;
+		font-size: 2.8em;
 	}
 }
 
@@ -430,6 +430,14 @@
 	& img {
 		width: 26px;
 		animation: scaleAndRotate 2.2s linear infinite;
+
+		@include media.bigMobile {
+			width: 22px;
+		}
+	}
+
+	& svg {
+		width: 26px;
 
 		@include media.bigMobile {
 			width: 22px;

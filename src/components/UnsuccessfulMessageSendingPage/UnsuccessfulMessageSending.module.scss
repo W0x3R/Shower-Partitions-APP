@@ -13,7 +13,7 @@
 	&__text-wrapper {
 		@include mixins.useFlex(center, center);
 		flex-direction: column;
-		row-gap: 2.2em;
+		row-gap: 2.5em;
 	}
 
 	&__title {
