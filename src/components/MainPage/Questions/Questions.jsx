@@ -1,13 +1,15 @@
 import styles from "./Questions.module.scss"
-import { useEffect, useState } from "react"
 import Cross from "../../../assets/MainPage/cross.svg?react"
 import questionImg from "../../../assets/MainPage/questions-img.png"
-import questionsData from "../../../data/mainPage/questionsData"
 import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
+import { useEffect, useRef, useState } from "react"
+import questionsData from "../../../data/mainPage/questionsData"
+import showTitleOnScroll from "../../../utils/showTitleOnScroll"
 
 const Questions = () => {
 	const [expandedIndex, setExpandedIndex] = useState([])
 	const [visibleCount, setVisibleCount] = useState(2)
+	const questionsTitleRef = useRef(null)
 
 	const handleShowMoreQuestions = () => {
 		setVisibleCount((prev) => Math.min(prev + 2, questionsData.length))
@@ -17,6 +19,10 @@ const Questions = () => {
 			setTimeout(() => (liveRegion.textContent = ""), 100)
 		}
 	}
+
+	useEffect(() => {
+		showTitleOnScroll(questionsTitleRef, 0, 120, 0, 1.5)
+	}, [])
 
 	const renderQuestions = () =>
 		questionsData.slice(0, visibleCount).map(({ id, title, answer }) => {
@@ -79,7 +85,9 @@ const Questions = () => {
 		<section className={styles.questions}>
 			<div className="container">
 				<div className={styles.questions__inner}>
-					<h3 className={styles.questions__title}>Часто задаваемые вопросы</h3>
+					<h3 className={styles.questions__title} ref={questionsTitleRef}>
+						Часто задаваемые вопросы
+					</h3>
 					<img
 						className={styles.questions__img}
 						src={questionImg}

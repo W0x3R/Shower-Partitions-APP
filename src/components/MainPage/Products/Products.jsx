@@ -5,11 +5,17 @@ import styles from "./Products.module.scss"
 import clickHand from "../../../assets/MainPage/click-hand.svg?url"
 import FullScreenIcon from "../../../assets/MainPage/fullscreen-icon.svg?react"
 import { productsData } from "../../../data/mainPage/productsData"
+import showTitleOnScroll from "../../../utils/showTitleOnScroll"
 
 const Products = () => {
 	const [activeBtn, setActiveBtn] = useState("showers")
 	const location = useLocation()
 	const productsRef = useRef(null)
+	const productsTitleRef = useRef(null)
+
+	useEffect(() => {
+		showTitleOnScroll(productsTitleRef, 0, 120, 0, 1.5)
+	}, [])
 
 	const buttonsData = [
 		{ text: "Формы душевых", activeBtnValue: "showers" },
@@ -40,7 +46,7 @@ const Products = () => {
 	return (
 		<section className={styles.products} ref={productsRef}>
 			<div className="container">
-				<h2 className={styles.products__title}>
+				<h2 className={styles.products__title} ref={productsTitleRef}>
 					Душевые перегородки по вашим размерам
 				</h2>
 				<p className={styles.products__text}>

@@ -2,12 +2,19 @@ import styles from "./SuccessfulMessageSending.module.scss"
 import clickHand from "../../assets/MainPage/click-hand.svg?url"
 import successfulImg from "../../assets/successfulPage/successful-gif.gif"
 import { Link } from "react-router-dom"
+import { useEffect, useRef } from "react"
+import showContentAnimation from "../../utils/showContentAnimation"
 
 export const SuccessfulMessageSending = () => {
+	const successfulRef = useRef(null)
+	useEffect(() => {
+		showContentAnimation(successfulRef)
+	}, [])
+
 	return (
 		<section className={styles.successful}>
 			<div className="container">
-				<div className={styles.successful__wrapper}>
+				<div className={styles.successful__wrapper} ref={successfulRef}>
 					<div className={styles["successful__text-wrapper"]}>
 						<h1 className={styles.successful__title}>
 							<b>Спасибо за обращение</b>

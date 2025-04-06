@@ -4,18 +4,46 @@ import QuestionIcon from "../../assets/ContactsPage/question.svg?react"
 import TimeIcon from "../../assets/ContactsPage/time.svg?react"
 import CallIcon from "../../assets/ContactsPage/call.svg?react"
 import MailIcon from "../../assets/ContactsPage/mail.svg?react"
+import gsap from "gsap"
+import { useEffect, useRef } from "react"
 import SocialLinks from "../Widgets/SocialsLinks/SocialLinks"
 import CallBackForm from "../Widgets/CallBackForm/CallBackForm"
+import showContentAnimation from "../../utils/showContentAnimation"
 
 const Contacts = () => {
+	const articleTitleRef = useRef(null)
+	const articleContactsRef = useRef(null)
+	const articleFormRef = useRef(null)
+
+	useEffect(() => {
+		showContentAnimation(articleTitleRef)
+
+		gsap.from(articleContactsRef.current, {
+			x: -500,
+			opacity: 0,
+			duration: 1.2,
+			ease: "power2.out",
+		})
+
+		gsap.from(articleFormRef.current, {
+			x: 500,
+			opacity: 0,
+			duration: 1.2,
+			ease: "power2.out",
+		})
+	}, [])
+
 	return (
 		<section className={styles.contacts}>
 			<div className="container">
-				<h1 className={styles.contacts__title}>
+				<h1 className={styles.contacts__title} ref={articleTitleRef}>
 					<b>Наши контакты</b>
 				</h1>
 				<div className={styles["contacts__wrapper"]}>
-					<div className={styles["contacts__info-wrapper"]}>
+					<div
+						className={styles["contacts__info-wrapper"]}
+						ref={articleContactsRef}
+					>
 						<h2 className={styles["contacts__info-title"]}>
 							Наши <b>контакты</b>
 						</h2>
@@ -84,6 +112,7 @@ const Contacts = () => {
 						</div>
 					</div>
 					<CallBackForm
+						articleFormRef={articleFormRef}
 						title="Ответим в течение дня, заполните форму"
 						isEmailShow={true}
 					/>

@@ -1,4 +1,5 @@
 import styles from "./Article.module.scss"
+import { useEffect, useRef } from "react"
 import AsideInfoWidget from "../Widgets/AsideInfoWidget/AsideInfoWidget"
 import articleBgImg from "../../assets/ArticlePage/bg.webp"
 import constructionsData from "../../data/articlePage/constructionsData"
@@ -7,13 +8,20 @@ import openingTypes from "../../data/articlePage/openingTypes"
 import glassesTypes from "../../data/articlePage/glassesTypes"
 import usefulTipsData from "../../data/articlePage/usefulTipsData"
 import reasonsToContactData from "../../data/articlePage/reasonsToContactData"
+import showContentAnimation from "../../utils/showContentAnimation"
 
 const Article = () => {
+	const articleTitleRef = useRef(null)
+
+	useEffect(() => {
+		showContentAnimation(articleTitleRef)
+	}, [])
+
 	return (
 		<section className={styles.article}>
 			<div className="container">
 				<div className={styles["article__title-wrapper"]}>
-					<h1 className={styles.article__title}>
+					<h1 className={styles.article__title} ref={articleTitleRef}>
 						<b>Душевая перегородка из стекла — советы по выбору</b>
 					</h1>
 					<img

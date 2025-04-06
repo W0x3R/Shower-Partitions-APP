@@ -1,11 +1,19 @@
 import styles from "./NotFound.module.scss"
-import { Link } from "react-router-dom"
 import notFoundGif from "../../assets/notFoundPage/not-found-gif.gif"
+import { Link } from "react-router-dom"
+import { useEffect, useRef } from "react"
+import showContentAnimation from "../../utils/showContentAnimation"
 
 const NotFound = () => {
+	const nofFoundRef = useRef(null)
+
+	useEffect(() => {
+		showContentAnimation(nofFoundRef)
+	}, [])
+
 	return (
 		<section className={styles.error}>
-			<div className="container">
+			<div className="container" ref={nofFoundRef}>
 				<h1 className={styles.error__title}>
 					<b>Упс! Кажется, такой страницы не существует</b>
 				</h1>

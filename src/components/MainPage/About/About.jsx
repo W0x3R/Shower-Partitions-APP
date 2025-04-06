@@ -1,19 +1,25 @@
 import styles from "./About.module.scss"
-import { useContext } from "react"
 import mainBgSmall from "../../../assets/MainPage/main-bg-small.webp"
 import mainBgBig from "../../../assets/MainPage/main-bg-big.webp"
 import featureCircle from "../../../assets/MainPage/feature-circle.svg?url"
 import clickHand from "../../../assets/MainPage/click-hand.svg?url"
+import { useContext, useEffect, useRef } from "react"
 import PopupFormContext from "../../../context/PopupFormContext"
+import showContentAnimation from "../../../utils/showContentAnimation"
 
 const About = () => {
 	const { handleFormPopupOpen } = useContext(PopupFormContext)
+	const aboutContentRef = useRef(null)
 
 	const featuresItemsText = [
 		"Дизайнерские решения",
 		"Тонкая рамка",
 		"Надежная фурнитура",
 	]
+
+	useEffect(() => {
+		showContentAnimation(aboutContentRef)
+	}, [])
 
 	return (
 		<section className={styles.about}>
@@ -34,7 +40,7 @@ const About = () => {
 				/>
 			</div>
 			<div className="container">
-				<div className={styles.about__content}>
+				<div className={styles.about__content} ref={aboutContentRef}>
 					<h1 className={styles.about__title}>
 						<b>Душевые перегородки</b> на заказ в Гомеле
 					</h1>

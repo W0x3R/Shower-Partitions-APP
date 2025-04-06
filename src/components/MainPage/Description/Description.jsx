@@ -1,6 +1,4 @@
 import styles from "./Description.module.scss"
-import ReactFocusLock from "react-focus-lock"
-import { useEffect, useState } from "react"
 import {
 	swingingDoorImg,
 	rollingDoorImg,
@@ -12,6 +10,8 @@ import {
 	nickelFurnitureImg,
 	chromeFurnitureImg,
 } from "../../../data/mainPage/productsData"
+import ReactFocusLock from "react-focus-lock"
+import { useEffect, useRef, useState } from "react"
 import Popup from "./Popup/Popup"
 import {
 	disableBodyScrollIncludeScrollbar,
@@ -24,6 +24,7 @@ import setTypeOfFurnitureAltData from "../../../data/mainPage/descriptionsData/t
 import reasonsListData from "../../../data/mainPage/descriptionsData/reasonsListData"
 import benefitsData from "../../../data/mainPage/descriptionsData/benefitsData"
 import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
+import showTitleOnScroll from "../../../utils/showTitleOnScroll"
 
 const ShowerPartitionsDescription = () => {
 	const [popupData, setPopupData] = useState({
@@ -32,6 +33,11 @@ const ShowerPartitionsDescription = () => {
 		alt: null,
 	})
 	const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false)
+	const descriptionTitleRef = useRef()
+
+	useEffect(() => {
+		showTitleOnScroll(descriptionTitleRef, 0, 120, 0, 1.5)
+	}, [])
 
 	const handlePopupOpen = (e, src, alt) => {
 		if (e.type === "click" || (e.type === "keydown" && e.code === "Enter")) {
@@ -62,7 +68,7 @@ const ShowerPartitionsDescription = () => {
 	return (
 		<section className={styles.descriptions}>
 			<div className="container">
-				<h4 className={styles["descriptions__title"]}>
+				<h4 className={styles["descriptions__title"]} ref={descriptionTitleRef}>
 					Душевые перегородки из стекла в Гомеле
 				</h4>
 				<div className={styles.descriptions__block}>

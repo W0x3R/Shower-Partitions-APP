@@ -1,17 +1,24 @@
-import { useContext } from "react"
 import styles from "./ServicesCost.module.scss"
 import clickHand from "../../assets/MainPage/click-hand.svg?url"
 import articleBgImg from "../../assets/ArticlePage/bg.webp"
+import { useContext, useEffect, useRef } from "react"
 import priceDescriptionData from "../../data/pricePage/priceDescriptionData"
 import PopupFormContext from "../../context/PopupFormContext"
+import showContentAnimation from "../../utils/showContentAnimation"
 
 const ServicesCost = () => {
 	const { handleFormPopupOpen } = useContext(PopupFormContext)
+	const servicesCostTitleRef = useRef(null)
+
+	useEffect(() => {
+		showContentAnimation(servicesCostTitleRef)
+	}, [])
+
 	return (
 		<section className={styles.cost}>
 			<div className="container">
 				<div className={styles["cost__title-wrapper"]}>
-					<h1 className={styles.cost__title}>
+					<h1 className={styles.cost__title} ref={servicesCostTitleRef}>
 						<b>Стоимость услуг</b>
 					</h1>
 					<img

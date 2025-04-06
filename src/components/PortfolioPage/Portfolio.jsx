@@ -1,13 +1,20 @@
-import { useEffect, useState } from "react"
 import styles from "./Portfolio.module.scss"
+import ShowMoreBtn from "../Widgets/ShowMoreBtn/ShowMoreBtn"
+import { useEffect, useRef, useState } from "react"
 import portfolioData from "../../data/portfolioPage/portfolioData"
 import PortfolioItem from "./PortfolioItem"
 import isDesktop from "../../utils/isDesktop"
-import ShowMoreBtn from "../Widgets/ShowMoreBtn/ShowMoreBtn"
+import showContentAnimation from "../../utils/showContentAnimation"
 
 const Portfolio = () => {
 	const [visibleCount, setVisibleCount] = useState(4)
 	const stepIncrease = 4
+
+	const portfolioTitleRef = useRef(null)
+
+	useEffect(() => {
+		showContentAnimation(portfolioTitleRef)
+	}, [])
 
 	useEffect(() => {
 		const items = document.querySelectorAll(
@@ -59,7 +66,7 @@ const Portfolio = () => {
 	return (
 		<section className={styles.portfolio}>
 			<div className="container">
-				<h1 className={styles.portfolio__title}>
+				<h1 className={styles.portfolio__title} ref={portfolioTitleRef}>
 					<b>Портфолио</b>
 				</h1>
 				<div className={styles["portfolio__items"]}>{renderItems()}</div>

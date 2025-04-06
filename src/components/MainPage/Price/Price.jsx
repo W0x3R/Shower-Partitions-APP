@@ -1,12 +1,20 @@
 import styles from "./Price.module.scss"
 import showerImage from "../../../assets/MainPage/shower-partition.webp"
 import clickHand from "../../../assets/MainPage/click-hand.svg?url"
+import { useEffect, useRef } from "react"
+import showTitleOnScroll from "../../../utils/showTitleOnScroll"
 
 const Price = () => {
+	const priceTitleRef = useRef(null)
+
+	useEffect(() => {
+		showTitleOnScroll(priceTitleRef, 0, 120, 0, 1.5)
+	}, [])
+
 	return (
 		<section className={styles.price}>
 			<div className="container">
-				<h2 className={styles.price__title}>
+				<h2 className={styles.price__title} ref={priceTitleRef}>
 					Цена душевых перегородок на заказ в Гомеле
 				</h2>
 				<div className={styles.price__info}>
