@@ -128,8 +128,8 @@ const Examples = () => {
 							onClick={handleShowMorePictures}
 							aria={`Показать еще ${stepIncrease} фото`}
 							text="Загрузить еще фото"
-							width={18}
-							height={18}
+							width="18"
+							height="18"
 						/>
 					)}
 				</Fancybox>

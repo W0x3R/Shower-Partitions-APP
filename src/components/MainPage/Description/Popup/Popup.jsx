@@ -57,8 +57,8 @@ const Popup = ({
 					src={activePopupImg}
 					onClick={(e) => e.stopPropagation()}
 					alt={activePopupAlt}
-					width={976}
-					height={607}
+					width="976"
+					height="607"
 				/>
 			</div>
 		</div>

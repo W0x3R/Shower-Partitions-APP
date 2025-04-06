@@ -23,15 +23,15 @@ export const SuccessfulMessageSending = () => {
 						<img
 							className={styles.successful__img}
 							src={successfulImg}
-							width={672}
-							height={504}
+							width="672"
+							height="504"
 						/>
 						<h2 className={styles.successful__subtitle}>
 							Пока посмотрите фото наших работ в хорошем качестве
 						</h2>
 						<Link className={styles["successful__link"]} to="/portfolio">
 							<span>Перейти в портфолио</span>
-							<img src={clickHand} alt="" width={26} height={26} />
+							<img src={clickHand} alt="" width="26" height="26" />
 						</Link>
 					</div>
 				</div>

@@ -34,7 +34,7 @@ const UnsuccessfulMessageSending = () => {
 							aria-label="Связаться с нами по номеру телефона"
 						>
 							<span>Связаться с нами</span>
-							<img src={clickHand} alt="" width={26} height={26} />
+							<img src={clickHand} alt="" width="26" height="26" />
 						</a>
 					</div>
 				</div>

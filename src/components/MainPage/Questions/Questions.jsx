@@ -93,8 +93,8 @@ const Questions = () => {
 						src={questionImg}
 						loading="lazy"
 						alt=""
-						width={368}
-						height={288}
+						width="368"
+						height="288"
 					/>
 					<div className={styles["questions__accordion-wrapper"]}>
 						<div className={styles["questions__accordion"]}>

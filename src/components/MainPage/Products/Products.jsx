@@ -106,7 +106,7 @@ const Products = () => {
 											width="342"
 											height="234"
 										/>
-										<FullScreenIcon width={26} height={26} />
+										<FullScreenIcon width="26" height="26" />
 									</a>
 									<figcaption>
 										<p
@@ -128,7 +128,7 @@ const Products = () => {
 					aria-label="Перейти на страницу с нашими работами"
 				>
 					<span>Перейти в портфолио</span>
-					<img src={clickHand} alt="" width={26} height={26} />
+					<img src={clickHand} alt="" width="26" height="26" />
 				</Link>
 			</div>
 		</section>

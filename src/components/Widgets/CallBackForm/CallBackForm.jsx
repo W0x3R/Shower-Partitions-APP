@@ -186,8 +186,8 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow, articleFormRef }) => {
 			>
 				<span>{isBtnDisable ? "Отправка" : "Отправить"}</span>
 				{isBtnDisable ?
-					<FetchingDataSpinner width={30} height={30} alt="" />
-				:	<img src={clickHandImg} width={26} height={26} alt="" />}
+					<FetchingDataSpinner width="30" height="30" alt="" />
+				:	<img src={clickHandImg} width="26" height="26" alt="" />}
 			</button>
 		</form>
 	)

@@ -61,7 +61,7 @@ const About = () => {
 					</div>
 					<div className={styles.about__features}>
 						<div className={styles["about__features-item"]}>
-							<img src={featureCircle} alt="" width={38} height={38} />
+							<img src={featureCircle} alt="" width="38" height="38" />
 							<p className={styles["about__features-text"]}>
 								<b>Закаленное стекло</b>
 								<br />
@@ -71,7 +71,7 @@ const About = () => {
 						{featuresItemsText.map((itemText) => {
 							return (
 								<div className={styles["about__features-item"]} key={itemText}>
-									<img src={featureCircle} alt="" width={38} height={38} />
+									<img src={featureCircle} alt="" width="38" height="38" />
 									<p className={styles["about__features-text"]}>
 										<b>{itemText}</b>
 									</p>
@@ -86,7 +86,7 @@ const About = () => {
 							onClick={(e) => handleFormPopupOpen(e)}
 						>
 							<span>Рассчитать цену по моим размерам</span>
-							<img src={clickHand} alt="" width={26} height={26} />
+							<img src={clickHand} alt="" width="26" height="26" />
 						</button>
 						<p className={styles["about__order-text"]}>
 							<b>Перезвоним и проконсультируем </b>

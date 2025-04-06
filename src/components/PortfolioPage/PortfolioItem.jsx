@@ -37,8 +37,8 @@ const PortfolioItem = memo(({ data }) => {
 								<img
 									alt=""
 									src={image}
-									width="440"
-									height="580"
+									width="384"
+									height="512"
 									loading="lazy"
 								/>
 							</div>
