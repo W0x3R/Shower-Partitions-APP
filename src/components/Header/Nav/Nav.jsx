@@ -3,9 +3,11 @@ import { useEffect, useRef, useState } from "react"
 import DropdownItem from "./DropdownMenu/DropdownItem"
 import NavItems from "./NavItems"
 import dropdownItemData from "../../../data/nav/dropdownItemData"
+import isDesktop from "../../../utils/isDesktop"
 
 const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	const [isFixed, setIsFixed] = useState(false)
+	const [navHeight, setNavHeight] = useState(0)
 
 	const [isMenuOpen, setIsMenuOpen] = useState({
 		customer: false,
@@ -13,6 +15,7 @@ const Nav = ({ isBurgerActive, onBurgerClick }) => {
 	})
 
 	const animationFrameId = useRef(null)
+	const navRef = useRef(null)
 
 	const handleScroll = () => {
 		if (animationFrameId.current) {
@@ -51,30 +54,41 @@ const Nav = ({ isBurgerActive, onBurgerClick }) => {
 		}
 	}, [])
 
+	useEffect(() => {
+		if (isDesktop()) {
+			const navCurrentHeight = navRef.current?.offsetHeight || 0
+			setNavHeight(navCurrentHeight)
+		}
+	}, [isFixed])
+
 	return (
-		<nav
-			className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : styles["nav_hide"]} ${isFixed ? styles["nav_fixed"] : ""}`}
-			aria-label="Основная навигация"
-			id="burger-open-nav"
-		>
-			<ul className={styles.nav__list}>
-				<NavItems styles={styles} onBurgerClick={onBurgerClick} />
-				{dropdownItemData.map((data) => {
-					return (
-						<DropdownItem
-							key={data.id}
-							styles={styles}
-							actions={{
-								onBurgerClick,
-								isMenuOpen,
-								setIsMenuOpen,
-							}}
-							data={data}
-						/>
-					)
-				})}
-			</ul>
-		</nav>
+		<>
+			{isFixed && <div style={{ height: `${navHeight}px` }}></div>}
+			<nav
+				ref={navRef}
+				className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : styles["nav_hide"]} ${isFixed ? styles["nav_fixed"] : ""}`}
+				aria-label="Основная навигация"
+				id="burger-open-nav"
+			>
+				<ul className={styles.nav__list}>
+					<NavItems styles={styles} onBurgerClick={onBurgerClick} />
+					{dropdownItemData.map((data) => {
+						return (
+							<DropdownItem
+								key={data.id}
+								styles={styles}
+								actions={{
+									onBurgerClick,
+									isMenuOpen,
+									setIsMenuOpen,
+								}}
+								data={data}
+							/>
+						)
+					})}
+				</ul>
+			</nav>
+		</>
 	)
 }
 
