@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { YMInitializer } from "react-yandex-metrika"
 import { lazy } from "react"
 import "./App.scss"
 import Layout from "./Layout/Layout"
@@ -34,10 +35,20 @@ const UnsuccessfulMessageSendingPage = lazy(
 const NotFoundPage = lazy(
 	() => import("./components/NotFoundPage/NotFoundPage")
 )
-
+const metrikaId = import.meta.env.VITE_YANDEX_METRIKA_ID
 function App() {
 	return (
 		<Router basename="/Shower-Partitions-APP">
+			<YMInitializer
+				accounts={[Number(metrikaId)]}
+				options={{
+					webvisor: true,
+					clickmap: true,
+					trackLinks: true,
+					accurateTrackBounce: true,
+				}}
+				version="2"
+			/>
 			<div className="App">
 				<ScrollTopOnLocationChange />
 				<PopupFormProvider>
