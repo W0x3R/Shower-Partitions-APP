@@ -3,6 +3,7 @@
 
 .standards {
 	@extend %section;
+	overflow-x: hidden;
 
 	&__text-wrapper {
 		align-self: baseline;

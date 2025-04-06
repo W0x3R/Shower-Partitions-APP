@@ -4,6 +4,7 @@
 
 .delivery {
 	@extend %section;
+	overflow-x: hidden;
 
 	&__title {
 		@extend %titleLevelOne;
