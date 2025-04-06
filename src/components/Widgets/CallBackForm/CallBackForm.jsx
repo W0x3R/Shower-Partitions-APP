@@ -1,15 +1,17 @@
 import styles from "./CallBackForm.module.scss"
 import InputMask from "@mona-health/react-input-mask"
 import { useForm } from "react-hook-form"
-import { useContext, useEffect, useRef } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import clickHandImg from "../../../assets/MainPage/click-hand.svg?url"
+import FetchingDataSpinner from "../../../assets/spinner/fetchingDataSpinner.svg?react"
 import PopupFormContext from "../../../context/PopupFormContext"
 import isHoverSupported from "../../../utils/isHoverSupported"
-import { useNavigate } from "react-router-dom"
 
 const formKey = import.meta.env.VITE_WEB3FORMS_KEY
 
-const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
+const CallBackForm = ({ title, isEmailShow, isBorderShow, articleFormRef }) => {
+	const [isBtnDisable, setIsBtnDisable] = useState(false)
 	const navigate = useNavigate()
 	const { isFormPopupOpen, handleFormPopupCloseRedirect } =
 		useContext(PopupFormContext)
@@ -29,7 +31,7 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 		}
 		formData.append("subject", "Новая заявка!")
 		formData.append("access_key", formKey)
-
+		setIsBtnDisable(true)
 		const response = await fetch("https://api.web3forms.com/submit", {
 			method: "POST",
 			body: formData,
@@ -44,6 +46,7 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 			navigate("/unsuccessful")
 		}
 		handleFormPopupCloseRedirect()
+		setIsBtnDisable(false)
 	}
 
 	const callBackBtnRef = useRef(null)
@@ -58,6 +61,7 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 
 	return (
 		<form
+			ref={articleFormRef}
 			onClick={(e) => e.stopPropagation()}
 			onMouseUp={(e) => e.stopPropagation()}
 			onSubmit={handleSubmit(onSubmit)}
@@ -178,10 +182,12 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 			<button
 				className={styles.form__btn}
 				type="submit"
-				disabled={Object.keys(errors).length > 0}
+				disabled={Object.keys(errors).length > 0 || isBtnDisable}
 			>
-				<span>Отправить</span>
-				<img src={clickHandImg} alt="" width={26} height={26} />
+				<span>{isBtnDisable ? "Отправка" : "Отправить"}</span>
+				{isBtnDisable ?
+					<FetchingDataSpinner width={30} height={30} alt="" />
+				:	<img src={clickHandImg} width={26} height={26} alt="" />}
 			</button>
 		</form>
 	)
