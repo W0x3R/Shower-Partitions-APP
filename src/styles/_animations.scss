@@ -50,11 +50,11 @@
 
 @keyframes glare {
 	0% {
-		left: -80%
+		left: -40%
 	}
 
 	100% {
-		left: 160%;
+		left: 100%;
 	}
 }
 
@@ -151,8 +151,8 @@
 	}
 
 	50% {
-		transform: scale(1.01);
-		filter: drop-shadow(2px 4px 6px var(--white));
+		transform: scale(1.02);
+		filter: drop-shadow(2px 4px 6px);
 	}
 }
 
