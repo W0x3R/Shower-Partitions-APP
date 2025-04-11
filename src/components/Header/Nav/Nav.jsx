@@ -60,36 +60,37 @@ const Nav = ({ isBurgerActive, onBurgerClick }) => {
 			setNavHeight(navCurrentHeight)
 		}
 	}, [isFixed])
-
-	return (
-		<>
-			{isFixed && <div style={{ height: `${navHeight}px` }}></div>}
-			<nav
-				ref={navRef}
-				className={`${styles.nav} ${isBurgerActive ? styles["nav_open"] : styles["nav_hide"]} ${isFixed ? styles["nav_fixed"] : ""}`}
-				aria-label="Основная навигация"
-				id="burger-open-nav"
-			>
-				<ul className={styles.nav__list}>
-					<NavItems styles={styles} onBurgerClick={onBurgerClick} />
-					{dropdownItemData.map((data) => {
-						return (
-							<DropdownItem
-								key={data.id}
-								styles={styles}
-								actions={{
-									onBurgerClick,
-									isMenuOpen,
-									setIsMenuOpen,
-								}}
-								data={data}
-							/>
-						)
-					})}
-				</ul>
-			</nav>
-		</>
-	)
+	{
+		return (
+			<>
+				<div style={{ height: isFixed ? `${navHeight}px` : 0 }}></div>
+				<nav
+					ref={navRef}
+					className={`${styles.nav} ${isFixed ? styles["nav_fixed"] : ""} ${isBurgerActive ? styles["nav_open"] : styles["nav_hide"]}`}
+					aria-label="Основная навигация"
+					id="burger-open-nav"
+				>
+					<ul className={styles.nav__list}>
+						<NavItems styles={styles} onBurgerClick={onBurgerClick} />
+						{dropdownItemData.map((data) => {
+							return (
+								<DropdownItem
+									key={data.id}
+									styles={styles}
+									actions={{
+										onBurgerClick,
+										isMenuOpen,
+										setIsMenuOpen,
+									}}
+									data={data}
+								/>
+							)
+						})}
+					</ul>
+				</nav>
+			</>
+		)
+	}
 }
 
 export default Nav
