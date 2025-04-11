@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet"
-import notFoundGif from "../../assets/notFoundPage/not-found-gif.gif"
+import notFoundImg from "../../assets/notFoundPage/not-found-img.webp"
 import NotFound from "./NotFound"
 
 const NotFoundPage = () => {
@@ -8,7 +8,7 @@ const NotFoundPage = () => {
 			<Helmet>
 				<title>404 - Страница не найдена</title>
 				<meta name="robots" content="noindex, nofollow" />
-				<link rel="preload" href={notFoundGif} as="image" type="image/gif" />
+				<link rel="preload" href={notFoundImg} as="image" type="image/gif" />
 			</Helmet>
 			<NotFound />
 		</>

@@ -1,38 +1,20 @@
 import styles from "./Standards.module.scss"
-import { useEffect, useRef } from "react"
 import standardsData from "../../../data/mainPage/standardsData"
-import showTitleOnScroll from "../../../utils/showTitleOnScroll"
-import moveContentLeftOnScrollAnimation from "../../../utils/moveContentLeftonScrollAnimation"
 
 const Standards = () => {
-	const standardsTextRef = useRef(null)
-	const standardsCardRefs = useRef([])
-
-	useEffect(() => {
-		showTitleOnScroll(standardsTextRef, 0, 120, 0, 1.5)
-		moveContentLeftOnScrollAnimation(standardsCardRefs, 70)
-	}, [])
-
 	return (
 		<section className={styles.standards}>
 			<div className="container">
-				<div
-					className={styles["standards__text-wrapper"]}
-					ref={standardsTextRef}
-				>
+				<div className={styles["standards__text-wrapper"]}>
 					<h3 className={styles.standards__title}>Наши стандарты работы</h3>
 					<p className={styles.standards__text}>
 						Качество и безопасность превыше всего
 					</p>
 				</div>
 				<div className={styles["standards__info-wrapper"]}>
-					{standardsData.map(({ number, title, subtitle, imgSrc }, index) => {
+					{standardsData.map(({ number, title, subtitle, imgSrc }) => {
 						return (
-							<div
-								ref={(el) => (standardsCardRefs.current[index] = el)}
-								key={number}
-								className={styles["standards__info-inner"]}
-							>
+							<div key={number} className={styles["standards__info-inner"]}>
 								<div className={styles.standards__block}>
 									<p className={styles["standards__block-num"]}>{number}</p>
 									<img

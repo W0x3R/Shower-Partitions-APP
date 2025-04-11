@@ -13,6 +13,8 @@ const Logo = () => {
 				src={logo}
 				className={styles.logo__img}
 				alt="Логотип DZ System - Душевые перегордки на заказ в Гомеле"
+				width="88"
+				height="88"
 			/>
 		</Link>
 	)

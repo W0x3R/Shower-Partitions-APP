@@ -21,26 +21,13 @@
 		margin-top: -9rem;
 	}
 
-	&__background-big {
-		@include mixins.fullscreenBg;
-		display: block;
-
-		@include media.mediumMobile {
-			display: none;
-		}
-	}
-
-	&__background-small {
-		@include mixins.fullscreenBg;
-		display: none;
-
-		@include media.mediumMobile {
-			display: block;
-		}
-	}
-
 	&__background {
 		@include mixins.fullscreenBg;
+		@include mixins.setBackgroundImage('../../../assets/mainPage/main-bg-big.webp');
+
+		@include media.mediumMobile {
+			@include mixins.setBackgroundImage('../../../assets/mainPage/main-bg-small.webp');
+		}
 	}
 
 	&__content {
@@ -57,7 +44,7 @@
 		font-size: 2.5em;
 		letter-spacing: .05em;
 		line-height: 1.3;
-		font-weight: 300;
+		font-weight: 400;
 
 		& b {
 			font-weight: 700;
@@ -226,7 +213,7 @@
 			background: var(--white);
 			@include mixins.sizes(10%, 300%);
 			transform: rotate(45deg) translateY(-50%);
-			animation: glare 3s linear infinite;
+			animation: glare 4s linear infinite;
 			opacity: 0.8;
 		}
 
@@ -245,7 +232,7 @@
 
 		& span {
 			font-size: 1.2em;
-			font-weight: 600;
+			font-weight: 700;
 			letter-spacing: var(--basic-letter-spacing);
 			white-space: nowrap;
 

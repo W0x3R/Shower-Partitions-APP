@@ -13,7 +13,7 @@
 		@extend %titleLevelFive;
 		margin-bottom: 0;
 		text-align: center;
-		font-weight: 500;
+		font-weight: 400;
 	}
 
 	&__img {
@@ -28,7 +28,7 @@
 
 	&__text {
 		@extend %titleLevelSix;
-		font-weight: 500;
+		font-weight: 400;
 		text-align: center;
 	}
 

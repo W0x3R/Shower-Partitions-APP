@@ -1,9 +1,9 @@
 import styles from "./Contacts.module.scss"
 import SocialLinks from "../../Widgets/SocialsLinks/SocialLinks"
-import TimeIcon from "../../../assets/footer/time.svg?react"
-import CallIcon from "../../../assets/footer/call.svg?react"
-import MailIcon from "../../../assets/footer/mail.svg?react"
-import QuestionIcon from "../../../assets/footer/question.svg?react"
+import timeIcon from "../../../assets/footer/time.svg?url"
+import callIcon from "../../../assets/footer/call.svg?url"
+import mailIcon from "../../../assets/footer/mail.svg?url"
+import questionIcon from "../../../assets/footer/question.svg?url"
 
 const Contacts = () => {
 	return (
@@ -11,7 +11,13 @@ const Contacts = () => {
 			<div className={styles["contacts__wrapper"]}>
 				<h6 className={styles.contacts__title}>Наши контакты</h6>
 				<div className={styles.contacts__time}>
-					<TimeIcon className="footer__icon" aria-hidden="true" />
+					<img
+						className="footer__icon"
+						src={timeIcon}
+						aria-hidden="true"
+						width="18"
+						height="18"
+					/>
 					<p aria-labelledby="working-time-description-footer">
 						Пн-Пт: 9:00 - 18:00 <br />
 						Сб-Вс - выходные
@@ -21,7 +27,13 @@ const Contacts = () => {
 					</span>
 				</div>
 				<div className={styles.contacts__call}>
-					<CallIcon className="footer__icon" aria-hidden="true" />
+					<img
+						className="footer__icon"
+						src={callIcon}
+						aria-hidden="true"
+						width="18"
+						height="18"
+					/>
 					<a
 						className={styles["contacts__number-link"]}
 						href="tel:+375447854381"
@@ -32,7 +44,13 @@ const Contacts = () => {
 					</a>
 				</div>
 				<div className={styles.contacts__mail}>
-					<MailIcon className="footer__icon" aria-hidden="true" />
+					<img
+						className="footer__icon"
+						src={mailIcon}
+						aria-hidden="true"
+						width="18"
+						height="18"
+					/>
 					<a
 						className={styles["contacts__mail-link"]}
 						href="mailto:showers.gomel@mail.ru"
@@ -47,7 +65,13 @@ const Contacts = () => {
 					aria-labelledby="online-question-contacts"
 				>
 					<div className={styles["contacts__socials-inner"]}>
-						<QuestionIcon className="footer__icon" aria-hidden="true" />
+						<img
+							className="footer__icon"
+							src={questionIcon}
+							aria-hidden="true"
+							width="18"
+							height="18"
+						/>
 						<p
 							className={styles["contacts__socials-text"]}
 							id="online-question-contacts"

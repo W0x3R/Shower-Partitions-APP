@@ -1,5 +1,5 @@
 import styles from "./Benefits.module.scss"
-import CheckIcon from "../../../assets/footer/check.svg?react"
+import checkIcon from "../../../assets/footer/check.svg?url"
 import { benefitsData } from "../../../data/footer/benefitsData"
 
 const Benefits = () => {
@@ -10,7 +10,13 @@ const Benefits = () => {
 				{benefitsData.map(({ id, text }) => {
 					return (
 						<li key={id} className={styles.benefits__item}>
-							<CheckIcon className="footer__icon" aria-hidden="true" />
+							<img
+								className="footer__icon"
+								src={checkIcon}
+								aria-hidden="true"
+								width="18"
+								height="18"
+							/>
 							{text}
 						</li>
 					)

@@ -1,20 +1,12 @@
 import styles from "./UnsuccessfulMessageSending.module.scss"
 import clickHand from "../../assets/MainPage/click-hand.svg?url"
 import unsuccessfulImg from "../../assets/unsuccessfulPage/unsuccessful-gif.gif"
-import { useEffect, useRef } from "react"
-import showContentAnimation from "../../utils/showContentAnimation"
 
 const UnsuccessfulMessageSending = () => {
-	const unsuccessfulRef = useRef(null)
-
-	useEffect(() => {
-		showContentAnimation(unsuccessfulRef)
-	}, [])
-
 	return (
 		<section className={styles.unsuccessful}>
 			<div className="container">
-				<div className={styles.unsuccessful__wrapper} ref={unsuccessfulRef}>
+				<div className={styles.unsuccessful__wrapper}>
 					<div className={styles["unsuccessful__text-wrapper"]}>
 						<h1 className={styles.unsuccessful__title}>
 							<b>Упс! Кажется, что-то пошло не так</b>

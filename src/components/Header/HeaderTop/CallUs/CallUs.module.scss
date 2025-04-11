@@ -6,7 +6,7 @@
 	@include mixins.useFlex(center, center);
 	flex-direction: column;
 	row-gap: .31em;
-	font-weight: 600;
+	font-weight: 700;
 
 	@include media.bigMobile {
 		row-gap: 0.41em;
@@ -45,7 +45,7 @@
 		letter-spacing: 0.05em;
 		font-size: 1.1em;
 		color: var(--main-green);
-		font-weight: 600;
+		font-weight: 700;
 
 		&::after {
 			content: "";

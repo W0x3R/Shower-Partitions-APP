@@ -1,33 +1,19 @@
 import styles from "./Delivery.module.scss"
-import carImg from "../../assets/deliveryPage/car-gif.gif"
-import { useEffect, useRef } from "react"
+import deliveryImg from "../../assets/deliveryPage/delivery-img.png"
 import deliveryPageData from "../../data/deliveryPage/deliveryPageData"
-import showContentAnimation from "../../utils/showContentAnimation"
-import moveContentLeftOnScrollAnimation from "../../utils/moveContentLeftonScrollAnimation"
 
 const Delivery = () => {
-	const deliveryTitleRef = useRef(null)
-	const deliveryImgRef = useRef(null)
-	const deliveryStageItems = useRef([])
-
-	useEffect(() => {
-		showContentAnimation(deliveryTitleRef)
-		showContentAnimation(deliveryImgRef)
-		moveContentLeftOnScrollAnimation(deliveryStageItems, 100)
-	}, [])
-
 	return (
 		<section className={styles.delivery}>
 			<div className="container">
-				<h1 className={styles.delivery__title} ref={deliveryTitleRef}>
+				<h1 className={styles.delivery__title}>
 					<b>Оплата и доставка</b>
 				</h1>
 				<div className={styles.delivery__wrapper}>
 					<div className={styles["delivery__content-wrapper"]}>
 						<img
-							ref={deliveryImgRef}
 							className={styles.delivery__img}
-							src={carImg}
+							src={deliveryImg}
 							width="704"
 							height="371"
 							alt=""
@@ -35,13 +21,9 @@ const Delivery = () => {
 						/>
 						<h2 className={styles.delivery__subtitle}>Этапы заказа</h2>
 						<div className={styles["delivery__stages-wrapper"]}>
-							{deliveryPageData.map(({ id, title, text }, index) => {
+							{deliveryPageData.map(({ id, title, text }) => {
 								return (
-									<div
-										ref={(el) => (deliveryStageItems.current[index] = el)}
-										key={id}
-										className={styles["delivery__stages-item"]}
-									>
+									<div key={id} className={styles["delivery__stages-item"]}>
 										<div className={styles["delivery__stages-content"]}>
 											<h3 className={styles["delivery__stage-title"]}>
 												{title}

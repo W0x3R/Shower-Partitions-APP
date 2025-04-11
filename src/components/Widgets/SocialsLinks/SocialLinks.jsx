@@ -3,7 +3,7 @@ import styles from "./SocialLinks.module.scss"
 
 const SocialLinks = ({ gap, sizes }) => {
 	return (
-		<section
+		<div
 			className={`${styles.socials} ${styles[gap]}`}
 			aria-label="Наши социальные сети"
 		>
@@ -17,11 +17,11 @@ const SocialLinks = ({ gap, sizes }) => {
 						aria-label={link.ariaLabel}
 						rel="noopener noreferrer"
 					>
-						<link.element aria-hidden="true" />
+						<link.element aria-hidden="true" width="45" height="45" />
 					</a>
 				)
 			})}
-		</section>
+		</div>
 	)
 }
 

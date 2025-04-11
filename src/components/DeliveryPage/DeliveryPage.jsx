@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
-import carImg from "../../assets/DeliveryPage/car-gif.gif"
+import deliveryImg from "../../assets/DeliveryPage/delivery-img.png"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import Delivery from "./Delivery"
 
@@ -52,7 +52,7 @@ const DeliveryPage = () => {
 				/>
 				<meta name="twitter:image" content={ogImage} />
 				{/* Preloading image */}
-				<link rel="preload" href={carImg} as="image" type="image/png" />
+				<link rel="preload" href={deliveryImg} as="image" type="image/png" />
 			</Helmet>
 			<Breadcrumbs currentPage="Оплата и доставка" />
 			<Delivery />

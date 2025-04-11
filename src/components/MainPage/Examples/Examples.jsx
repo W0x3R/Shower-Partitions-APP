@@ -5,7 +5,6 @@ import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useRef, useState } from "react"
 import { useLocation } from "react-router-dom"
 import examplesData from "../../../data/mainPage/examplesData"
-import showTitleOnScroll from "../../../utils/showTitleOnScroll"
 
 const Examples = () => {
 	const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 500)
@@ -14,11 +13,6 @@ const Examples = () => {
 
 	const location = useLocation()
 	const examplesRef = useRef(null)
-	const examplesTitleRef = useRef(null)
-
-	useEffect(() => {
-		showTitleOnScroll(examplesTitleRef, 0, 120, 0, 1.5)
-	}, [])
 
 	useEffect(() => {
 		let prevWidth = window.innerWidth
@@ -102,7 +96,7 @@ const Examples = () => {
 		<section className={styles.examples} ref={examplesRef}>
 			<div className="container">
 				<div className={styles.examples__texts}>
-					<h2 className={styles.examples__title} ref={examplesTitleRef}>
+					<h2 className={styles.examples__title}>
 						Душевые ограждения - примеры душевых перегородок в интерьере
 					</h2>
 					<p className={styles.examples__info}>Тренды 2022-2025 года</p>

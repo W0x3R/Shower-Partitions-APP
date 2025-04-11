@@ -1,7 +1,5 @@
 import { Helmet } from "react-helmet"
 import { useLocation } from "react-router-dom"
-import bigBg from "../../assets/MainPage/main-bg-big.webp"
-import smallBg from "../../assets/MainPage/main-bg-small.webp"
 import About from "./About/About"
 import Products from "./Products/Products"
 import Examples from "./Examples/Examples"
@@ -9,7 +7,6 @@ import Price from "./Price/Price"
 import Questions from "./Questions/Questions"
 import Standards from "./Standards/Standards"
 import ShowerPartitionsDescription from "./Description/Description"
-import isMobile from "../../utils/isMobile"
 
 const MainPage = () => {
 	const location = useLocation()
@@ -58,10 +55,6 @@ const MainPage = () => {
 					content="Душевые перегородки на заказ по индивидуальным размерам в Гомеле: замер, изготовление, установка. Современный дизайн, закаленное стекло(8-10мм), надежная фурнитура, гарантия!"
 				/>
 				<meta name="twitter:image" content={ogImage} />
-				{/* Preloading images */}
-				{isMobile() ?
-					<link rel="preload" href={smallBg} as="image" type="image/webp" />
-				:	<link rel="preload" href={bigBg} as="image" type="image/webp" />}
 			</Helmet>
 			<About />
 			<Products />

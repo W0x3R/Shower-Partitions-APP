@@ -4,7 +4,7 @@
 .descriptions {
 	@extend %section;
 
-	&__title {
+	&__header {
 		margin-bottom: 0.8em;
 		font-size: 1.9em;
 		letter-spacing: 0.05em;
@@ -24,21 +24,7 @@
 		@extend %usefulTextFonts;
 	}
 
-	&__block {
-		overflow: hidden;
-	}
-
-	&__block-hidden {
-		@include mixins.hide;
-		max-height: 0;
-
-		&.visible {
-			@include mixins.show;
-			max-height: 100%;
-		}
-	}
-
-	&__block-title {
+	&__title {
 		@extend %titleLevelFive;
 	}
 
@@ -67,7 +53,7 @@
 		}
 	}
 
-	&__block-subtitle {
+	&__subtitle {
 		@extend %titleLevelSix;
 	}
 }
