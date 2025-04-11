@@ -13,7 +13,7 @@
 	&__text-wrapper {
 		@include mixins.useFlex(center, center);
 		flex-direction: column;
-		row-gap: 2.5em;
+		row-gap: 2em;
 	}
 
 	&__title {
@@ -22,7 +22,7 @@
 	}
 
 	&__img {
-		@include mixins.sizes(38em, auto);
+		@include mixins.sizes(30em, auto);
 
 		@include media.bigMobile {
 			width: 36em;

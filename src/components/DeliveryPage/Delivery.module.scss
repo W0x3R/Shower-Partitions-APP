@@ -23,9 +23,9 @@
 	&__img {
 		display: block;
 		margin: 0 auto 2em;
-		@include mixins.sizes(44em, auto);
+		@include mixins.sizes(30em, auto);
 
-		@include media.smallMobile {
+		@include media.mediumMobile {
 			width: 38em;
 		}
 	}

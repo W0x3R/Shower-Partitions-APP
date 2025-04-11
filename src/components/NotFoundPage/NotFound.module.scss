@@ -19,11 +19,7 @@
 	&__img {
 		margin: 0.6em auto;
 		display: block;
-		@include mixins.sizes(48em, auto);
-
-		@include media.smallMobile {
-			width: 38em;
-		}
+		@include mixins.sizes(35em, auto);
 	}
 
 	&__text {

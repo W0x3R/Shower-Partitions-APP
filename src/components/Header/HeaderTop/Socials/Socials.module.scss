@@ -4,7 +4,7 @@
 .socials {
 	@include mixins.useFlex(center, center);
 	flex-direction: column;
-	row-gap: .31rem;
+	row-gap: 0.4rem;
 
 	@include media.bigMobile {
 		display: none;

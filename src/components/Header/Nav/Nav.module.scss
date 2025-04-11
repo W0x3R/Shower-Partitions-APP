@@ -23,7 +23,6 @@
 		z-index: 1;
 		@include mixins.useFlex(center, flex-start);
 		padding-block: 20em 4em;
-		@include mixins.sizes(100vw, 100vh);
 		font-size: clamp(9px, 2vw, 12px);
 		@include mixins.setBackgroundImage('../../../assets/header/mobile-nav-bg.jpg')
 	}
