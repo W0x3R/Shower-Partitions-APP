@@ -16,8 +16,8 @@ export const SuccessfulMessageSending = () => {
 						<img
 							className={styles.successful__img}
 							src={successfulImg}
-							width="672"
-							height="504"
+							width="480"
+							height="480"
 						/>
 						<h2 className={styles.successful__subtitle}>
 							Пока посмотрите фото наших работ в хорошем качестве

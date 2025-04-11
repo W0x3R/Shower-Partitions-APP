@@ -14,8 +14,8 @@ const UnsuccessfulMessageSending = () => {
 						<img
 							className={styles.unsuccessful__img}
 							src={unsuccessfulImg}
-							width="672"
-							height="504"
+							width="480"
+							height="480"
 						/>
 						<h2 className={styles.unsuccessful__subtitle}>
 							Вы можете связаться с нами по номеру телефона

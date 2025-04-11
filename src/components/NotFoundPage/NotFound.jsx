@@ -16,7 +16,7 @@ const NotFound = () => {
 					className={styles.error__img}
 					src={notFoundImg}
 					width="560"
-					height="630"
+					height="632"
 				/>
 				<h3 className={styles.error__text}>
 					Попробуйте вернуться на{" "}
