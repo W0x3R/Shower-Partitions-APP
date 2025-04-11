@@ -7,7 +7,7 @@ const ContactsWidget = () => {
 		<div className={styles.contacts__widget}>
 			<a
 				className={styles["contacts__widget-telegram"]}
-				href="#"
+				href="https://telegram.im/@georgiyzm"
 				aria-label="Открыть чат в Telegram"
 				target="_blank"
 				rel="noopener noreferrer"
