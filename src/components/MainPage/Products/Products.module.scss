@@ -42,10 +42,8 @@
 		opacity: 0.85;
 		background-color: var(--black);
 		border-radius: 15px;
-		border: none;
 		transition: background-color .3s ease, border-radius .5s ease, opacity .3s ease;
 		color: var(--white);
-		cursor: pointer;
 
 		@include media.hoverAndActive {
 			border-radius: 20px;

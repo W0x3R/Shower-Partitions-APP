@@ -38,14 +38,45 @@
 	}
 
 	&__texts {
-		@extend %headerTextsFonts;
+		font-size: 0.95em;
+		letter-spacing: 0;
+		line-height: 1.4;
+		text-align: center;
+
+		@include media.bigMobile {
+			font-size: 1.4em
+		}
+
+		@include media.mediumMobile {
+			font-size: 1.6em;
+		}
 	}
 
 	&__animation {
 		position: relative;
 
 		&::before {
-			@extend %headerBlinkAnimation
+			content: '';
+			position: absolute;
+			left: -17px;
+			top: 50%;
+			transform: translateY(-50%);
+			@include mixins.sizes(8px, 8px);
+			background-color: var(--main-green);
+			border-radius: var(--border-r-circle);
+			animation: blink 2.2s infinite;
+
+			@include media.tablet {
+				left: -14px;
+			}
+
+			@include media.bigMobile {
+				left: -15px;
+			}
+
+			@include media.mediumMobile {
+				left: -13px;
+			}
 		}
 	}
 }

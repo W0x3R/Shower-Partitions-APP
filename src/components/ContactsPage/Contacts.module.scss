@@ -25,7 +25,7 @@
 		background-color: rgba(28, 28, 28, 0.96);
 		border-radius: 15px;
 
-		& div:not(:last-of-type) {
+		&>div:not(:last-child) {
 			margin-bottom: 1em;
 		}
 
@@ -69,7 +69,8 @@
 
 	&__time,
 	&__call,
-	&__mail {
+	&__mail,
+	&__socials-inner {
 		@extend %contactsTextsFonts;
 	}
 
@@ -81,12 +82,11 @@
 	&__social {
 		display: flex;
 		flex-direction: column;
-		row-gap: 0.75rem;
+		row-gap: 0.25rem;
 	}
 
 	&__socials-inner {
 		@extend %contactsTextsFonts;
-		margin-bottom: 0;
 
 		@include media.bigMobile {
 			margin-bottom: 0.3em;

@@ -1,5 +1,5 @@
 import styles from "./ShowMoreBtn.module.scss"
-import ShowMoreImgBtn from "../../../assets/MainPage/example-moreImg-btn.svg?react"
+import showMoreImgBtn from "../../../assets/MainPage/example-moreImg-btn.svg?url"
 
 const ShowMoreBtn = ({ onClick, aria, text }) => {
 	return (
@@ -10,7 +10,7 @@ const ShowMoreBtn = ({ onClick, aria, text }) => {
 			aria-label={aria}
 		>
 			{text}
-			<ShowMoreImgBtn aria-hidden="true" width="18" height="18" />
+			<img src={showMoreImgBtn} alt="" width="18" height="18" />
 		</button>
 	)
 }

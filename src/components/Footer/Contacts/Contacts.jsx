@@ -1,9 +1,9 @@
 import styles from "./Contacts.module.scss"
-import SocialLinks from "../../Widgets/SocialsLinks/SocialLinks"
 import timeIcon from "../../../assets/footer/time.svg?url"
 import callIcon from "../../../assets/footer/call.svg?url"
 import mailIcon from "../../../assets/footer/mail.svg?url"
 import questionIcon from "../../../assets/footer/question.svg?url"
+import SocialLinks from "../../Widgets/SocialsLinks/SocialLinks"
 
 const Contacts = () => {
 	return (
@@ -14,9 +14,10 @@ const Contacts = () => {
 					<img
 						className="footer__icon"
 						src={timeIcon}
-						aria-hidden="true"
 						width="18"
 						height="18"
+						alt=""
+						loading="lazy"
 					/>
 					<p aria-labelledby="working-time-description-footer">
 						Пн-Пт: 9:00 - 18:00 <br />
@@ -30,9 +31,10 @@ const Contacts = () => {
 					<img
 						className="footer__icon"
 						src={callIcon}
-						aria-hidden="true"
 						width="18"
 						height="18"
+						alt=""
+						loading="lazy"
 					/>
 					<a
 						className={styles["contacts__number-link"]}
@@ -47,9 +49,10 @@ const Contacts = () => {
 					<img
 						className="footer__icon"
 						src={mailIcon}
-						aria-hidden="true"
 						width="18"
 						height="18"
+						alt=""
+						loading="lazy"
 					/>
 					<a
 						className={styles["contacts__mail-link"]}
@@ -68,9 +71,10 @@ const Contacts = () => {
 						<img
 							className="footer__icon"
 							src={questionIcon}
-							aria-hidden="true"
 							width="18"
 							height="18"
+							alt=""
+							loading="lazy"
 						/>
 						<p
 							className={styles["contacts__socials-text"]}

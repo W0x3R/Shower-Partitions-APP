@@ -1,5 +1,5 @@
-import socialLinksData from "../../../data/socialLinksData"
 import styles from "./SocialLinks.module.scss"
+import socialLinksData from "../../../data/socialLinksData"
 
 const SocialLinks = ({ gap, sizes }) => {
 	return (
@@ -17,7 +17,7 @@ const SocialLinks = ({ gap, sizes }) => {
 						aria-label={link.ariaLabel}
 						rel="noopener noreferrer"
 					>
-						<link.element aria-hidden="true" width="45" height="45" />
+						<link.element aria-hidden={true} width={45} height={45} />
 					</a>
 				)
 			})}

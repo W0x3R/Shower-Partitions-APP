@@ -1,10 +1,10 @@
 import styles from "./CallBackForm.module.scss"
+import clickHandImg from "../../../assets/MainPage/click-hand.svg?url"
+import FetchingDataSpinner from "../../../assets/spinner/fetchingDataSpinner.svg?react"
 import InputMask from "@mona-health/react-input-mask"
 import { useForm } from "react-hook-form"
 import { useContext, useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import clickHandImg from "../../../assets/MainPage/click-hand.svg?url"
-import FetchingDataSpinner from "../../../assets/spinner/fetchingDataSpinner.svg?react"
 import PopupFormContext from "../../../context/PopupFormContext"
 import isHoverSupported from "../../../utils/isHoverSupported"
 
@@ -25,6 +25,11 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 	} = useForm()
 
 	const onSubmit = async (data) => {
+		if (navigator.userAgent === "ReactSnap") {
+			console.log("⚠️ Форма не отправляется при пререндере ReactSnap")
+			return
+		}
+
 		const formData = new FormData()
 		for (const key in data) {
 			formData.append(key, data[key])
@@ -185,7 +190,7 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 			>
 				<span>{isBtnDisable ? "Отправка" : "Отправить"}</span>
 				{isBtnDisable ?
-					<FetchingDataSpinner width="30" height="30" alt="" />
+					<FetchingDataSpinner width={30} height={30} aria-hidden={true} />
 				:	<img src={clickHandImg} width="26" height="26" alt="" />}
 			</button>
 		</form>

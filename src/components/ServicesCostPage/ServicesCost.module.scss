@@ -12,11 +12,8 @@
 
 	&__title {
 		@extend %titleLevelOne;
-		position: absolute;
+		@include mixins.absCenter;
 		color: var(--white);
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
 	}
 
 	&__img {
@@ -60,24 +57,12 @@
 		margin: 0 auto;
 		column-gap: .625em;
 		padding: 1.6em 2em;
-		overflow: hidden;
-		opacity: 0.9;
+		opacity: 0.95;
 		background-color: var(--dark-green);
 		border-radius: 15px;
+		animation: scalesOrderBtn 2.2s linear infinite;
 		transition: var(--basic-transition);
 		color: var(--white);
-
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			background: var(--white);
-			@include mixins.sizes(10%, 300%);
-			transform: rotate(45deg) translateY(-50%);
-			animation: glare 3s linear infinite;
-			opacity: 0.8;
-		}
 
 		@include media.bigMobile {
 			padding: 1.9em 1.6em;

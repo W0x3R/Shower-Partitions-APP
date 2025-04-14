@@ -4,16 +4,16 @@
 
 .spinner {
 	position: fixed;
-	@include mixins.sizes(100vw, 100vh);
 	inset: 0;
 	@include mixins.useFlex(center, center);
 	flex-direction: column;
 	background: var(--black);
-	z-index: 100;
+	z-index: 1000;
+	overflow: hidden;
 
 	&__img {
 		@include mixins.sizes(120px, 120px);
-		fill: var(--white);
+		animation: rotateSpinner 1s linear infinite;
 
 		@include media.desktop {
 			@include mixins.sizes(100px, 100px);

@@ -12,7 +12,7 @@ const ContactsWidget = () => {
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<TelegramIcon aria-hidden="true" />
+				<TelegramIcon aria-hidden={true} width={34} height={34} />
 				<span className={styles["contacts__widget-text"]}>Написать</span>
 			</a>
 			<a
@@ -21,7 +21,7 @@ const ContactsWidget = () => {
 				aria-label="Связаться с нами по номеру телефона"
 				rel="noopener noreferrer"
 			>
-				<CallIcon aria-hidden="true" />
+				<CallIcon aria-hidden={true} width={34} height={34} />
 				<span className={styles["contacts__widget-text"]}>Позвонить</span>
 			</a>
 		</div>

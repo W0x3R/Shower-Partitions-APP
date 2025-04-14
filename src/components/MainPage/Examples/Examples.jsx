@@ -66,28 +66,23 @@ const Examples = () => {
 	}, [location])
 
 	const renderedSlides = () => {
-		return examplesData.slice(0, visibleCount).map(({ id, imgSrc, alt }) => (
+		return examplesData.slice(0, visibleCount).map(({ id, alt }, i) => (
 			<div className={`${styles.examples__item}`} key={id}>
 				<a
 					className={styles["examples__item-link"]}
 					data-fancybox="gallery"
-					href={imgSrc}
+					href={`https://W0x3R.github.io/Shower-Partitions-APP/example-${i}.webp`}
 				>
 					<img
 						className={styles["examples__item-img"]}
-						loading="lazy"
-						alt={alt}
-						src={imgSrc}
+						src={`https://W0x3R.github.io/Shower-Partitions-APP/example-${i}.webp`}
 						width="351"
 						height="243"
+						alt={alt}
+						loading="lazy"
 					/>
-					<FullScreenIcon aria-hidden="true" width={26} height={26} />
+					<FullScreenIcon aria-hidden={true} width={26} height={26} />
 				</a>
-				<div
-					id="aria-examples-live-status"
-					aria-live="polite"
-					className="sr-only"
-				></div>
 			</div>
 		))
 	}
@@ -117,13 +112,16 @@ const Examples = () => {
 					}}
 				>
 					{renderedSlides()}
+					<div
+						id={`aria-examples-live-status`}
+						aria-live="polite"
+						className="sr-only"
+					></div>
 					{visibleCount < examplesData.length && (
 						<ShowMoreBtn
 							onClick={handleShowMorePictures}
 							aria={`Показать еще ${stepIncrease} фото`}
 							text="Загрузить еще фото"
-							width="18"
-							height="18"
 						/>
 					)}
 				</Fancybox>

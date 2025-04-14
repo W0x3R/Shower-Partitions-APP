@@ -1,6 +1,6 @@
 import styles from "./Article.module.scss"
-import AsideInfoWidget from "../Widgets/AsideInfoWidget/AsideInfoWidget"
 import articleBgImg from "../../assets/ArticlePage/bg.webp"
+import AsideInfoWidget from "../Widgets/AsideInfoWidget/AsideInfoWidget"
 import constructionsData from "../../data/articlePage/constructionsData"
 import typesData from "../../data/articlePage/typesData"
 import openingTypes from "../../data/articlePage/openingTypes"
@@ -18,10 +18,11 @@ const Article = () => {
 					</h1>
 					<img
 						className={styles.article__img}
+						src={articleBgImg}
 						width="1408"
 						height="430"
-						src={articleBgImg}
 						alt=""
+						loading="lazy"
 					/>
 				</div>
 				<div className={styles["article__wrapper"]}>

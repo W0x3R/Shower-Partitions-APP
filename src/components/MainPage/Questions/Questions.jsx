@@ -1,5 +1,5 @@
 import styles from "./Questions.module.scss"
-import Cross from "../../../assets/MainPage/cross.svg?react"
+import crossImg from "../../../assets/MainPage/cross.svg?url"
 import questionImg from "../../../assets/MainPage/questions-img.png"
 import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
 import { useEffect, useState } from "react"
@@ -31,11 +31,12 @@ const Questions = () => {
 						aria-controls={`subtitle-${id}`}
 					>
 						<span className={styles["questions__accordion-text"]}>{title}</span>
-						<Cross
+						<img
+							src={crossImg}
+							alt=""
 							className={`${styles["questions__accordion-icon"]} ${expandedIndex.includes(id) ? styles.open : ""}`}
-							width={34}
-							height={34}
-							aria-hidden="true"
+							width="34"
+							height="34"
 						/>
 					</button>
 					<div
@@ -83,10 +84,10 @@ const Questions = () => {
 					<img
 						className={styles.questions__img}
 						src={questionImg}
-						loading="lazy"
-						alt=""
 						width="368"
 						height="288"
+						alt=""
+						loading="lazy"
 					/>
 					<div className={styles["questions__accordion-wrapper"]}>
 						<div className={styles["questions__accordion"]}>

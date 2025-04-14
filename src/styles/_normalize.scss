@@ -9,10 +9,9 @@
  */
 
 html {
+	box-sizing: border-box;
 	line-height: 1.15;
-	/* 1 */
 	-webkit-text-size-adjust: 100%;
-	/* 2 */
 	width: 100%;
 	height: 100%;
 	scroll-behavior: smooth;
@@ -27,7 +26,6 @@ html {
 
 body {
 	margin: 0;
-	font-family: 'Noto Sans', sans-serif;
 	letter-spacing: 1px;
 	width: 100%;
 	height: 100%;
@@ -64,11 +62,8 @@ h1 {
 
 hr {
 	box-sizing: content-box;
-	/* 1 */
 	height: 0;
-	/* 1 */
 	overflow: visible;
-	/* 2 */
 }
 
 /**
@@ -78,9 +73,7 @@ hr {
 
 pre {
 	font-family: monospace, monospace;
-	/* 1 */
 	font-size: 1em;
-	/* 2 */
 }
 
 /* Text-level semantics
@@ -103,11 +96,8 @@ a {
 
 abbr[title] {
 	border-bottom: none;
-	/* 1 */
 	text-decoration: underline;
-	/* 2 */
 	text-decoration: underline dotted;
-	/* 2 */
 }
 
 /**
@@ -128,9 +118,7 @@ code,
 kbd,
 samp {
 	font-family: monospace, monospace;
-	/* 1 */
 	font-size: 1em;
-	/* 2 */
 }
 
 /**
@@ -187,13 +175,9 @@ optgroup,
 select,
 textarea {
 	font-family: inherit;
-	/* 1 */
 	font-size: 100%;
-	/* 1 */
 	line-height: 1.15;
-	/* 1 */
 	margin: 0;
-	/* 2 */
 }
 
 /**
@@ -203,7 +187,6 @@ textarea {
 
 button,
 input {
-	/* 1 */
 	overflow: visible;
 }
 
@@ -214,7 +197,6 @@ input {
 
 button,
 select {
-	/* 1 */
 	text-transform: none;
 }
 
@@ -276,17 +258,11 @@ fieldset {
 
 legend {
 	box-sizing: border-box;
-	/* 1 */
 	color: inherit;
-	/* 2 */
 	display: table;
-	/* 1 */
 	max-width: 100%;
-	/* 1 */
 	padding: 0;
-	/* 3 */
 	white-space: normal;
-	/* 1 */
 }
 
 /**
@@ -317,9 +293,7 @@ figure {
 [type='checkbox'],
 [type='radio'] {
 	box-sizing: border-box;
-	/* 1 */
 	padding: 0;
-	/* 2 */
 }
 
 /**
@@ -338,9 +312,7 @@ figure {
 
 [type='search'] {
 	-webkit-appearance: textfield;
-	/* 1 */
 	outline-offset: -2px;
-	/* 2 */
 }
 
 /**
@@ -358,9 +330,7 @@ figure {
 
 ::-webkit-file-upload-button {
 	-webkit-appearance: button;
-	/* 1 */
 	font: inherit;
-	/* 2 */
 }
 
 /* Interactive
@@ -410,14 +380,12 @@ template {
 	display: none;
 }
 
-html {
-	box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 ul {

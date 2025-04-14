@@ -2,44 +2,25 @@
 @use "./styles/variables";
 @use "./styles/media";
 @use './styles/global.scss';
-@use '../src/components/FancyApp/fancyApp.scss';
 @use './styles/fonts.scss';
+@use '../src/components/FancyApp/fancyApp.scss';
 
 html {
-	box-sizing: border-box;
-	/* Учитывать границы и паддинги в общей ширине элемента */
 	font-size: clamp(12px, 1.4vw, 16px);
-	/* Базовый размер шрифта для удобства использования rem */
-	scroll-behavior: smooth;
-	/* Плавная прокрутка */
-	height: 100%;
-	/* Полноэкранное покрытие */
 	user-select: none;
 }
 
 body {
-	margin: 0;
-	/* Убираем отступы по умолчанию */
 	padding: 0;
-	/* Убираем внутренние отступы */
 	font-family: 'VelaSans', Arial, sans-serif;
-	/* Задаем шрифт по умолчанию */
 	font-size: 1rem;
-	/* Размер шрифта по умолчанию */
 	line-height: 1.5;
-	/* Интерлиньяж для читаемости */
 	color: var(--white);
-	/* Цвет текста */
 	min-height: 100%;
-	/* Гарантируем минимальную высоту */
-	overflow-x: hidden;
-	/* Убираем горизонтальную прокрутку */
 }
 
-*,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }

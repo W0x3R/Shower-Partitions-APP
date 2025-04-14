@@ -15,6 +15,7 @@ export const SuccessfulMessageSending = () => {
 						</h1>
 						<img
 							className={styles.successful__img}
+							alt=""
 							src={successfulImg}
 							width="480"
 							height="480"

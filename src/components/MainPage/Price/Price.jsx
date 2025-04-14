@@ -13,10 +13,10 @@ const Price = () => {
 					<img
 						className={`${styles["price__info-img"]} ${styles.desktop}`}
 						src={showerImage}
-						loading="lazy"
-						alt=""
 						width="288"
 						height="448"
+						alt=""
+						loading="lazy"
 					/>
 					<div className={styles["price__text-wrapper"]}>
 						<p className={styles["price__info-text"]}>
@@ -29,11 +29,11 @@ const Price = () => {
 						</p>
 						<img
 							className={`${styles["price__info-img"]} ${styles.mobile}`}
-							loading="lazy"
 							src={showerImage}
-							alt=""
 							width="275"
 							height="410"
+							alt=""
+							loading="lazy"
 						/>
 						<a
 							className={styles["price__info-link"]}

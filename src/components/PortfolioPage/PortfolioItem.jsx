@@ -35,10 +35,10 @@ const PortfolioItem = memo(({ data }) => {
 								data-thumb-src={image}
 							>
 								<img
-									alt=""
 									src={image}
 									width="384"
 									height="512"
+									alt=""
 									loading="lazy"
 								/>
 							</div>

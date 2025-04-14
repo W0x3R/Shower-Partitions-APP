@@ -7,6 +7,7 @@
 
 	&__img {
 		width: 61em;
+		height: auto;
 		cursor: default;
 
 		@include media.bigMobile {

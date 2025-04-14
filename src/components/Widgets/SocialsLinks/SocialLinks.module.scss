@@ -30,13 +30,14 @@
 	&__link {
 		display: inline-block;
 		transition: var(--basic-transition);
+		outline: none;
+
 
 		@include media.hoverAndActive {
 			transform: scale(1.1);
 		}
 
 		@include media.focusVisible {
-			outline: none;
 			animation: scale 2.2s infinite;
 		}
 	}

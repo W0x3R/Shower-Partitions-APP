@@ -15,8 +15,10 @@
 		"clean": "rd /s /q build"
 	},
 	"reactSnap": {
+		"timeout": 60000,
 		"puppeteerArgs": [
-			"--no-sandbox"
+			"--no-sandbox",
+			"--disable-setuid-sandbox"
 		],
 		"include": [
 			"/",
@@ -24,9 +26,7 @@
 			"/portfolio",
 			"/price",
 			"/delivery",
-			"/article",
-			"/successful",
-			"/unsuccessful"
+			"/article"
 		]
 	},
 	"dependencies": {

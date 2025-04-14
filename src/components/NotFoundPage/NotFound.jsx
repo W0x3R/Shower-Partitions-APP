@@ -15,6 +15,7 @@ const NotFound = () => {
 				<img
 					className={styles.error__img}
 					src={notFoundImg}
+					alt=""
 					width="560"
 					height="632"
 				/>

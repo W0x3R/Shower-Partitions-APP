@@ -22,7 +22,11 @@
 	}
 
 	&__background {
-		@include mixins.fullscreenBg;
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		@include mixins.sizes(100%, 100%);
+		object-fit: cover;
 		@include mixins.setBackgroundImage('../../../assets/mainPage/main-bg-big.webp');
 
 		@include media.mediumMobile {
@@ -45,10 +49,6 @@
 		letter-spacing: .05em;
 		line-height: 1.3;
 		font-weight: 400;
-
-		& b {
-			font-weight: 700;
-		}
 
 		@include media.tablet {
 			max-width: 80%;
@@ -76,6 +76,7 @@
 	}
 
 	&__description-dots {
+		height: min-content;
 		margin-top: .3125em;
 
 		@include media.bigMobile {
@@ -198,24 +199,12 @@
 		@include mixins.useFlex(space-around, center);
 		column-gap: .625em;
 		padding: 1.6em 2em;
-		overflow: hidden;
-		opacity: 0.9;
+		opacity: 0.95;
 		background-color: var(--dark-green);
 		border-radius: 15px;
 		transition: var(--basic-transition);
 		color: var(--white);
-
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			background: var(--white);
-			@include mixins.sizes(10%, 300%);
-			transform: rotate(45deg) translateY(-50%);
-			animation: glare 4s linear infinite;
-			opacity: 0.8;
-		}
+		animation: scalesOrderBtn 2.2s linear infinite;
 
 		@include media.smallMobile {
 			padding: 1.7em 1em;

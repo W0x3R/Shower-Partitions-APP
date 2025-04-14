@@ -11,7 +11,7 @@ const CallUs = () => {
 				className="header__texts header__animation"
 				aria-labelledby="working-time-description-header"
 			>
-				<strong aria-hidden>
+				<strong aria-hidden="true">
 					<span>Звоните Пн-Пт</span> 9 - 18
 				</strong>
 				<span id="working-time-description-header" className="sr-only">

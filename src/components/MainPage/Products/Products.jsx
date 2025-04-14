@@ -94,13 +94,13 @@ const Products = () => {
 									>
 										<img
 											className={styles["products__item-img"]}
-											loading="lazy"
-											alt={alt}
 											src={ImgSrc}
 											width="342"
 											height="234"
+											alt={alt}
+											loading="lazy"
 										/>
-										<FullScreenIcon width="26" height="26" />
+										<FullScreenIcon width={26} height={26} aria-hidden={true} />
 									</a>
 									<figcaption>
 										<p

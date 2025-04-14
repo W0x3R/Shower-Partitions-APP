@@ -114,7 +114,7 @@
 		visibility: hidden;
 		opacity: 0;
 		max-height: 0;
-		transition: all .3s ease-in-out;
+		transition: var(--basic-transition);
 
 		&.open {
 			visibility: visible;

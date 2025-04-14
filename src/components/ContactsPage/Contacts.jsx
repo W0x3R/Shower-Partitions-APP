@@ -1,9 +1,9 @@
 import styles from "./Contacts.module.scss"
 import callUsImg from "../../assets/ContactsPage/callUs.png"
-import QuestionIcon from "../../assets/ContactsPage/question.svg?react"
-import TimeIcon from "../../assets/ContactsPage/time.svg?react"
-import CallIcon from "../../assets/ContactsPage/call.svg?react"
-import MailIcon from "../../assets/ContactsPage/mail.svg?react"
+import questionIcon from "../../assets/ContactsPage/question.svg?url"
+import timeIcon from "../../assets/ContactsPage/time.svg?url"
+import callIcon from "../../assets/ContactsPage/call.svg?url"
+import mailIcon from "../../assets/ContactsPage/mail.svg?url"
 import SocialLinks from "../Widgets/SocialsLinks/SocialLinks"
 import CallBackForm from "../Widgets/CallBackForm/CallBackForm"
 
@@ -20,7 +20,13 @@ const Contacts = () => {
 							Наши <b>контакты</b>
 						</h2>
 						<div className={styles.contacts__time}>
-							<TimeIcon className={styles.contacts__icon} aria-hidden="true" />
+							<img
+								className={styles.contacts__icon}
+								src={timeIcon}
+								width="23"
+								height="23"
+								alt=""
+							/>
 							<p aria-labelledby="working-time-description-footer">
 								Пн-Пт: 9:00 - 18:00 <br />
 								Сб-Вс - выходные
@@ -30,7 +36,13 @@ const Contacts = () => {
 							</span>
 						</div>
 						<div className={styles.contacts__call}>
-							<CallIcon className={styles.contacts__icon} aria-hidden="true" />
+							<img
+								className={styles.contacts__icon}
+								src={callIcon}
+								width="23"
+								height="23"
+								alt=""
+							/>
 							<a
 								className={styles["contacts__number-link"]}
 								href="tel:+375447854381"
@@ -43,7 +55,13 @@ const Contacts = () => {
 							</a>
 						</div>
 						<div className={styles.contacts__mail}>
-							<MailIcon className={styles.contacts__icon} aria-hidden="true" />
+							<img
+								className={styles.contacts__icon}
+								src={mailIcon}
+								width="23"
+								height="23"
+								alt=""
+							/>
 							<a
 								className={styles["contacts__mail-link"]}
 								href="mailto:showers.gomel@mail.ru"
@@ -64,11 +82,15 @@ const Contacts = () => {
 								width="256"
 								height="256"
 								alt=""
+								loading="lazy"
 							/>
 							<div className={styles["contacts__socials-inner"]}>
-								<QuestionIcon
+								<img
 									className={styles.contacts__icon}
-									aria-hidden="true"
+									src={questionIcon}
+									width="23"
+									height="23"
+									alt=""
 								/>
 								<p
 									className={styles["contacts__socials-text"]}

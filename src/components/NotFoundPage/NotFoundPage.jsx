@@ -8,7 +8,7 @@ const NotFoundPage = () => {
 			<Helmet>
 				<title>404 - Страница не найдена</title>
 				<meta name="robots" content="noindex, nofollow" />
-				<link rel="preload" href={notFoundImg} as="image" type="image/gif" />
+				<link rel="preload" href={notFoundImg} as="image" type="image/webp" />
 			</Helmet>
 			<NotFound />
 		</>

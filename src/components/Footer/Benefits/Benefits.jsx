@@ -13,9 +13,9 @@ const Benefits = () => {
 							<img
 								className="footer__icon"
 								src={checkIcon}
-								aria-hidden="true"
 								width="18"
 								height="18"
+								alt=""
 							/>
 							{text}
 						</li>

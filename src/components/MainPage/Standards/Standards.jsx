@@ -20,10 +20,10 @@ const Standards = () => {
 									<img
 										className={styles["standards__block-img"]}
 										src={imgSrc}
-										loading="lazy"
-										alt=""
 										width="864"
 										height="512"
+										alt=""
+										loading="lazy"
 									/>
 									<div className={styles["standards__block-content"]}>
 										<p className={styles["standards__block-title"]}>{title}</p>

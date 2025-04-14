@@ -13,6 +13,7 @@ const UnsuccessfulMessageSending = () => {
 						</h1>
 						<img
 							className={styles.unsuccessful__img}
+							alt=""
 							src={unsuccessfulImg}
 							width="480"
 							height="480"

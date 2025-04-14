@@ -48,16 +48,6 @@
 	}
 }
 
-@keyframes glare {
-	0% {
-		left: -40%
-	}
-
-	100% {
-		left: 100%;
-	}
-}
-
 @keyframes firstLineOpenAnimation {
 	0% {
 		transform: rotate(0deg);
@@ -97,6 +87,7 @@
 		transform: rotate(0deg);
 	}
 }
+
 
 @keyframes secondLineCloseAnimation {
 	0% {
@@ -209,5 +200,27 @@
 	50% {
 		box-shadow: 0 0 1px 3px var(--main-green);
 		border: 10px solid rgba(0, 0, 0, 0.84);
+	}
+}
+
+@keyframes rotateSpinner {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes scalesOrderBtn {
+
+	0%,
+	100% {
+		transform: scale(0.98);
+	}
+
+	50% {
+		transform: scale(1);
 	}
 }
