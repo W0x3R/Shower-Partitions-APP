@@ -1,12 +1,15 @@
 import styles from "./Examples.module.scss"
 import FullScreenIcon from "../../../assets/MainPage/fullscreen-icon.svg?react"
+import errorImg from "../../../assets/content-unavailable.png"
 import ShowMoreBtn from "../../Widgets/ShowMoreBtn/ShowMoreBtn"
 import Fancybox from "../../FancyApp/FancyBox"
 import { useEffect, useRef, useState } from "react"
 import { useLocation } from "react-router-dom"
-import examplesData from "../../../data/mainPage/examplesData"
 
 const Examples = () => {
+	const [examplesData, setExamplesData] = useState([])
+	const [isDataError, setIsDataError] = useState("")
+	const [isLoading, setIsLoading] = useState(true)
 	const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 500)
 	const [visibleCount, setVisibleCount] = useState(isMobileView ? 3 : 6)
 	const [stepIncrease, setStepIncrease] = useState(isMobileView ? 3 : 6)
@@ -48,6 +51,23 @@ const Examples = () => {
 	}
 
 	useEffect(() => {
+		const getExamplesData = async () => {
+			const examplesDataUrl =
+				"https://res.cloudinary.com/dpvqykdi9/raw/upload/v1744802085/examplesData_elu58v.json"
+			try {
+				const res = await fetch(examplesDataUrl)
+				const examplesData = await res.json()
+				setExamplesData(examplesData)
+			} catch {
+				setIsDataError("Ошибка получения данных")
+			} finally {
+				setIsLoading(false)
+			}
+		}
+		getExamplesData()
+	}, [])
+
+	useEffect(() => {
 		const items = document.querySelectorAll(`.${styles.examples__item}`)
 		const timeouts = []
 		items.forEach((item, i) => {
@@ -57,7 +77,7 @@ const Examples = () => {
 			timeouts.push(timer)
 		})
 		return () => timeouts.forEach(clearTimeout)
-	}, [visibleCount])
+	}, [examplesData, visibleCount])
 
 	useEffect(() => {
 		if (location.hash === "#examples" && examplesRef.current) {
@@ -66,16 +86,16 @@ const Examples = () => {
 	}, [location])
 
 	const renderedSlides = () => {
-		return examplesData.slice(0, visibleCount).map(({ id, alt }, i) => (
+		return examplesData.slice(0, visibleCount).map(({ id, alt, imgSrc }) => (
 			<div className={`${styles.examples__item}`} key={id}>
 				<a
 					className={styles["examples__item-link"]}
 					data-fancybox="gallery"
-					href={`https://W0x3R.github.io/Shower-Partitions-APP/example-${i}.webp`}
+					href={imgSrc}
 				>
 					<img
 						className={styles["examples__item-img"]}
-						src={`https://W0x3R.github.io/Shower-Partitions-APP/example-${i}.webp`}
+						src={imgSrc}
 						width="351"
 						height="243"
 						alt={alt}
@@ -95,6 +115,21 @@ const Examples = () => {
 						Душевые ограждения - примеры душевых перегородок в интерьере
 					</h2>
 					<p className={styles.examples__info}>Тренды 2022-2025 года</p>
+					{isDataError && (
+						<>
+							<img
+								className={styles["examples__error-img"]}
+								src={errorImg}
+								alt="Изображение, которое указывает на то,что контент временно недоступен"
+								width="500"
+								height="477"
+								loading="lazy"
+							/>
+							<p className={styles["examples__error-text"]}>
+								Изображения временно недоступны
+							</p>
+						</>
+					)}
 				</div>
 				<Fancybox
 					styles={styles.examples__items}
@@ -111,7 +146,8 @@ const Examples = () => {
 						},
 					}}
 				>
-					{renderedSlides()}
+					{!isLoading && !isDataError && renderedSlides()}
+
 					<div
 						id={`aria-examples-live-status`}
 						aria-live="polite"

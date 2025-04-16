@@ -40,6 +40,20 @@
 		}
 	}
 
+	&__error-text {
+		@extend %mainTextsFonts;
+	}
+
+	&__error-img {
+		@include mixins.sizes(30em, auto);
+		margin-bottom: 2.5em;
+
+		@include media.bigMobile {
+			margin-bottom: 3.58em;
+			width: 34em;
+		}
+	}
+
 	&__items {
 		@include mixins.useFlex(center, center);
 		@extend %imagesCardsWrapper;
