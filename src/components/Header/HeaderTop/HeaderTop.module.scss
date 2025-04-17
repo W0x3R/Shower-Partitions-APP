@@ -3,15 +3,8 @@
 @use '../../../styles/animations';
 
 .header {
-	&__top {
-		@include mixins.useFlex(space-between, center);
-		padding-bottom: 0.6em;
-		font-size: clamp(13.2px, 1.6vw, 16px);
-		border-bottom: var(--border-b-white-2);
-		position: relative;
-		z-index: 10;
-		color: var(--white);
 
+	&__top {
 		@include media.bigMobile {
 			font-size: clamp(10px, 1.7vw, 12px);
 			border-bottom: none;

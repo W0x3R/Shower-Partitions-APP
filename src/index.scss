@@ -3,6 +3,9 @@
 @use "./styles/media";
 @use './styles/global.scss';
 @use './styles/fonts.scss';
+@use '../src/components/Header/HeaderTop/criticalHeaderTop.scss';
+@use '../src/components/Header/Nav/criticalNav.scss';
+@use '../src/components/MainPage/About/criticalAbout.scss';
 @use '../src/components/FancyApp/fancyApp.scss';
 
 html {

@@ -66,11 +66,11 @@ const Nav = ({ isBurgerActive, onBurgerClick }) => {
 				<div style={{ height: isFixed ? `${navHeight}px` : 0 }}></div>
 				<nav
 					ref={navRef}
-					className={`${styles.nav} ${isFixed ? styles["nav_fixed"] : ""} ${isBurgerActive ? styles["nav_open"] : styles["nav_hide"]}`}
+					className={`nav ${styles.nav} ${isFixed ? styles["nav_fixed"] : ""} ${isBurgerActive ? styles["nav_open"] : styles["nav_hide"]}`}
 					aria-label="Основная навигация"
 					id="burger-open-nav"
 				>
-					<ul className={styles.nav__list}>
+					<ul className={`nav__list ${styles.nav__list}`}>
 						<NavItems styles={styles} onBurgerClick={onBurgerClick} />
 						{dropdownItemData.map((data) => {
 							return (

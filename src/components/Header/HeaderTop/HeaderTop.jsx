@@ -8,7 +8,7 @@ import Burger from "./Burger/Burger"
 const HeaderTop = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 	return (
 		<div
-			className={`${styles.header__top} ${isBurgerActive ? styles.open : ""}`}
+			className={`header__top ${styles.header__top} ${isBurgerActive ? styles.open : ""}`}
 		>
 			<Logo />
 			<Description />

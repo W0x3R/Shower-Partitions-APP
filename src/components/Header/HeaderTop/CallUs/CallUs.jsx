@@ -6,7 +6,7 @@ const CallUs = () => {
 	const { handleFormPopupOpen } = useContext(PopupFormContext)
 
 	return (
-		<div className={styles.callUs}>
+		<div className={`callUs ${styles.callUs}`}>
 			<p
 				className="header__texts header__animation"
 				aria-labelledby="working-time-description-header"
@@ -19,7 +19,7 @@ const CallUs = () => {
 				</span>
 			</p>
 			<a
-				className={styles.callUs__link}
+				className={`callUs__link ${styles.callUs__link}`}
 				href="tel:+375447854381"
 				aria-label="Связаться с нами по номеру телефона"
 				title="Позвонить по номеру +375 44 785 43 81"
@@ -29,7 +29,7 @@ const CallUs = () => {
 			<button
 				onClick={(e) => handleFormPopupOpen(e)}
 				type="button"
-				className={styles.callUs__btn}
+				className={`callUs__btn ${styles.callUs__btn}`}
 				aria-label="Нажмите, чтобы заказать обратный звонок"
 			>
 				Заказать звонок

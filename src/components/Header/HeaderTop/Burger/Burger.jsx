@@ -16,7 +16,7 @@ const Burger = ({ isBurgerActive, onBurgerClick, burgerRef }) => {
 
 	return (
 		<button
-			className={`${styles.burger} ${isBurgerActive ? styles.open : styles.close}`}
+			className={`burger ${styles.burger} ${isBurgerActive ? styles.open : styles.close}`}
 			onClick={onBurgerClick}
 			ref={burgerRef}
 			aria-label={

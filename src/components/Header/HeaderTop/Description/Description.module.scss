@@ -1,7 +1,6 @@
 @use '../../../../styles/media';
 
 .description {
-	max-width: min-content;
 
 	@include media.mediumMobile {
 		display: none;

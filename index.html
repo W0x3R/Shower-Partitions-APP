@@ -4,6 +4,111 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			.header {
+				position: relative;
+				z-index: 10;
+				padding-top: 0.625em;
+				height: 12rem;
+			}
+
+			.header.black {
+				background-color: var(--dark-bg);
+				height: auto;
+			}
+			.header.black nav {
+				border-bottom: none;
+			}
+
+			.header__texts {
+				font-size: 0.95em;
+				letter-spacing: 0;
+				line-height: 1.4;
+				text-align: center;
+			}
+			.header__top {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-bottom: 0.6em;
+				font-size: clamp(13.2px, 1.6vw, 16px);
+				border-bottom: var(--border-b-white-2);
+				position: relative;
+				z-index: 10;
+				color: var(--white);
+			}
+
+			.burger {
+				display: none;
+				position: relative;
+				width: 45px;
+				height: 45px;
+				border-radius: var(--border-r-circle);
+			}
+
+			.callUs {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				row-gap: 0.31em;
+				font-weight: 700;
+			}
+
+			.callUs span {
+				font-weight: 400;
+			}
+
+			.callUs__link {
+				font-size: 1em;
+				letter-spacing: 0.05em;
+			}
+
+			.callUs__btn {
+				padding-bottom: 2px;
+				position: relative;
+				letter-spacing: 0.05em;
+				font-size: 1.1em;
+				color: var(--main-green);
+				font-weight: 700;
+			}
+
+			.description {
+				max-width: min-content;
+			}
+
+			.logo__img {
+				width: 5.5em;
+				height: 5.5em;
+				border-radius: 10px;
+			}
+
+			.socials__media {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				row-gap: 0.4rem;
+			}
+
+			.socials {
+				display: flex;
+			}
+
+			.socials-header {
+				column-gap: 1em;
+			}
+
+			.socials__link {
+				display: inline-block;
+			}
+
+			.socials__link-sizes,
+			socials__link-sizes > svg {
+				width: 2.5em;
+				height: 2.5em;
+			}
+		</style>
 		<link
 			rel="preload"
 			href="./src/fonts/VelaSans-Regular.woff2"

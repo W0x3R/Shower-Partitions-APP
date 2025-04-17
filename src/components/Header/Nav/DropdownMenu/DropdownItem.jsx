@@ -33,7 +33,7 @@ const DropdownItem = ({
 
 	return (
 		<li
-			className={`${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen[menuName] ? styles["nav__dropdown-item_open"] : ""}`}
+			className={`nav__item nav__dropdown-item ${styles["nav__item"]} ${styles["nav__dropdown-item"]} ${isMenuOpen[menuName] ? styles["nav__dropdown-item_open"] : ""}`}
 			onMouseEnter={() => handleActionsMenuMouseMove(true)}
 			onMouseLeave={() => handleActionsMenuMouseMove(false)}
 			onMouseDown={(e) => handleToggleMenuClick(e)}
@@ -46,7 +46,7 @@ const DropdownItem = ({
 					Выпадающее меню с {dropdownMenuItems.length} ссылками
 				</span>
 				<NavLink
-					className={`${styles["nav__item-link"]} ${styles.hasDropdown} ${findMatchesPath ? styles.active : ""}`}
+					className={`nav__item-link ${styles["nav__item-link"]} ${styles.hasDropdown} ${findMatchesPath ? styles.active : ""}`}
 					aria-describedby={`menu-desc-${menuName}`}
 					onFocus={handleCloseMenuClick}
 					to="#"

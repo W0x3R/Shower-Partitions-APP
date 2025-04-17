@@ -18,65 +18,30 @@
 	}
 }
 
-.header {
+.header__animation {
 	position: relative;
-	z-index: 10;
-	padding-top: .625em;
-	height: 12rem;
 
-	&.black {
-		background-color: var(--dark-bg);
-		height: auto;
+	&::before {
+		content: '';
+		position: absolute;
+		left: -17px;
+		top: 50%;
+		transform: translateY(-50%);
+		@include mixins.sizes(8px, 8px);
+		background-color: var(--main-green);
+		border-radius: var(--border-r-circle);
+		animation: blink 2.2s infinite;
 
-		& nav {
-			border-bottom: none;
+		@include media.tablet {
+			left: -14px;
 		}
-	}
-
-	@include media.bigMobile {
-		height: min-content;
-	}
-
-	&__texts {
-		font-size: 0.95em;
-		letter-spacing: 0;
-		line-height: 1.4;
-		text-align: center;
 
 		@include media.bigMobile {
-			font-size: 1.4em
+			left: -15px;
 		}
 
 		@include media.mediumMobile {
-			font-size: 1.6em;
-		}
-	}
-
-	&__animation {
-		position: relative;
-
-		&::before {
-			content: '';
-			position: absolute;
-			left: -17px;
-			top: 50%;
-			transform: translateY(-50%);
-			@include mixins.sizes(8px, 8px);
-			background-color: var(--main-green);
-			border-radius: var(--border-r-circle);
-			animation: blink 2.2s infinite;
-
-			@include media.tablet {
-				left: -14px;
-			}
-
-			@include media.bigMobile {
-				left: -15px;
-			}
-
-			@include media.mediumMobile {
-				left: -13px;
-			}
+			left: -13px;
 		}
 	}
 }

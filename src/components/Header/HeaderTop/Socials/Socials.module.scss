@@ -1,11 +1,7 @@
 @use '../../../../styles/mixins';
 @use '../../../../styles/media';
 
-.socials {
-	@include mixins.useFlex(center, center);
-	flex-direction: column;
-	row-gap: 0.4rem;
-
+.socials__media {
 	@include media.bigMobile {
 		display: none;
 	}

@@ -1,0 +1,28 @@
+@use '../../../styles/mixins';
+@use '../../../styles/media';
+
+.nav {
+	font-size: clamp(12px, 1.6vw, 16px);
+	border-bottom: var(--border-b-white-2);
+
+	&__list {
+		@include mixins.useFlex(space-around, center);
+	}
+
+	&__item {
+		padding: 1em;
+		color: var(--white);
+	}
+
+	&__item-link {
+		position: relative;
+		font-size: 1em;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	&__dropdown-item {
+		position: relative;
+	}
+}

@@ -3,7 +3,10 @@ import SocialLinks from "../../../Widgets/SocialsLinks/SocialLinks"
 
 const Socials = () => {
 	return (
-		<div className={styles.socials} aria-labelledby="online-question">
+		<div
+			className={`socials__media ${styles.socials__media}`}
+			aria-labelledby="online-question"
+		>
 			<p className={`header__animation header__texts`} id="online-question">
 				<strong>Задайте вопрос, мы онлайн:</strong>
 			</p>

@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet"
+import criticalStylesAbout from "../../data/mainPage/criticalStylesAbout"
 import { useLocation } from "react-router-dom"
 import About from "./About/About"
 import Products from "./Products/Products"
@@ -16,6 +17,7 @@ const MainPage = () => {
 	return (
 		<>
 			<Helmet>
+				<style type="text/css">{criticalStylesAbout}</style>
 				{/* Title */}
 				<title>
 					Главная | Душевые перегородки по индивидуальным размерам на заказ в

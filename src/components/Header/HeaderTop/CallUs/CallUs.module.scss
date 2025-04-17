@@ -3,22 +3,11 @@
 @use '../../../../styles/animations';
 
 .callUs {
-	@include mixins.useFlex(center, center);
-	flex-direction: column;
-	row-gap: .31em;
-	font-weight: 700;
-
 	@include media.bigMobile {
 		row-gap: 0.41em;
 	}
 
-	& span {
-		font-weight: 400;
-	}
-
 	&__link {
-		font-size: 1em;
-		letter-spacing: 0.05em;
 		transition: var(--basic-transition);
 
 		@include media.hoverAndActive {
@@ -40,13 +29,6 @@
 	}
 
 	&__btn {
-		padding-bottom: 2px;
-		position: relative;
-		letter-spacing: 0.05em;
-		font-size: 1.1em;
-		color: var(--main-green);
-		font-weight: 700;
-
 		&::after {
 			content: "";
 			position: absolute;

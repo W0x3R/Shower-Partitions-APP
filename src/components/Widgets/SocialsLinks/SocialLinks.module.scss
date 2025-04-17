@@ -3,11 +3,6 @@
 @use '../../../styles/animations';
 
 .socials {
-	display: flex;
-
-	&-header {
-		column-gap: 1em;
-	}
 
 	&-footer {
 		column-gap: 1.4em;
@@ -28,10 +23,8 @@
 	}
 
 	&__link {
-		display: inline-block;
 		transition: var(--basic-transition);
 		outline: none;
-
 
 		@include media.hoverAndActive {
 			transform: scale(1.1);
@@ -40,11 +33,6 @@
 		@include media.focusVisible {
 			animation: scale 2.2s infinite;
 		}
-	}
-
-	&__link-sizes,
-	&__link-sizes>svg {
-		@include mixins.sizes(2.5em, 2.5em);
 	}
 
 	&__link-contacts-sizes>svg {

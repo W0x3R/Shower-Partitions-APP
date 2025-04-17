@@ -3,8 +3,6 @@
 @use '../../../styles/animations';
 
 .nav {
-	font-size: clamp(12px, 1.6vw, 16px);
-	border-bottom: var(--border-b-white-2);
 	transition: background-color .2s ease-in-out;
 
 	&_fixed {
@@ -101,11 +99,6 @@
 	}
 
 	&__item-link {
-		position: relative;
-		font-size: 1em;
-		letter-spacing: 0.04em;
-		text-transform: uppercase;
-		font-weight: 700;
 		outline: none;
 		transition: all 0.2s ease-out;
 
@@ -202,7 +195,6 @@
 	}
 
 	&__dropdown-item {
-		position: relative;
 		cursor: pointer;
 
 		& .nav__item-link {
