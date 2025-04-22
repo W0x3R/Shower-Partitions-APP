@@ -38,10 +38,7 @@
 	}
 
 	&__item-link {
-		color: var(--main-green);
-		outline: none;
-		cursor: pointer;
-		opacity: 0.9;
+		color: var(--dark-green);
 		transition: var(--basic-transition);
 
 		@include media.hoverAndActive {
