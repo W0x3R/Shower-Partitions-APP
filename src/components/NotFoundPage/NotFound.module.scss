@@ -4,6 +4,11 @@
 .error {
 	@extend %section;
 
+	@include media.bigMobile {
+		font-size: clamp(7.8px, 2.2vw, 11px);
+		margin: auto;
+	}
+
 	&__title {
 		@extend %titleLevelOne;
 		margin-bottom: 0.5em;
@@ -20,6 +25,10 @@
 		margin: 0.6em auto;
 		display: block;
 		@include mixins.sizes(35em, auto);
+
+		@include media.bigMobile {
+			width: 40em;
+		}
 	}
 
 	&__text {
