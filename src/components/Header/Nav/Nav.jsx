@@ -5,7 +5,7 @@ import NavItems from "./NavItems"
 import dropdownItemData from "../../../data/nav/dropdownItemData"
 import isDesktop from "../../../utils/isDesktop"
 
-const Nav = ({ isBurgerActive, onBurgerClick }) => {
+const Nav = ({ isBurgerActive, hasBurgerOpen, onBurgerClick }) => {
 	const [isFixed, setIsFixed] = useState(false)
 	const [navHeight, setNavHeight] = useState(0)
 
@@ -60,37 +60,36 @@ const Nav = ({ isBurgerActive, onBurgerClick }) => {
 			setNavHeight(navCurrentHeight)
 		}
 	}, [isFixed])
-	{
-		return (
-			<>
-				<div style={{ height: isFixed ? `${navHeight}px` : 0 }}></div>
-				<nav
-					ref={navRef}
-					className={`nav ${styles.nav} ${isFixed ? styles["nav_fixed"] : ""} ${isBurgerActive ? styles["nav_open"] : styles["nav_hide"]}`}
-					aria-label="Основная навигация"
-					id="burger-open-nav"
-				>
-					<ul className={`nav__list ${styles.nav__list}`}>
-						<NavItems styles={styles} onBurgerClick={onBurgerClick} />
-						{dropdownItemData.map((data) => {
-							return (
-								<DropdownItem
-									key={data.id}
-									styles={styles}
-									actions={{
-										onBurgerClick,
-										isMenuOpen,
-										setIsMenuOpen,
-									}}
-									data={data}
-								/>
-							)
-						})}
-					</ul>
-				</nav>
-			</>
-		)
-	}
+
+	return (
+		<>
+			<div style={{ height: isFixed ? `${navHeight}px` : 0 }}></div>
+			<nav
+				ref={navRef}
+				className={`nav ${styles.nav} ${isFixed ? styles["nav_fixed"] : ""} ${isBurgerActive ? styles["nav_open"] : ""} ${!isBurgerActive && hasBurgerOpen ? styles["nav_hide"] : ""}`}
+				aria-label="Основная навигация"
+				id="burger-open-nav"
+			>
+				<ul className={`nav__list ${styles.nav__list}`}>
+					<NavItems styles={styles} onBurgerClick={onBurgerClick} />
+					{dropdownItemData.map((data) => {
+						return (
+							<DropdownItem
+								key={data.id}
+								styles={styles}
+								actions={{
+									onBurgerClick,
+									isMenuOpen,
+									setIsMenuOpen,
+								}}
+								data={data}
+							/>
+						)
+					})}
+				</ul>
+			</nav>
+		</>
+	)
 }
 
 export default Nav

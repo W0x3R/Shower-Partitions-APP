@@ -22,16 +22,18 @@
 		@include mixins.useFlex(center, flex-start);
 		padding-block: 20em 4em;
 		font-size: clamp(9px, 2vw, 12px);
-		@include mixins.setBackgroundImage('../../../assets/header/mobile-nav-bg.jpg')
+		@include mixins.setBackgroundImage('../../../assets/header/mobile-nav-bg.jpg');
+		opacity: 0;
+		visibility: hidden;
 	}
 
 	@include media.bigMobile {
 		&_open {
-			animation: smoothShow 0.4s forwards;
+			animation: smoothShow 0.3s forwards;
 		}
 
 		&_hide {
-			animation: smoothHide 0.4s forwards;
+			animation: smoothHide 0.3s forwards;
 		}
 	}
 

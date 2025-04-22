@@ -70,6 +70,7 @@ const Header = () => {
 				/>
 				<Nav
 					isBurgerActive={isBurgerActive}
+					hasBurgerOpen={hasBurgerOpen}
 					onBurgerClick={handleBurgerClick}
 				/>
 			</div>
