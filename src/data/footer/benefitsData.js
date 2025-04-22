@@ -13,7 +13,7 @@ export const benefitsData = [
 	},
 	{
 		id: "benefits_3",
-		text: "Гарантия 24 месяца",
+		text: "Гарантия 18 месяцев",
 	},
 	{
 		id: "benefits_4",

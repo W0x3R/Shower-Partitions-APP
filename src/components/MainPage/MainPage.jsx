@@ -32,8 +32,7 @@ const MainPage = () => {
 				{/* Meta OG */}
 				<meta
 					property="og:title"
-					content="Главная | Душевые перегородки по индивидуальным размерам на заказ в
-					Гомеле"
+					content="Душевые перегородки по индивидуальным размерам на заказ в Гомеле"
 				/>
 				<meta
 					property="og:description"
@@ -46,8 +45,7 @@ const MainPage = () => {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta
 					name="twitter:title"
-					content="Главная | Душевые перегородки по индивидуальным размерам на заказ в
-					Гомеле"
+					content="Душевые перегородки по индивидуальным размерам на заказ в Гомеле"
 				/>
 				<meta
 					name="twitter:description"

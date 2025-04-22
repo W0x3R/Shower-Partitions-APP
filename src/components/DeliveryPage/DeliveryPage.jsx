@@ -29,8 +29,7 @@ const DeliveryPage = () => {
 				{/* Meta OG */}
 				<meta
 					property="og:title"
-					content="Доставка и оплата | Информация о доставке душевых перегородок на заказ
-					в Гомеле"
+					content="Доставка и оплата | Информация о доставке душевых перегородок на заказ в Гомеле"
 				/>
 				<meta
 					property="og:description"
@@ -43,8 +42,7 @@ const DeliveryPage = () => {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta
 					name="twitter:title"
-					content="Доставка и оплата | Информация о доставке душевых перегородок на заказ
-					в Гомеле"
+					content="Доставка и оплата | Информация о доставке душевых перегородок на заказ в Гомеле"
 				/>
 				<meta
 					name="twitter:description"
