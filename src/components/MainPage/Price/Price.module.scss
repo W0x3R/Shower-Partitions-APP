@@ -21,7 +21,7 @@
 
 	&__info-img {
 		@include mixins.sizes(18em, 28em);
-		animation: scaleAndDropShadowImage 4.3s infinite ease-in-out;
+		animation: scaleAndGrayScaleImage 4.3s infinite ease-in-out;
 
 		&.desktop {
 			display: block;

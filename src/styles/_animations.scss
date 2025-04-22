@@ -133,7 +133,7 @@
 	}
 }
 
-@keyframes scaleAndDropShadowImage {
+@keyframes scaleAndGrayScaleImage {
 
 	0%,
 	100% {
@@ -142,8 +142,8 @@
 	}
 
 	50% {
-		transform: scale(1.02);
-		filter: drop-shadow(2px 4px 6px);
+		transform: scale(1.04);
+		filter: grayscale(1);
 	}
 }
 
