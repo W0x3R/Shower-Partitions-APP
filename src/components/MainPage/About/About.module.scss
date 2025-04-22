@@ -15,12 +15,6 @@
 		margin-top: -9rem;
 	}
 
-	&__background {
-		@include media.mediumMobile {
-			@include mixins.setBackgroundImage('../../../assets/mainPage/main-bg-small.webp');
-		}
-	}
-
 	&__content {
 		@include media.bigMobile {
 			padding-block: 5.5em;
