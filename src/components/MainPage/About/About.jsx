@@ -15,10 +15,7 @@ const About = () => {
 
 	return (
 		<section className={`about ${styles.about}`}>
-			<div
-				className={`about__background ${styles.about__background}`}
-				aria-hidden="true"
-			></div>
+			<div className={`about__background`} aria-hidden="true"></div>
 			<div className="container">
 				<div className={`about__content ${styles.about__content}`}>
 					<h1 className={`about__title ${styles.about__title}`}>
