@@ -1,7 +1,6 @@
 @use '../../../../styles/media';
 
 .description {
-
 	@include media.mediumMobile {
 		display: none;
 	}

@@ -38,8 +38,6 @@
 	}
 
 	&__list {
-		@include mixins.useFlex(space-around, center);
-
 		@include media.bigMobile {
 			flex-direction: column;
 			padding: 1.6em 1.8em;
@@ -56,9 +54,7 @@
 	}
 
 	&__item {
-		padding: 1em;
 		transition: var(--basic-transition);
-		color: var(--white);
 
 		@include media.bigMobile {
 			@include mixins.useFlex(center, flex-start);

@@ -3,10 +3,6 @@
 @use '../../../../styles/animations';
 
 .burger {
-	display: none;
-	position: relative;
-	@include mixins.sizes(45px, 45px);
-	border-radius: var(--border-r-circle);
 	cursor: pointer;
 
 	@include media.bigMobile {
