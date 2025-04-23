@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /successful
+Disallow: /unsuccessful
+
+Allow: /
+
+Sitemap: https://w0x3r.github.io/Shower-Partitions-APP/sitemap.xml
