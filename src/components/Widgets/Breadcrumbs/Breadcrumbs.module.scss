@@ -14,10 +14,6 @@
 		letter-spacing: var(--basic-letter-spacing);
 		font-size: 1.1em;
 
-		& span {
-			color: var(--black);
-		}
-
 		@include media.bigMobile {
 			column-gap: 10px;
 		}
@@ -36,6 +32,10 @@
 			outline: none;
 			box-shadow: var(--focus-shadow);
 		}
+	}
+
+	&__dash {
+		color: var(--black);
 	}
 
 	&__current-page {

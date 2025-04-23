@@ -58,11 +58,6 @@ const PortfolioItem = memo(({ data }) => {
 					})}
 				</div>
 			</Fancybox>
-			<div
-				id="aria-portfolio-live-status"
-				aria-live="polite"
-				className="sr-only"
-			></div>
 		</div>
 	)
 })

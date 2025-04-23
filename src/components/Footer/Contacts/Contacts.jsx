@@ -19,11 +19,11 @@ const Contacts = () => {
 						alt=""
 						loading="lazy"
 					/>
-					<p aria-labelledby="working-time-description-footer">
+					<p aria-labelledby="working-time-description-contacts">
 						Пн-Пт: 9:00 - 18:00 <br />
 						Сб-Вс - выходные
 					</p>
-					<span id="working-time-description-footer" className="sr-only">
+					<span id="working-time-description-contacts" className="sr-only">
 						Мы работаем с понедельника по пятницу с 9 утра до 6 часов вечера
 					</span>
 				</div>

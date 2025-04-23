@@ -74,7 +74,7 @@ const Contacts = () => {
 						</div>
 						<div
 							className={styles.contacts__social}
-							aria-labelledby="online-question-contacts"
+							aria-labelledby="online-question-contacts-footer"
 						>
 							<img
 								className={styles["contacts__info-img"]}
@@ -94,7 +94,7 @@ const Contacts = () => {
 								/>
 								<p
 									className={styles["contacts__socials-text"]}
-									id="online-question-contacts"
+									id="online-question-contacts-footer"
 								>
 									<strong>Задайте вопрос, мы онлайн:</strong>
 								</p>

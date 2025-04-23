@@ -18,10 +18,10 @@ const Breadcrumbs = ({ currentPage, gray }) => {
 							Главная
 						</Link>
 					</li>
-					<span>&#10073;</span>
+					<li className={styles.breadcrumb__dash}>&#10073;</li>
 					<li
 						className={styles["breadcrumb__current-page"]}
-						aria-label={`Текущая страница - ${currentPage}`}
+						aria-current="page"
 					>
 						{currentPage}
 					</li>

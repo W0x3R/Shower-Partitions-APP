@@ -63,6 +63,11 @@ const Portfolio = () => {
 					<b>Портфолио</b>
 				</h1>
 				<div className={styles["portfolio__items"]}>{renderItems()}</div>
+				<div
+					id="aria-portfolio-live-status"
+					aria-live="polite"
+					className="sr-only"
+				></div>
 				{visibleCount < portfolioData.length && (
 					<ShowMoreBtn
 						onClick={handleShowMoreItems}

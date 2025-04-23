@@ -10,7 +10,12 @@ import isHoverSupported from "../../../utils/isHoverSupported"
 
 const formKey = import.meta.env.VITE_WEB3FORMS_KEY
 
-const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
+const CallBackForm = ({
+	title,
+	isEmailShow,
+	isBorderShow,
+	ariaLabelledBy = "contact-form-title",
+}) => {
 	const [isBtnDisable, setIsBtnDisable] = useState(false)
 	const navigate = useNavigate()
 	const { isFormPopupOpen, handleFormPopupCloseRedirect } =
@@ -70,9 +75,9 @@ const CallBackForm = ({ title, isEmailShow, isBorderShow }) => {
 			onMouseUp={(e) => e.stopPropagation()}
 			onSubmit={handleSubmit(onSubmit)}
 			className={`${styles.form} ${isBorderShow ? styles.border : ""}`}
-			aria-labelledby="contact-form-title"
+			aria-labelledby={ariaLabelledBy}
 		>
-			<h2 className={styles.form__title} id="contact-form-title">
+			<h2 className={styles.form__title} id={ariaLabelledBy}>
 				{title}
 			</h2>
 			<input
