@@ -47,11 +47,6 @@ const Questions = () => {
 					>
 						<p className={styles["questions__accordion-subtext"]}>{answer}</p>
 					</div>
-					<div
-						id="aria-accordion-live-status"
-						aria-live="polite"
-						className="sr-only"
-					></div>
 				</div>
 			)
 		})
@@ -92,6 +87,11 @@ const Questions = () => {
 					<div className={styles["questions__accordion-wrapper"]}>
 						<div className={styles["questions__accordion"]}>
 							{renderQuestions()}
+							<div
+								id="aria-accordion-live-status"
+								aria-live="polite"
+								className="sr-only"
+							></div>
 							{visibleCount < questionsData.length && (
 								<ShowMoreBtn
 									onClick={handleShowMoreQuestions}

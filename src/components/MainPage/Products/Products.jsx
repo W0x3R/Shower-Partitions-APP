@@ -18,8 +18,11 @@ const Products = () => {
 		{ text: "Типы открывания дверей", activeBtnValue: "typeOpening" },
 	]
 
-	const handleButtonActive = (value) => {
-		setActiveBtn(value)
+	const handleButtonActive = (value) => setActiveBtn(value)
+	const setAriaControlOnActiveBtn = (dataValue) => {
+		if (activeBtn === dataValue) {
+			return `panel-${dataValue}`
+		}
 	}
 
 	useEffect(() => {
@@ -57,7 +60,7 @@ const Products = () => {
 								role="tab"
 								aria-selected={activeBtn === data.activeBtnValue}
 								id={`tab-${data.activeBtnValue}`}
-								aria-controls={`panel-${data.activeBtnValue}`}
+								aria-controls={setAriaControlOnActiveBtn(data.activeBtnValue)}
 							>
 								<span>{data.text}</span>
 							</button>

@@ -38,7 +38,7 @@ const Price = () => {
 						<a
 							className={styles["price__info-link"]}
 							href="https://telegram.im/@georgiyzm"
-							target="_blink"
+							target="_blank"
 						>
 							<span>Связаться с нами в Telegram</span>
 							<img src={clickHand} alt="" width="26" height="26" />

@@ -3,10 +3,7 @@ import socialLinksData from "../../../data/socialLinksData"
 
 const SocialLinks = ({ gap, sizes }) => {
 	return (
-		<div
-			className={`socials ${styles[gap] || ["socials-header"]}`}
-			aria-label="Наши социальные сети"
-		>
+		<div className={`socials ${styles[gap] || ["socials-header"]}`}>
 			{socialLinksData.map((link) => {
 				return (
 					<a

@@ -27,8 +27,8 @@ import benefitsData from "../../../data/mainPage/descriptionsData/benefitsData"
 const ShowerPartitionsDescription = () => {
 	const [popupData, setPopupData] = useState({
 		isOpen: false,
-		img: null,
-		alt: null,
+		img: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",
+		alt: "",
 	})
 
 	const handlePopupOpen = (e, src, alt) => {
