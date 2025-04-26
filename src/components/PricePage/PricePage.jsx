@@ -1,14 +1,13 @@
 import articleBgImg from "../../assets/ArticlePage/bg.webp"
 import { Helmet } from "react-helmet"
-import { useLocation } from "react-router-dom"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
-import ServicesCost from "./ServicesCost"
+import ServicesCost from "./Price"
+import { GetCurrentUrl } from "../../utils/getCurrentUrl"
+import pricePageSchema from "../../data/schemaMarkup/pricePage"
 
-const ServicesCostPage = () => {
-	const location = useLocation()
-	const currentUrl = `https://garderobsystem.ru${location.pathname}`
+const PricePage = () => {
 	const ogImage =
-		"https://W0x3R.github.io/Shower-Partitions-APP/price-og-img.jpg"
+		"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745603935/price-og-img_ub3dyg.jpg"
 	return (
 		<>
 			<Helmet>
@@ -23,6 +22,11 @@ const ServicesCostPage = () => {
 					name="keywords"
 					content="стоимость душевых перегородок, цена замера, стоимость доставки душевых перегородок, купить душевые перегородки"
 				/>
+				{/* Micro Data start */}
+				<script type="application/ld+json">
+					{JSON.stringify(pricePageSchema)}
+				</script>
+				{/* Micro Data end */}
 				{/* Meta OG */}
 				<meta
 					property="og:title"
@@ -33,7 +37,7 @@ const ServicesCostPage = () => {
 					content="Посмотрите актуальные цены на замер, доставку и установку душевых перегородок на заказ в Гомеле. Гарантированное качество и индивидуальный подход!"
 				/>
 				<meta property="og:image" content={ogImage} />
-				<meta property="og:url" content={currentUrl} />
+				<meta property="og:url" content={GetCurrentUrl()} />
 				<meta property="og:type" content="article" />
 				{/* Meta Twitter */}
 				<meta name="twitter:card" content="summary_large_image" />
@@ -54,4 +58,4 @@ const ServicesCostPage = () => {
 	)
 }
 
-export default ServicesCostPage
+export default PricePage

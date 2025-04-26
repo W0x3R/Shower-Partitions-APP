@@ -9,9 +9,7 @@ const MainPage = lazy(() => import("./components/MainPage/MainPage"))
 const DeliveryPage = lazy(
 	() => import("./components/DeliveryPage/DeliveryPage")
 )
-const ServicesCostPage = lazy(
-	() => import("./components/ServicesCostPage/ServicesCostPage")
-)
+const PricePage = lazy(() => import("./components/PricePage/PricePage"))
 const ArticlePage = lazy(() => import("./components/ArticlePage/ArticlePage"))
 const ContactsPage = lazy(
 	() => import("./components/ContactsPage/ContactsPage")
@@ -44,7 +42,7 @@ function App() {
 						<Route path="/" element={<Layout />}>
 							<Route index element={<MainPage />} />
 							<Route path="delivery" element={<DeliveryPage />} />
-							<Route path="price" element={<ServicesCostPage />} />
+							<Route path="price" element={<PricePage />} />
 							<Route path="article" element={<ArticlePage />} />
 							<Route path="contacts" element={<ContactsPage />} />
 							<Route path="portfolio" element={<PortfolioPage />} />
