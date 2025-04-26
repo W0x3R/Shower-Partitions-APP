@@ -1,0 +1,27 @@
+const articleSectionSchema = {
+	"@context": "https://schema.org",
+	"@type": "Article",
+	headline:
+		"Душевые перегородки из стекла в Гомеле: современное решение для ванной",
+	image:
+		"https://raw.githubusercontent.com/W0x3R/Shower-Partitions-APP/refs/heads/gh-pages/article-og-img.jpg",
+	author: {
+		"@type": "Organization",
+		name: "DZ System",
+		url: "https://w0x3r.github.io/Shower-Partitions-APP/",
+	},
+	publisher: {
+		"@type": "Organization",
+		name: "DZ System",
+		logo: {
+			"@type": "ImageObject",
+			url: "https://w0x3r.github.io/Shower-Partitions-APP/assets/logo-BmYQqIHg.webp",
+		},
+	},
+	datePublished: "2025-04-24",
+	dateModified: "2025-04-24",
+	articleBody:
+		"Стеклянные душевые перегородки — современное решение для оформления и разделения ванной комнаты на функциональные зоны. В отличие от привычных шторок наши стеклянные двери и ограждения не только защищают помещение от брызг, но и придают ему элегантный, лаконичный вид. Изготовление душевых перегородок из стекла под заказ в Гомеле предлагает наша компания DZ System.\n\nПлюсы душевых перегородок из закаленного стекла: \nГигиеничность, экологическая чистота, прочность и устойчивость к температурным перепадам.\n\nВиды душевых перегородок: линейные, угловые, П-образные, трапециевидные.\n\nОстекление: бесцветное, осветленное, матовое, цветное. Стекло с рисунком и зеркальные поверхности.\n\nПрофиль и фурнитура: черный, бронза, хром и другие металлы.\n\nПочему клиенты выбирают нас: полный цикл услуг, высокое качество, гарантия и профессиональные монтажники.",
+}
+
+export default articleSectionSchema
