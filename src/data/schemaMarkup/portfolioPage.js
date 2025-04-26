@@ -232,7 +232,7 @@ const portfolioPageSchema = {
 			],
 			offers: {
 				"@type": "Offer",
-				price: "2100р",
+				price: "2100",
 				priceCurrency: "BYN",
 				availability: "https://schema.org/InStock",
 			},

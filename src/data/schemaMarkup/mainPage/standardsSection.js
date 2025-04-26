@@ -4,6 +4,11 @@ const standardsSectionSchema = {
 	name: "Душевые перегородки из закаленного стекла",
 	description:
 		"Стеклянные душевые перегородки, изготовленные из закаленного стекла толщиной 8-10 мм с химически травленым или пескоструйным матированием, безопасные и долговечные.",
+	aggregateRating: {
+		"@type": "AggregateRating",
+		ratingValue: "5",
+		reviewCount: "1",
+	},
 	brand: {
 		"@type": "Organization",
 		name: "DZ System",
