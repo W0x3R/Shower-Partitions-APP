@@ -92,15 +92,15 @@ const Questions = () => {
 								aria-live="polite"
 								className="sr-only"
 							></div>
-							{visibleCount < questionsData.length && (
-								<ShowMoreBtn
-									onClick={handleShowMoreQuestions}
-									aria="Показать еще 2 вопроса"
-									text="Показать еще вопросы"
-								/>
-							)}
 						</div>
 					</div>
+					{visibleCount < questionsData.length && (
+						<ShowMoreBtn
+							onClick={handleShowMoreQuestions}
+							aria="Показать еще 2 вопроса"
+							text="Показать еще вопросы"
+						/>
+					)}
 				</div>
 			</div>
 		</section>
