@@ -51,9 +51,9 @@ const Examples = () => {
 	}
 
 	useEffect(() => {
+		const examplesDataUrl =
+			"https://res.cloudinary.com/dpvqykdi9/raw/upload/v1744802085/examplesData_elu58v.json"
 		const getExamplesData = async () => {
-			const examplesDataUrl =
-				"https://res.cloudinary.com/dpvqykdi9/raw/upload/v1744802085/examplesData_elu58v.json"
 			try {
 				const res = await fetch(examplesDataUrl)
 				const examplesData = await res.json()
@@ -126,7 +126,8 @@ const Examples = () => {
 								loading="lazy"
 							/>
 							<p className={styles["examples__error-text"]}>
-								Изображения временно недоступны
+								К сожалению, изображения временно недоступны.Попробуйте
+								повторить действие чуть позже.
 							</p>
 						</>
 					)}

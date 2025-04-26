@@ -1,65 +1,52 @@
-import bathCurtainImg from "../../assets/mainPage/products/шторка в ванную.webp"
-import showerPartitionImg from "../../assets/mainPage/products/душевая перегородка.webp"
-import alcoveDoorImg from "../../assets/mainPage/products/дверь в нишу.webp"
-import alcoveShowerImg from "../../assets/mainPage/products/душевая в нишу.webp"
-import cornerShowerImg from "../../assets/mainPage/products/угловая душевая.webp"
-import trapezoidalShowerImg from "../../assets/mainPage/products/трапециевидная душевая.webp"
-import showerCabinImg from "../../assets/mainPage/products/душевая кабина.webp"
-import transparentGlassImg from "../../assets/mainPage/products/бесцветное стекло.webp"
-import brightenedGlassImg from "../../assets/mainPage/products/осветленное стекло.webp"
-import frostedGlassImg from "../../assets/mainPage/products/матовое стекло.webp"
-import tonedBronzeGlassImg from "../../assets/mainPage/products/тонированое бронзовое стекло.webp"
-import tonedGraphiteGlassImg from "../../assets/mainPage/products/тонированное графитовое стекло.webp"
-import blackFurnitureImg from "../../assets/mainPage/products/черная фурнитура.webp"
-import goldFurnitureImg from "../../assets/mainPage/products/золотая фурнитура.webp"
-import bronzeFurnitureImg from "../../assets/mainPage/products/бронзовая фурнитура.webp"
-import nickelFurnitureImg from "../../assets/mainPage/products/никелевая фурнитура.webp"
-import chromeFurnitureImg from "../../assets/mainPage/products/хромовая фурнитура.webp"
-import swingingDoorImg from "../../assets/mainPage/products/распашная дверь.webp"
-import rollingDoorImg from "../../assets/mainPage/products/откатная дверь.webp"
-
 export const productsData = {
 	showers: [
 		{
 			id: "showers_0",
 			title: "Шторка в ванную",
-			ImgSrc: bathCurtainImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497788/%D1%88%D1%82%D0%BE%D1%80%D0%BA%D0%B0_%D0%B2_%D0%B2%D0%B0%D0%BD%D0%BD%D1%83%D1%8E_ud7ps0.webp",
 			alt: "На изображении отображено как выглядит стеклянная шторка для ванной.",
 		},
 		{
 			id: "showers_1",
 			title: "Душевая перегородка",
-			ImgSrc: showerPartitionImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497909/%D0%B4%D1%83%D1%88%D0%B5%D0%B2%D0%B0%D1%8F_%D0%BF%D0%B5%D1%80%D0%B5%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BA%D0%B0_n9ykm6.webp",
 			alt: "На изображении отображено как выглядит стеклянная душевая перегородка.",
 		},
 		{
 			id: "showers_2",
 			title: "Дверь в нишу",
-			ImgSrc: alcoveDoorImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B4%D0%B2%D0%B5%D1%80%D1%8C_%D0%B2_%D0%BD%D0%B8%D1%88%D1%83_mmjeyc.webp",
 			alt: "На изображении отображено как выглядит стеклянная дверь в нишу.",
 		},
 		{
 			id: "showers_3",
 			title: "Душевая в нишу",
-			ImgSrc: alcoveShowerImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B4%D1%83%D1%88%D0%B5%D0%B2%D0%B0%D1%8F_%D0%B2_%D0%BD%D0%B8%D1%88%D1%83_ptdbha.webp",
 			alt: "На изображении отображено как выглядит стеклянная душевая в нишу.",
 		},
 		{
 			id: "showers_4",
 			title: "Угловая душевая",
-			ImgSrc: cornerShowerImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497913/%D1%83%D0%B3%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F_%D0%B4%D1%83%D1%88%D0%B5%D0%B2%D0%B0%D1%8F_i7lqc6.webp",
 			alt: "На изображении отображено как выглядит стеклянная угловая душевая.",
 		},
 		{
 			id: "showers_5",
 			title: "Трапециевидная душевая",
-			ImgSrc: trapezoidalShowerImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497912/%D1%82%D1%80%D0%B0%D0%BF%D0%B5%D1%86%D0%B8%D0%B5%D0%B2%D0%B8%D0%B4%D0%BD%D0%B0%D1%8F_%D0%B4%D1%83%D1%88%D0%B5%D0%B2%D0%B0%D1%8F_hbhkrj.webp",
 			alt: "На изображении отображено как выглядит стеклянная трапециевидная душевая.",
 		},
 		{
 			id: "showers_6",
 			title: "Душевая кабина",
-			ImgSrc: showerCabinImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497909/%D0%B4%D1%83%D1%88%D0%B5%D0%B2%D0%B0%D1%8F_%D0%BA%D0%B0%D0%B1%D0%B8%D0%BD%D0%B0_k3elan.webp",
 			alt: "На изображении отображено как выглядит душевая кабина.",
 		},
 	],
@@ -67,31 +54,36 @@ export const productsData = {
 		{
 			id: "glasses_0",
 			title: "Бесцветное стекло",
-			ImgSrc: transparentGlassImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B1%D0%B5%D1%81%D1%86%D0%B2%D0%B5%D1%82%D0%BD%D0%BE%D0%B5_%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE_mvcaz9.webp",
 			alt: "На изображении отображено как выглядит бесцветное стекло для душевых перегородок.",
 		},
 		{
 			id: "glasses_1",
 			title: "Осветленное стекло",
-			ImgSrc: brightenedGlassImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%BE%D1%81%D0%B2%D0%B5%D1%82%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE_arkfus.webp",
 			alt: "На изображении отображено как выглядит осветленное стекло для душевых перегородок.",
 		},
 		{
 			id: "glasses_2",
 			title: "Матовое стекло (Обычное,бронзовое,графит)",
-			ImgSrc: frostedGlassImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497910/%D0%BC%D0%B0%D1%82%D0%BE%D0%B2%D0%BE%D0%B5_%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE_h3pgwh.webp",
 			alt: "На изображении отображено как выглядит матовое стекло для душевых перегородок. Также указано что матовое стекло бывает трех цветов: обычное, бронзовое и графитовое",
 		},
 		{
 			id: "glasses_3",
 			title: "Тонированное стекло с оттенком бронзы",
-			ImgSrc: tonedBronzeGlassImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497912/%D1%82%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE%D0%B5_%D0%B1%D1%80%D0%BE%D0%BD%D0%B7%D0%BE%D0%B2%D0%BE%D0%B5_%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE_pdbs9t.webp",
 			alt: "На изображении отображено как выглядит тонированное стекло с оттенком бронзы для душевых перегородок.",
 		},
 		{
 			id: "glasses_4",
 			title: "Тонированное cтекло с оттенком графита",
-			ImgSrc: tonedGraphiteGlassImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497911/%D1%82%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%82%D0%BE%D0%B2%D0%BE%D0%B5_%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE_lh0nmr.webp",
 			alt: "На изображении отображено как выглядит тонированное стекло с оттенком графита для душевых перегородок.",
 		},
 	],
@@ -99,31 +91,36 @@ export const productsData = {
 		{
 			id: "furniture_0",
 			title: "Черный",
-			ImgSrc: blackFurnitureImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497787/%D1%87%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_no3tam.webp",
 			alt: "На изображении отображено как выглядит фурнитура черного цвета для душевых перегородок.",
 		},
 		{
 			id: "furniture_1",
 			title: "Золото",
-			ImgSrc: goldFurnitureImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497909/%D0%B7%D0%BE%D0%BB%D0%BE%D1%82%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_fzhfqd.webp",
 			alt: "На изображении отображено как выглядит фурнитура золотого цвета для душевых перегородок.",
 		},
 		{
 			id: "furniture_2",
 			title: "Бронза",
-			ImgSrc: bronzeFurnitureImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B1%D1%80%D0%BE%D0%BD%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_brte0p.webp",
 			alt: "На изображении отображено как выглядит фурнитура бронзового цвета для душевых перегородок.",
 		},
 		{
 			id: "furniture_3",
 			title: "Никель",
-			ImgSrc: nickelFurnitureImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%BD%D0%B8%D0%BA%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_wybroz.webp",
 			alt: "На изображении отображено как выглядит фурнитура никелевого цвета для душевых перегородок.",
 		},
 		{
 			id: "furniture_4",
 			title: "Хром",
-			ImgSrc: chromeFurnitureImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497787/%D1%85%D1%80%D0%BE%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_eqtiud.webp",
 			alt: "На изображении отображено как выглядит фурнитура хромового цвета для душевых перегородок.",
 		},
 	],
@@ -131,34 +128,16 @@ export const productsData = {
 		{
 			id: "typeOpening_0",
 			title: "Распашная",
-			ImgSrc: swingingDoorImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497786/%D1%80%D0%B0%D1%81%D0%BF%D0%B0%D1%88%D0%BD%D0%B0%D1%8F_%D0%B4%D0%B2%D0%B5%D1%80%D1%8C_da05jg.webp",
 			alt: "На изображении отображено как выглядит душевая перегородка с распашным типом открытия",
 		},
 		{
 			id: "typeOpening_1",
 			title: "Откатная",
-			ImgSrc: rollingDoorImg,
+			ImgSrc:
+				"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497786/%D0%BE%D1%82%D0%BA%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D0%B4%D0%B2%D0%B5%D1%80%D1%8C_viifaa.webp",
 			alt: "На изображении отображено как выглядит душевая перегородка с откатным типом открытия",
 		},
 	],
-}
-
-export {
-	showerPartitionImg,
-	cornerShowerImg,
-	showerCabinImg,
-	trapezoidalShowerImg,
-	swingingDoorImg,
-	rollingDoorImg,
-	alcoveDoorImg,
-	alcoveShowerImg,
-	transparentGlassImg,
-	brightenedGlassImg,
-	frostedGlassImg,
-	tonedGraphiteGlassImg,
-	blackFurnitureImg,
-	goldFurnitureImg,
-	bronzeFurnitureImg,
-	nickelFurnitureImg,
-	chromeFurnitureImg,
 }

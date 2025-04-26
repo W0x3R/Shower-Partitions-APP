@@ -1,15 +1,4 @@
 import styles from "./Description.module.scss"
-import {
-	swingingDoorImg,
-	rollingDoorImg,
-	alcoveDoorImg,
-	alcoveShowerImg,
-	blackFurnitureImg,
-	goldFurnitureImg,
-	bronzeFurnitureImg,
-	nickelFurnitureImg,
-	chromeFurnitureImg,
-} from "../../../data/mainPage/productsData"
 import ReactFocusLock from "react-focus-lock"
 import { useState } from "react"
 import Popup from "./Popup/Popup"
@@ -127,15 +116,15 @@ const ShowerPartitionsDescription = () => {
 						onClick={(e) =>
 							handlePopupOpen(
 								e,
-								swingingDoorImg,
-								setTypeOfDoorsAltData("развижными")
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497786/%D1%80%D0%B0%D1%81%D0%BF%D0%B0%D1%88%D0%BD%D0%B0%D1%8F_%D0%B4%D0%B2%D0%B5%D1%80%D1%8C_da05jg.webp",
+								setTypeOfDoorsAltData("раздвижными")
 							)
 						}
 						onKeyDown={(e) =>
 							handlePopupOpen(
 								e,
-								swingingDoorImg,
-								setTypeOfDoorsAltData("развижными")
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497786/%D1%80%D0%B0%D1%81%D0%BF%D0%B0%D1%88%D0%BD%D0%B0%D1%8F_%D0%B4%D0%B2%D0%B5%D1%80%D1%8C_da05jg.webp",
+								setTypeOfDoorsAltData("раздвижными")
 							)
 						}
 						aria-label="Открыть изображение душевой с раздвижными дверями"
@@ -148,14 +137,14 @@ const ShowerPartitionsDescription = () => {
 						onClick={(e) =>
 							handlePopupOpen(
 								e,
-								rollingDoorImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497786/%D0%BE%D1%82%D0%BA%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D0%B4%D0%B2%D0%B5%D1%80%D1%8C_viifaa.webp",
 								setTypeOfDoorsAltData("откатными")
 							)
 						}
 						onKeyDown={(e) =>
 							handlePopupOpen(
 								e,
-								rollingDoorImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497786/%D0%BE%D1%82%D0%BA%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D0%B4%D0%B2%D0%B5%D1%80%D1%8C_viifaa.webp",
 								setTypeOfDoorsAltData("откатными")
 							)
 						}
@@ -169,14 +158,14 @@ const ShowerPartitionsDescription = () => {
 						onClick={(e) =>
 							handlePopupOpen(
 								e,
-								alcoveDoorImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B4%D0%B2%D0%B5%D1%80%D1%8C_%D0%B2_%D0%BD%D0%B8%D1%88%D1%83_mmjeyc.webp",
 								setTypeOfDoorsAltData("одинарными")
 							)
 						}
 						onKeyDown={(e) =>
 							handlePopupOpen(
 								e,
-								alcoveDoorImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B4%D0%B2%D0%B5%D1%80%D1%8C_%D0%B2_%D0%BD%D0%B8%D1%88%D1%83_mmjeyc.webp",
 								setTypeOfDoorsAltData("одинарными")
 							)
 						}
@@ -190,14 +179,14 @@ const ShowerPartitionsDescription = () => {
 						onClick={(e) =>
 							handlePopupOpen(
 								e,
-								alcoveShowerImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B4%D1%83%D1%88%D0%B5%D0%B2%D0%B0%D1%8F_%D0%B2_%D0%BD%D0%B8%D1%88%D1%83_ptdbha.webp",
 								setTypeOfDoorsAltData("двойными")
 							)
 						}
 						onKeyDown={(e) =>
 							handlePopupOpen(
 								e,
-								alcoveShowerImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B4%D1%83%D1%88%D0%B5%D0%B2%D0%B0%D1%8F_%D0%B2_%D0%BD%D0%B8%D1%88%D1%83_ptdbha.webp",
 								setTypeOfDoorsAltData("двойными")
 							)
 						}
@@ -249,14 +238,14 @@ const ShowerPartitionsDescription = () => {
 						onClick={(e) =>
 							handlePopupOpen(
 								e,
-								blackFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497787/%D1%87%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_no3tam.webp",
 								setTypeOfFurnitureAltData("черного")
 							)
 						}
 						onKeyDown={(e) =>
 							handlePopupOpen(
 								e,
-								blackFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497787/%D1%87%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_no3tam.webp",
 								setTypeOfFurnitureAltData("черного")
 							)
 						}
@@ -270,14 +259,14 @@ const ShowerPartitionsDescription = () => {
 						onClick={(e) =>
 							handlePopupOpen(
 								e,
-								goldFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497909/%D0%B7%D0%BE%D0%BB%D0%BE%D1%82%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_fzhfqd.webp",
 								setTypeOfFurnitureAltData("золотистого")
 							)
 						}
 						onKeyDown={(e) =>
 							handlePopupOpen(
 								e,
-								goldFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497909/%D0%B7%D0%BE%D0%BB%D0%BE%D1%82%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_fzhfqd.webp",
 								setTypeOfFurnitureAltData("золотистого")
 							)
 						}
@@ -291,14 +280,14 @@ const ShowerPartitionsDescription = () => {
 						onClick={(e) =>
 							handlePopupOpen(
 								e,
-								nickelFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%BD%D0%B8%D0%BA%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_wybroz.webp",
 								setTypeOfFurnitureAltData("никелевого")
 							)
 						}
 						onKeyDown={(e) =>
 							handlePopupOpen(
 								e,
-								nickelFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%BD%D0%B8%D0%BA%D0%B5%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_wybroz.webp",
 								setTypeOfFurnitureAltData("никелевого")
 							)
 						}
@@ -312,14 +301,14 @@ const ShowerPartitionsDescription = () => {
 						onClick={(e) =>
 							handlePopupOpen(
 								e,
-								bronzeFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B1%D1%80%D0%BE%D0%BD%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_brte0p.webp",
 								setTypeOfFurnitureAltData("бронзового")
 							)
 						}
 						onKeyDown={(e) =>
 							handlePopupOpen(
 								e,
-								bronzeFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497785/%D0%B1%D1%80%D0%BE%D0%BD%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_brte0p.webp",
 								setTypeOfFurnitureAltData("бронзового")
 							)
 						}
@@ -333,14 +322,14 @@ const ShowerPartitionsDescription = () => {
 						onClick={(e) =>
 							handlePopupOpen(
 								e,
-								chromeFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497787/%D1%85%D1%80%D0%BE%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_eqtiud.webp",
 								setTypeOfFurnitureAltData("хромового")
 							)
 						}
 						onKeyDown={(e) =>
 							handlePopupOpen(
 								e,
-								chromeFurnitureImg,
+								"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745497787/%D1%85%D1%80%D0%BE%D0%BC%D0%BE%D0%B2%D0%B0%D1%8F_%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0_eqtiud.webp",
 								setTypeOfFurnitureAltData("хромового")
 							)
 						}

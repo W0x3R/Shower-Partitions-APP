@@ -1,0 +1,372 @@
+[
+	{
+		"mainId": "portfolioPage_main_id_0",
+		"carouselId": "portfolioPage_carousel_id_",
+		"descriptionId": "portfolioPage_description_id_",
+		"title": "Душевая угловая перегородка",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/1-1_bzezfy.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/1-2_ta2xip.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/1-3_nqwm5r.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая угловая перегородка",
+			"Фурнитура: Золото глянец",
+			"Стекло: Бронза матовое , закаленное, 8мм",
+			"Тип открывания дверей: Раздвижной",
+			"Стоимость под ключ: 3900р",
+			"Размеры: 2100*1195*736"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_1",
+		"carouselId": "portfolioPage_carousel_id_1",
+		"descriptionId": "portfolioPage_description_id_1",
+		"title": "Дущевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/2-1_ubxapu.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/2-2_rpunnb.webp"
+		],
+		"descriptions": [
+			"Форма: Дущевая перегородка в нишу",
+			"Фурнитура: Черный мат.",
+			"Стекло: Прозрачное+матир., закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1808р",
+			"Размеры: 2000*1045"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_2",
+		"title": "Душевая угловая перегородка",
+		"carouselId": "portfolioPage_carousel_id_2",
+		"descriptionId": "portfolioPage_description_id_2",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/3-1_ubjh70.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/3-2_m6w8oo.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/3-3_j3iucb.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая угловая перегородка",
+			"Фурнитура: Черный мат.",
+			"Стекло: Осветлен. матовое , закаленное, 8мм",
+			"Тип открывания дверей: Раздвижной",
+			"Стоимость: 3500р",
+			"Размеры: 2100*1000*1000"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_3",
+		"carouselId": "portfolioPage_carousel_id_3",
+		"descriptionId": "portfolioPage_description_id_3",
+		"title": "Дущевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/4-1_ejrok6.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/4-2_xw000h.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/4-3_d2aowp.webp"
+		],
+		"descriptions": [
+			"Форма: Дущевая перегородка в нишу",
+			"Фурнитура: Черный мат.",
+			"Стекло: Осветлен. матовое., закаленное, 8мм",
+			"Тип открывания дверей: Раздвижной",
+			"Стоимость: 3300р",
+			"Размеры: 2300*2300"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_4",
+		"carouselId": "portfolioPage_carousel_id_4",
+		"descriptionId": "portfolioPage_description_id_4",
+		"title": "Дущевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/5-1_gnjikk.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/5-2_c0w90s.webp"
+		],
+		"descriptions": [
+			"Форма: Дущевая перегородка в нишу",
+			"Фурнитура: Хром мат.",
+			"Стекло: Матовое закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1864р",
+			"Размеры: 2100*1162"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_5",
+		"carouselId": "portfolioPage_carousel_id_5",
+		"descriptionId": "portfolioPage_description_id_5",
+		"title": "Статичная перегородка в ванную",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/6-1_kprusv.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/6-2_ju4b95.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/6-3_s2hbgj.webp"
+		],
+		"descriptions": [
+			"Форма: Статичная перегородка в ванную",
+			"Фурнитура: Черный мат.",
+			"Стекло: Рифленое триплекс, закаленное, 8мм",
+			"Тип открывания дверей: -",
+			"Стоимость: 951р",
+			"Размеры: 1871*785"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_6",
+		"carouselId": "portfolioPage_carousel_id_6",
+		"descriptionId": "portfolioPage_description_id_6",
+		"title": "Душевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/7-1_ubkhhy.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Черный мат.",
+			"Стекло: Тонированное закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 2050р",
+			"Размеры: 2100*1100"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_7",
+		"carouselId": "portfolioPage_carousel_id_7",
+		"descriptionId": "portfolioPage_description_id_7",
+		"title": "Душевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/8-1_i4g10y.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Черный мат.",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1531р",
+			"Размеры: 2100*1100"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_8",
+		"carouselId": "portfolioPage_carousel_id_8",
+		"descriptionId": "portfolioPage_description_id_8",
+		"title": "Душевая угловая перегородка",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/9-1_lexglw.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/9-2_qz77mj.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая угловая перегородка",
+			"Фурнитура: Черный мат.",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 3060р",
+			"Размеры: 2200*903*900"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_9",
+		"carouselId": "portfolioPage_carousel_id_9",
+		"descriptionId": "portfolioPage_description_id_9",
+		"title": "Душевая угловая перегородка",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/10-1_aqegik.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая угловая перегородка",
+			"Фурнитура: Черный мат.",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1925р",
+			"Размеры: 2000*613*1066"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_10",
+		"carouselId": "portfolioPage_carousel_id_10",
+		"descriptionId": "portfolioPage_description_id_10",
+		"title": "Душевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/11-1_dz7kyd.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Золото глянец",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1987р",
+			"Размеры: 2100*1502"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_11",
+		"carouselId": "portfolioPage_carousel_id_11",
+		"descriptionId": "portfolioPage_description_id_11",
+		"title": "Душевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/12-1_ob3ekg.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Черный  мат",
+			"Стекло: Прозрачное тонир. закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1979р",
+			"Размеры: 2100*1200"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_12",
+		"carouselId": "portfolioPage_carousel_id_12",
+		"descriptionId": "portfolioPage_description_id_12",
+		"title": "Душевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/13-1_qysrkr.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/13-2_nrdnz4.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Черный  мат",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 893р",
+			"Размеры: 2120*599"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_13",
+		"carouselId": "portfolioPage_carousel_id_13",
+		"descriptionId": "portfolioPage_description_id_13",
+		"title": "Душевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/14-1_vdgiev.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Хром мат.",
+			"Стекло: Матовое закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1782р",
+			"Размеры: 2100*1162"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_14",
+		"carouselId": "portfolioPage_carousel_id_14",
+		"descriptionId": "portfolioPage_description_id_14",
+		"title": "Душевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/15-1_dhg4hf.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Черный мат.",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Раздвижной",
+			"Стоимость: 1800р",
+			"Размеры: 2100*1499"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_15",
+		"carouselId": "portfolioPage_carousel_id_15",
+		"descriptionId": "portfolioPage_description_id_15",
+		"title": "Душевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/16-1_utx6ez.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Черный мат.",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Раздвижной",
+			"Стоимость: 1650р",
+			"Размеры: 2000*1330"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_16",
+		"carouselId": "portfolioPage_carousel_id_16",
+		"descriptionId": "portfolioPage_description_id_16",
+		"title": "Душевая угловая перегородка",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/17-1_ovliks.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая угловая перегородка",
+			"Фурнитура: Хром глянец",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1900р",
+			"Размеры: 2000*913*585"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_17",
+		"carouselId": "portfolioPage_carousel_id_17",
+		"descriptionId": "portfolioPage_description_id_17",
+		"title": "Душевая шторка в ванную",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/18-1_k5pbtw.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая шторка в ванную",
+			"Фурнитура: Черная",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1100",
+			"Размеры: 900*1400"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_18",
+		"carouselId": "portfolioPage_carousel_id_18",
+		"descriptionId": "portfolioPage_description_id_18",
+		"title": "Душевая перегородка в нишу",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/19-1_x1d1cl.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в нишу",
+			"Фурнитура: Хром мат.",
+			"Стекло: Прозрачное осветленное, 8мм",
+			"Тип открывания дверей: Распашной",
+			"Стоимость: 1287",
+			"Размеры: 1100*2000"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_19",
+		"carouselId": "portfolioPage_carousel_id_19",
+		"descriptionId": "portfolioPage_description_id_19",
+		"title": "Душевая угловая перегородка",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/20-1_ydq2ze.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая угловая перегородка",
+			"Фурнитура: Черный мат.",
+			"Стекло: Прозрачное закаленное, 8мм",
+			"Тип открывания дверей: Откатной",
+			"Стоимость: 2800",
+			"Размеры: 900*900*2000"
+		]
+	},
+	{
+		"mainId": "portfolioPage_main_id_20",
+		"carouselId": "portfolioPage_carousel_id_20",
+		"descriptionId": "portfolioPage_description_id_20",
+		"title": "Душевая перегородка в ванную",
+		"images": [
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/21-1_mrn8dn.webp",
+			"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745588311/21-2_uzdeyx.webp"
+		],
+		"descriptions": [
+			"Форма: Душевая перегородка в ванную",
+			"Фурнитура: Черная",
+			"Стекло: Матовое закаленное, 8мм",
+			"Тип открывания дверей: Раздвижной",
+			"Стоимость: 2100",
+			"Размеры: 1400*1700"
+		]
+	}
+]

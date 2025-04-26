@@ -91,7 +91,7 @@ const Products = () => {
 								<figure className={styles.products__item} key={id}>
 									<a
 										className={styles["products__item-link"]}
-										data-fancybox="gallery"
+										data-fancybox={`galery-${activeBtn}`}
 										href={ImgSrc}
 										data-caption={title}
 									>
