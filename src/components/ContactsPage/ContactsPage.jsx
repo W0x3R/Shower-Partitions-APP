@@ -1,15 +1,14 @@
-import { useLocation } from "react-router-dom"
 import { Helmet } from "react-helmet"
 import bgImg from "../../assets/ContactsPage/bg.png"
 import callUsImg from "../../assets/ContactsPage/callUs.png"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import Contacts from "./Contacts"
+import { GetCurrentUrl } from "../../utils/getCurrentUrl"
+import contactsPageSchema from "../../data/schemaMarkup/contactsPage"
 
 const ContactsPage = () => {
-	const location = useLocation()
-	const currentUrl = `https://garderobsystem.ru${location.pathname}`
 	const ogImage =
-		"https://W0x3R.github.io/Shower-Partitions-APP/contacts-og-img.jpg"
+		"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745603936/contacts-og-img_ma97ih.jpg"
 	return (
 		<>
 			<Helmet>
@@ -27,6 +26,11 @@ const ContactsPage = () => {
 					name="keywords"
 					content="контакты, доставка, душевые перегородки, Гомель, оплата"
 				/>
+				{/* Micro Data start */}
+				<script type="application/ld+json">
+					{JSON.stringify(contactsPageSchema)}
+				</script>
+				{/* Micro Data end */}
 				{/* Meta OG */}
 				<meta
 					property="og:title"
@@ -37,7 +41,7 @@ const ContactsPage = () => {
 					content="Свяжитесь с нами для консультации по доставке и оплате перегородок в Гомеле."
 				/>
 				<meta property="og:image" content={ogImage} />
-				<meta property="og:url" content={currentUrl} />
+				<meta property="og:url" content={GetCurrentUrl()} />
 				<meta property="og:type" content="website" />
 				{/* Meta Twitter */}
 				<meta name="twitter:card" content="summary_large_image" />

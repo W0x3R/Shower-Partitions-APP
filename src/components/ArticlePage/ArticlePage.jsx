@@ -1,14 +1,13 @@
 import { Helmet } from "react-helmet"
-import { useLocation } from "react-router-dom"
 import articleBg from "../../assets/ArticlePage/bg.webp"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import Article from "./Article"
+import { GetCurrentUrl } from "../../utils/getCurrentUrl"
+import articlePageSchema from "../../data/schemaMarkup/articlePage"
 
 const ArticlePage = () => {
-	const location = useLocation()
-	const currentUrl = `https://garderobsystem.ru${location.pathname}`
 	const ogImage =
-		"https://W0x3R.github.io/Shower-Partitions-APP/article-og-img.jpg"
+		"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745603935/article-og-img_ctzoa7.jpg"
 	return (
 		<>
 			<Helmet>
@@ -25,6 +24,11 @@ const ArticlePage = () => {
 					name="keywords"
 					content="выбор душевых перегородок, стеклянные перегородки для ванной, душевая перегородка советы, купить стеклянную перегородку"
 				/>
+				{/* Micro Data start */}
+				<script type="application/ld+json">
+					{JSON.stringify(articlePageSchema)}
+				</script>
+				{/* Micro Data end */}
 				{/* Meta OG */}
 				<meta
 					property="og:title"
@@ -35,7 +39,7 @@ const ArticlePage = () => {
 					content="Узнай, какие стеклянные душевые перегородки подойдут именно тебе! Советы по выбору, установке и уходу от профессионалов."
 				/>
 				<meta property="og:image" content={ogImage} />
-				<meta property="og:url" content={currentUrl} />
+				<meta property="og:url" content={GetCurrentUrl()} />
 				<meta property="og:type" content="article" />
 				{/* Meta Twitter */}
 				<meta name="twitter:card" content="summary_large_image" />

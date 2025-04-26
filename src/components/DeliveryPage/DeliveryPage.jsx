@@ -1,14 +1,13 @@
 import { Helmet } from "react-helmet"
-import { useLocation } from "react-router-dom"
 import deliveryImg from "../../assets/DeliveryPage/delivery-img.png"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import Delivery from "./Delivery"
+import { GetCurrentUrl } from "../../utils/getCurrentUrl"
+import deliveryPageSchema from "../../data/schemaMarkup/deliveryPage"
 
 const DeliveryPage = () => {
-	const location = useLocation()
-	const currentUrl = `https://garderobsystem.ru${location.pathname}`
 	const ogImage =
-		"https://W0x3R.github.io/Shower-Partitions-APP/delivery-og-img.jpg"
+		"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745603937/delivery-og-img_fq34fy.jpg"
 	return (
 		<>
 			<Helmet>
@@ -26,6 +25,11 @@ const DeliveryPage = () => {
 					name="keywords"
 					content="доставка душевых перегородок, оплата перегородок, стеклянные душевые перегородки Гомель, купить душевые перегородки"
 				/>
+				{/* Micro Data start */}
+				<script type="application/ld+json">
+					{JSON.stringify(deliveryPageSchema)}
+				</script>
+				{/* Micro Data end */}
 				{/* Meta OG */}
 				<meta
 					property="og:title"
@@ -36,7 +40,7 @@ const DeliveryPage = () => {
 					content="Узнайте условия доставки и оплаты стеклянных душевых перегородок на заказ в Гомеле. Быстрая доставка, удобные способы оплаты и качественный сервис!"
 				/>
 				<meta property="og:image" content={ogImage} />
-				<meta property="og:url" content={currentUrl} />
+				<meta property="og:url" content={GetCurrentUrl()} />
 				<meta property="og:type" content="article" />
 				{/* Meta Twitter */}
 				<meta name="twitter:card" content="summary_large_image" />

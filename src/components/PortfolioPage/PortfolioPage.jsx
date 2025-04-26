@@ -1,13 +1,12 @@
 import { Helmet } from "react-helmet"
-import { useLocation } from "react-router-dom"
 import Breadcrumbs from "../Widgets/Breadcrumbs/Breadcrumbs"
 import Portfolio from "./Portfolio"
+import { GetCurrentUrl } from "../../utils/getCurrentUrl"
+import portfolioPageSchema from "../../data/schemaMarkup/portfolioPage"
 
 const PortfolioPage = () => {
-	const location = useLocation()
-	const currentUrl = `https://garderobsystem.ru${location.pathname}`
 	const ogImage =
-		"https://W0x3R.github.io/Shower-Partitions-APP/portfolio-og-img.jpg"
+		"https://res.cloudinary.com/dpvqykdi9/image/upload/v1745672155/portfolio-og-img_usf45x.jpg"
 	return (
 		<>
 			<Helmet>
@@ -22,6 +21,11 @@ const PortfolioPage = () => {
 					name="keywords"
 					content="портфолио душевых перегородок, примеры работ, установка стеклянных перегородок, фото работ, душевые перегородки на заказ"
 				/>
+				{/* Micro Data start  */}
+				<script type="application/ld+json">
+					{JSON.stringify(portfolioPageSchema)}
+				</script>
+				{/* Micro Data end  */}
 				{/* Meta OG */}
 				<meta
 					property="og:title"
@@ -32,7 +36,7 @@ const PortfolioPage = () => {
 					content="Реальные примеры стеклянных душевых перегородок. Качественная установка, индивидуальный дизайн и надежные материалы."
 				/>
 				<meta property="og:image" content={ogImage} />
-				<meta property="og:url" content={currentUrl} />
+				<meta property="og:url" content={GetCurrentUrl()} />
 				<meta property="og:type" content="article" />
 				{/* Meta Twitter */}
 				<meta name="twitter:card" content="summary_large_image" />
