@@ -5,15 +5,15 @@
 This project is a responsive corporate website built from the ground up in React.
 Special attention is paid to:
 
-- Loading speed
+- **Loading speed**
 
-- Search Engine Optimization
+- **Search Engine Optimization**
 
-- Adaptability for different devices (Desktop-First approach)
+- **Adaptability for different devices (Desktop-First approach)**
 
-- A11Y user accessibility
+- **A11Y user accessibility**
 
-- Quality code structure and scalability of the project
+- **Quality code structure and scalability of the project**
 
 ---
 
@@ -27,7 +27,7 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937159/aboutSectionBig_vjp7dc.png" alt="The ‘About Us’ block on the big screen" />
 
-- Implemented functionality:
+- **Implemented functionality**:
 
   - When clicking on the button to calculate the price according to my dimensions or to order a call, a modal window with the form of sending a message to the mail appears". Adaptive burger menu appears on devices with size < 768px.
 
@@ -46,7 +46,7 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937162/productsSectionBig_grskm0.png" alt="The ‘Goods’ block on the big screen"/>
 
-- Implemented functionality:
+- **Implemented functionality**:
 
   - Switching products by category with tab buttons.
 
@@ -54,9 +54,9 @@ Below are the main pages of the project. All pages are designed in the same styl
 
   - Ability to interact and view products using the Tab key and close the modal window using the Esc key for people with disabilities.
 
-  - Inability to go outside the modal window when switching with the Tab key using React-Focus-Lock.
+  - Inability to go outside the modal window when switching with the Tab key using `React-Focus-Lock`.
 
-  - Optimized uploading of images and data via **Cloudinary**.
+  - Optimized uploading of images and data via `Cloudinary`.
 
 <p>
   <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937338/productsItem1_azpycx.png" alt="Open carousel in 'Products' block on mobile screen" width = '48%' />
@@ -69,17 +69,17 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937160/examples_j1gusm.png" alt="Block ‘Examples of interior shower partitions’ on large screen"/>
 
-- Implemented functionality:
+- **Implemented functionality**:
 
   - Infinite carousel with thumbnails.
 
   - Ability to interact and view products using the Tab key and close the modal window using the Esc key for people with disabilities.
 
-  - Inability to go outside the modal window when switching with the Tab key using React-Focus-Lock.
+  - Inability to go outside the modal window when switching with the Tab key using `React-Focus-Lock`.
 
   - Implemented lazy image loading via the “Load More Photos” button.
 
-  - Optimized uploading of images and data via **Cloudinary**.
+  - Optimized uploading of images and data via `Cloudinary`.
 
 <p>
   <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937160/examplesItem1_qptpo3.png" alt="Open carousel in 'Examples of Interior Shower Partitions' block" width = '48%' />
@@ -93,17 +93,17 @@ Below are the main pages of the project. All pages are designed in the same styl
 <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937162/portfoloPage_ftqfi1.png" alt="Large screen 'Portfolio' page"/>
 <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937161/portfolioPage1_zn4efs.png" alt="Large screen 'Portfolio' page"/>
 
-- Implemented functionality:
+- **Implemented functionality**:
 
   - Infinite carousel and slider with thumbnails.
 
   - Support for Tab navigation and closing modals by Esc for accessibility.
 
-  - Focus locking inside a modal window with React Focus Lock.
+  - Focus locking inside a modal window with `React Focus Lock`.
 
   - Lazy image loading on the "Load More" button.
 
-  - Optimized uploading of images and data via **Cloudinary**.
+  - Optimized uploading of images and data via `Cloudinary`.
 
 <p>
 	<img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937161/portfolioPageItem1_msnsz8.png" alt="Image of the completed work card on the 'Portfolio' page" width = '48%' />
@@ -116,7 +116,7 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937160/articlePage_jcgzid.png" alt="Large screen ‘Useful Information’ page"/>
 
-- Implemented functionality:
+- **Implemented functionality**:
 
   - Implemented widget for communication: order a callback, call, go to the catalog and to examples of partitions.
 
@@ -131,13 +131,13 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937161/contactsPage_cjddar.png" alt="Large screen ‘Contacts’ page"/>
 
-- Implemented functionality:
+- **Implemented functionality**:
 
   - Implemented ‘Contacts’ widget with which you can see the company's working hours, call the phone number, write to mail or ask a question in social networks.
 
   - Added a form for sending a message to mail
 
-  - Depending on the outcome of sending a message (successful/unsuccessful) the user will be redirected to the appropriate page.
+  - The user is redirected to the form submission result page (success/error).
 
 <p>
 	<img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937158/contactsPageItem1_yxddon.png" alt="Contacts widget" width = '48%' />
@@ -164,7 +164,7 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 ---
 
-### When an error occurs in requesting a JSON file from a remote server, the site does not crash and the user sees a nicely designed block of code
+#### When JSON request from server fails, a stylish fallback block is displayed instead of a site crash.
 
 <img src="https://res.cloudinary.com/dkcilxezg/image/upload/v1745937161/noContentBlock_hxc8fi.png" alt="Content retrieval error alert"/>
 
@@ -191,21 +191,29 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 ### 🔥 Key features of the project
 
-- Modern build on Vite + React.
+- Modern build on `Vite + React`.
 
-- SCSS modules using variables, mixins and nesting.
+- Used by `React.lazy` and `Suspense` to lazily load components and optimize the size of the bundle.
 
-- Desktop-first approach to layout.
+- `SCSS` modules using variables, mixins, template selectors and nesting.
+
+- `Desktop-first` approach to layout.
 
 - The project is structured in a component-based architecture.
 
-- Utilized React Context for global state management.
+- Animations are placed in a separate `SCSS` file.
 
-- SEO with React Helmet
+- Structured data - stored in the data folder, loaded via `.map()`.
 
-- Used React Snap for pre-rendering (SSG) to improve SEO and load speed.
+- Reusable widgets and utilities are placed in separate components and folders.
 
-- Adaptive and accessible (a11y) layout.
+- Utilized `React Context` for global state management.
+
+- SEO with `React Helmet`.
+
+- Used `React Snap` for pre-rendering (SSG) to improve SEO and load speed.
+
+- Adaptive and accessible layout (`a11y`): aria-attributes, focus styles, keyboard navigation, Esc and `Focus Lock` support.
 
 - Cross-browser compatibility (support for all modern browsers).
 
@@ -221,7 +229,7 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 - Lazy loading of content (“Show more”) and images (Lazy Loading).
 
-- Semantic HTML5 markup and accessibility:
+- Semantic `HTML5` markup and accessibility:
 
   - Keyboard navigation (Tab), focus styles.
 
@@ -242,25 +250,38 @@ Below are the main pages of the project. All pages are designed in the same styl
 ## 📈 SEO and optimization
 
 - Unique `title`, `meta description`, `keywords` and Open Graph tags via React Helmet.
-- Schema.org micro-markup for better indexing.
+
+- `Schema.org` micro-markup for better indexing.
+
 - Generation of `sitemap.xml` and `robots.txt`.
-- Pre-rendering via React Snap to improve first rendering speed.
-- Optimization of images and resources via Cloudinary and lazy loading.
+
+- Pre-rendering via `React Snap` to improve first rendering speed.
+
+- Optimization of images and resources via `Cloudinary` and lazy loading.
+
 - Minification and build optimization.
+
+- All images have been converted to modern `WebP` format to reduce weight and speed up loading.
+
+- Preload critical images via `<link rel="preload">`.
+
+- Modern fonts in `woff2` format, cleaned of unnecessary characters and languages to minimize size, and preloaded via `<link rel="preload">` for faster text rendering.
+
+- Critical styles are included both inline in `<head>` and in a separate `SCSS` file for fast rendering of the first screen (`Critical CSS` approach is used).
 
 ---
 
 ## 🧪 Comparison with competitors
 
-| Criterion                      | My project ✅     | Typical competitor site ❌ |
-| ------------------------------ | ----------------- | -------------------------- |
-| ⚡ Loading speed (Desktop)     | **90–100 points** | 50–70 points               |
-| 🧩 Schema.org micro markup     | ✅ Full           | ❌ None or partial         |
-| 🕸️ OpenGraph (social. Preview) | Supported         | ❌ Often absent            |
-| ♿ Accessibility (a11y)        | ✅ Implemented    | ❌ Not Implemented         |
-| 🖼️ Lazy loading images         | ✅ Yes            | ❌ No                      |
-| 🔍 Sitemap and robots.txt      | ✅ Generated      | ❌ None                    |
-| 🔑 Aria-attributes, Tab-focus  | ✅ Full support   | ❌ Not implemented         |
+| Criterion                      | My project ✅   | Typical competitor site ❌ |
+| ------------------------------ | --------------- | -------------------------- |
+| ⚡ Loading speed (Desktop)     | 90–100 points   | 50–70 points               |
+| 🧩 Schema.org micro markup     | ✅ Full         | ❌ None or partial         |
+| 🕸️ OpenGraph (social. Preview) | Supported       | ❌ Often absent            |
+| ♿ Accessibility (a11y)        | ✅ Implemented  | ❌ Not Implemented         |
+| 🖼️ Lazy loading images         | ✅ Yes          | ❌ No                      |
+| 🔍 Sitemap and robots.txt      | ✅ Generated    | ❌ None                    |
+| 🔑 Aria-attributes, Tab-focus  | ✅ Full support | ❌ Not implemented         |
 
 ---
 
