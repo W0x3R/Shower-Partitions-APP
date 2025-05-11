@@ -6,8 +6,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 2.2em 1.5em;
-	width: 28em;
+	padding: 2.2em;
+	width: 30em;
 	background-color: rgba(28, 28, 28, 0.96);
 	border-radius: 15px;
 	cursor: default;
@@ -43,10 +43,25 @@
 		}
 	}
 
-	&__input {
-		padding: 1em;
-		margin-bottom: 1.8em;
+	&__input-wrapper {
 		min-width: 90%;
+		position: relative;
+
+		&::after {
+			content: "*";
+			position: absolute;
+			left: 100%;
+			bottom: 100%;
+			@include mixins.sizes(20px, 20px);
+			color: var(--white);
+			font-size: 26px;
+		}
+	}
+
+	&__input {
+		margin-bottom: 1.8em;
+		padding: 1em;
+		@include mixins.sizes(100%, 100%);
 		font-size: 1.1em;
 		letter-spacing: var(--basic-letter-spacing);
 		color: var(--black);
@@ -77,10 +92,25 @@
 		}
 	}
 
+	&__textarea-wrapper {
+		min-width: 90%;
+		position: relative;
+
+		&::after {
+			content: "*";
+			position: absolute;
+			left: 100%;
+			bottom: 100%;
+			@include mixins.sizes(20px, 20px);
+			color: var(--white);
+			font-size: 26px;
+		}
+	}
+
 	&__textarea {
 		padding: 1em;
 		margin-bottom: 1.8em;
-		min-width: 90%;
+		@include mixins.sizes(100%, 100%);
 		min-height: 150px;
 		font-size: 1.2em;
 		letter-spacing: var(--basic-letter-spacing);
