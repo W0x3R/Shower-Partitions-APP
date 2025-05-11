@@ -17,6 +17,7 @@ const CallBackForm = ({
 	ariaLabelledBy = "contact-form-title",
 }) => {
 	const [isBtnDisable, setIsBtnDisable] = useState(false)
+	const [isPhoneInputFocused, setIsPhoneInputFocused] = useState(false)
 	const navigate = useNavigate()
 	const { isFormPopupOpen, handleFormPopupCloseRedirect } =
 		useContext(PopupFormContext)
@@ -28,6 +29,33 @@ const CallBackForm = ({
 		reset,
 		formState: { errors },
 	} = useForm()
+
+	const getLastDigitIndex = (str) => {
+		for (let i = str.length - 1; i >= 5; i--) {
+			if (/\d/.test(str[i])) {
+				return i
+			}
+		}
+		return -1
+	}
+
+	const setPhoneInputCursor = (e) => {
+		const phoneInput = e.target
+		if (isPhoneInputFocused) return
+
+		let index = getLastDigitIndex(phoneInput.value)
+		index = index === -1 ? 6 : index + 1
+
+		const char = phoneInput.value[index]
+
+		if (/[-)]/.test(char)) {
+			index += /[)]/.test(char) ? 2 : 1
+		}
+
+		setIsPhoneInputFocused(true)
+		phoneInput.focus()
+		phoneInput.setSelectionRange(index, index)
+	}
 
 	const onSubmit = async (data) => {
 		if (navigator.userAgent === "ReactSnap") {
@@ -98,6 +126,7 @@ const CallBackForm = ({
 					setValue("name", e.target.value)
 					trigger("name")
 				}}
+				autoComplete="given-name"
 				aria-invalid={errors.name ? "true" : "false"}
 				ref={callBackBtnRef}
 			/>
@@ -121,12 +150,14 @@ const CallBackForm = ({
 						return true
 					},
 				})}
+				autoComplete="off"
 				placeholder="Ваш номер телефона"
-				alwaysShowMask
+				onClick={(e) => setPhoneInputCursor(e)}
 				onChange={(e) => {
 					setValue("phone", e.target.value)
 					trigger("phone")
 				}}
+				onBlur={() => setIsPhoneInputFocused(false)}
 				aria-invalid={errors.phone ? "true" : "false"}
 			/>
 			{errors.phone && (
