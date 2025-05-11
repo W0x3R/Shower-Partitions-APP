@@ -131,12 +131,12 @@ const CallBackForm = ({
 					aria-invalid={errors.name ? "true" : "false"}
 					ref={callBackBtnRef}
 				/>
-				{errors.name && (
-					<p role="alert" className={styles.form__error}>
-						{errors.name?.message}
-					</p>
-				)}
 			</div>
+			{errors.name && (
+				<p role="alert" className={styles.form__error}>
+					{errors.name?.message}
+				</p>
+			)}
 			<div className={styles["form__input-wrapper"]}>
 				<InputMask
 					className={`${styles.form__input} ${errors.phone?.message ? styles.resetIndent : ""}`}
@@ -223,7 +223,6 @@ const CallBackForm = ({
 					aria-invalid={errors.text ? "true" : "false"}
 				></textarea>
 			</div>
-
 			{errors.text && (
 				<p role="alert" className={styles.form__error}>
 					{errors.text?.message}
