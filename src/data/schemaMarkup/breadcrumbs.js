@@ -9,7 +9,7 @@ const getBreadcrumbSchema = (currentPage) => {
 				"@type": "ListItem",
 				position: 1,
 				name: "Главная",
-				item: "https://w0x3r.github.io/Shower-Partitions-APP",
+				item: "https://w0x3r.github.io/Shower-Partitions",
 			},
 			{
 				"@type": "ListItem",

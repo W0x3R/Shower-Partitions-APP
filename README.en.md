@@ -172,7 +172,7 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 ## 🚀 Deploy
 
-[See the site in action →](https://w0x3r.github.io/Shower-Partitions-APP/)
+[See the site in action →](https://w0x3r.github.io/Shower-Partitions/)
 
 ---
 
@@ -307,13 +307,13 @@ Tested via Google Lighthouse and PageSpeed Insights
 1. Clone the repository:
 
 ```bash
- git clone https://w0x3r.github.io/Shower-Partitions-APP/
+ git clone https://w0x3r.github.io/Shower-Partitions/
 ```
 
 2. Go to the project folder
 
 ```
-cd Shower-Partitions-APP
+cd Shower-Partitions
 ```
 
 3. Install dependencies

@@ -18,7 +18,7 @@ const pricePageSchema = {
 	},
 	datePublished: "2025-04-25",
 	dateModified: "2025-04-25",
-	mainEntityOfPage: "https://w0x3r.github.io/Shower-Partitions-APP/price",
+	mainEntityOfPage: "https://w0x3r.github.io/Shower-Partitions/price",
 }
 
 export default pricePageSchema

@@ -19,7 +19,7 @@ const standardsSectionSchema = {
 		"Химическое травление",
 		"Пескоструйная обработка",
 	],
-	url: "https://w0x3r.github.io/Shower-Partitions-APP",
+	url: "https://w0x3r.github.io/Shower-Partitions",
 }
 
 export default standardsSectionSchema

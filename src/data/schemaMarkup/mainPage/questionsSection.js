@@ -24,7 +24,7 @@ export const questionsSectionSchema = {
 			acceptedAnswer: {
 				"@type": "Answer",
 				text: "Цена зависит от размеров конструкции, толщины стекла, фурнитуры и сложности монтажа. Подробнее читайте в статье по ссылке.",
-				url: "https://w0x3r.github.io/Shower-Partitions-APP/price",
+				url: "https://w0x3r.github.io/Shower-Partitions/price",
 			},
 		},
 		{

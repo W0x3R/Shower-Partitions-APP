@@ -18,7 +18,7 @@ const articlePageSchema = {
 	},
 	datePublished: "2025-04-25",
 	dateModified: "2025-04-25",
-	mainEntityOfPage: "https://w0x3r.github.io/Shower-Partitions-APP/article",
+	mainEntityOfPage: "https://w0x3r.github.io/Shower-Partitions/article",
 }
 
 export default articlePageSchema

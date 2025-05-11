@@ -170,7 +170,7 @@
 
 ## 🚀 Deploy
 
-[Посмотреть сайт в действии →](https://w0x3r.github.io/Shower-Partitions-APP/)
+[Посмотреть сайт в действии →](https://w0x3r.github.io/Shower-Partitions/)
 
 ---
 
@@ -304,13 +304,13 @@
 1. Клонировать репозиторий:
 
 ```bash
- git clone https://w0x3r.github.io/Shower-Partitions-APP/
+ git clone https://w0x3r.github.io/Shower-Partitions/
 ```
 
 2. Перейти в папку проекта
 
 ```
- cd Shower-Partitions-APP
+ cd Shower-Partitions
 ```
 
 3. Установить зависимости
