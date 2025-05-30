@@ -34,7 +34,7 @@ const NotFoundPage = lazy(
 )
 function App() {
 	return (
-		<Router basename="/Shower-Partitions">
+		<Router basename="/Showers-Gomel">
 			<div className="App">
 				<ScrollTopOnLocationChange />
 				<PopupFormProvider>

@@ -170,7 +170,7 @@
 
 ## 🚀 Deploy
 
-[Посмотреть сайт в действии →](https://w0x3r.github.io/Shower-Partitions/)
+[Посмотреть сайт в действии →](https://w0x3r.github.io/Showers-Gomel/)
 
 ---
 
@@ -304,13 +304,13 @@
 1. Клонировать репозиторий:
 
 ```bash
- git clone https://w0x3r.github.io/Shower-Partitions/
+ git clone https://w0x3r.github.io/Showers-Gomel/
 ```
 
 2. Перейти в папку проекта
 
 ```
- cd Shower-Partitions
+ cd Showers-Gomel
 ```
 
 3. Установить зависимости

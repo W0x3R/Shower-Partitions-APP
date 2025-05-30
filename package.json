@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "1.0.1",
 	"type": "module",
-	"homepage": "https://w0x3r.github.io/Shower-Partitions",
+	"homepage": "https://w0x3r.github.io/Showers-Gomel",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",

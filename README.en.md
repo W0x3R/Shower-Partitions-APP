@@ -172,7 +172,7 @@ Below are the main pages of the project. All pages are designed in the same styl
 
 ## 🚀 Deploy
 
-[See the site in action →](https://w0x3r.github.io/Shower-Partitions/)
+[See the site in action →](https://w0x3r.github.io/Showers-Gomel/)
 
 ---
 
@@ -307,13 +307,13 @@ Tested via Google Lighthouse and PageSpeed Insights
 1. Clone the repository:
 
 ```bash
- git clone https://w0x3r.github.io/Shower-Partitions/
+ git clone https://w0x3r.github.io/Showers-Gomel/
 ```
 
 2. Go to the project folder
 
 ```
-cd Shower-Partitions
+cd Showers-Gomel
 ```
 
 3. Install dependencies

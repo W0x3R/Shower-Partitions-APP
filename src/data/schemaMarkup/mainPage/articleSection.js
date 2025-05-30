@@ -4,18 +4,18 @@ const articleSectionSchema = {
 	headline:
 		"Душевые перегородки из стекла в Гомеле: современное решение для ванной",
 	image:
-		"https://raw.githubusercontent.com/W0x3R/Shower-Partitions/refs/heads/gh-pages/article-og-img.jpg",
+		"https://raw.githubusercontent.com/W0x3R/Showers-Gomel/refs/heads/gh-pages/article-og-img.jpg",
 	author: {
 		"@type": "Organization",
 		name: "DZ System",
-		url: "https://w0x3r.github.io/Shower-Partitions/",
+		url: "https://w0x3r.github.io/Showers-Gomel/",
 	},
 	publisher: {
 		"@type": "Organization",
 		name: "DZ System",
 		logo: {
 			"@type": "ImageObject",
-			url: "https://w0x3r.github.io/Shower-Partitions/assets/logo-BmYQqIHg.webp",
+			url: "https://w0x3r.github.io/Showers-Gomel/assets/logo-BmYQqIHg.webp",
 		},
 	},
 	datePublished: "2025-04-24T12:00:00+03:00",
